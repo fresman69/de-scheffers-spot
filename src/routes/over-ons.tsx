@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import interior from "../assets/interior.jpg";
-import brassTap from "../assets/brass-tap.jpg";
+import { PhotoPlaceholder } from "../components/photo-placeholder";
 
 export const Route = createFileRoute("/over-ons")({
   head: () => ({
@@ -41,14 +40,8 @@ const pillars = [
 function OverOns() {
   return (
     <>
-      <section className="relative overflow-hidden bg-oak py-32">
-        <img
-          src={interior}
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-oak/70 to-oak" />
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+      <section className="bg-oak py-32">
+        <div className="mx-auto max-w-4xl px-6 text-center">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Over ons</p>
           <h1 className="mb-6 font-display text-5xl text-paper md:text-6xl">
             Ons verhaal, ons huis.
@@ -64,12 +57,7 @@ function OverOns() {
       <section className="bg-paper py-24 text-oak">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-5 lg:items-center">
           <div className="lg:col-span-2">
-            <img
-              src={brassTap}
-              alt="Koperen tapkranen"
-              loading="lazy"
-              className="aspect-[4/5] w-full rounded-sm object-cover"
-            />
+            <PhotoPlaceholder tone="light" aspect="4 / 5" label="Cafédetail — nog toe te voegen" />
           </div>
           <div className="lg:col-span-3">
             <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass-dim">

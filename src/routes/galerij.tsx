@@ -1,12 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroCafe from "../assets/hero-cafe.jpg";
-import interior from "../assets/interior.jpg";
-import brassTap from "../assets/brass-tap.jpg";
-import terras from "../assets/terras.jpg";
-import beerTrappist from "../assets/beer-trappist.jpg";
-import beerBlond from "../assets/beer-blond.jpg";
-import beerTripel from "../assets/beer-tripel.jpg";
-import borrelplank from "../assets/borrelplank.jpg";
+import { PhotoPlaceholder } from "../components/photo-placeholder";
 
 export const Route = createFileRoute("/galerij")({
   head: () => ({
@@ -25,15 +18,15 @@ export const Route = createFileRoute("/galerij")({
   component: Galerij,
 });
 
-const gallery = [
-  { src: heroCafe, alt: "Interieur bij avondlicht", tall: true },
-  { src: terras, alt: "Terras aan het Scheffersplein" },
-  { src: brassTap, alt: "Koperen tapkranen" },
-  { src: beerTrappist, alt: "Trappist in chalice" },
-  { src: interior, alt: "Bruine cafésfeer met leren stoelen", tall: true },
-  { src: beerBlond, alt: "Blond speciaalbier" },
-  { src: borrelplank, alt: "Borrelplank" },
-  { src: beerTripel, alt: "Tripel Karmeliet" },
+const slots = [
+  { label: "Interieur", aspect: "3 / 4" },
+  { label: "Terras", aspect: "4 / 3" },
+  { label: "Tapkranen", aspect: "4 / 3" },
+  { label: "Speciaalbier", aspect: "4 / 5" },
+  { label: "Bruine cafésfeer", aspect: "3 / 4" },
+  { label: "Borrelplank", aspect: "4 / 3" },
+  { label: "Evenement", aspect: "4 / 3" },
+  { label: "Gasten", aspect: "4 / 5" },
 ];
 
 function Galerij() {
@@ -46,7 +39,8 @@ function Galerij() {
             Sfeer, ambacht en Dordts leven.
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
-            Een blik binnen — van de bar tot het terras, van tap tot borrelplank.
+            Een blik binnen — van de bar tot het terras, van tap tot borrelplank. Deze galerij
+            wordt gevuld met eigen foto's van Rijke &amp; Zn.
           </p>
         </div>
       </section>
@@ -54,18 +48,10 @@ function Galerij() {
       <section className="bg-oak pb-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
-            {gallery.map((g, i) => (
-              <figure
-                key={i}
-                className="mb-4 overflow-hidden rounded-sm ring-1 ring-border transition-transform duration-500 hover:-translate-y-1 break-inside-avoid"
-              >
-                <img
-                  src={g.src}
-                  alt={g.alt}
-                  loading="lazy"
-                  className={`w-full object-cover ${g.tall ? "aspect-[3/4]" : "aspect-[4/3]"}`}
-                />
-              </figure>
+            {slots.map((s, i) => (
+              <div key={i} className="mb-4 break-inside-avoid">
+                <PhotoPlaceholder aspect={s.aspect} label={s.label} />
+              </div>
             ))}
           </div>
         </div>

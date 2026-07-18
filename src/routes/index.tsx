@@ -1,11 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroCafe from "../assets/hero-cafe.jpg";
-import brassTap from "../assets/brass-tap.jpg";
-import terras from "../assets/terras.jpg";
-import beerTrappist from "../assets/beer-trappist.jpg";
-import beerBlond from "../assets/beer-blond.jpg";
-import beerTripel from "../assets/beer-tripel.jpg";
 import { Instagram, MapPin, Star } from "lucide-react";
+import { PhotoPlaceholder } from "../components/photo-placeholder";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,7 +20,6 @@ export const Route = createFileRoute("/")({
 
 const featuredBeers = [
   {
-    img: beerTrappist,
     name: "Rochefort 8",
     brewery: "Trappistes Rochefort",
     abv: "9.2%",
@@ -33,7 +27,6 @@ const featuredBeers = [
     note: "Diepbruin, aroma's van vijgen en pure chocolade. Complexe klassieker.",
   },
   {
-    img: beerBlond,
     name: "Schapenkop Blond",
     brewery: "Stadsbrouwerij Dordrecht",
     abv: "7.0%",
@@ -41,7 +34,6 @@ const featuredBeers = [
     note: "Lokaal gebrouwen. Fris, fruitig met een licht bittere afdronk.",
   },
   {
-    img: beerTripel,
     name: "Tripel Karmeliet",
     brewery: "Brouwerij Bosteels",
     abv: "8.4%",
@@ -74,13 +66,10 @@ function Home() {
     <>
       {/* Hero */}
       <section className="relative flex min-h-[92vh] items-center justify-center overflow-hidden bg-oak">
-        <img
-          src={heroCafe}
-          alt="Interieur van Stadscafé Rijke & Zn. bij avondlicht"
-          width={1920}
-          height={1080}
-          className="absolute inset-0 h-full w-full object-cover opacity-55"
-        />
+        <div className="absolute inset-0 bg-gradient-to-b from-oak-light via-oak to-oak" />
+        <div className="absolute inset-4 opacity-40 sm:inset-8">
+          <PhotoPlaceholder label="Sfeerfoto café — nog toe te voegen" className="h-full" />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-oak/60 via-oak/30 to-oak" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass animate-fade-in">
@@ -126,28 +115,14 @@ function Home() {
               tijd even stilstaat — donker hout, koperen tapkranen en een warme sfeer.
             </p>
           </div>
-          <img
-            src={brassTap}
-            alt="Koperen tapkranen op de bar"
-            loading="lazy"
-            width={1600}
-            height={800}
-            className="aspect-[21/9] w-full rounded-sm object-cover"
-          />
+          <PhotoPlaceholder tone="light" aspect="21 / 9" label="Detail bar — nog toe te voegen" />
         </div>
       </section>
 
       {/* Sfeerimpressie */}
       <section className="bg-oak py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
-          <img
-            src={terras}
-            alt="Terras van Stadscafé Rijke & Zn. op het Scheffersplein"
-            loading="lazy"
-            width={1600}
-            height={1000}
-            className="aspect-[4/3] w-full rounded-sm object-cover"
-          />
+          <PhotoPlaceholder aspect="4 / 3" label="Terrasfoto — nog toe te voegen" />
           <div>
             <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass">
               Sfeerimpressie
@@ -194,18 +169,9 @@ function Home() {
             {featuredBeers.map((b) => (
               <article
                 key={b.name}
-                className="group rounded-sm bg-oak-light p-6 ring-1 ring-border transition-all hover:ring-brass/40"
+                className="group flex flex-col rounded-sm bg-oak-light p-6 ring-1 ring-border transition-all hover:ring-brass/40"
               >
-                <div className="mb-6 aspect-[4/5] overflow-hidden rounded-sm bg-oak">
-                  <img
-                    src={b.img}
-                    alt={b.name}
-                    loading="lazy"
-                    width={800}
-                    height={1000}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
+                <PhotoPlaceholder aspect="4 / 5" className="mb-6" label="Bierfoto volgt" />
                 <div className="mb-2 flex items-start justify-between gap-4">
                   <h3 className="font-display text-2xl text-paper">{b.name}</h3>
                   <span className="shrink-0 font-medium text-brass">{b.abv}</span>
@@ -307,17 +273,14 @@ function Home() {
             </div>
             <h2 className="mb-8 font-display text-4xl">Sfeer op Instagram</h2>
             <div className="grid grid-cols-3 gap-2">
-              {[heroCafe, terras, brassTap, beerTrappist, beerBlond, beerTripel].map((src, i) => (
-                <div key={i} className="aspect-square overflow-hidden rounded-sm bg-oak/10">
-                  <img
-                    src={src}
-                    alt="Instagram post"
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
-                  />
-                </div>
+              {Array.from({ length: 6 }).map((_, i) => (
+                <PhotoPlaceholder key={i} tone="light" aspect="1 / 1" label="Instagram post" />
               ))}
             </div>
+            <p className="mt-4 text-xs text-oak/50">
+              Koppeling met de officiële Instagram-feed van Rijke &amp; Zn. wordt aangesloten
+              zodra het account is geverifieerd.
+            </p>
           </div>
           <div>
             <div className="mb-8 flex items-center gap-3">

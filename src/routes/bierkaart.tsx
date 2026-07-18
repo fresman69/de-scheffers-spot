@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import beerTrappist from "../assets/beer-trappist.jpg";
-import beerBlond from "../assets/beer-blond.jpg";
-import beerTripel from "../assets/beer-tripel.jpg";
+import { PhotoPlaceholder } from "../components/photo-placeholder";
 
 export const Route = createFileRoute("/bierkaart")({
   head: () => ({
@@ -28,14 +26,13 @@ type Beer = {
   temp: string;
   notes: string;
   pair: string;
-  img?: string;
   category: string;
 };
 
 const beers: Beer[] = [
-  { category: "Tapbier", name: "Rijke Blond", brewery: "Huis van Rijke", abv: "5.2%", temp: "5°C", notes: "Zacht, mout, licht kruidig.", pair: "Bitterballen", img: beerBlond },
+  { category: "Tapbier", name: "Rijke Blond", brewery: "Huis van Rijke", abv: "5.2%", temp: "5°C", notes: "Zacht, mout, licht kruidig.", pair: "Bitterballen" },
   { category: "Tapbier", name: "Dordts Pils", brewery: "Stadsbrouwerij", abv: "4.8%", temp: "4°C", notes: "Fris en droog met hoppige afdronk.", pair: "Kaasstengels" },
-  { category: "Tapbier", name: "Karmeliet Tripel", brewery: "Bosteels", abv: "8.4%", temp: "8°C", notes: "Verfijnd, granig, elegant.", pair: "Oude kaas", img: beerTripel },
+  { category: "Tapbier", name: "Karmeliet Tripel", brewery: "Bosteels", abv: "8.4%", temp: "8°C", notes: "Verfijnd, granig, elegant.", pair: "Oude kaas" },
   { category: "Speciaalbier", name: "Duvel", brewery: "Duvel Moortgat", abv: "8.5%", temp: "6°C", notes: "Blond, droog, met karakter.", pair: "Charcuterie" },
   { category: "Speciaalbier", name: "La Chouffe", brewery: "Achouffe", abv: "8.0%", temp: "7°C", notes: "Fruitig, koriander, honing.", pair: "Nootjes" },
   { category: "Seizoensbier", name: "Kerst Bock", brewery: "Jopen", abv: "8.5%", temp: "10°C", notes: "Karamel, kruidnagel, warm.", pair: "Wildpaté" },
@@ -45,7 +42,7 @@ const beers: Beer[] = [
   { category: "Blond", name: "Affligem Blond", brewery: "Affligem", abv: "6.7%", temp: "6°C", notes: "Zoet, mout, kruidig.", pair: "Brie" },
   { category: "Tripel", name: "Westmalle Tripel", brewery: "Trappist Westmalle", abv: "9.5%", temp: "12°C", notes: "Klassiek, complex, honing.", pair: "Ossenworst" },
   { category: "Dubbel", name: "Westmalle Dubbel", brewery: "Trappist Westmalle", abv: "7.0%", temp: "12°C", notes: "Chocolade, koffie, rozijn.", pair: "Belegen kaas" },
-  { category: "Dubbel", name: "Rochefort 8", brewery: "Trappistes Rochefort", abv: "9.2%", temp: "12°C", notes: "Vijgen, chocolade, complex.", pair: "Wildpaté", img: beerTrappist },
+  { category: "Dubbel", name: "Rochefort 8", brewery: "Trappistes Rochefort", abv: "9.2%", temp: "12°C", notes: "Vijgen, chocolade, complex.", pair: "Wildpaté" },
   { category: "Weizen", name: "Weihenstephaner Hefe", brewery: "Weihenstephan", abv: "5.4%", temp: "5°C", notes: "Banaan, kruidnagel, fris.", pair: "Krakelingen" },
   { category: "Weizen", name: "Erdinger Weissbier", brewery: "Erdinger", abv: "5.3%", temp: "5°C", notes: "Zacht, romig, gistig.", pair: "Pretzels" },
   { category: "Stout", name: "Guinness Draught", brewery: "Guinness", abv: "4.2%", temp: "8°C", notes: "Koffie, cacao, romig.", pair: "Oesters" },
@@ -115,22 +112,7 @@ function Bierkaart() {
               key={b.name}
               className="group flex flex-col rounded-sm bg-oak-light ring-1 ring-border transition-all hover:ring-brass/40"
             >
-              <div className="aspect-[5/4] overflow-hidden rounded-t-sm bg-oak">
-                {b.img ? (
-                  <img
-                    src={b.img}
-                    alt={b.name}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center">
-                    <span className="font-display text-6xl text-brass/20">
-                      {b.name.slice(0, 1)}
-                    </span>
-                  </div>
-                )}
-              </div>
+              <PhotoPlaceholder aspect="5 / 4" label="Bierfoto volgt" className="rounded-b-none" />
               <div className="flex flex-1 flex-col p-6">
                 <div className="mb-1 flex items-start justify-between gap-4">
                   <h3 className="font-display text-2xl text-paper">{b.name}</h3>
