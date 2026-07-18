@@ -9,8 +9,62 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ReserverenRouteImport } from './routes/reserveren'
+import { Route as OverOnsRouteImport } from './routes/over-ons'
+import { Route as GalerijRouteImport } from './routes/galerij'
+import { Route as EvenementenRouteImport } from './routes/evenementen'
+import { Route as DrankenRouteImport } from './routes/dranken'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BorrelkaartRouteImport } from './routes/borrelkaart'
+import { Route as BierkaartRouteImport } from './routes/bierkaart'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReserverenRoute = ReserverenRouteImport.update({
+  id: '/reserveren',
+  path: '/reserveren',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OverOnsRoute = OverOnsRouteImport.update({
+  id: '/over-ons',
+  path: '/over-ons',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalerijRoute = GalerijRouteImport.update({
+  id: '/galerij',
+  path: '/galerij',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvenementenRoute = EvenementenRouteImport.update({
+  id: '/evenementen',
+  path: '/evenementen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DrankenRoute = DrankenRouteImport.update({
+  id: '/dranken',
+  path: '/dranken',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BorrelkaartRoute = BorrelkaartRouteImport.update({
+  id: '/borrelkaart',
+  path: '/borrelkaart',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BierkaartRoute = BierkaartRouteImport.update({
+  id: '/bierkaart',
+  path: '/bierkaart',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +73,158 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/bierkaart': typeof BierkaartRoute
+  '/borrelkaart': typeof BorrelkaartRoute
+  '/contact': typeof ContactRoute
+  '/dranken': typeof DrankenRoute
+  '/evenementen': typeof EvenementenRoute
+  '/galerij': typeof GalerijRoute
+  '/over-ons': typeof OverOnsRoute
+  '/reserveren': typeof ReserverenRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/bierkaart': typeof BierkaartRoute
+  '/borrelkaart': typeof BorrelkaartRoute
+  '/contact': typeof ContactRoute
+  '/dranken': typeof DrankenRoute
+  '/evenementen': typeof EvenementenRoute
+  '/galerij': typeof GalerijRoute
+  '/over-ons': typeof OverOnsRoute
+  '/reserveren': typeof ReserverenRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/bierkaart': typeof BierkaartRoute
+  '/borrelkaart': typeof BorrelkaartRoute
+  '/contact': typeof ContactRoute
+  '/dranken': typeof DrankenRoute
+  '/evenementen': typeof EvenementenRoute
+  '/galerij': typeof GalerijRoute
+  '/over-ons': typeof OverOnsRoute
+  '/reserveren': typeof ReserverenRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/bierkaart'
+    | '/borrelkaart'
+    | '/contact'
+    | '/dranken'
+    | '/evenementen'
+    | '/galerij'
+    | '/over-ons'
+    | '/reserveren'
+    | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/bierkaart'
+    | '/borrelkaart'
+    | '/contact'
+    | '/dranken'
+    | '/evenementen'
+    | '/galerij'
+    | '/over-ons'
+    | '/reserveren'
+    | '/sitemap.xml'
+  id:
+    | '__root__'
+    | '/'
+    | '/bierkaart'
+    | '/borrelkaart'
+    | '/contact'
+    | '/dranken'
+    | '/evenementen'
+    | '/galerij'
+    | '/over-ons'
+    | '/reserveren'
+    | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BierkaartRoute: typeof BierkaartRoute
+  BorrelkaartRoute: typeof BorrelkaartRoute
+  ContactRoute: typeof ContactRoute
+  DrankenRoute: typeof DrankenRoute
+  EvenementenRoute: typeof EvenementenRoute
+  GalerijRoute: typeof GalerijRoute
+  OverOnsRoute: typeof OverOnsRoute
+  ReserverenRoute: typeof ReserverenRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reserveren': {
+      id: '/reserveren'
+      path: '/reserveren'
+      fullPath: '/reserveren'
+      preLoaderRoute: typeof ReserverenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/over-ons': {
+      id: '/over-ons'
+      path: '/over-ons'
+      fullPath: '/over-ons'
+      preLoaderRoute: typeof OverOnsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galerij': {
+      id: '/galerij'
+      path: '/galerij'
+      fullPath: '/galerij'
+      preLoaderRoute: typeof GalerijRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/evenementen': {
+      id: '/evenementen'
+      path: '/evenementen'
+      fullPath: '/evenementen'
+      preLoaderRoute: typeof EvenementenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dranken': {
+      id: '/dranken'
+      path: '/dranken'
+      fullPath: '/dranken'
+      preLoaderRoute: typeof DrankenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/borrelkaart': {
+      id: '/borrelkaart'
+      path: '/borrelkaart'
+      fullPath: '/borrelkaart'
+      preLoaderRoute: typeof BorrelkaartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bierkaart': {
+      id: '/bierkaart'
+      path: '/bierkaart'
+      fullPath: '/bierkaart'
+      preLoaderRoute: typeof BierkaartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +237,16 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BierkaartRoute: BierkaartRoute,
+  BorrelkaartRoute: BorrelkaartRoute,
+  ContactRoute: ContactRoute,
+  DrankenRoute: DrankenRoute,
+  EvenementenRoute: EvenementenRoute,
+  GalerijRoute: GalerijRoute,
+  OverOnsRoute: OverOnsRoute,
+  ReserverenRoute: ReserverenRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
