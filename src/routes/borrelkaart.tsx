@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import borrelplank from "../assets/borrelplank.jpg";
+import { PhotoPlaceholder } from "../components/photo-placeholder";
 
 export const Route = createFileRoute("/borrelkaart")({
   head: () => ({
@@ -67,17 +67,18 @@ const items = [
 function Borrelkaart() {
   return (
     <>
-      <section className="relative bg-oak py-24">
-        <img src={borrelplank} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-oak/60 to-oak" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6">
+      <section className="bg-oak py-24">
+        <div className="mx-auto max-w-7xl px-6">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Borrelkaart</p>
           <h1 className="mb-6 max-w-[22ch] font-display text-5xl text-paper md:text-6xl">
             Ambachtelijke borrelhapjes bij ieder glas.
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-paper/80">
+          <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
             Van bitterballen tot een royale borrelplank — met liefde bereid en gemaakt om te delen.
           </p>
+        </div>
+        <div className="mx-auto mt-12 max-w-7xl px-6">
+          <PhotoPlaceholder aspect="21 / 9" label="Foto borrelplank — nog toe te voegen" />
         </div>
       </section>
 
