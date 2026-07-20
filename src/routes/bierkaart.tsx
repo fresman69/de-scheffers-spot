@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { PhotoPlaceholder } from "../components/photo-placeholder";
+import { ProductCard, type Product } from "../components/product-card";
 
 export const Route = createFileRoute("/bierkaart")({
   head: () => ({
@@ -9,7 +9,7 @@ export const Route = createFileRoute("/bierkaart")({
       {
         name: "description",
         content:
-          "Meer dan 40 speciaalbieren op de kaart: tap, IPA, blond, tripel, dubbel, weizen, stout en seizoensbieren. Ambachtelijk geselecteerd.",
+          "Onze volledige bierkaart: van de tap, blond, dubbel, tripel, quad, amber, wit/weizen, stout, saison, cider, sour, ale, laag alcohol en glutenvrij.",
       },
       { property: "og:title", content: "Bierkaart — Rijke & Zn." },
       { property: "og:url", content: "/bierkaart" },
@@ -19,50 +19,119 @@ export const Route = createFileRoute("/bierkaart")({
   component: Bierkaart,
 });
 
-type Beer = {
-  name: string;
-  brewery: string;
-  abv: string;
-  temp: string;
-  notes: string;
-  pair: string;
-  category: string;
-};
+type Beer = Product & { category: string };
 
 const beers: Beer[] = [
-  { category: "Tapbier", name: "Rijke Blond", brewery: "Huis van Rijke", abv: "5.2%", temp: "5°C", notes: "Zacht, mout, licht kruidig.", pair: "Bitterballen" },
-  { category: "Tapbier", name: "Dordts Pils", brewery: "Stadsbrouwerij", abv: "4.8%", temp: "4°C", notes: "Fris en droog met hoppige afdronk.", pair: "Kaasstengels" },
-  { category: "Tapbier", name: "Karmeliet Tripel", brewery: "Bosteels", abv: "8.4%", temp: "8°C", notes: "Verfijnd, granig, elegant.", pair: "Oude kaas" },
-  { category: "Speciaalbier", name: "Duvel", brewery: "Duvel Moortgat", abv: "8.5%", temp: "6°C", notes: "Blond, droog, met karakter.", pair: "Charcuterie" },
-  { category: "Speciaalbier", name: "La Chouffe", brewery: "Achouffe", abv: "8.0%", temp: "7°C", notes: "Fruitig, koriander, honing.", pair: "Nootjes" },
-  { category: "Seizoensbier", name: "Kerst Bock", brewery: "Jopen", abv: "8.5%", temp: "10°C", notes: "Karamel, kruidnagel, warm.", pair: "Wildpaté" },
-  { category: "Seizoensbier", name: "Meibock", brewery: "Ramses Bier", abv: "6.5%", temp: "8°C", notes: "Licht, bloemig, lente.", pair: "Gemarineerde olijven" },
-  { category: "IPA", name: "Punk IPA", brewery: "BrewDog", abv: "5.6%", temp: "5°C", notes: "Grapefruit, tropisch, bitter.", pair: "Chorizo" },
-  { category: "IPA", name: "Neck Oil", brewery: "Beavertown", abv: "4.3%", temp: "5°C", notes: "Sessie IPA, citrus.", pair: "Nachos" },
-  { category: "Blond", name: "Affligem Blond", brewery: "Affligem", abv: "6.7%", temp: "6°C", notes: "Zoet, mout, kruidig.", pair: "Brie" },
-  { category: "Tripel", name: "Westmalle Tripel", brewery: "Trappist Westmalle", abv: "9.5%", temp: "12°C", notes: "Klassiek, complex, honing.", pair: "Ossenworst" },
-  { category: "Dubbel", name: "Westmalle Dubbel", brewery: "Trappist Westmalle", abv: "7.0%", temp: "12°C", notes: "Chocolade, koffie, rozijn.", pair: "Belegen kaas" },
-  { category: "Dubbel", name: "Rochefort 8", brewery: "Trappistes Rochefort", abv: "9.2%", temp: "12°C", notes: "Vijgen, chocolade, complex.", pair: "Wildpaté" },
-  { category: "Weizen", name: "Weihenstephaner Hefe", brewery: "Weihenstephan", abv: "5.4%", temp: "5°C", notes: "Banaan, kruidnagel, fris.", pair: "Krakelingen" },
-  { category: "Weizen", name: "Erdinger Weissbier", brewery: "Erdinger", abv: "5.3%", temp: "5°C", notes: "Zacht, romig, gistig.", pair: "Pretzels" },
-  { category: "Stout", name: "Guinness Draught", brewery: "Guinness", abv: "4.2%", temp: "8°C", notes: "Koffie, cacao, romig.", pair: "Oesters" },
-  { category: "Stout", name: "Imperial Stout", brewery: "De Molen", abv: "10.2%", temp: "12°C", notes: "Espresso, chocolade, robuust.", pair: "Chocoladebonbons" },
-  { category: "Alcoholvrij", name: "Weihenstephaner 0.0", brewery: "Weihenstephan", abv: "0.0%", temp: "5°C", notes: "Volle smaak, fris.", pair: "Bitterballen" },
-  { category: "Alcoholvrij", name: "Vandestreek Playground", brewery: "Vandestreek", abv: "0.5%", temp: "5°C", notes: "IPA-stijl, citrus, hoppig.", pair: "Nachos" },
+  // Van de Tap
+  { category: "Van de Tap", name: "Heineken Fluit", description: "Pilsener", volume: "18 cl", abv: "5%", price: "€ 2,30" },
+  { category: "Van de Tap", name: "Heineken Vaas", description: "Pilsener", volume: "25 cl", abv: "5%", price: "€ 2,80" },
+  { category: "Van de Tap", name: "Gele Ary", description: "Huisbier Rijke & Zn", volume: "25 cl", abv: "5%", price: "€ 3,20" },
+
+  // Blond
+  { category: "Blond", name: "Affligem Blond", description: "Smooth, fruity", volume: "33 cl", abv: "6.8%", price: "€ 4,20" },
+  { category: "Blond", name: "Maallust — De Weldoener", description: "Sweet, hoppy", volume: "33 cl", abv: "6.5%", price: "€ 4,80" },
+  { category: "Blond", name: "'t IJ — Flink", description: "Light, citrus", volume: "33 cl", abv: "4.7%", price: "€ 4,20" },
+
+  // Dubbel
+  { category: "Dubbel", name: "Westmalle Trappist Dubbel", description: "Sweet, malty", volume: "33 cl", abv: "7%", price: "€ 4,40" },
+  { category: "Dubbel", name: "Corsendonk Pater Dubbel", description: "Sweet, dark", volume: "33 cl", abv: "6.5%", price: "€ 4,80" },
+
+  // Tripel
+  { category: "Tripel", name: "Westmalle Trappist Tripel", description: "Strong, sweet", volume: "33 cl", abv: "9.5%", price: "€ 4,80" },
+  { category: "Tripel", name: "Tripel Karmeliet", description: "Sweet, smooth", volume: "33 cl", abv: "8.4%", price: "€ 4,80" },
+  { category: "Tripel", name: "White Dog — Tripel", description: "Herbal, floral", volume: "33 cl", abv: "7.5%", price: "€ 4,90" },
+  { category: "Tripel", name: "Van Moll — Triple Trouble", description: "Subtle, body", volume: "33 cl", abv: "8.5%", price: "€ 4,80" },
+
+  // Quad / Barleywine
+  { category: "Quad / Barleywine", name: "Trappistes Rochefort 10", description: "Strong, dark", volume: "33 cl", abv: "11.3%", price: "€ 6,50" },
+  { category: "Quad / Barleywine", name: "St. Bernardus — Abt 12", description: "Dark, smooth", volume: "33 cl", abv: "10%", price: "€ 5,50" },
+  { category: "Quad / Barleywine", name: "De Molen — Bommen en Granaten", description: "Sweet, strong", volume: "33 cl", abv: "11.9%", price: "€ 6,50" },
+  { category: "Quad / Barleywine", name: "Gouden Carolus Whisky Infused", description: "Sweet, caramel", volume: "33 cl", abv: "11.7%", price: "€ 6,50" },
+
+  // Amber
+  { category: "Amber", name: "Seef — Bootjes Bier", description: "Hoppy, fruity", volume: "33 cl", abv: "7%", price: "€ 4,40" },
+  { category: "Amber", name: "De Koninck — APA", description: "Light, smooth", volume: "33 cl", abv: "5.2%", price: "€ 3,90" },
+  { category: "Amber", name: "Ebontree — Dordt 1618-1619", description: "Honey, refreshing", volume: "33 cl", abv: "5.5%", price: "€ 5,00" },
+  { category: "Amber", name: "Anchor — Liberty Ale", description: "Hoppy, light", volume: "33 cl", abv: "5.9%", price: "€ 5,50" },
+
+  // Zwaar Blond
+  { category: "Zwaar Blond", name: "Duvel", description: "Strong, smooth", volume: "33 cl", abv: "8.5%", price: "€ 4,80" },
+  { category: "Zwaar Blond", name: "La Chouffe Blond", description: "Strong, sweet", volume: "33 cl", abv: "8%", price: "€ 4,80" },
+  { category: "Zwaar Blond", name: "Hapkin", description: "Strong, dry", volume: "33 cl", abv: "8.5%", price: "€ 4,80" },
+  { category: "Zwaar Blond", name: "Corsendonk — Agnus Tripel Blond", description: "Smooth, sweet", volume: "33 cl", abv: "7.5%", price: "€ 4,80" },
+
+  // Wit / Weizen
+  { category: "Wit / Weizen", name: "Paulaner", description: "Smooth, light", volume: "50 cl", abv: "5.5%", price: "€ 5,90" },
+  { category: "Wit / Weizen", name: "'t IJ — IJwit", description: "Fruity, soft", volume: "33 cl", abv: "6.5%", price: "€ 4,40" },
+
+  // Fruit / Zomer
+  { category: "Fruit / Zomer", name: "Kasteel — Rouge", description: "Sweet, fruity", volume: "33 cl", abv: "8%", price: "€ 4,80" },
+  { category: "Fruit / Zomer", name: "Liefmans Fruitesse", description: "Sweet, fruity", volume: "25 cl", abv: "3.8%", price: "€ 3,80" },
+  { category: "Fruit / Zomer", name: "Kriek Boon", description: "Fruity, sour", volume: "25 cl", abv: "4%", price: "€ 3,80" },
+  { category: "Fruit / Zomer", name: "Desperados", description: "Fruity, light", volume: "33 cl", abv: "5.9%", price: "€ 4,00" },
+  { category: "Fruit / Zomer", name: "Sol", description: "Light, clean", volume: "33 cl", abv: "4.5%", price: "€ 4,00" },
+
+  // Stout / Porter
+  { category: "Stout / Porter", name: "Lowlander — Poorter", description: "Dark, coffee", volume: "33 cl", abv: "6%", price: "€ 5,50" },
+  { category: "Stout / Porter", name: "Poesiat & Kater's — Vollenhoven Stout", description: "Coffee, bitter", volume: "33 cl", abv: "7.1%", price: "€ 5,50" },
+  { category: "Stout / Porter", name: "Kompaan — 39 Bloedbroeder", description: "Dark, port", volume: "33 cl", abv: "9.1%", price: "€ 6,00" },
+  { category: "Stout / Porter", name: "BrewDog — Jet Black Heart", description: "Coffee, milk", volume: "33 cl", abv: "4.7%", price: "€ 4,80" },
+
+  // Saison
+  { category: "Saison", name: "Oedipus — Mannenliefde", description: "Hoppy, light", volume: "33 cl", abv: "6%", price: "€ 5,00" },
+  { category: "Saison", name: "Kompaan — Thierry Sauvage", description: "Light, soft", volume: "33 cl", abv: "4.8%", price: "€ 4,60" },
+
+  // Cider
+  { category: "Cider", name: "Strongbow — Gold", description: "Sweet, apple", volume: "33 cl", abv: "5%", price: "€ 3,90" },
+  { category: "Cider", name: "Strongbow — British Dry", description: "Dry, apple", volume: "33 cl", abv: "5%", price: "€ 3,90" },
+  { category: "Cider", name: "Bulmers — Original Irish Cider", description: "Sweet, apple", volume: "50 cl", abv: "4.5%", price: "€ 6,50" },
+  { category: "Cider", name: "Bulmers — Pear", description: "Sweet, dry", volume: "50 cl", abv: "4.5%", price: "€ 6,50" },
+
+  // Sour / Geuze
+  { category: "Sour / Geuze", name: "Oude Geuze Boon", description: "Sour, dry", volume: "33 cl", abv: "7%", price: "€ 4,40" },
+  { category: "Sour / Geuze", name: "Geuze Boon — Mariage Parfait (Vintage)", description: "Sour, dry", volume: "37,5 cl", abv: "8%", price: "€ 9,00" },
+  { category: "Sour / Geuze", name: "Oedipus — Polyamorie", description: "Sour, fruity", volume: "33 cl", abv: "5%", price: "€ 5,00" },
+
+  // Ale
+  { category: "Ale", name: "Kompaan — Wingman", description: "Hoppy, smooth", volume: "33 cl", abv: "5%", price: "€ 5,00" },
+  { category: "Ale", name: "Vet & Lazy — Fluffy", description: "Hoppy, smooth", volume: "33 cl", abv: "6.4%", price: "€ 5,00" },
+  { category: "Ale", name: "Bazen — Huisbaas", description: "Fruity, light", volume: "33 cl", abv: "4.5%", price: "€ 4,30" },
+  { category: "Ale", name: "BrewDog — Elvis Juice", description: "Hoppy, grapefruit", volume: "33 cl", abv: "6.5%", price: "€ 4,80" },
+  { category: "Ale", name: "Poesiat & Kater's — Vollenhoven IPA", description: "Bitter, citrus", volume: "33 cl", abv: "6.5%", price: "€ 4,80" },
+  { category: "Ale", name: "Lagunitas — A Little Sumpin' Ale", description: "Smooth, sweet", volume: "33 cl", abv: "7.5%", price: "€ 5,00" },
+  { category: "Ale", name: "Lagunitas — 12th of Never Ale", description: "Tropical, light", volume: "33 cl", abv: "5.5%", price: "€ 4,50" },
+  { category: "Ale", name: "Bax — #006 Abel's Ale", description: "Citrus, bitter", volume: "33 cl", abv: "7.8%", price: "€ 6,00" },
+
+  // Laag Alcohol
+  { category: "Laag Alcohol", name: "Uiltje — Met Je Bek In Het Zonnetje IPA", description: "Hoppy, bitter", volume: "33 cl", abv: "3.6%", price: "€ 5,50" },
+  { category: "Laag Alcohol", name: "Lowlander — Yuzu & Grapefruit", description: "Citrus, sour", volume: "33 cl", abv: "2.5%", price: "€ 5,50" },
+  { category: "Laag Alcohol", name: "Van Moll — Wanderlust IPA", description: "Light, hoppy", volume: "33 cl", abv: "2%", price: "€ 4,50" },
+  { category: "Laag Alcohol", name: "BrewDog — Nanny State", description: "Hoppy, thin", volume: "33 cl", abv: "0.5%", price: "€ 5,00" },
+  { category: "Laag Alcohol", name: "Amstel — Radler", description: "Citrus, lemon", volume: "33 cl", abv: "0.0%", price: "€ 2,80" },
+  { category: "Laag Alcohol", name: "Heineken 0.0", description: "Alcoholvrije pilsener", volume: "33 cl", abv: "0.0%", price: "€ 2,80" },
+
+  // Glutenvrij
+  { category: "Glutenvrij", name: "Light, Floral", description: "Hoppy, bitter", volume: "33 cl", abv: "4.5%", price: "€ 7,00" },
 ];
 
 const categories = [
   "Alle",
-  "Tapbier",
-  "Speciaalbier",
-  "Seizoensbier",
-  "IPA",
+  "Van de Tap",
   "Blond",
-  "Tripel",
   "Dubbel",
-  "Weizen",
-  "Stout",
-  "Alcoholvrij",
+  "Tripel",
+  "Quad / Barleywine",
+  "Amber",
+  "Zwaar Blond",
+  "Wit / Weizen",
+  "Fruit / Zomer",
+  "Stout / Porter",
+  "Saison",
+  "Cider",
+  "Sour / Geuze",
+  "Ale",
+  "Laag Alcohol",
+  "Glutenvrij",
 ];
 
 function Bierkaart() {
@@ -75,24 +144,28 @@ function Bierkaart() {
         <div className="mx-auto max-w-7xl px-6">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Bierkaart</p>
           <h1 className="mb-6 max-w-[20ch] font-display text-5xl text-paper md:text-6xl">
-            Meer dan veertig bieren, met zorg gekozen.
+            Meer dan zestig bieren, met zorg gekozen.
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
-            Van klassieke trappisten tot lokale seizoensbrouwsels — onze kaart is een
-            eerbetoon aan het ambacht. Onze bediening adviseert je graag over de juiste
-            keuze voor de avond.
+            Van huisbier Gele Ary op de tap tot klassieke trappisten, wilde sours en
+            alcoholvrije verfrissers — onze kaart is een eerbetoon aan het ambacht.
+            Onze bediening adviseert je graag over de juiste keuze voor de avond.
+          </p>
+          <p className="mt-6 max-w-[60ch] text-sm text-paper/50">
+            Productfoto's worden per bier toegevoegd. Waar nog geen officiële foto beschikbaar
+            is, tonen we een neutrale, vervangbare placeholder.
           </p>
         </div>
       </section>
 
-      <section className="border-t border-border bg-oak">
-        <div className="mx-auto max-w-7xl px-6 py-8">
-          <div className="flex flex-wrap gap-2">
+      <section className="sticky top-16 z-20 border-y border-border bg-oak/95 backdrop-blur">
+        <div className="mx-auto max-w-7xl overflow-x-auto px-6 py-4">
+          <div className="flex gap-2">
             {categories.map((c) => (
               <button
                 key={c}
                 onClick={() => setActive(c)}
-                className={`rounded-sm px-4 py-2 text-xs font-medium uppercase tracking-widest transition-all ${
+                className={`whitespace-nowrap rounded-sm px-4 py-2 text-xs font-medium uppercase tracking-widest transition-all ${
                   active === c
                     ? "bg-brass text-oak"
                     : "text-muted-foreground ring-1 ring-border hover:text-brass"
@@ -105,27 +178,10 @@ function Bierkaart() {
         </div>
       </section>
 
-      <section className="bg-oak pb-24">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 md:grid-cols-2 lg:grid-cols-3">
+      <section className="bg-oak pb-24 pt-12">
+        <div className="mx-auto grid max-w-7xl gap-6 px-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((b) => (
-            <article
-              key={b.name}
-              className="group flex flex-col rounded-sm bg-oak-light ring-1 ring-border transition-all hover:ring-brass/40"
-            >
-              <PhotoPlaceholder aspect="5 / 4" label="Bierfoto volgt" className="rounded-b-none" />
-              <div className="flex flex-1 flex-col p-6">
-                <div className="mb-1 flex items-start justify-between gap-4">
-                  <h3 className="font-display text-2xl text-paper">{b.name}</h3>
-                  <span className="shrink-0 font-medium text-brass">{b.abv}</span>
-                </div>
-                <p className="mb-4 text-sm text-muted-foreground">{b.brewery}</p>
-                <p className="mb-6 flex-1 text-sm text-paper/70">{b.notes}</p>
-                <div className="mt-auto flex justify-between border-t border-border pt-4 text-[11px] uppercase tracking-widest text-muted-foreground">
-                  <span>Serveer · {b.temp}</span>
-                  <span className="text-brass">{b.pair}</span>
-                </div>
-              </div>
-            </article>
+            <ProductCard key={`${b.category}-${b.name}`} product={b} aspect="4 / 3" tone="dark" />
           ))}
         </div>
       </section>
