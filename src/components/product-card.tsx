@@ -30,8 +30,8 @@ export function ProductCard({ product, aspect = "4 / 3", tone = "dark" }: Props)
     ? "bg-oak-light ring-border"
     : "bg-white ring-oak/10";
   const title = isDark ? "text-paper" : "text-oak";
-  const sub = isDark ? "text-muted-foreground" : "text-oak/60";
-  const meta = isDark ? "text-paper/70" : "text-oak/70";
+  const sub = isDark ? "text-muted-foreground" : "text-oak/75";
+  const meta = isDark ? "text-paper/85" : "text-oak/80";
   const price = isDark ? "text-brass" : "text-brass-dim";
 
   return (

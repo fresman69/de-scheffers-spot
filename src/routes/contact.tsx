@@ -50,7 +50,7 @@ function Contact() {
                   <MapPin size={20} className="mt-1 shrink-0 text-brass-dim" />
                   <div>
                     <p className="font-medium">Scheffersplein 12</p>
-                    <p className="text-oak/60">3311 PX Dordrecht</p>
+                    <p className="text-oak/75">3311 PX Dordrecht</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
@@ -70,7 +70,7 @@ function Contact() {
                 {hours.map(([d, t]) => (
                   <li key={d} className="flex justify-between border-b border-dashed border-oak/10 pb-2">
                     <span className="font-medium">{d}</span>
-                    <span className="text-oak/60">{t}</span>
+                    <span className="text-oak/75">{t}</span>
                   </li>
                 ))}
               </ul>
@@ -98,7 +98,7 @@ function Contact() {
                 loading="lazy"
               />
             </div>
-            <p className="mt-6 text-sm text-oak/70">
+            <p className="mt-6 text-sm text-oak/80">
               Op 3 minuten lopen van station Dordrecht Centrum. Parkeergarage Visstraat op 200 meter.
             </p>
           </div>

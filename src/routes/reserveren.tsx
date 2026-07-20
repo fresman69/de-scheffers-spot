@@ -77,7 +77,7 @@ function Reserveren() {
               <div className="py-10 text-center">
                 <CheckCircle2 size={48} className="mx-auto mb-6 text-brass-dim" />
                 <h3 className="mb-3 font-display text-3xl">Bedankt voor je aanvraag!</h3>
-                <p className="text-oak/70">
+                <p className="text-oak/80">
                   We nemen zo snel mogelijk contact op om je reservering te bevestigen.
                 </p>
               </div>
@@ -94,34 +94,34 @@ function Reserveren() {
                 </div>
                 <div className="grid gap-5 sm:grid-cols-2">
                   <label className="block">
-                    <span className="mb-2 block text-xs uppercase tracking-widest text-oak/60">Naam</span>
+                    <span className="mb-2 block text-xs uppercase tracking-widest text-oak/75">Naam</span>
                     <input required className="w-full rounded-sm border border-oak/15 bg-transparent px-4 py-3 outline-none focus:border-brass-dim" />
                   </label>
                   <label className="block">
-                    <span className="mb-2 block text-xs uppercase tracking-widest text-oak/60">Telefoon</span>
+                    <span className="mb-2 block text-xs uppercase tracking-widest text-oak/75">Telefoon</span>
                     <input required type="tel" className="w-full rounded-sm border border-oak/15 bg-transparent px-4 py-3 outline-none focus:border-brass-dim" />
                   </label>
                 </div>
                 <label className="block">
-                  <span className="mb-2 block text-xs uppercase tracking-widest text-oak/60">E-mail</span>
+                  <span className="mb-2 block text-xs uppercase tracking-widest text-oak/75">E-mail</span>
                   <input required type="email" className="w-full rounded-sm border border-oak/15 bg-transparent px-4 py-3 outline-none focus:border-brass-dim" />
                 </label>
                 <div className="grid gap-5 sm:grid-cols-3">
                   <label className="block">
-                    <span className="mb-2 block text-xs uppercase tracking-widest text-oak/60">Datum</span>
+                    <span className="mb-2 block text-xs uppercase tracking-widest text-oak/75">Datum</span>
                     <input required type="date" className="w-full rounded-sm border border-oak/15 bg-transparent px-4 py-3 outline-none focus:border-brass-dim" />
                   </label>
                   <label className="block">
-                    <span className="mb-2 block text-xs uppercase tracking-widest text-oak/60">Tijd</span>
+                    <span className="mb-2 block text-xs uppercase tracking-widest text-oak/75">Tijd</span>
                     <input required type="time" className="w-full rounded-sm border border-oak/15 bg-transparent px-4 py-3 outline-none focus:border-brass-dim" />
                   </label>
                   <label className="block">
-                    <span className="mb-2 block text-xs uppercase tracking-widest text-oak/60">Personen</span>
+                    <span className="mb-2 block text-xs uppercase tracking-widest text-oak/75">Personen</span>
                     <input required type="number" min={1} defaultValue={2} className="w-full rounded-sm border border-oak/15 bg-transparent px-4 py-3 outline-none focus:border-brass-dim" />
                   </label>
                 </div>
                 <label className="block">
-                  <span className="mb-2 block text-xs uppercase tracking-widest text-oak/60">Wensen (optioneel)</span>
+                  <span className="mb-2 block text-xs uppercase tracking-widest text-oak/75">Wensen (optioneel)</span>
                   <textarea rows={4} className="w-full rounded-sm border border-oak/15 bg-transparent px-4 py-3 outline-none focus:border-brass-dim" />
                 </label>
                 <button
@@ -130,7 +130,7 @@ function Reserveren() {
                 >
                   Verstuur aanvraag
                 </button>
-                <p className="text-center text-xs text-oak/50">
+                <p className="text-center text-xs text-oak/75">
                   Of bel ons direct op{" "}
                   <a href="tel:+31786134242" className="text-brass-dim">
                     078 613 4242

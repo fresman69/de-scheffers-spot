@@ -66,12 +66,12 @@ function OverOns() {
             <h2 className="mb-6 font-display text-4xl leading-tight md:text-5xl">
               Waar donker hout, koper en Dordts gelach elkaar ontmoeten.
             </h2>
-            <p className="mb-6 text-pretty text-oak/70">
+            <p className="mb-6 text-pretty text-oak/80">
               We geloven in de kracht van eenvoud: goed bier, oprechte aandacht en een café dat
               voelt als thuis. Elke tap wordt met zorg gekozen, elk borrelhapje met liefde bereid,
               en elke gast met een warme groet ontvangen.
             </p>
-            <p className="text-pretty text-oak/70">
+            <p className="text-pretty text-oak/80">
               Onze bar is een verhaal op zichzelf. De koperen tapkranen glimmen tegen het donkere
               eiken, de leren krukken dragen het geheugen van duizenden gesprekken, en het licht
               van de messingen lampen strijkt zachtjes over de flessen achter de bar.
