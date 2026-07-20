@@ -43,7 +43,7 @@ function Borrelkaart() {
             gemaakt om te delen. Onze bediening tipt graag het juiste bier of de
             juiste wijn erbij.
           </p>
-          <p className="mt-6 max-w-[60ch] text-sm text-paper/50">
+          <p className="mt-6 max-w-[60ch] text-sm text-paper/75">
             Foto's van de happas worden per gerecht toegevoegd. Waar een echte foto
             nog ontbreekt, tonen we een neutrale, vervangbare placeholder.
           </p>

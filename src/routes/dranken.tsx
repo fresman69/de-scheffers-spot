@@ -139,7 +139,7 @@ function Dranken() {
             Onze volledige kaart met wijnen, sterke dranken, gin & tonic, warme dranken
             en frisdranken — zorgvuldig samengesteld voor elk moment van de avond.
           </p>
-          <p className="mt-6 max-w-[60ch] text-sm text-paper/50">
+          <p className="mt-6 max-w-[60ch] text-sm text-paper/75">
             Productfoto's worden per drank toegevoegd. Waar een officiële foto nog ontbreekt,
             tonen we een neutrale, later vervangbare placeholder.
           </p>

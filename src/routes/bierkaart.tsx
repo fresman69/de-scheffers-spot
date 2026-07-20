@@ -151,7 +151,7 @@ function Bierkaart() {
             alcoholvrije verfrissers — onze kaart is een eerbetoon aan het ambacht.
             Onze bediening adviseert je graag over de juiste keuze voor de avond.
           </p>
-          <p className="mt-6 max-w-[60ch] text-sm text-paper/50">
+          <p className="mt-6 max-w-[60ch] text-sm text-paper/75">
             Productfoto's worden per bier toegevoegd. Waar nog geen officiële foto beschikbaar
             is, tonen we een neutrale, vervangbare placeholder.
           </p>

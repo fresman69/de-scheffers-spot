@@ -109,7 +109,7 @@ function Home() {
             <h2 className="mb-8 max-w-[35ch] text-balance font-display text-4xl leading-tight md:text-5xl">
               Een huiskamer in het hart van de stad waar historie en vriendschap samenkomen.
             </h2>
-            <p className="mb-12 max-w-[60ch] text-pretty text-lg text-oak/70">
+            <p className="mb-12 max-w-[60ch] text-pretty text-lg text-oak/80">
               Stadscafé Rijke &amp; Zn. is geworteld in de Dordtse geschiedenis. Met onze passie
               voor ambachtelijke bieren en oprechte gastvrijheid bieden wij een plek waar de
               tijd even stilstaat — donker hout, koperen tapkranen en een warme sfeer.
@@ -179,7 +179,7 @@ function Home() {
                 <p className="mb-5 text-sm text-muted-foreground">
                   {b.brewery} · {b.temp}
                 </p>
-                <p className="text-pretty text-sm leading-relaxed text-paper/70">{b.note}</p>
+                <p className="text-pretty text-sm leading-relaxed text-paper/85">{b.note}</p>
               </article>
             ))}
           </div>
@@ -195,7 +195,7 @@ function Home() {
               {hours.map(([d, t]) => (
                 <div key={d} className="flex justify-between border-b border-black/5 pb-3">
                   <span className="font-medium">{d}</span>
-                  <span className="text-oak/60">{t}</span>
+                  <span className="text-oak/75">{t}</span>
                 </div>
               ))}
             </div>
@@ -221,7 +221,7 @@ function Home() {
                     <h3 className="font-display text-xl transition-colors group-hover:text-brass-dim">
                       {e.title}
                     </h3>
-                    <p className="mt-1 text-sm text-oak/60">{e.meta}</p>
+                    <p className="mt-1 text-sm text-oak/75">{e.meta}</p>
                   </div>
                 </div>
               ))}
@@ -277,7 +277,7 @@ function Home() {
                 <PhotoPlaceholder key={i} tone="light" aspect="1 / 1" label="Instagram post" />
               ))}
             </div>
-            <p className="mt-4 text-xs text-oak/50">
+            <p className="mt-4 text-xs text-oak/75">
               Koppeling met de officiële Instagram-feed van Rijke &amp; Zn. wordt aangesloten
               zodra het account is geverifieerd.
             </p>
@@ -298,7 +298,7 @@ function Home() {
                 loading="lazy"
               />
             </div>
-            <p className="mt-6 text-sm text-oak/70">
+            <p className="mt-6 text-sm text-oak/80">
               Scheffersplein 12, 3311 PX Dordrecht — op 3 minuten lopen van station Dordrecht Centrum.
             </p>
           </div>

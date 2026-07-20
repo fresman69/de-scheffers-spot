@@ -24,7 +24,7 @@ export function PhotoPlaceholder({
   const toneClasses =
     tone === "dark"
       ? "bg-oak-light text-muted-foreground ring-border"
-      : "bg-oak/[0.04] text-oak/50 ring-oak/10";
+      : "bg-oak/[0.04] text-oak/75 ring-oak/10";
 
   return (
     <div
