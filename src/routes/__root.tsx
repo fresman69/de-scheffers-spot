@@ -80,22 +80,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Stadscafé Rijke & Zn. is dé ontmoetingsplek op het Scheffersplein in Dordrecht. Speciaalbier, wijn, borrelhapjes en een gezellige bruine cafésfeer.",
+          "Dé ontmoetingsplek op het Scheffersplein. Speciaalbier, wijn, borrelhapjes en de gezellige sfeer van Dordrecht.",
       },
       { name: "author", content: "Stadscafé Rijke & Zn." },
-      { property: "og:title", content: "Stadscafé Rijke & Zn. — Dordrecht" },
+      { property: "og:title", content: "Stadscafé Rijke & Zn. — Speciaalbier op het Scheffersplein Dordrecht" },
       {
         property: "og:description",
         content:
-          "Speciaalbier, wijn en borrelhapjes in het hart van Dordrecht. Reserveer online.",
+          "Dé ontmoetingsplek op het Scheffersplein. Speciaalbier, wijn, borrelhapjes en de gezellige sfeer van Dordrecht.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Stadscafé Rijke & Zn." },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Stadscafé Rijke & Zn. — Speciaalbier op het Scheffersplein Dordrecht" },
+      { name: "twitter:description", content: "Dé ontmoetingsplek op het Scheffersplein. Speciaalbier, wijn, borrelhapjes en de gezellige sfeer van Dordrecht." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/864e9f43-d1ff-43f5-9042-fdaf210aadc0/id-preview-32eb416b--3030e587-0e2c-48b8-aabd-374eb7f88cb1.lovable.app-1784404156583.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/864e9f43-d1ff-43f5-9042-fdaf210aadc0/id-preview-32eb416b--3030e587-0e2c-48b8-aabd-374eb7f88cb1.lovable.app-1784404156583.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
