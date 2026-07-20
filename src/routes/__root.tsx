@@ -83,6 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Dé ontmoetingsplek op het Scheffersplein. Speciaalbier, wijn, borrelhapjes en de gezellige sfeer van Dordrecht.",
       },
       { name: "author", content: "Stadscafé Rijke & Zn." },
+      { name: "google-site-verification", content: "Ku2-ctAEbemhXWDqpPifgZQXgxgdPj5lXZcFxZkucdA" },
       { property: "og:title", content: "Stadscafé Rijke & Zn. — Speciaalbier op het Scheffersplein Dordrecht" },
       {
         property: "og:description",
