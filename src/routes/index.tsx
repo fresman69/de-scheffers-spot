@@ -273,20 +273,34 @@ function Home() {
           <div>
             <div className="mb-8 flex items-center gap-3">
               <Instagram size={18} className="text-brass-dim" />
-              <span className="text-xs font-semibold uppercase tracking-widest text-brass-dim">
-                @rijke_zn
-              </span>
+              <a
+                href="https://www.instagram.com/stadscafe_rijke/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-semibold uppercase tracking-widest text-brass-dim hover:text-oak"
+              >
+                @stadscafe_rijke
+              </a>
             </div>
-            <h2 className="mb-8 font-display text-4xl">Sfeer op Instagram</h2>
+            <h2 className="mb-4 font-display text-4xl">Sfeer op Instagram</h2>
+            <p className="mb-8 max-w-[52ch] text-pretty text-oak/80">
+              Volg <span className="font-medium">@stadscafe_rijke</span> voor sfeerbeelden uit
+              het café, verse tapkranen, borrelplanken, evenementen op het Scheffersplein en
+              een blik achter de schermen bij Rijke &amp; Zn.
+            </p>
             <div className="grid grid-cols-3 gap-2">
               {Array.from({ length: 6 }).map((_, i) => (
                 <PhotoPlaceholder key={i} tone="light" aspect="1 / 1" label="Instagram post" />
               ))}
             </div>
-            <p className="mt-4 text-xs text-oak/75">
-              Koppeling met de officiële Instagram-feed van Rijke &amp; Zn. wordt aangesloten
-              zodra het account is geverifieerd.
-            </p>
+            <a
+              href="https://www.instagram.com/stadscafe_rijke/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block border-b border-brass-dim/40 pb-1 text-sm font-medium text-brass-dim hover:border-brass-dim"
+            >
+              Bekijk op Instagram →
+            </a>
           </div>
           <div>
             <div className="mb-8 flex items-center gap-3">
