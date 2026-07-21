@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Instagram, MapPin, Star } from "lucide-react";
 import { PhotoPlaceholder } from "../components/photo-placeholder";
 import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
+import gevelCafe from "../assets/gevel-cafe.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
