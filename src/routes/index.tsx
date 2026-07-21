@@ -69,8 +69,12 @@ function Home() {
       {/* Hero */}
       <section className="relative flex min-h-[92vh] items-center justify-center overflow-hidden bg-oak">
         <div className="absolute inset-0 bg-gradient-to-b from-oak-light via-oak to-oak" />
-        <div className="absolute inset-4 opacity-40 sm:inset-8">
-          <PhotoPlaceholder label="Sfeerfoto café — nog toe te voegen" className="h-full" />
+        <div className="absolute inset-0">
+          <img
+            src={gevelCafe.url}
+            alt="Gevel van Stadscafé Rijke & Zn. aan het Scheffersplein in Dordrecht — rode kozijnen, neonletters en illy koffie schoolbord"
+            className="h-full w-full object-cover opacity-55"
+          />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-oak/60 via-oak/30 to-oak" />
         <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
