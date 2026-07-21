@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Instagram, MapPin, Star } from "lucide-react";
 import { PhotoPlaceholder } from "../components/photo-placeholder";
+import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -122,7 +123,12 @@ function Home() {
       {/* Sfeerimpressie */}
       <section className="bg-oak py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
-          <PhotoPlaceholder aspect="4 / 3" label="Terrasfoto — nog toe te voegen" />
+          <img
+            src={interieurCafe.url}
+            alt="Interieur van Stadscafé Rijke & Zn. — vintage bierposters, kroonluchter en bistrotafeltjes bij het raam aan de Voorstraat in Dordrecht"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-sm object-cover ring-1 ring-border"
+          />
           <div>
             <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass">
               Sfeerimpressie
@@ -267,20 +273,34 @@ function Home() {
           <div>
             <div className="mb-8 flex items-center gap-3">
               <Instagram size={18} className="text-brass-dim" />
-              <span className="text-xs font-semibold uppercase tracking-widest text-brass-dim">
-                @rijke_zn
-              </span>
+              <a
+                href="https://www.instagram.com/stadscafe_rijke/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-semibold uppercase tracking-widest text-brass-dim hover:text-oak"
+              >
+                @stadscafe_rijke
+              </a>
             </div>
-            <h2 className="mb-8 font-display text-4xl">Sfeer op Instagram</h2>
+            <h2 className="mb-4 font-display text-4xl">Sfeer op Instagram</h2>
+            <p className="mb-8 max-w-[52ch] text-pretty text-oak/80">
+              Volg <span className="font-medium">@stadscafe_rijke</span> voor sfeerbeelden uit
+              het café, verse tapkranen, borrelplanken, evenementen op het Scheffersplein en
+              een blik achter de schermen bij Rijke &amp; Zn.
+            </p>
             <div className="grid grid-cols-3 gap-2">
               {Array.from({ length: 6 }).map((_, i) => (
                 <PhotoPlaceholder key={i} tone="light" aspect="1 / 1" label="Instagram post" />
               ))}
             </div>
-            <p className="mt-4 text-xs text-oak/75">
-              Koppeling met de officiële Instagram-feed van Rijke &amp; Zn. wordt aangesloten
-              zodra het account is geverifieerd.
-            </p>
+            <a
+              href="https://www.instagram.com/stadscafe_rijke/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block border-b border-brass-dim/40 pb-1 text-sm font-medium text-brass-dim hover:border-brass-dim"
+            >
+              Bekijk op Instagram →
+            </a>
           </div>
           <div>
             <div className="mb-8 flex items-center gap-3">
