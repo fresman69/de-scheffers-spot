@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Instagram, MapPin, Star } from "lucide-react";
 import { PhotoPlaceholder } from "../components/photo-placeholder";
+import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -122,7 +123,12 @@ function Home() {
       {/* Sfeerimpressie */}
       <section className="bg-oak py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
-          <PhotoPlaceholder aspect="4 / 3" label="Terrasfoto — nog toe te voegen" />
+          <img
+            src={interieurCafe.url}
+            alt="Interieur van Stadscafé Rijke & Zn. — vintage bierposters, kroonluchter en bistrotafeltjes bij het raam aan de Voorstraat in Dordrecht"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-sm object-cover ring-1 ring-border"
+          />
           <div>
             <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass">
               Sfeerimpressie
