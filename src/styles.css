@@ -51,7 +51,9 @@
   --oak-light: oklch(0.22 0.012 60);
   --brass: oklch(0.68 0.09 78);
   --brass-dim: oklch(0.56 0.08 78);
-  --paper: oklch(0.985 0.006 85);
+  --paper: oklch(0.96 0.03 85);
+  --wine: oklch(0.48 0.16 25);
+  --wine-dim: oklch(0.38 0.14 25);
 
   --background: var(--oak);
   --foreground: oklch(0.92 0.008 85);
