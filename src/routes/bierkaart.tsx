@@ -9,7 +9,7 @@ export const Route = createFileRoute("/bierkaart")({
       {
         name: "description",
         content:
-          "Onze volledige bierkaart: van de tap, blond, dubbel, tripel, quad, amber, wit/weizen, stout, saison, cider, sour, ale, laag alcohol en glutenvrij.",
+          "Onze volledige bierkaart 2025: van huisbier Gouwe Ary tot trappisten, sours, ciders, saisons en alcoholvrij. Zorgvuldig gekozen speciaalbieren in Dordrecht.",
       },
       { property: "og:title", content: "Bierkaart — Rijke & Zn." },
       { property: "og:url", content: "/bierkaart" },
@@ -22,96 +22,97 @@ export const Route = createFileRoute("/bierkaart")({
 type Beer = Product & { category: string };
 
 const beers: Beer[] = [
-  // Van de Tap
-  { category: "Van de Tap", name: "Heineken Fluit", description: "Pilsener", volume: "18 cl", abv: "5%", price: "€ 2,30" },
-  { category: "Van de Tap", name: "Heineken Vaas", description: "Pilsener", volume: "25 cl", abv: "5%", price: "€ 2,80" },
-  { category: "Van de Tap", name: "Gele Ary", description: "Huisbier Rijke & Zn", volume: "25 cl", abv: "5%", price: "€ 3,20" },
+  // Van de Tap / Op fles
+  { category: "Van de Tap", name: "Gouwe Ary", description: "Huisbier Rijke & Zn.", abv: "5%" },
+  { category: "Van de Tap", name: "Heineken Fluit / Vaas", description: "Pilsener — 0,18L · 0,25L · 0,5L", abv: "5%" },
+  { category: "Van de Tap", name: "6 wisselende tapkranen", description: "Vraag onze bediening naar de actuele selectie" },
 
   // Blond
-  { category: "Blond", name: "Affligem Blond", description: "Smooth, fruity", volume: "33 cl", abv: "6.8%", price: "€ 4,20" },
-  { category: "Blond", name: "Maallust — De Weldoener", description: "Sweet, hoppy", volume: "33 cl", abv: "6.5%", price: "€ 4,80" },
-  { category: "Blond", name: "'t IJ — Flink", description: "Light, citrus", volume: "33 cl", abv: "4.7%", price: "€ 4,20" },
+  { category: "Blond", name: "Affligem — Blond", abv: "6,8%" },
+  { category: "Blond", name: "Van Moll — Toewijding", abv: "5,5%" },
+  { category: "Blond", name: "Scheldebrouwerij — Strandgaper", abv: "6,2%" },
 
   // Dubbel
-  { category: "Dubbel", name: "Westmalle Trappist Dubbel", description: "Sweet, malty", volume: "33 cl", abv: "7%", price: "€ 4,40" },
-  { category: "Dubbel", name: "Corsendonk Pater Dubbel", description: "Sweet, dark", volume: "33 cl", abv: "6.5%", price: "€ 4,80" },
+  { category: "Dubbel", name: "La Trappe — Dubbel", abv: "7%" },
+  { category: "Dubbel", name: "Corsendonk — Pater Dubbel", abv: "6,5%" },
+  { category: "Dubbel", name: "Lefort — Belgian Brown Ale", abv: "5,8%" },
+  { category: "Dubbel", name: "Westmalle — Dubbel", abv: "7%" },
 
   // Tripel
-  { category: "Tripel", name: "Westmalle Trappist Tripel", description: "Strong, sweet", volume: "33 cl", abv: "9.5%", price: "€ 4,80" },
-  { category: "Tripel", name: "Tripel Karmeliet", description: "Sweet, smooth", volume: "33 cl", abv: "8.4%", price: "€ 4,80" },
-  { category: "Tripel", name: "White Dog — Tripel", description: "Herbal, floral", volume: "33 cl", abv: "7.5%", price: "€ 4,90" },
-  { category: "Tripel", name: "Van Moll — Triple Trouble", description: "Subtle, body", volume: "33 cl", abv: "8.5%", price: "€ 4,80" },
+  { category: "Tripel", name: "La Trappe — Tripel", abv: "8%" },
+  { category: "Tripel", name: "Tripel Karmeliet", abv: "8,4%" },
+  { category: "Tripel", name: "Gouden Carolus — Tripel", abv: "9%" },
+  { category: "Tripel", name: "Scheldebrouwerij — Zeezuiper", abv: "8%" },
 
-  // Quad / Barleywine
-  { category: "Quad / Barleywine", name: "Trappistes Rochefort 10", description: "Strong, dark", volume: "33 cl", abv: "11.3%", price: "€ 6,50" },
-  { category: "Quad / Barleywine", name: "St. Bernardus — Abt 12", description: "Dark, smooth", volume: "33 cl", abv: "10%", price: "€ 5,50" },
-  { category: "Quad / Barleywine", name: "De Molen — Bommen en Granaten", description: "Sweet, strong", volume: "33 cl", abv: "11.9%", price: "€ 6,50" },
-  { category: "Quad / Barleywine", name: "Gouden Carolus Whisky Infused", description: "Sweet, caramel", volume: "33 cl", abv: "11.7%", price: "€ 6,50" },
+  // Quad / Barley Wine
+  { category: "Quad / Barley Wine", name: "Trappistes Rochefort 10", abv: "11,3%" },
+  { category: "Quad / Barley Wine", name: "Kees — Barley Wine", abv: "11,5%" },
+  { category: "Quad / Barley Wine", name: "Gouden Carolus — Whisky Infused", abv: "11,7%" },
+  { category: "Quad / Barley Wine", name: "St. Bernardus — Abt 12", abv: "10%" },
 
-  // Amber
-  { category: "Amber", name: "Seef — Bootjes Bier", description: "Hoppy, fruity", volume: "33 cl", abv: "7%", price: "€ 4,40" },
-  { category: "Amber", name: "De Koninck — APA", description: "Light, smooth", volume: "33 cl", abv: "5.2%", price: "€ 3,90" },
-  { category: "Amber", name: "Ebontree — Dordt 1618-1619", description: "Honey, refreshing", volume: "33 cl", abv: "5.5%", price: "€ 5,00" },
-  { category: "Amber", name: "Anchor — Liberty Ale", description: "Hoppy, light", volume: "33 cl", abv: "5.9%", price: "€ 5,50" },
+  // Indian Pale Ale
+  { category: "Indian Pale Ale", name: "Two Chefs — Bon Chef", abv: "6,5%" },
+  { category: "Indian Pale Ale", name: "Kees — Hazy Sunrise", abv: "7,5%" },
+  { category: "Indian Pale Ale", name: "BrewDog — Elvis Juice", abv: "6,5%" },
+  { category: "Indian Pale Ale", name: "Van de Streek — Hop Art IPA", abv: "6,5%" },
+  { category: "Indian Pale Ale", name: "De Eeuwige Jeugd — Gladjanus White IPA", description: "Glutenvrij", abv: "5%" },
 
   // Zwaar Blond
-  { category: "Zwaar Blond", name: "Duvel", description: "Strong, smooth", volume: "33 cl", abv: "8.5%", price: "€ 4,80" },
-  { category: "Zwaar Blond", name: "La Chouffe Blond", description: "Strong, sweet", volume: "33 cl", abv: "8%", price: "€ 4,80" },
-  { category: "Zwaar Blond", name: "Hapkin", description: "Strong, dry", volume: "33 cl", abv: "8.5%", price: "€ 4,80" },
-  { category: "Zwaar Blond", name: "Corsendonk — Agnus Tripel Blond", description: "Smooth, sweet", volume: "33 cl", abv: "7.5%", price: "€ 4,80" },
+  { category: "Zwaar Blond", name: "Duvel", abv: "8,5%" },
+  { category: "Zwaar Blond", name: "La Chouffe Blond", abv: "8%" },
+  { category: "Zwaar Blond", name: "Corsendonk — Agnus", abv: "7,5%" },
+  { category: "Zwaar Blond", name: "Omer — Traditional Blond", abv: "8%" },
 
   // Wit / Weizen
-  { category: "Wit / Weizen", name: "Paulaner", description: "Smooth, light", volume: "50 cl", abv: "5.5%", price: "€ 5,90" },
-  { category: "Wit / Weizen", name: "'t IJ — IJwit", description: "Fruity, soft", volume: "33 cl", abv: "6.5%", price: "€ 4,40" },
+  { category: "Wit / Weizen", name: "Paulaner — Hefeweizen", volume: "50 cl", abv: "5,5%" },
+  { category: "Wit / Weizen", name: "'t IJ — IJwit", abv: "6,5%" },
+  { category: "Wit / Weizen", name: "Vedett — Extra White", abv: "4,7%" },
+  { category: "Wit / Weizen", name: "De Eeuwige Jeugd — Bullebak Weizen Tripel", abv: "7,7%" },
+
+  // Amber
+  { category: "Amber", name: "Seef — Bootjes Bier", abv: "7%" },
 
   // Fruit / Zomer
-  { category: "Fruit / Zomer", name: "Kasteel — Rouge", description: "Sweet, fruity", volume: "33 cl", abv: "8%", price: "€ 4,80" },
-  { category: "Fruit / Zomer", name: "Liefmans Fruitesse", description: "Sweet, fruity", volume: "25 cl", abv: "3.8%", price: "€ 3,80" },
-  { category: "Fruit / Zomer", name: "Kriek Boon", description: "Fruity, sour", volume: "25 cl", abv: "4%", price: "€ 3,80" },
-  { category: "Fruit / Zomer", name: "Desperados", description: "Fruity, light", volume: "33 cl", abv: "5.9%", price: "€ 4,00" },
-  { category: "Fruit / Zomer", name: "Sol", description: "Light, clean", volume: "33 cl", abv: "4.5%", price: "€ 4,00" },
+  { category: "Fruit / Zomer", name: "Kasteel — Rouge", abv: "8%" },
+  { category: "Fruit / Zomer", name: "Liefmans — Fruitesse", abv: "3,8%" },
+  { category: "Fruit / Zomer", name: "Boon — Kriek Boon", abv: "4%" },
+  { category: "Fruit / Zomer", name: "Desperados", abv: "5,9%" },
+  { category: "Fruit / Zomer", name: "Corona", abv: "4,5%" },
 
   // Stout / Porter
-  { category: "Stout / Porter", name: "Lowlander — Poorter", description: "Dark, coffee", volume: "33 cl", abv: "6%", price: "€ 5,50" },
-  { category: "Stout / Porter", name: "Poesiat & Kater's — Vollenhoven Stout", description: "Coffee, bitter", volume: "33 cl", abv: "7.1%", price: "€ 5,50" },
-  { category: "Stout / Porter", name: "Kompaan — 39 Bloedbroeder", description: "Dark, port", volume: "33 cl", abv: "9.1%", price: "€ 6,00" },
-  { category: "Stout / Porter", name: "BrewDog — Jet Black Heart", description: "Coffee, milk", volume: "33 cl", abv: "4.7%", price: "€ 4,80" },
+  { category: "Stout / Porter", name: "Guinness — Draught Stout", abv: "4,2%" },
+  { category: "Stout / Porter", name: "Kees — Export Porter 1750", abv: "8,7%" },
+  { category: "Stout / Porter", name: "Kompaan — Bloedbroeder Imperial Stout" },
 
   // Saison
-  { category: "Saison", name: "Oedipus — Mannenliefde", description: "Hoppy, light", volume: "33 cl", abv: "6%", price: "€ 5,00" },
-  { category: "Saison", name: "Kompaan — Thierry Sauvage", description: "Light, soft", volume: "33 cl", abv: "4.8%", price: "€ 4,60" },
-
-  // Cider
-  { category: "Cider", name: "Strongbow — Gold", description: "Sweet, apple", volume: "33 cl", abv: "5%", price: "€ 3,90" },
-  { category: "Cider", name: "Strongbow — British Dry", description: "Dry, apple", volume: "33 cl", abv: "5%", price: "€ 3,90" },
-  { category: "Cider", name: "Bulmers — Original Irish Cider", description: "Sweet, apple", volume: "50 cl", abv: "4.5%", price: "€ 6,50" },
-  { category: "Cider", name: "Bulmers — Pear", description: "Sweet, dry", volume: "50 cl", abv: "4.5%", price: "€ 6,50" },
+  { category: "Saison", name: "Oedipus — Mannenliefde", abv: "6%" },
+  { category: "Saison", name: "Oersoep — Laizy Daisy", abv: "6%" },
+  { category: "Saison", name: "Saison Dupont", abv: "6%" },
 
   // Sour / Geuze
-  { category: "Sour / Geuze", name: "Oude Geuze Boon", description: "Sour, dry", volume: "33 cl", abv: "7%", price: "€ 4,40" },
-  { category: "Sour / Geuze", name: "Geuze Boon — Mariage Parfait (Vintage)", description: "Sour, dry", volume: "37,5 cl", abv: "8%", price: "€ 9,00" },
-  { category: "Sour / Geuze", name: "Oedipus — Polyamorie", description: "Sour, fruity", volume: "33 cl", abv: "5%", price: "€ 5,00" },
+  { category: "Sour / Geuze", name: "Rodenbach — Grand Cru", abv: "6%" },
+  { category: "Sour / Geuze", name: "Oedipus — Polyamorie", abv: "5%" },
+  { category: "Sour / Geuze", name: "Rijngoud — Zuurbier", abv: "4,5%" },
+  { category: "Sour / Geuze", name: "Oude Geuze Boon", abv: "7%" },
 
-  // Ale
-  { category: "Ale", name: "Kompaan — Wingman", description: "Hoppy, smooth", volume: "33 cl", abv: "5%", price: "€ 5,00" },
-  { category: "Ale", name: "Vet & Lazy — Fluffy", description: "Hoppy, smooth", volume: "33 cl", abv: "6.4%", price: "€ 5,00" },
-  { category: "Ale", name: "Bazen — Huisbaas", description: "Fruity, light", volume: "33 cl", abv: "4.5%", price: "€ 4,30" },
-  { category: "Ale", name: "BrewDog — Elvis Juice", description: "Hoppy, grapefruit", volume: "33 cl", abv: "6.5%", price: "€ 4,80" },
-  { category: "Ale", name: "Poesiat & Kater's — Vollenhoven IPA", description: "Bitter, citrus", volume: "33 cl", abv: "6.5%", price: "€ 4,80" },
-  { category: "Ale", name: "Lagunitas — A Little Sumpin' Ale", description: "Smooth, sweet", volume: "33 cl", abv: "7.5%", price: "€ 5,00" },
-  { category: "Ale", name: "Lagunitas — 12th of Never Ale", description: "Tropical, light", volume: "33 cl", abv: "5.5%", price: "€ 4,50" },
-  { category: "Ale", name: "Bax — #006 Abel's Ale", description: "Citrus, bitter", volume: "33 cl", abv: "7.8%", price: "€ 6,00" },
+  // Cider
+  { category: "Cider", name: "Magners" },
+  { category: "Cider", name: "Magners — Pear" },
+  { category: "Cider", name: "Magners — Dark Fruit", abv: "4%" },
+  { category: "Cider", name: "Magners — Pint", volume: "568 ml", abv: "4,5%" },
+  { category: "Cider", name: "La Trappe — Isid'or", abv: "7,5%" },
 
-  // Laag Alcohol
-  { category: "Laag Alcohol", name: "Uiltje — Met Je Bek In Het Zonnetje IPA", description: "Hoppy, bitter", volume: "33 cl", abv: "3.6%", price: "€ 5,50" },
-  { category: "Laag Alcohol", name: "Lowlander — Yuzu & Grapefruit", description: "Citrus, sour", volume: "33 cl", abv: "2.5%", price: "€ 5,50" },
-  { category: "Laag Alcohol", name: "Van Moll — Wanderlust IPA", description: "Light, hoppy", volume: "33 cl", abv: "2%", price: "€ 4,50" },
-  { category: "Laag Alcohol", name: "BrewDog — Nanny State", description: "Hoppy, thin", volume: "33 cl", abv: "0.5%", price: "€ 5,00" },
-  { category: "Laag Alcohol", name: "Amstel — Radler", description: "Citrus, lemon", volume: "33 cl", abv: "0.0%", price: "€ 2,80" },
-  { category: "Laag Alcohol", name: "Heineken 0.0", description: "Alcoholvrije pilsener", volume: "33 cl", abv: "0.0%", price: "€ 2,80" },
-
-  // Glutenvrij
-  { category: "Glutenvrij", name: "Light, Floral", description: "Hoppy, bitter", volume: "33 cl", abv: "4.5%", price: "€ 7,00" },
+  // 0.0 / Alcoholarm
+  { category: "0.0 / Alcoholarm", name: "Heineken 0.0", abv: "0,0%" },
+  { category: "0.0 / Alcoholarm", name: "Amstel Radler", abv: "2,0%" },
+  { category: "0.0 / Alcoholarm", name: "Frontaal — Juice Punch", abv: "0,5%" },
+  { category: "0.0 / Alcoholarm", name: "Van Moll — Wanderlust", abv: "0,3%" },
+  { category: "0.0 / Alcoholarm", name: "Kromme Haring — Sand Diver", abv: "0,3%" },
+  { category: "0.0 / Alcoholarm", name: "Lowlander — Wit", abv: "0,0%" },
+  { category: "0.0 / Alcoholarm", name: "Oersoep — Starchaser", abv: "0,0%" },
+  { category: "0.0 / Alcoholarm", name: "Amstel Radler 0.0", abv: "0,0%" },
+  { category: "0.0 / Alcoholarm", name: "Affligem Blond 0.0", abv: "0,0%" },
+  { category: "0.0 / Alcoholarm", name: "La Trappe — Nillis Donker", abv: "0,0%" },
 ];
 
 const categories = [
@@ -120,18 +121,17 @@ const categories = [
   "Blond",
   "Dubbel",
   "Tripel",
-  "Quad / Barleywine",
-  "Amber",
+  "Quad / Barley Wine",
+  "Indian Pale Ale",
   "Zwaar Blond",
   "Wit / Weizen",
+  "Amber",
   "Fruit / Zomer",
   "Stout / Porter",
   "Saison",
-  "Cider",
   "Sour / Geuze",
-  "Ale",
-  "Laag Alcohol",
-  "Glutenvrij",
+  "Cider",
+  "0.0 / Alcoholarm",
 ];
 
 function Bierkaart() {
@@ -144,16 +144,16 @@ function Bierkaart() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Bierkaart</p>
           <h1 className="mb-6 max-w-[20ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
-            Meer dan zestig bieren, met zorg gekozen.
+            Zorgvuldig gekozen speciaalbier.
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
-            Van huisbier Gele Ary op de tap tot klassieke trappisten, wilde sours en
+            Van huisbier Gouwe Ary op de tap tot klassieke trappisten, wilde sours en
             alcoholvrije verfrissers — onze kaart is een eerbetoon aan het ambacht.
             Onze bediening adviseert je graag over de juiste keuze voor de avond.
           </p>
           <p className="mt-6 max-w-[60ch] text-sm text-paper/75">
-            Productfoto's worden per bier toegevoegd. Waar nog geen officiële foto beschikbaar
-            is, tonen we een neutrale, vervangbare placeholder.
+            Prijzen zijn tijdelijk niet zichtbaar op de website — vraag onze bediening
+            of bekijk de kaart in het café. Productfoto's worden per bier toegevoegd.
           </p>
         </div>
       </section>
