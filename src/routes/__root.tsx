@@ -18,7 +18,7 @@ function NotFoundComponent() {
   return (
     <>
       <SiteNav />
-      <main className="flex min-h-[70vh] items-center justify-center bg-oak px-6">
+      <main className="flex min-h-[70svh] items-center justify-center bg-oak px-4 sm:px-6">
         <div className="max-w-md text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-brass">Foutmelding</p>
           <h1 className="mt-4 font-display text-6xl text-paper">404</h1>
@@ -29,7 +29,7 @@ function NotFoundComponent() {
           <div className="mt-8">
             <Link
               to="/"
-              className="inline-flex items-center justify-center rounded-sm bg-brass px-6 py-3 text-sm font-medium text-oak transition-colors hover:bg-paper"
+              className="inline-flex items-center justify-center rounded-sm bg-brass px-4 sm:px-6 py-3 text-sm font-medium text-oak transition-colors hover:bg-paper"
             >
               Terug naar home
             </Link>
@@ -49,7 +49,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-oak px-6">
+    <main className="flex min-h-screen items-center justify-center bg-oak px-4 sm:px-6">
       <div className="max-w-md text-center">
         <h1 className="font-display text-3xl text-paper">Er ging iets mis</h1>
         <p className="mt-3 text-sm text-muted-foreground">

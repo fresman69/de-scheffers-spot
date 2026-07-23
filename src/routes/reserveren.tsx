@@ -33,10 +33,10 @@ function Reserveren() {
 
   return (
     <>
-      <section className="bg-oak py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-oak py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Reserveren</p>
-          <h1 className="mb-6 max-w-[24ch] font-display text-5xl text-paper md:text-6xl">
+          <h1 className="mb-6 max-w-[24ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
             Kom gezellig langs — reserveer je plek.
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
@@ -46,8 +46,8 @@ function Reserveren() {
         </div>
       </section>
 
-      <section className="bg-paper py-24 text-oak">
-        <div className="mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-[1fr_1.4fr]">
+      <section className="bg-paper py-16 md:py-24 text-oak">
+        <div className="mx-auto grid max-w-6xl gap-16 px-4 sm:px-6 lg:grid-cols-[1fr_1.4fr]">
           <div>
             <h2 className="mb-6 font-display text-3xl">Waarvoor reserveer je?</h2>
             <div className="space-y-3">
@@ -126,7 +126,7 @@ function Reserveren() {
                 </label>
                 <button
                   type="submit"
-                  className="w-full rounded-sm bg-oak px-6 py-4 text-sm font-medium uppercase tracking-widest text-paper transition-colors hover:bg-brass hover:text-oak"
+                  className="w-full rounded-sm bg-oak px-4 sm:px-6 py-4 text-sm font-medium uppercase tracking-widest text-paper transition-colors hover:bg-brass hover:text-oak"
                 >
                   Verstuur aanvraag
                 </button>

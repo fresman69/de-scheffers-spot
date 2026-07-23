@@ -129,10 +129,10 @@ function Dranken() {
 
   return (
     <>
-      <section className="bg-oak py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-oak py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Dranken</p>
-          <h1 className="mb-6 max-w-[24ch] font-display text-5xl text-paper md:text-6xl">
+          <h1 className="mb-6 max-w-[24ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
             Van huiswijn tot Islay single malt.
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
@@ -147,7 +147,7 @@ function Dranken() {
       </section>
 
       <section className="sticky top-16 z-20 border-y border-border bg-oak/95 backdrop-blur">
-        <div className="mx-auto max-w-7xl overflow-x-auto px-6 py-4">
+        <div className="mx-auto max-w-7xl overflow-x-auto px-4 sm:px-6 py-4">
           <div className="flex gap-2">
             {categories.map((c) => (
               <button
@@ -167,7 +167,7 @@ function Dranken() {
       </section>
 
       <section className="bg-oak pb-24 pt-12">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((d) => (
             <ProductCard key={`${d.category}-${d.name}`} product={d} aspect="4 / 3" tone="dark" />
           ))}

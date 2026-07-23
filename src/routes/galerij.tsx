@@ -32,10 +32,10 @@ const slots = [
 function Galerij() {
   return (
     <>
-      <section className="bg-oak py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-oak py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Galerij</p>
-          <h1 className="mb-6 max-w-[22ch] font-display text-5xl text-paper md:text-6xl">
+          <h1 className="mb-6 max-w-[22ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
             Sfeer, ambacht en Dordts leven.
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
@@ -46,7 +46,7 @@ function Galerij() {
       </section>
 
       <section className="bg-oak pb-24">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
             {slots.map((s, i) => (
               <div key={i} className="mb-4 break-inside-avoid">

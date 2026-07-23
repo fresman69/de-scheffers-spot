@@ -67,7 +67,7 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-[92vh] items-center justify-center overflow-hidden bg-oak">
+      <section className="relative flex min-h-[85svh] md:min-h-[92vh] items-center justify-center overflow-hidden bg-oak">
         <div className="absolute inset-0 bg-gradient-to-b from-oak-light via-oak to-oak" />
         <div className="absolute inset-0">
           <img
@@ -77,7 +77,7 @@ function Home() {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-oak/60 via-oak/30 to-oak" />
-        <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 text-center">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass animate-fade-in">
             Sinds mensenheugenis · Scheffersplein
           </p>
@@ -106,13 +106,13 @@ function Home() {
       </section>
 
       {/* Introductie */}
-      <section className="bg-paper py-24 text-oak">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-paper py-16 md:py-24 text-oak">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl">
             <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass-dim">
               Ambacht &amp; Gastvrijheid
             </span>
-            <h2 className="mb-8 max-w-[35ch] text-balance font-display text-4xl leading-tight md:text-5xl">
+            <h2 className="mb-8 max-w-[35ch] text-balance font-display text-3xl sm:text-4xl leading-tight md:text-5xl">
               Een huiskamer in het hart van de stad waar historie en vriendschap samenkomen.
             </h2>
             <p className="mb-12 max-w-[60ch] text-pretty text-lg text-oak/80">
@@ -126,8 +126,8 @@ function Home() {
       </section>
 
       {/* Sfeerimpressie */}
-      <section className="bg-oak py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
+      <section className="bg-oak py-16 md:py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <img
             src={interieurCafe.url}
             alt="Interieur van Stadscafé Rijke & Zn. — vintage bierposters, kroonluchter en bistrotafeltjes bij het raam aan de Voorstraat in Dordrecht"
@@ -138,7 +138,7 @@ function Home() {
             <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass">
               Sfeerimpressie
             </span>
-            <h2 className="mb-6 font-display text-4xl text-paper md:text-5xl">
+            <h2 className="mb-6 font-display text-3xl sm:text-4xl text-paper md:text-5xl">
               Terras, bar en donkerhouten zalen.
             </h2>
             <p className="mb-6 text-pretty text-muted-foreground">
@@ -157,14 +157,14 @@ function Home() {
       </section>
 
       {/* Uitgelichte bieren */}
-      <section className="bg-oak py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-oak py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-16 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               <span className="mb-3 block text-xs font-semibold uppercase tracking-widest text-brass">
                 Van de tap
               </span>
-              <h2 className="font-display text-4xl text-paper md:text-5xl">
+              <h2 className="font-display text-3xl sm:text-4xl text-paper md:text-5xl">
                 Uitgelichte speciaalbieren
               </h2>
             </div>
@@ -198,8 +198,8 @@ function Home() {
       </section>
 
       {/* Openingstijden & Agenda */}
-      <section className="bg-paper py-24 text-oak">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+      <section className="bg-paper py-16 md:py-24 text-oak">
+        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2">
           <div className="rounded-sm bg-white p-10 ring-1 ring-black/5 md:p-12">
             <h2 className="mb-10 font-display text-4xl">Openingstijden</h2>
             <div className="space-y-4 border-t border-black/5 pt-8">
@@ -242,13 +242,13 @@ function Home() {
       </section>
 
       {/* Reviews */}
-      <section className="bg-oak-light py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-oak-light py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 text-center">
             <span className="mb-3 block text-xs font-semibold uppercase tracking-widest text-brass">
               Wat gasten zeggen
             </span>
-            <h2 className="mx-auto max-w-[24ch] font-display text-4xl text-paper md:text-5xl">
+            <h2 className="mx-auto max-w-[24ch] font-display text-3xl sm:text-4xl text-paper md:text-5xl">
               Gastvrij, ambachtelijk, Dordts.
             </h2>
           </div>
@@ -273,8 +273,8 @@ function Home() {
       </section>
 
       {/* Instagram + Kaart */}
-      <section className="bg-paper py-24 text-oak">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+      <section className="bg-paper py-16 md:py-24 text-oak">
+        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2">
           <div>
             <div className="mb-8 flex items-center gap-3">
               <Instagram size={18} className="text-brass-dim" />

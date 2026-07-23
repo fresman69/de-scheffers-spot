@@ -30,10 +30,10 @@ const events = [
 function Evenementen() {
   return (
     <>
-      <section className="bg-oak py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-oak py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Agenda</p>
-          <h1 className="mb-6 max-w-[22ch] font-display text-5xl text-paper md:text-6xl">
+          <h1 className="mb-6 max-w-[22ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
             Elke week iets bijzonders.
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
@@ -44,13 +44,13 @@ function Evenementen() {
       </section>
 
       <section className="bg-oak pb-24">
-        <div className="mx-auto max-w-4xl space-y-4 px-6">
+        <div className="mx-auto max-w-4xl space-y-4 px-4 sm:px-6">
           {events.map((e) => {
             const Icon = e.icon;
             return (
               <article
                 key={e.title + e.d}
-                className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-6 rounded-sm bg-oak-light p-6 ring-1 ring-border transition-all hover:ring-brass/40 sm:gap-8 sm:p-8"
+                className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4 rounded-sm bg-oak-light p-5 ring-1 ring-border transition-all hover:ring-brass/40 sm:grid-cols-[auto_minmax(0,1fr)_auto] sm:gap-8 sm:p-8"
               >
                 <div className="flex h-20 w-16 shrink-0 flex-col items-center justify-center rounded-sm bg-oak ring-1 ring-brass/20 sm:h-24 sm:w-20">
                   <span className="text-[10px] uppercase tracking-widest text-brass">{e.m}</span>
@@ -66,15 +66,16 @@ function Evenementen() {
                   <h2 className="font-display text-2xl text-paper">{e.title}</h2>
                   <p className="mt-1 hidden text-sm text-muted-foreground sm:block">{e.desc}</p>
                 </div>
-                <div className="flex flex-col items-end gap-3">
+                <div className="col-span-2 flex items-center justify-between gap-3 border-t border-border pt-4 sm:col-span-1 sm:flex-col sm:items-end sm:border-0 sm:pt-0">
                   <span className="text-xs font-medium text-brass">{e.price}</span>
                   <Link
                     to="/reserveren"
-                    className="rounded-sm border border-brass/40 px-3 py-1.5 text-[11px] uppercase tracking-widest text-brass hover:bg-brass hover:text-oak"
+                    className="rounded-sm border border-brass/40 px-3 py-2 text-[11px] uppercase tracking-widest text-brass hover:bg-brass hover:text-oak"
                   >
                     Aanmelden
                   </Link>
                 </div>
+
               </article>
             );
           })}
