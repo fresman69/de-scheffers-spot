@@ -50,7 +50,7 @@ function Evenementen() {
             return (
               <article
                 key={e.title + e.d}
-                className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-6 rounded-sm bg-oak-light p-6 ring-1 ring-border transition-all hover:ring-brass/40 sm:gap-8 sm:p-8"
+                className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4 rounded-sm bg-oak-light p-5 ring-1 ring-border transition-all hover:ring-brass/40 sm:grid-cols-[auto_minmax(0,1fr)_auto] sm:gap-8 sm:p-8"
               >
                 <div className="flex h-20 w-16 shrink-0 flex-col items-center justify-center rounded-sm bg-oak ring-1 ring-brass/20 sm:h-24 sm:w-20">
                   <span className="text-[10px] uppercase tracking-widest text-brass">{e.m}</span>
