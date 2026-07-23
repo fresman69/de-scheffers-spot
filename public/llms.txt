@@ -11,7 +11,7 @@ Stadscafé Rijke & Zn. is een authentiek Dordts bruin café. Van huisbier Gele A
 - [Bierkaart](/bierkaart): Volledige bierkaart met tap, blond, dubbel, tripel, quad, amber, wit, stout, saison, cider, sour, ale en alcoholvrij.
 - [Dranken](/dranken): Wijnen, sterke dranken, gin & tonic, warme dranken en frisdranken.
 - [Borrelkaart](/borrelkaart): Ambachtelijke happas — fuet, tosti, olijven, kaasplank, nacho's, gehaktballen, chorizo en ossenworst.
-- [Evenementen](/evenementen): Live muziek, proeverijen, pubquiz en seizoensavonden.
+
 - [Galerij](/galerij): Sfeerbeelden van het café.
 - [Reserveren](/reserveren): Online tafelreservering.
 - [Contact](/contact): Adres, openingstijden en route naar Voorstraat 260, Dordrecht.
