@@ -66,15 +66,16 @@ function Evenementen() {
                   <h2 className="font-display text-2xl text-paper">{e.title}</h2>
                   <p className="mt-1 hidden text-sm text-muted-foreground sm:block">{e.desc}</p>
                 </div>
-                <div className="flex flex-col items-end gap-3">
+                <div className="col-span-2 flex items-center justify-between gap-3 border-t border-border pt-4 sm:col-span-1 sm:flex-col sm:items-end sm:border-0 sm:pt-0">
                   <span className="text-xs font-medium text-brass">{e.price}</span>
                   <Link
                     to="/reserveren"
-                    className="rounded-sm border border-brass/40 px-3 py-1.5 text-[11px] uppercase tracking-widest text-brass hover:bg-brass hover:text-oak"
+                    className="rounded-sm border border-brass/40 px-3 py-2 text-[11px] uppercase tracking-widest text-brass hover:bg-brass hover:text-oak"
                   >
                     Aanmelden
                   </Link>
                 </div>
+
               </article>
             );
           })}
