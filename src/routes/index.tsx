@@ -197,9 +197,9 @@ function Home() {
         </div>
       </section>
 
-      {/* Openingstijden & Agenda */}
+      {/* Openingstijden */}
       <section className="bg-paper py-16 md:py-24 text-oak">
-        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <div className="rounded-sm bg-white p-10 ring-1 ring-black/5 md:p-12">
             <h2 className="mb-10 font-display text-4xl">Openingstijden</h2>
             <div className="space-y-4 border-t border-black/5 pt-8">
@@ -207,33 +207,6 @@ function Home() {
                 <div key={d} className="flex justify-between border-b border-black/5 pb-3">
                   <span className="font-medium">{d}</span>
                   <span className="text-oak/75">{t}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <div className="mb-10 flex items-end justify-between">
-              <h2 className="font-display text-4xl">Agenda</h2>
-              <Link
-                to="/evenementen"
-                className="border-b border-brass-dim/40 pb-1 text-sm font-medium text-brass-dim hover:border-brass-dim"
-              >
-                Alles →
-              </Link>
-            </div>
-            <div className="space-y-6">
-              {events.map((e) => (
-                <div key={e.title} className="group flex gap-6">
-                  <div className="flex h-24 w-20 shrink-0 flex-col items-center justify-center rounded-sm bg-oak text-paper ring-1 ring-black/5">
-                    <span className="text-xs uppercase tracking-widest text-brass">{e.m}</span>
-                    <span className="font-display text-2xl">{e.d}</span>
-                  </div>
-                  <div className="min-w-0 pt-2">
-                    <h3 className="font-display text-xl transition-colors group-hover:text-brass-dim">
-                      {e.title}
-                    </h3>
-                    <p className="mt-1 text-sm text-oak/75">{e.meta}</p>
-                  </div>
                 </div>
               ))}
             </div>
