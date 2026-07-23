@@ -2,9 +2,9 @@ import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-oak py-16">
+    <footer className="border-t border-border bg-oak py-12 md:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex flex-col items-start justify-between gap-12 md:flex-row">
+        <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:gap-12">
           <div>
             <span className="mb-4 block font-display text-3xl text-brass">Rijke &amp; Zn.</span>
             <p className="max-w-[30ch] text-sm leading-relaxed text-muted-foreground">
@@ -13,7 +13,8 @@ export function SiteFooter() {
               3311 PX Dordrecht
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-16 sm:grid-cols-3">
+          <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-3 sm:gap-16">
+
             <div>
               <h4 className="mb-6 text-xs font-semibold uppercase tracking-widest text-paper">Bezoek</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
