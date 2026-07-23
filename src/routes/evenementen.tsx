@@ -30,10 +30,10 @@ const events = [
 function Evenementen() {
   return (
     <>
-      <section className="bg-oak py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-oak py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Agenda</p>
-          <h1 className="mb-6 max-w-[22ch] font-display text-5xl text-paper md:text-6xl">
+          <h1 className="mb-6 max-w-[22ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
             Elke week iets bijzonders.
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
@@ -44,7 +44,7 @@ function Evenementen() {
       </section>
 
       <section className="bg-oak pb-24">
-        <div className="mx-auto max-w-4xl space-y-4 px-6">
+        <div className="mx-auto max-w-4xl space-y-4 px-4 sm:px-6">
           {events.map((e) => {
             const Icon = e.icon;
             return (

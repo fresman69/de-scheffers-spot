@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-oak py-16">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-12 md:flex-row">
           <div>
             <span className="mb-4 block font-display text-3xl text-brass">Rijke &amp; Zn.</span>

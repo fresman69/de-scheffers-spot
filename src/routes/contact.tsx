@@ -31,17 +31,17 @@ const hours = [
 function Contact() {
   return (
     <>
-      <section className="bg-oak py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-oak py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Contact</p>
-          <h1 className="mb-6 max-w-[22ch] font-display text-5xl text-paper md:text-6xl">
+          <h1 className="mb-6 max-w-[22ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
             Loop binnen, bel of stuur een berichtje.
           </h1>
         </div>
       </section>
 
-      <section className="bg-paper py-24 text-oak">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+      <section className="bg-paper py-16 md:py-24 text-oak">
+        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2">
           <div className="space-y-10">
             <div>
               <h2 className="mb-8 font-display text-3xl">Bezoek</h2>

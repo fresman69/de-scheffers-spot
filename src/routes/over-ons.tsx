@@ -41,9 +41,9 @@ function OverOns() {
   return (
     <>
       <section className="bg-oak py-32">
-        <div className="mx-auto max-w-4xl px-6 text-center">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Over ons</p>
-          <h1 className="mb-6 font-display text-5xl text-paper md:text-6xl">
+          <h1 className="mb-6 font-display text-4xl sm:text-5xl text-paper md:text-6xl">
             Ons verhaal, ons huis.
           </h1>
           <p className="mx-auto max-w-[55ch] text-pretty text-lg text-paper/85">
@@ -54,8 +54,8 @@ function OverOns() {
         </div>
       </section>
 
-      <section className="bg-paper py-24 text-oak">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-5 lg:items-center">
+      <section className="bg-paper py-16 md:py-24 text-oak">
+        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-5 lg:items-center">
           <div className="lg:col-span-2">
             <PhotoPlaceholder tone="light" aspect="4 / 5" label="Cafédetail — nog toe te voegen" />
           </div>
@@ -63,7 +63,7 @@ function OverOns() {
             <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass-dim">
               Ambacht sinds jaar en dag
             </span>
-            <h2 className="mb-6 font-display text-4xl leading-tight md:text-5xl">
+            <h2 className="mb-6 font-display text-3xl sm:text-4xl leading-tight md:text-5xl">
               Waar donker hout, koper en Dordts gelach elkaar ontmoeten.
             </h2>
             <p className="mb-6 text-pretty text-oak/80">
@@ -80,13 +80,13 @@ function OverOns() {
         </div>
       </section>
 
-      <section className="bg-oak py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-oak py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-16 max-w-2xl">
             <span className="mb-3 block text-xs font-semibold uppercase tracking-widest text-brass">
               Waar we voor staan
             </span>
-            <h2 className="font-display text-4xl text-paper md:text-5xl">Vier pijlers.</h2>
+            <h2 className="font-display text-3xl sm:text-4xl text-paper md:text-5xl">Vier pijlers.</h2>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             {pillars.map((p, i) => (
