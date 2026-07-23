@@ -5,11 +5,11 @@ import { ProductCard, type Product } from "../components/product-card";
 export const Route = createFileRoute("/dranken")({
   head: () => ({
     meta: [
-      { title: "Dranken — Wijn, cocktails, sterk & meer | Rijke & Zn." },
+      { title: "Dranken — Wijn, gin, cocktails, sterk & meer | Rijke & Zn." },
       {
         name: "description",
         content:
-          "Onze wijnkaart, sterke dranken, gin & tonic, warme dranken en frisdranken — zoals opgenomen in de officiële kaart 2025 van Stadscafé Rijke & Zn.",
+          "Onze wijnkaart, gin & tonic, cocktails, sterke dranken, koffie/thee en frisdranken — de officiële kaart 2025 van Stadscafé Rijke & Zn.",
       },
       { property: "og:title", content: "Dranken — Rijke & Zn." },
       { property: "og:url", content: "/dranken" },
@@ -22,93 +22,108 @@ export const Route = createFileRoute("/dranken")({
 type Drink = Product & { category: string };
 
 const drinks: Drink[] = [
-  // Wijnen — Wit
-  { category: "Wijn wit", name: "Tarani Sauvignon Blanc", description: "Licht, fris en strak", volume: "15 cl", price: "€ 3,80" },
-  { category: "Wijn wit", name: "Le Bottle Viognier", description: "Verkwikkend, bloemig, fruitig", volume: "15 cl", price: "€ 4,50" },
-  { category: "Wijn wit", name: "Le Bottle Chardonnay", description: "Vol, zacht en boterig", volume: "15 cl", price: "€ 4,50" },
-  { category: "Wijn wit", name: "El Arino Gewürztraminer", description: "Intens, rijk en kruidig", volume: "15 cl", price: "€ 4,50" },
-  { category: "Wijn wit", name: "Winzerkrone St. Michael", description: "Zoet en fruitig", volume: "15 cl", price: "€ 3,50" },
+  // Wijn — Wit
+  { category: "Wijn wit", name: "Tarani Sauvignon Blanc", description: "Licht, fris en strak" },
+  { category: "Wijn wit", name: "Les Bertholets Chardonnay", description: "Hout, boter en tropisch fruit" },
 
-  // Wijnen — Rood
-  { category: "Wijn rood", name: "Tarani Cabernet Sauvignon", description: "Zachte, lichte wijn", volume: "15 cl", price: "€ 3,80" },
-  { category: "Wijn rood", name: "Slent Farms Shiraz", description: "Complex, kruidig en vol", volume: "15 cl", price: "€ 4,70" },
-  { category: "Wijn rood", name: "Sendero Royal Rioja", description: "Rijp, aangezet, zoet-zuur — fles", volume: "75 cl", price: "€ 25,50" },
+  // Wijn — Rood
+  { category: "Wijn rood", name: "Tarani Cabernet Sauvignon", description: "Zoet, licht en soepel" },
+  { category: "Wijn rood", name: "Rioja Luis Cañas", description: "Klassieke Rioja, zachte subtiele hout" },
+  { category: "Wijn rood", name: "Puerta Adalla Verdejo", description: "Fruitig, soepel en licht kruidig" },
+  { category: "Wijn rood", name: "Le Bottle Syrah", description: "Licht kruidig, vol van smaak" },
 
-  // Wijnen — Rosé
-  { category: "Wijn rosé", name: "Tarani Gamay Rosé", description: "Fruitig, soepel en licht", volume: "15 cl", price: "€ 3,80" },
+  // Wijn — Rosé
+  { category: "Wijn rosé", name: "Barista Pinotage", description: "Fruitig, hints van vanille en ciderhout" },
+  { category: "Wijn rosé", name: "Tarani Gamay Rosé", description: "Fruitig, soepel en licht" },
 
-  // Wijnen — Muserend
-  { category: "Muserend", name: "Casa Defra Prosecco Frizzante", description: "Verkwikkend, fris en fruitig", volume: "20 cl", price: "€ 6,50" },
-  { category: "Muserend", name: "Cava Naveran Brutissimo", description: "Strak, fris en mineralig — fles", volume: "75 cl", price: "€ 23,50" },
-
-  // Sterk
-  { category: "Sterk", name: "Ketel 1", description: "Jonge jenever", volume: "3,5 cl", price: "€ 2,60" },
-  { category: "Sterk", name: "Vieux", description: "Nederlandse brandewijn", volume: "3,5 cl", price: "€ 2,60" },
-  { category: "Sterk", name: "Zuidam Oude Jenever 1 jaar", description: "Rijp, rond", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Apfelkorn", description: "Zoet, appel", volume: "3,5 cl", price: "€ 3,50" },
-  { category: "Sterk", name: "Jägermeister", description: "Kruidenbitter", volume: "3,5 cl", price: "€ 3,00" },
-  { category: "Sterk", name: "Limoncello", description: "Zoet, citrus", volume: "3,5 cl", price: "€ 3,00" },
-  { category: "Sterk", name: "Bacardi", description: "Witte rum", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Brugal", description: "Bruine rum", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Vodka", description: "Neutraal, puur", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Cognac", description: "Frans, warm", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Tequila Sauza Gold", description: "Gerijpt, honing", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Drambuie", description: "Whisky-likeur", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Quarenta y Tres", description: "43 kruiden-likeur", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Disaronno", description: "Amandel-likeur", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Tia Maria", description: "Koffie-likeur", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Sambuca", description: "Anijs-likeur", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Cointreau", description: "Sinaasappel-likeur", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Baileys", description: "Iers, roomig", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Pernod", description: "Anijs, kruidig", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Campari", description: "Bitter, kruidig", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Southern Comfort", description: "Whisky-likeur", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Four Roses", description: "Kentucky straight bourbon whiskey", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Jack Daniel's", description: "Tennessee whiskey", volume: "3,5 cl", price: "€ 5,00" },
-  { category: "Sterk", name: "Chivas Regal 12", description: "Blended scotch whisky", volume: "3,5 cl", price: "€ 5,00" },
-  { category: "Sterk", name: "Famous Grouse", description: "Blended scotch whisky", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Jameson", description: "Irish whiskey", volume: "3,5 cl", price: "€ 4,50" },
-  { category: "Sterk", name: "Laphroaig 10", description: "Islay single malt whisky", volume: "3,5 cl", price: "€ 7,00" },
-  { category: "Sterk", name: "Bushmills 10", description: "Single malt Irish whiskey", volume: "3,5 cl", price: "€ 7,00" },
-  { category: "Sterk", name: "Talisker Skye", description: "Single malt scotch whisky", volume: "3,5 cl", price: "€ 7,00" },
+  // Mousserend
+  { category: "Mousserend", name: "Mionetto Prosecco", description: "Verkwikkend, fris en fruitig" },
+  { category: "Mousserend", name: "Cava Naveran Brutissimo", description: "Strak, fris en mineralig" },
 
   // Gin & Tonic
-  { category: "Gin & Tonic", name: "Loopuyt Gin & Tonic", description: "Loopuyt tonic, garnering naar keuze", volume: "vanaf 25 cl", price: "vanaf € 7,50" },
-  { category: "Gin & Tonic", name: "Tanqueray Gin & Tonic", description: "Fever-Tree Mediterranean, garnering", volume: "vanaf 25 cl", price: "vanaf € 7,50" },
-  { category: "Gin & Tonic", name: "Bulldog Gin & Tonic", description: "Fever-Tree Aromatic tonic, garnering", volume: "vanaf 25 cl", price: "vanaf € 7,50" },
-  { category: "Gin & Tonic", name: "Bombay Gin & Tonic", description: "Fever-Tree Elderflower, garnering", volume: "vanaf 25 cl", price: "vanaf € 7,50" },
-  { category: "Gin & Tonic", name: "Bobby's Gin & Tonic", description: "Loopuyt ginger-beer, garnering", volume: "vanaf 25 cl", price: "vanaf € 7,50" },
+  { category: "Gin & Tonic", name: "Loopuyt 1772 Dry Gin", description: "Fever-Tree Indian Tonic Water" },
+  { category: "Gin & Tonic", name: "Tanqueray Dry Gin", description: "Fever-Tree Indian Tonic Water · verse limoen" },
+  { category: "Gin & Tonic", name: "Bobby's Schiedam Dry Gin", description: "Fever-Tree Mediterranean Tonic · sinaasappel & kruidnagel" },
+  { category: "Gin & Tonic", name: "Bombay Sapphire", description: "Fever-Tree Indian Tonic Water · verse limoen" },
+  { category: "Gin & Tonic", name: "Tanqueray Flor de Sevilla Gin", description: "Fever-Tree Clementine Tonic · gedroogde sinaasappel" },
 
-  // Warme dranken
-  { category: "Warme dranken", name: "Espresso", description: "Enkel, krachtig", volume: "5 cl", price: "€ 2,50" },
-  { category: "Warme dranken", name: "Dubbele espresso", description: "Volle body", volume: "10 cl", price: "€ 4,00" },
-  { category: "Warme dranken", name: "Koffie", description: "Vers gezet", volume: "15 cl", price: "€ 2,50" },
-  { category: "Warme dranken", name: "Koffie verkeerd", description: "Met warme melk", volume: "20 cl", price: "€ 2,70" },
-  { category: "Warme dranken", name: "Cappuccino", description: "Melk & schuim", volume: "15 cl", price: "€ 2,70" },
-  { category: "Warme dranken", name: "Cortado", description: "Espresso met warme melk", volume: "10 cl", price: "€ 2,50" },
-  { category: "Warme dranken", name: "Thee — diverse smaken", description: "Ruime keuze aan smaken", volume: "20 cl", price: "€ 2,20" },
-  { category: "Warme dranken", name: "Italian Coffee", description: "Met Disaronno", volume: "20 cl", price: "€ 7,50" },
-  { category: "Warme dranken", name: "Irish Coffee", description: "Met Jameson", volume: "20 cl", price: "€ 7,50" },
-  { category: "Warme dranken", name: "Spanish Coffee", description: "Met Tia Maria", volume: "20 cl", price: "€ 7,50" },
-  { category: "Warme dranken", name: "French Coffee", description: "Met Dom Benedictine", volume: "20 cl", price: "€ 7,50" },
+  // Cocktails
+  { category: "Cocktails", name: "Spiced Mule", description: "Barceló · pimento · ginger beer · gedroogde sinaasappel" },
+  { category: "Cocktails", name: "Cuba Libre", description: "Cola · Barceló · limoensap" },
+  { category: "Cocktails", name: "Old Fashioned", description: "Bourbon · angostura · syrup" },
+  { category: "Cocktails", name: "Paloma", description: "Tequila · lime · pink grapefruit soda" },
 
-  // Frisdranken
-  { category: "Frisdranken", name: "Pepsi", description: "Cola", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Sisi", description: "Sinas", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "7up", description: "Citrus", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Sourcy", description: "Mineraalwater", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Bitter Lemon", description: "Fris, bitter", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Lipton Ice Tea", description: "Green of sparkling", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Cassis", description: "Zwarte bes", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Ginger Ale", description: "Gember, fris", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Royal Club Tonic", description: "Klassieke tonic", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Rivella", description: "Op basis van melkwei", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Fristi", description: "Rood fruit", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Chocomel", description: "Ook verwarmd", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Appelsap", description: "Zacht en zoet", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Tomatensap", description: "Hartig", volume: "20 cl", price: "€ 2,50" },
-  { category: "Frisdranken", name: "Verse jus d'orange (klein)", description: "Vers geperst", volume: "20 cl", price: "€ 3,00" },
-  { category: "Frisdranken", name: "Verse jus d'orange (groot)", description: "Vers geperst", volume: "30 cl", price: "€ 4,00" },
+  // Sterk — Jenever & Vieux
+  { category: "Sterk", name: "Ketel 1 Jonge" },
+  { category: "Sterk", name: "Rutte Oude" },
+  { category: "Sterk", name: "Vieux" },
+  // Sterk — Rum & Tequila
+  { category: "Sterk", name: "Barceló", description: "Rum" },
+  { category: "Sterk", name: "Bacardi", description: "Witte rum" },
+  { category: "Sterk", name: "Tequila Gold" },
+  // Sterk — Whisky & Bourbon
+  { category: "Sterk", name: "Buffalo Trace Bourbon" },
+  { category: "Sterk", name: "Four Roses", description: "Kentucky straight bourbon" },
+  { category: "Sterk", name: "Jack Daniel's", description: "Tennessee whiskey" },
+  { category: "Sterk", name: "Southern Comfort", description: "Whisky-likeur" },
+  { category: "Sterk", name: "Chivas Regal 12", description: "Blended scotch whisky" },
+  { category: "Sterk", name: "Famous Grouse", description: "Blended scotch whisky" },
+  { category: "Sterk", name: "Jameson", description: "Irish whiskey" },
+  { category: "Sterk", name: "Bushmills", description: "Irish whiskey" },
+  { category: "Sterk", name: "Laphroaig", description: "Islay single malt whisky" },
+  { category: "Sterk", name: "Talisker Skye", description: "Single malt scotch whisky" },
+  { category: "Sterk", name: "Nikka Days Whisky", description: "Japanse blended whisky" },
+  // Sterk — Vodka
+  { category: "Sterk", name: "Absolut Vodka" },
+  { category: "Sterk", name: "Ketel 1 Vodka" },
+  // Sterk — Cognac / Salmiari
+  { category: "Sterk", name: "Cognac Vieux" },
+  { category: "Sterk", name: "Salmiari", description: "Zoute drop-likeur" },
+  // Sterk — Likeuren & bitters
+  { category: "Sterk", name: "Jägermeister", description: "Kruidenbitter" },
+  { category: "Sterk", name: "Drambuie", description: "Whisky-likeur" },
+  { category: "Sterk", name: "Cuarenta y Tres", description: "43 kruiden-likeur" },
+  { category: "Sterk", name: "Disaronno", description: "Amandel-likeur" },
+  { category: "Sterk", name: "Tia Maria", description: "Koffie-likeur" },
+  { category: "Sterk", name: "Sambuca", description: "Anijs-likeur" },
+  { category: "Sterk", name: "Cointreau", description: "Sinaasappel-likeur" },
+  { category: "Sterk", name: "Baileys", description: "Iers, roomig" },
+  { category: "Sterk", name: "Pernod", description: "Anijs, kruidig" },
+  { category: "Sterk", name: "Limoncello", description: "Zoet, citrus" },
+  { category: "Sterk", name: "Black Sheep", description: "Kruidenbitter" },
+
+  // Koffie / Thee
+  { category: "Koffie / Thee", name: "Thee", description: "Diverse smaken" },
+  { category: "Koffie / Thee", name: "Verse gemberthee" },
+  { category: "Koffie / Thee", name: "Espresso" },
+  { category: "Koffie / Thee", name: "Dubbele espresso" },
+  { category: "Koffie / Thee", name: "Koffie" },
+  { category: "Koffie / Thee", name: "Koffie verkeerd" },
+  { category: "Koffie / Thee", name: "Cappuccino" },
+  { category: "Koffie / Thee", name: "Cortado" },
+  { category: "Koffie / Thee", name: "Warme chocomel", description: "Slagroom optioneel" },
+  { category: "Koffie / Thee", name: "Italian Coffee", description: "Met Disaronno" },
+  { category: "Koffie / Thee", name: "Irish Coffee", description: "Met Jameson" },
+  { category: "Koffie / Thee", name: "Spanish Coffee", description: "Met Tia Maria" },
+  { category: "Koffie / Thee", name: "French Coffee", description: "Met Cointreau" },
+
+  // Frisdrank
+  { category: "Frisdrank", name: "Pepsi" },
+  { category: "Frisdrank", name: "Sisi", description: "Sinas" },
+  { category: "Frisdrank", name: "7 Up" },
+  { category: "Frisdrank", name: "Sourcy", description: "Mineraalwater" },
+  { category: "Frisdrank", name: "Bitter Lemon" },
+  { category: "Frisdrank", name: "Lipton Ice Tea" },
+  { category: "Frisdrank", name: "Cassis" },
+  { category: "Frisdrank", name: "Ginger Ale" },
+  { category: "Frisdrank", name: "Fever-Tree Tonic" },
+  { category: "Frisdrank", name: "Fristi" },
+  { category: "Frisdrank", name: "Chocomel" },
+  { category: "Frisdrank", name: "Appelsap" },
+  { category: "Frisdrank", name: "Jus d'Orange", description: "Vers geperst" },
+  { category: "Frisdrank", name: "Double Dutch Watermelon" },
+  { category: "Frisdrank", name: "Double Dutch Ginger Beer" },
+  { category: "Frisdrank", name: "Double Dutch Pink Grapefruit" },
 ];
 
 const categories = [
@@ -116,11 +131,12 @@ const categories = [
   "Wijn wit",
   "Wijn rood",
   "Wijn rosé",
-  "Muserend",
-  "Sterk",
+  "Mousserend",
   "Gin & Tonic",
-  "Warme dranken",
-  "Frisdranken",
+  "Cocktails",
+  "Sterk",
+  "Koffie / Thee",
+  "Frisdrank",
 ];
 
 function Dranken() {
@@ -133,15 +149,16 @@ function Dranken() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Dranken</p>
           <h1 className="mb-6 max-w-[24ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
-            Van huiswijn tot Islay single malt.
+            Wijn, gin, cocktails & meer.
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
-            Onze volledige kaart met wijnen, sterke dranken, gin & tonic, warme dranken
-            en frisdranken — zorgvuldig samengesteld voor elk moment van de avond.
+            Onze volledige drankenkaart met wijnen, gin & tonic, cocktails,
+            sterke dranken, koffie/thee en frisdranken — zorgvuldig
+            samengesteld voor elk moment van de avond.
           </p>
           <p className="mt-6 max-w-[60ch] text-sm text-paper/75">
-            Productfoto's worden per drank toegevoegd. Waar een officiële foto nog ontbreekt,
-            tonen we een neutrale, later vervangbare placeholder.
+            Prijzen worden voorlopig niet online getoond. Vraag onze bediening
+            of bekijk de kaart in het café.
           </p>
         </div>
       </section>
