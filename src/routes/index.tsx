@@ -51,11 +51,6 @@ const hours = [
   ["Zondag", "12:00 — 23:00"],
 ];
 
-const events = [
-  { m: "Mei", d: "12", title: "Live Jazz op de Zondag", meta: "Vanaf 15:00 · Toegang gratis" },
-  { m: "Mei", d: "25", title: "Dordtse Pubquiz", meta: "Aanvang 20:30 · Teams van 5" },
-  { m: "Jun", d: "02", title: "Speciaalbier Proeverij", meta: "Met Brouwerij 't IJ · Reserveren" },
-];
 
 const reviews = [
   { name: "Sanne V.", text: "De sfeer, de bediening en die bierkaart — écht Dordts genieten.", src: "Google" },
