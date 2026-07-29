@@ -97,16 +97,16 @@ const reviews = [
 function Home() {
   return (
     <>
-      {/* Hero — cinematische video met eigen gevel als poster tot de video geleverd wordt */}
+      {/* Hero — nu met eigen gevelfoto; owner kan later 1-op-1 een MP4 in dit slot droppen. */}
       <section className="relative flex min-h-[88svh] items-center justify-center overflow-hidden bg-oak md:min-h-[92vh]">
-        <VideoPlaceholder fullscreen poster={gevelCafe.url}>
+        <div className="absolute inset-0" data-video-slot="hero">
           <img
             src={gevelCafe.url}
             alt="Gevel van StadsCafe aan het Scheffersplein in Dordrecht"
             className="h-full w-full object-cover opacity-60"
           />
-        </VideoPlaceholder>
-        <div className="absolute inset-0 bg-gradient-to-b from-oak/75 via-oak/40 to-oak" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-oak/80 via-oak/45 to-oak" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6">
           <p className="mb-4 font-script text-5xl leading-none text-brass animate-fade-in md:text-6xl">
             Sinds mensenheugenis
