@@ -4,7 +4,7 @@ import { PhotoPlaceholder } from "../components/photo-placeholder";
 import { Ornament } from "../components/ornament";
 import { Reveal } from "../components/reveal";
 import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
-import gevelCafe from "../assets/gevel-cafe.jpg.asset.json";
+import gevelCafe from "../assets/gevel-cafe.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
