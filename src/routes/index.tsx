@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Beer, Instagram, MapPin, Star, Users, Heart } from "lucide-react";
 import { PhotoPlaceholder } from "../components/photo-placeholder";
+import { Ornament } from "../components/ornament";
 import { Reveal } from "../components/reveal";
 import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
 import gevelCafe from "../assets/gevel-cafe.jpg.asset.json";
@@ -94,6 +95,11 @@ function Home() {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-oak/80 via-oak/45 to-oak" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute left-1/2 top-1/3 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-40 blur-3xl"
+          style={{ background: "radial-gradient(circle, var(--brass) 0%, transparent 70%)" }}
+        />
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6">
           <p className="mb-4 font-script text-5xl leading-none text-brass animate-fade-in md:text-6xl">
             Welkom bij
@@ -136,6 +142,9 @@ function Home() {
             <span className="mb-4 block font-script text-4xl leading-none text-brass-dim md:text-5xl">
               Kom binnen
             </span>
+          </Reveal>
+          <Reveal delay={60}>
+            <Ornament tone="wine" className="mb-6" />
           </Reveal>
           <Reveal delay={100}>
             <h2 className="mb-8 text-balance font-display-condensed text-4xl leading-tight tracking-wider text-oak md:text-6xl">
