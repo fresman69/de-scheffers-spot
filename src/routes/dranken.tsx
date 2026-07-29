@@ -32,8 +32,9 @@ const drinks: Drink[] = [
   { category: "Wijn rood", name: "Puerta Adalla Verdejo", description: "Fruitig, soepel en licht kruidig" },
   { category: "Wijn rood", name: "Le Bottle Syrah", description: "Licht kruidig, vol van smaak" },
 
+  { category: "Wijn rood", name: "Barista Pinotage", description: "Fruitig, hints van vanille en ciderhout" },
+
   // Wijn — Rosé
-  { category: "Wijn rosé", name: "Barista Pinotage", description: "Fruitig, hints van vanille en ciderhout" },
   { category: "Wijn rosé", name: "Tarani Gamay Rosé", description: "Fruitig, soepel en licht" },
 
   // Mousserend
