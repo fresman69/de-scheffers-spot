@@ -32,8 +32,9 @@ const drinks: Drink[] = [
   { category: "Wijn rood", name: "Puerta Adalla Verdejo", description: "Fruitig, soepel en licht kruidig" },
   { category: "Wijn rood", name: "Le Bottle Syrah", description: "Licht kruidig, vol van smaak" },
 
+  { category: "Wijn rood", name: "Barista Pinotage", description: "Fruitig, hints van vanille en ciderhout" },
+
   // Wijn — Rosé
-  { category: "Wijn rosé", name: "Barista Pinotage", description: "Fruitig, hints van vanille en ciderhout" },
   { category: "Wijn rosé", name: "Tarani Gamay Rosé", description: "Fruitig, soepel en licht" },
 
   // Mousserend
@@ -64,7 +65,7 @@ const drinks: Drink[] = [
   // Sterk — Whisky & Bourbon
   { category: "Sterk", name: "Buffalo Trace Bourbon" },
   { category: "Sterk", name: "Four Roses", description: "Kentucky straight bourbon" },
-  { category: "Sterk", name: "Jack Daniel's", description: "Tennessee whiskey" },
+  { category: "Sterk", name: "Jack Daniels", description: "Tennessee whiskey" },
   { category: "Sterk", name: "Southern Comfort", description: "Whisky-likeur" },
   { category: "Sterk", name: "Chivas Regal 12", description: "Blended scotch whisky" },
   { category: "Sterk", name: "Famous Grouse", description: "Blended scotch whisky" },
@@ -76,9 +77,9 @@ const drinks: Drink[] = [
   // Sterk — Vodka
   { category: "Sterk", name: "Absolut Vodka" },
   { category: "Sterk", name: "Ketel 1 Vodka" },
-  // Sterk — Cognac / Salmiari
-  { category: "Sterk", name: "Cognac Vieux" },
-  { category: "Sterk", name: "Salmiari", description: "Zoute drop-likeur" },
+  // Sterk — Cognac / Salmari
+  { category: "Sterk", name: "Cognac" },
+  { category: "Sterk", name: "Salmari", description: "Zoute drop-likeur" },
   // Sterk — Likeuren & bitters
   { category: "Sterk", name: "Jägermeister", description: "Kruidenbitter" },
   { category: "Sterk", name: "Drambuie", description: "Whisky-likeur" },
@@ -101,7 +102,7 @@ const drinks: Drink[] = [
   { category: "Koffie / Thee", name: "Koffie verkeerd" },
   { category: "Koffie / Thee", name: "Cappuccino" },
   { category: "Koffie / Thee", name: "Cortado" },
-  { category: "Koffie / Thee", name: "Warme chocomel", description: "Slagroom optioneel" },
+  { category: "Koffie / Thee", name: "Warme chocomel", description: "Slagroom + €0,50" },
   { category: "Koffie / Thee", name: "Italian Coffee", description: "Met Disaronno" },
   { category: "Koffie / Thee", name: "Irish Coffee", description: "Met Jameson" },
   { category: "Koffie / Thee", name: "Spanish Coffee", description: "Met Tia Maria" },
