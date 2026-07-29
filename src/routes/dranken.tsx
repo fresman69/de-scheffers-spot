@@ -65,7 +65,7 @@ const drinks: Drink[] = [
   // Sterk — Whisky & Bourbon
   { category: "Sterk", name: "Buffalo Trace Bourbon" },
   { category: "Sterk", name: "Four Roses", description: "Kentucky straight bourbon" },
-  { category: "Sterk", name: "Jack Daniel's", description: "Tennessee whiskey" },
+  { category: "Sterk", name: "Jack Daniels", description: "Tennessee whiskey" },
   { category: "Sterk", name: "Southern Comfort", description: "Whisky-likeur" },
   { category: "Sterk", name: "Chivas Regal 12", description: "Blended scotch whisky" },
   { category: "Sterk", name: "Famous Grouse", description: "Blended scotch whisky" },
@@ -77,9 +77,9 @@ const drinks: Drink[] = [
   // Sterk — Vodka
   { category: "Sterk", name: "Absolut Vodka" },
   { category: "Sterk", name: "Ketel 1 Vodka" },
-  // Sterk — Cognac / Salmiari
-  { category: "Sterk", name: "Cognac Vieux" },
-  { category: "Sterk", name: "Salmiari", description: "Zoute drop-likeur" },
+  // Sterk — Cognac / Salmari
+  { category: "Sterk", name: "Cognac" },
+  { category: "Sterk", name: "Salmari", description: "Zoute drop-likeur" },
   // Sterk — Likeuren & bitters
   { category: "Sterk", name: "Jägermeister", description: "Kruidenbitter" },
   { category: "Sterk", name: "Drambuie", description: "Whisky-likeur" },
