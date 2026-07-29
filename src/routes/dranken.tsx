@@ -5,13 +5,13 @@ import { ProductCard, type Product } from "../components/product-card";
 export const Route = createFileRoute("/dranken")({
   head: () => ({
     meta: [
-      { title: "Dranken — Wijn, gin, cocktails, sterk & meer | Rijke & Zn." },
+      { title: "Dranken — Wijn, gin, cocktails, sterk & meer | StadsCafe" },
       {
         name: "description",
         content:
-          "Onze wijnkaart, gin & tonic, cocktails, sterke dranken, koffie/thee en frisdranken — de officiële kaart 2025 van Stadscafé Rijke & Zn.",
+          "Onze wijnkaart, gin & tonic, cocktails, sterke dranken, koffie/thee en frisdranken — de officiële kaart 2025 van StadsCafe",
       },
-      { property: "og:title", content: "Dranken — Rijke & Zn." },
+      { property: "og:title", content: "Dranken — StadsCafe" },
       { property: "og:url", content: "/dranken" },
     ],
     links: [{ rel: "canonical", href: "/dranken" }],

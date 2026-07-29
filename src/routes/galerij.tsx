@@ -4,13 +4,13 @@ import { PhotoPlaceholder } from "../components/photo-placeholder";
 export const Route = createFileRoute("/galerij")({
   head: () => ({
     meta: [
-      { title: "Galerij — Sfeerbeelden Stadscafé Rijke & Zn." },
+      { title: "Galerij — Sfeerbeelden StadsCafe" },
       {
         name: "description",
         content:
-          "Sfeerbeelden van interieur, terras, speciaalbieren, evenementen en gasten van Stadscafé Rijke & Zn. in Dordrecht.",
+          "Sfeerbeelden van interieur, terras, speciaalbieren, evenementen en gasten van StadsCafe in Dordrecht.",
       },
-      { property: "og:title", content: "Galerij — Rijke & Zn." },
+      { property: "og:title", content: "Galerij — StadsCafe" },
       { property: "og:url", content: "/galerij" },
     ],
     links: [{ rel: "canonical", href: "/galerij" }],
@@ -40,7 +40,7 @@ function Galerij() {
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
             Een blik binnen — van de bar tot het terras, van tap tot borrelplank. Deze galerij
-            wordt gevuld met eigen foto's van Rijke &amp; Zn.
+            wordt gevuld met eigen foto's van StadsCafe
           </p>
         </div>
       </section>

@@ -33,7 +33,7 @@ export function SiteNav() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
         <Link to="/" className="flex min-w-0 shrink items-baseline gap-2 truncate">
           <span className="font-script text-2xl leading-none text-brass sm:text-3xl">Stadscafé</span>
-          <span className="font-display-condensed text-lg tracking-widest text-paper sm:text-xl">Rijke &amp; Zn.</span>
+          <span className="font-display-condensed text-lg tracking-widest text-paper sm:text-xl">StadsCafe</span>
         </Link>
         <div className="hidden items-center gap-7 text-[12px] font-medium uppercase tracking-[0.18em] text-paper/70 lg:flex">
           {links.slice(1, -1).map((l) => (

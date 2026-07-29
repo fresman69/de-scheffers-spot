@@ -7,7 +7,7 @@ export function SiteFooter() {
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:gap-12">
           <div>
             <span className="mb-1 block font-script text-4xl text-brass">Stadscafé</span>
-            <span className="mb-4 block font-display-condensed text-2xl tracking-widest text-paper">Rijke &amp; Zn.</span>
+            <span className="mb-4 block font-display-condensed text-2xl tracking-widest text-paper">StadsCafe</span>
             <p className="max-w-[30ch] text-sm leading-relaxed text-paper/75">
               Scheffersplein 12
               <br />
@@ -44,7 +44,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-16 flex flex-col items-start justify-between gap-3 border-t border-border pt-8 text-[11px] uppercase tracking-widest text-muted-foreground sm:flex-row sm:items-center">
-          <span>© {new Date().getFullYear()} Stadscafé Rijke &amp; Zn.</span>
+          <span>© {new Date().getFullYear()} StadsCafe</span>
           <span>Dordrecht, Nederland</span>
         </div>
       </div>

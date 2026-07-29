@@ -7,7 +7,7 @@ import gevelCafe from "../assets/gevel-cafe.jpg.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Stadscafé Rijke & Zn. — Speciaalbier op het Scheffersplein Dordrecht" },
+      { title: "StadsCafe — Speciaalbier op het Scheffersplein Dordrecht" },
       {
         name: "description",
         content:
@@ -67,7 +67,7 @@ function Home() {
         <div className="absolute inset-0">
           <img
             src={gevelCafe.url}
-            alt="Gevel van Stadscafé Rijke & Zn. aan het Scheffersplein in Dordrecht — rode kozijnen, neonletters en illy koffie schoolbord"
+            alt="Gevel van StadsCafe aan het Scheffersplein in Dordrecht — rode kozijnen, neonletters en illy koffie schoolbord"
             className="h-full w-full object-cover opacity-55"
           />
         </div>
@@ -114,7 +114,7 @@ function Home() {
               Een huiskamer in het hart van de stad waar historie en vriendschap samenkomen.
             </h2>
             <p className="mb-12 max-w-[60ch] text-pretty text-lg text-oak/80">
-              Stadscafé Rijke &amp; Zn. is geworteld in de Dordtse geschiedenis. Met onze passie
+              StadsCafe is geworteld in de Dordtse geschiedenis. Met onze passie
               voor ambachtelijke bieren en oprechte gastvrijheid bieden wij een plek waar de
               tijd even stilstaat — donker hout, koperen tapkranen en een warme sfeer.
             </p>
@@ -128,7 +128,7 @@ function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <img
             src={interieurCafe.url}
-            alt="Interieur van Stadscafé Rijke & Zn. — vintage bierposters, kroonluchter en bistrotafeltjes bij het raam aan de Voorstraat in Dordrecht"
+            alt="Interieur van StadsCafe — vintage bierposters, kroonluchter en bistrotafeltjes bij het raam aan de Voorstraat in Dordrecht"
             loading="lazy"
             className="aspect-[4/3] w-full rounded-sm object-cover ring-1 ring-border"
           />
@@ -266,7 +266,7 @@ function Home() {
             <p className="mb-8 max-w-[52ch] text-pretty text-oak/80">
               Volg <span className="font-medium">@stadscafe_rijke</span> voor sfeerbeelden uit
               het café, verse tapkranen, borrelplanken, evenementen op het Scheffersplein en
-              een blik achter de schermen bij Rijke &amp; Zn.
+              een blik achter de schermen bij StadsCafe
             </p>
             <div className="grid grid-cols-3 gap-2">
               {Array.from({ length: 6 }).map((_, i) => (

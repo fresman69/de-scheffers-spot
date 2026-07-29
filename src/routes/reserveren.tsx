@@ -5,13 +5,13 @@ import { CheckCircle2, Users, Cake, Briefcase, PartyPopper, Wine } from "lucide-
 export const Route = createFileRoute("/reserveren")({
   head: () => ({
     meta: [
-      { title: "Reserveren — Tafel, borrel of feest | Rijke & Zn." },
+      { title: "Reserveren — Tafel, borrel of feest | StadsCafe" },
       {
         name: "description",
         content:
-          "Reserveer online een tafel, groepsborrel, bedrijfsborrel, verjaardag of vrijmibo bij Stadscafé Rijke & Zn. in Dordrecht.",
+          "Reserveer online een tafel, groepsborrel, bedrijfsborrel, verjaardag of vrijmibo bij StadsCafe in Dordrecht.",
       },
-      { property: "og:title", content: "Reserveren — Rijke & Zn." },
+      { property: "og:title", content: "Reserveren — StadsCafe" },
       { property: "og:url", content: "/reserveren" },
     ],
     links: [{ rel: "canonical", href: "/reserveren" }],

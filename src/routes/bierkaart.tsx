@@ -5,13 +5,13 @@ import { ProductCard, type Product } from "../components/product-card";
 export const Route = createFileRoute("/bierkaart")({
   head: () => ({
     meta: [
-      { title: "Bierkaart — Speciaalbier in Dordrecht | Rijke & Zn." },
+      { title: "Bierkaart — Speciaalbier in Dordrecht | StadsCafe" },
       {
         name: "description",
         content:
           "Onze volledige bierkaart 2025: van huisbier Gouwe Ary tot trappisten, sours, ciders, saisons en alcoholvrij. Zorgvuldig gekozen speciaalbieren in Dordrecht.",
       },
-      { property: "og:title", content: "Bierkaart — Rijke & Zn." },
+      { property: "og:title", content: "Bierkaart — StadsCafe" },
       { property: "og:url", content: "/bierkaart" },
     ],
     links: [{ rel: "canonical", href: "/bierkaart" }],
@@ -23,7 +23,7 @@ type Beer = Product & { category: string };
 
 const beers: Beer[] = [
   // Van de Tap / Op fles
-  { category: "Van de Tap", name: "Gouwe Ary", description: "Huisbier Rijke & Zn.", abv: "5%" },
+  { category: "Van de Tap", name: "Gouwe Ary", description: "Huisbier StadsCafe", abv: "5%" },
   { category: "Van de Tap", name: "Heineken Fluit / Vaas", description: "Pilsener — 0,18L · 0,25L · 0,5L", abv: "5%" },
   { category: "Van de Tap", name: "6 wisselende tapkranen", description: "Vraag onze bediening naar de actuele selectie" },
 

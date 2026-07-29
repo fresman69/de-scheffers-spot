@@ -10,7 +10,7 @@ type Props = {
 };
 
 /**
- * Placeholder shown wherever a real photo of Stadscafé Rijke & Zn.
+ * Placeholder shown wherever a real photo of StadsCafe
  * still has to be uploaded by the owner. We do NOT show AI or stock
  * imagery — authenticity boven opgevuld ontwerp.
  */
@@ -36,7 +36,7 @@ export function PhotoPlaceholder({
       <ImageIcon size={22} strokeWidth={1.25} className="text-brass/60" />
       <span className="text-[10px] font-medium uppercase tracking-[0.25em]">{label}</span>
       <span className="max-w-[28ch] text-[11px] leading-relaxed opacity-70">
-        Eigen foto van Stadscafé Rijke &amp; Zn. — nog te uploaden door de eigenaar.
+        Eigen foto van StadsCafe — nog te uploaden door de eigenaar.
       </span>
     </div>
   );
