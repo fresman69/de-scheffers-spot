@@ -170,10 +170,10 @@ function Dranken() {
               <button
                 key={c}
                 onClick={() => setActive(c)}
-                className={`whitespace-nowrap rounded-sm px-4 py-2 text-xs font-medium uppercase tracking-widest transition-all ${
+                className={`whitespace-nowrap rounded-sm px-4 py-2 text-[11px] font-medium uppercase tracking-widest transition-all ${
                   active === c
-                    ? "bg-brass text-oak"
-                    : "text-muted-foreground ring-1 ring-border hover:text-brass"
+                    ? "bg-wine text-paper"
+                    : "text-paper/75 ring-1 ring-border hover:text-brass hover:ring-brass/50"
                 }`}
               >
                 {c}
