@@ -48,11 +48,6 @@ const drinks: Drink[] = [
   { category: "Gin & Tonic", name: "Bombay Sapphire", description: "Fever-Tree Indian Tonic Water · verse limoen" },
   { category: "Gin & Tonic", name: "Tanqueray Flor de Sevilla Gin", description: "Fever-Tree Clementine Tonic · gedroogde sinaasappel" },
 
-  // Cocktails
-  { category: "Cocktails", name: "Spiced Mule", description: "Barceló · pimento · ginger beer · gedroogde sinaasappel" },
-  { category: "Cocktails", name: "Cuba Libre", description: "Cola · Barceló · limoensap" },
-  { category: "Cocktails", name: "Old Fashioned", description: "Bourbon · angostura · syrup" },
-  { category: "Cocktails", name: "Paloma", description: "Tequila · lime · pink grapefruit soda" },
 
   // Sterk — Jenever & Vieux
   { category: "Sterk", name: "Ketel 1 Jonge" },
