@@ -129,7 +129,7 @@ const categories = [
   "Wijn rosé",
   "Mousserend",
   "Gin & Tonic",
-  "Cocktails",
+  
   "Sterk",
   "Koffie / Thee",
   "Frisdrank",
