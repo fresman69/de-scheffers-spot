@@ -107,7 +107,7 @@ function Home() {
       <section className="bg-paper py-16 md:py-24 text-oak">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl">
-            <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass-dim">
+            <span className="mb-4 block font-script text-4xl leading-none text-brass-dim">
               Ambacht &amp; Gastvrijheid
             </span>
             <h2 className="mb-8 max-w-[35ch] text-balance font-display text-3xl sm:text-4xl leading-tight md:text-5xl">
@@ -133,7 +133,7 @@ function Home() {
             className="aspect-[4/3] w-full rounded-sm object-cover ring-1 ring-border"
           />
           <div>
-            <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass">
+            <span className="mb-4 block font-script text-4xl leading-none text-brass">
               Sfeerimpressie
             </span>
             <h2 className="mb-6 font-display text-3xl sm:text-4xl text-paper md:text-5xl">
@@ -159,7 +159,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-16 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <span className="mb-3 block text-xs font-semibold uppercase tracking-widest text-brass">
+              <span className="mb-3 block font-script text-4xl leading-none text-brass">
                 Van de tap
               </span>
               <h2 className="font-display text-3xl sm:text-4xl text-paper md:text-5xl">
@@ -220,7 +220,7 @@ function Home() {
       <section className="bg-oak-light py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 text-center">
-            <span className="mb-3 block text-xs font-semibold uppercase tracking-widest text-brass">
+            <span className="mb-3 block font-script text-4xl leading-none text-brass">
               Wat gasten zeggen
             </span>
             <h2 className="mx-auto max-w-[24ch] font-display text-3xl sm:text-4xl text-paper md:text-5xl">

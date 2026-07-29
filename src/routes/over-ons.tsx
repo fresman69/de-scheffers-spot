@@ -60,7 +60,7 @@ function OverOns() {
             <PhotoPlaceholder tone="light" aspect="4 / 5" label="Cafédetail — nog toe te voegen" />
           </div>
           <div className="lg:col-span-3">
-            <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass-dim">
+            <span className="mb-4 block font-script text-4xl leading-none text-brass-dim">
               Ambacht sinds jaar en dag
             </span>
             <h2 className="mb-6 font-display text-3xl sm:text-4xl leading-tight md:text-5xl">
@@ -83,7 +83,7 @@ function OverOns() {
       <section className="bg-oak py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-16 max-w-2xl">
-            <span className="mb-3 block text-xs font-semibold uppercase tracking-widest text-brass">
+            <span className="mb-3 block font-script text-4xl leading-none text-brass">
               Waar we voor staan
             </span>
             <h2 className="font-display text-3xl sm:text-4xl text-paper md:text-5xl">Vier pijlers.</h2>
