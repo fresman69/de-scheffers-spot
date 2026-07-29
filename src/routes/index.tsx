@@ -89,13 +89,13 @@ function Home() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-up">
             <Link
               to="/reserveren"
-              className="w-full rounded-sm bg-brass px-8 py-3.5 text-sm font-medium uppercase tracking-widest text-oak transition-colors hover:bg-paper sm:w-auto"
+              className="w-full rounded-sm bg-wine px-8 py-3.5 text-xs font-medium uppercase tracking-[0.25em] text-paper transition-colors hover:bg-wine-dim sm:w-auto"
             >
               Reserveer een tafel
             </Link>
             <Link
               to="/bierkaart"
-              className="w-full rounded-sm px-8 py-3.5 text-sm font-medium uppercase tracking-widest text-paper ring-1 ring-paper/40 transition-colors hover:ring-paper sm:w-auto"
+              className="w-full rounded-sm bg-mustard px-8 py-3.5 text-xs font-medium uppercase tracking-[0.25em] text-oak transition-colors hover:bg-mustard-dim sm:w-auto"
             >
               Bekijk onze bieren
             </Link>
