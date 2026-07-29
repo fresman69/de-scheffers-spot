@@ -53,66 +53,83 @@
 :root {
   --radius: 0.5rem;
 
-  --oak: oklch(0.16 0.012 55);
-  --oak-light: oklch(0.22 0.014 55);
-  --brass: oklch(0.74 0.11 78);
-  --brass-dim: oklch(0.58 0.09 78);
-  --paper: oklch(0.94 0.035 82);
-  /* "Wine" is nu cognac — warm bruin, past bij het bruine café. */
-  --wine: oklch(0.52 0.12 55);
-  --wine-dim: oklch(0.38 0.10 55);
-  --mustard: oklch(0.80 0.14 82);
-  --mustard-dim: oklch(0.66 0.12 78);
-  /* Donkergroen accent — flesgroen, subtiel gebruikt. */
-  --teal: oklch(0.36 0.06 155);
-  --teal-dim: oklch(0.28 0.05 155);
+  /* Warmer, natuurlijker palet: walnoot, eik, cognac, olijf. */
+  --oak: oklch(0.17 0.014 50);
+  --oak-light: oklch(0.23 0.016 52);
+  --brass: oklch(0.78 0.115 78);
+  --brass-dim: oklch(0.62 0.095 78);
+  --paper: oklch(0.955 0.032 82);
+  /* Cognac — warm bruin met roodgloed. */
+  --wine: oklch(0.50 0.115 50);
+  --wine-dim: oklch(0.36 0.09 50);
+  --mustard: oklch(0.82 0.135 82);
+  --mustard-dim: oklch(0.68 0.115 78);
+  /* Olijf / diep flesgroen accent. */
+  --teal: oklch(0.38 0.055 145);
+  --teal-dim: oklch(0.29 0.045 145);
+
+  /* Unified easing & timing tokens — één designer voelt. */
+  --ease-smooth: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-fast: 220ms;
+  --dur-base: 400ms;
+  --dur-slow: 900ms;
 
   --background: var(--oak);
-  --foreground: oklch(0.92 0.008 85);
+  --foreground: oklch(0.955 0.012 85);
   --card: var(--oak-light);
-  --card-foreground: oklch(0.92 0.008 85);
+  --card-foreground: oklch(0.955 0.012 85);
   --popover: var(--oak-light);
-  --popover-foreground: oklch(0.92 0.008 85);
+  --popover-foreground: oklch(0.955 0.012 85);
   --primary: var(--brass);
   --primary-foreground: var(--oak);
-  --secondary: oklch(0.28 0.012 60);
-  --secondary-foreground: oklch(0.92 0.008 85);
-  --muted: oklch(0.24 0.01 60);
-  --muted-foreground: oklch(0.65 0.02 80);
+  --secondary: oklch(0.30 0.014 60);
+  --secondary-foreground: oklch(0.955 0.012 85);
+  --muted: oklch(0.26 0.012 60);
+  --muted-foreground: oklch(0.76 0.022 82);
   --accent: var(--brass);
   --accent-foreground: var(--oak);
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.28 0.01 60);
-  --input: oklch(0.28 0.01 60);
+  --border: oklch(0.32 0.012 60);
+  --input: oklch(0.30 0.012 60);
   --ring: var(--brass);
 }
 
+
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translate3d(0, 24px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+@keyframes soft-pulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
 
 @utility animate-fade-up {
-  animation: fade-up 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation: fade-up var(--dur-slow) var(--ease-smooth) both;
 }
 @utility animate-fade-in {
-  animation: fade-in 1.2s ease-out both;
+  animation: fade-in 1.2s var(--ease-smooth) both;
 }
 @utility hover-lift {
-  transition: transform 400ms cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: transform var(--dur-base) var(--ease-smooth),
+              box-shadow var(--dur-base) var(--ease-smooth);
   will-change: transform;
-  &:hover { transform: translate3d(0, -4px, 0); }
+  &:hover {
+    transform: translate3d(0, -4px, 0);
+    box-shadow: 0 18px 40px -24px color-mix(in oklch, var(--oak) 90%, black);
+  }
 }
 @utility zoom-image {
   overflow: hidden;
-  & img { transition: transform 900ms cubic-bezier(0.22, 0.61, 0.36, 1); }
+  & img { transition: transform var(--dur-slow) var(--ease-smooth); }
   &:hover img { transform: scale(1.04); }
 }
+
 
 /* Handgeschreven script — direct herkenbaar uit de fysieke menukaart. */
 @utility font-script {
@@ -147,14 +164,29 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    /* Zachte sitewide transitie op kleur, zodat sectiewisselingen niet klikken. */
+    transition: background-color var(--dur-base) var(--ease-smooth),
+                color var(--dur-base) var(--ease-smooth);
   }
   h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.005em; text-transform: uppercase; }
+  p { line-height: 1.7; }
+  a, button { transition: color var(--dur-fast) var(--ease-smooth),
+                                 background-color var(--dur-fast) var(--ease-smooth),
+                                 border-color var(--dur-fast) var(--ease-smooth),
+                                 transform var(--dur-fast) var(--ease-smooth),
+                                 opacity var(--dur-fast) var(--ease-smooth); }
   img, iframe, video { max-width: 100%; height: auto; }
   iframe { display: block; }
   ::selection { background: color-mix(in oklch, var(--brass) 40%, transparent); }
-  /* Larger tap targets for interactive elements on touch */
   @media (hover: none) and (pointer: coarse) {
     a, button, [role="button"] { min-height: 44px; }
   }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
 }
+
 
