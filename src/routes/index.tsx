@@ -73,10 +73,13 @@ function Home() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-oak/60 via-oak/30 to-oak" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass animate-fade-in">
-            Sinds mensenheugenis · Scheffersplein
+          <p className="mb-4 font-script text-5xl leading-none text-brass animate-fade-in md:text-6xl">
+            Sinds mensenheugenis
           </p>
-          <h1 className="mx-auto mb-8 max-w-[22ch] text-balance font-display text-5xl leading-[1.05] text-paper md:text-7xl animate-fade-up">
+          <p className="mb-8 text-[11px] uppercase tracking-[0.4em] text-paper/70 animate-fade-in">
+            Scheffersplein · Dordrecht
+          </p>
+          <h1 className="mx-auto mb-8 max-w-[22ch] text-balance font-display-condensed text-5xl leading-[0.95] tracking-wider text-paper md:text-7xl lg:text-8xl animate-fade-up">
             Dé ontmoetingsplek op het Scheffersplein.
           </h1>
           <p className="mx-auto mb-10 max-w-[50ch] text-pretty text-lg leading-relaxed text-paper/85 md:text-xl animate-fade-up">
