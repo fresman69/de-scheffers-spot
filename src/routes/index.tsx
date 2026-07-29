@@ -1,25 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Award, Instagram, MapPin, Sparkles, Star, UtensilsCrossed, Wine } from "lucide-react";
+import { Beer, Instagram, MapPin, Star, Users, Heart } from "lucide-react";
 import { PhotoPlaceholder } from "../components/photo-placeholder";
-import { VideoPlaceholder } from "../components/video-placeholder";
 import { Reveal } from "../components/reveal";
-import { WhatsAppButton } from "../components/whatsapp-button";
 import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
 import gevelCafe from "../assets/gevel-cafe.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "StadsCafe — Cocktails, wijn & shared dining op het Scheffersplein" },
+      { title: "StadsCafe — Bruin café en speciaalbier in Dordrecht" },
       {
         name: "description",
         content:
-          "Signature cocktails, zorgvuldig gekozen wijnen, shared dining en de warmste sfeer van Dordrecht. Reserveer eenvoudig via WhatsApp.",
+          "Een gezellig bruin café in het hart van Dordrecht. Speciaalbier van de tap, ambachtelijke happas en een warme sfeer. Loop gerust binnen.",
       },
-      { property: "og:title", content: "StadsCafe — Scheffersplein, Dordrecht" },
+      { property: "og:title", content: "StadsCafe — Bruin café in Dordrecht" },
       {
         property: "og:description",
-        content: "Signature cocktails, wijn, shared dining en sfeer. Reserveer via WhatsApp.",
+        content:
+          "Speciaalbier, borrelhapjes en een warme kroegsfeer aan het Scheffersplein.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -28,50 +27,44 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const signatures = [
+const taps = [
   {
     name: "Gouwe Ary",
-    note: "Signature van het huis — geflambeerde sinaasappelschil, honing en gin.",
-    tag: "Signature",
+    note: "Ons huisbier — blonde tap die er altijd is.",
+    tag: "Vast op de tap",
   },
   {
-    name: "Merwedes Old-Fashioned",
-    note: "Rye whisky, gerookte suikersiroop en huisgemaakte bitters.",
+    name: "Heineken Pilsener",
+    note: "Vaas of fluit, zoals het hoort. Voor de trouwe pilsdrinker.",
     tag: "Klassiek",
   },
   {
-    name: "Scheffers Spritz",
-    note: "Franciacorta, wilde tijm, elderflower — de zomer op glas.",
-    tag: "Terras",
+    name: "6 wisselende tapkranen",
+    note: "Van blond tot stout, iets nieuws of iets vertrouwds. Vraag onze bediening wat er staat.",
+    tag: "Wisselend",
   },
-];
-
-const dishes = [
-  { name: "Shared Dining — Chef's board", note: "Selectie van tapas, pintxos en oesters — samen delen." },
-  { name: "Bourgondiër bitterballen", note: "Klassiek, met graanmosterd en warm brood." },
-  { name: "Zeeuwse oesters", note: "Uit de Grevelingen, met sjalot-vinaigrette." },
 ];
 
 const reasons = [
   {
-    icon: Wine,
-    title: "Zorgvuldig gekozen",
-    text: "Wijnen, gedistilleerd en speciaalbieren die onze sommelier zelf zou schenken.",
+    icon: Beer,
+    title: "Meer dan zestig bieren",
+    text: "Van huisbier Gouwe Ary tot trappisten, IPA's, sours en alcoholvrij. Voor elk moment het juiste glas.",
   },
   {
-    icon: UtensilsCrossed,
-    title: "Ambachtelijk gerecht",
-    text: "Shared dining met verse, seizoensgebonden ingrediënten van lokale leveranciers.",
+    icon: Users,
+    title: "Kom zoals je bent",
+    text: "Aan de bar, aan een tafel of op het terras — bij ons is iedereen welkom, alleen of met een club.",
   },
   {
-    icon: Sparkles,
-    title: "Signature cocktails",
-    text: "Van klassieke Old-Fashioned tot eigen creaties — geshaked met vakmanschap.",
+    icon: Heart,
+    title: "Ambachtelijke happas",
+    text: "Bourgondiër bitterballen, olijven, fuet, kaas — eerlijk werk, om lekker met z'n allen te delen.",
   },
   {
-    icon: Award,
-    title: "Hartje Scheffersplein",
-    text: "Het historische kloppende hart van Dordrecht — al generaties lang.",
+    icon: MapPin,
+    title: "Hartje Dordrecht",
+    text: "Aan het Scheffersplein, tussen de terrassen. Zo naar binnen gelopen na het winkelen of een wandeling langs de haven.",
   },
 ];
 
@@ -82,22 +75,16 @@ const hours = [
   ["Zondag", "12:00 — 23:00"],
 ];
 
-const events = [
-  { date: "Elke donderdag", title: "Wijn & Vinyl", note: "Sommelier + platenspeler, vanaf 20:00." },
-  { date: "Elke laatste vrijdag", title: "Cocktail Lab", note: "Signature masterclass — reserveren aanbevolen." },
-  { date: "Zondagmiddag", title: "Shared Dining", note: "Chef's board voor het hele gezelschap." },
-];
-
 const reviews = [
-  { name: "Sanne V.", text: "De sfeer, de bediening en die kaart — écht Dordts genieten.", src: "Google" },
-  { name: "Martijn D.", text: "Beste terras van de stad. Cocktails van topniveau.", src: "Tripadvisor" },
-  { name: "Eva K.", text: "Warme, klassieke bar met een enorm hart voor ambacht.", src: "Google" },
+  { name: "Sanne V.", text: "Warm, gezellig en een geweldige bierkaart. Voelt echt als een tweede huiskamer.", src: "Google" },
+  { name: "Martijn D.", text: "Fijne kroeg met eerlijke bediening en een terras dat er in de zomer altijd is.", src: "Tripadvisor" },
+  { name: "Eva K.", text: "Klassiek bruin café met een enorm hart voor bier. Kom hier vaak terug.", src: "Google" },
 ];
 
 function Home() {
   return (
     <>
-      {/* Hero — nu met eigen gevelfoto; owner kan later 1-op-1 een MP4 in dit slot droppen. */}
+      {/* Hero */}
       <section className="relative flex min-h-[88svh] items-center justify-center overflow-hidden bg-oak md:min-h-[92vh]">
         <div className="absolute inset-0" data-video-slot="hero">
           <img
@@ -109,108 +96,92 @@ function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-oak/80 via-oak/45 to-oak" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6">
           <p className="mb-4 font-script text-5xl leading-none text-brass animate-fade-in md:text-6xl">
-            Sinds mensenheugenis
+            Welkom bij
           </p>
           <p className="mb-8 text-[11px] uppercase tracking-[0.4em] text-paper/70 animate-fade-in">
             Scheffersplein · Dordrecht
           </p>
           <h1 className="mx-auto mb-8 max-w-[22ch] text-balance font-display-condensed text-5xl leading-[0.95] tracking-wider text-paper animate-fade-up md:text-7xl lg:text-8xl">
-            Cocktails, wijn &amp; shared dining.
+            Een goed glas bier &amp; een goed gesprek.
           </h1>
-          <p className="mx-auto mb-10 max-w-[52ch] text-pretty text-lg leading-relaxed text-paper/85 animate-fade-up md:text-xl">
-            Dé ontmoetingsplek op het Scheffersplein — waar signature cocktails,
-            zorgvuldig gekozen wijnen en warm ambacht samenkomen.
+          <p className="mx-auto mb-10 max-w-[54ch] text-pretty text-lg leading-relaxed text-paper/85 animate-fade-up md:text-xl">
+            StadsCafe is een gewoon, gezellig bruin café in hartje Dordrecht.
+            Speciaalbier van de tap, ambachtelijke happas en tijd voor een praatje.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 animate-fade-up sm:flex-row">
-            <WhatsAppButton size="lg" label="Reserveer via WhatsApp" />
             <Link
               to="/bierkaart"
+              className="rounded-sm bg-wine px-8 py-4 text-sm font-medium uppercase tracking-[0.25em] text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-wine-dim"
+            >
+              Ontdek onze bierkaart
+            </Link>
+            <Link
+              to="/contact"
               className="rounded-sm px-8 py-4 text-sm font-medium uppercase tracking-[0.25em] text-paper ring-1 ring-paper/30 transition-all duration-300 hover:-translate-y-0.5 hover:text-brass hover:ring-brass"
             >
-              Bekijk de kaart
+              Route &amp; openingstijden
             </Link>
           </div>
         </div>
-        {/* Scroll-hint */}
         <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-paper/60 md:flex">
           <span className="text-[10px] uppercase tracking-[0.35em]">Scroll</span>
           <span className="h-8 w-px animate-pulse bg-brass/60" />
         </div>
       </section>
 
-      {/* Introductie */}
+      {/* Introductie — de gastheer aan het woord */}
       <section className="bg-paper py-20 text-oak md:py-28">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <Reveal>
             <span className="mb-4 block font-script text-4xl leading-none text-brass-dim md:text-5xl">
-              Welkom bij
+              Kom binnen
             </span>
           </Reveal>
           <Reveal delay={100}>
             <h2 className="mb-8 text-balance font-display-condensed text-4xl leading-tight tracking-wider text-oak md:text-6xl">
-              StadsCafe
+              Een café zoals ze vroeger waren
             </h2>
           </Reveal>
           <Reveal delay={200}>
             <p className="mx-auto max-w-[60ch] text-pretty text-lg leading-relaxed text-oak/80 md:text-xl">
-              Een huiskamer in het hart van Dordrecht waar historie en ambacht samenkomen.
-              Van vroege koffie tot late nachtcocktail — bij ons vindt elke gast zijn moment.
+              Bij ons hoeft niks. Neem plaats aan de bar, schuif aan bij vrienden of pak
+              een tafeltje bij het raam. We schenken graag een goed glas, praten mee als je
+              zin hebt en laten je met rust als dat lekkerder is. Zo simpel is het.
             </p>
           </Reveal>
         </div>
       </section>
 
-      {/* Reserveer via WhatsApp — vol-breed accentblok */}
-      <section className="bg-oak py-16 md:py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <Reveal>
-            <div className="grid gap-8 rounded-sm bg-wine p-8 text-paper ring-1 ring-wine-dim md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-12 md:p-12">
-              <div className="min-w-0">
-                <p className="mb-2 font-script text-3xl leading-none text-mustard md:text-4xl">Direct een tafel</p>
-                <h2 className="mb-3 font-display-condensed text-3xl tracking-wider md:text-4xl">
-                  Reserveer eenvoudig via WhatsApp
-                </h2>
-                <p className="text-pretty text-paper/85">
-                  Stuur ons een berichtje met datum, tijd en het aantal personen — je krijgt binnen
-                  enkele minuten bevestiging van ons team.
-                </p>
-              </div>
-              <WhatsAppButton size="lg" className="justify-self-start md:justify-self-end" />
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Signature Cocktails */}
+      {/* Bier centraal — Van de tap */}
       <section className="bg-oak py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <Reveal>
               <div>
                 <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
-                  Signature cocktails
+                  Van de tap
                 </span>
                 <h2 className="font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
-                  Geshaked met vakmanschap
+                  Vers getapt, elke dag
                 </h2>
               </div>
             </Reveal>
             <Reveal delay={100}>
               <Link
-                to="/dranken"
+                to="/bierkaart"
                 className="border-b border-brass/40 pb-1 text-sm font-medium text-brass transition-colors hover:border-brass"
               >
-                Volledige cocktailkaart →
+                Volledige bierkaart →
               </Link>
             </Reveal>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
-            {signatures.map((c, i) => (
+            {taps.map((c, i) => (
               <Reveal key={c.name} delay={i * 120}>
                 <article className="hover-lift group flex h-full flex-col overflow-hidden rounded-sm bg-oak-light ring-1 ring-border">
                   <div className="zoom-image relative aspect-[4/5] w-full bg-oak/60">
                     <PhotoPlaceholder aspect="4 / 5" label={`Foto ${c.name}`} />
-                    <span className="absolute left-4 top-4 rounded-sm bg-mustard px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-oak">
+                    <span className="absolute left-4 top-4 rounded-sm bg-brass px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-oak">
                       {c.tag}
                     </span>
                   </div>
@@ -227,77 +198,30 @@ function Home() {
         </div>
       </section>
 
-      {/* Cinematische video-strook — cocktails shaken */}
-      <section className="bg-oak">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-4">
-          <Reveal>
-            <VideoPlaceholder
-              aspect="21 / 9"
-              label="Video: cocktail shaken achter de bar"
-            />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Uitgelichte gerechten */}
-      <section className="bg-paper py-20 text-oak md:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="mb-14 max-w-2xl">
-            <Reveal>
-              <span className="mb-3 block font-script text-4xl leading-none text-brass-dim md:text-5xl">
-                Uit de keuken
-              </span>
-            </Reveal>
-            <Reveal delay={100}>
-              <h2 className="font-display-condensed text-4xl tracking-wider text-oak md:text-5xl">
-                Shared dining, tapas &amp; oesters
-              </h2>
-            </Reveal>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {dishes.map((d, i) => (
-              <Reveal key={d.name} delay={i * 120}>
-                <article className="hover-lift group overflow-hidden rounded-sm bg-white ring-1 ring-oak/10">
-                  <div className="zoom-image aspect-[4/3] w-full">
-                    <PhotoPlaceholder tone="light" aspect="4 / 3" label={`Foto ${d.name}`} />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="mb-2 font-display-condensed text-xl tracking-wider text-oak">
-                      {d.name}
-                    </h3>
-                    <p className="text-sm text-oak/75">{d.note}</p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Waarom StadsCafe */}
-      <section className="bg-oak py-20 md:py-28">
+      <section className="bg-oak-light py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 text-center">
             <Reveal>
               <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
-                Waarom
+                Waarom StadsCafe
               </span>
             </Reveal>
             <Reveal delay={100}>
               <h2 className="mx-auto max-w-[24ch] font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
-                Vier redenen om terug te komen
+                Vier redenen om aan te schuiven
               </h2>
             </Reveal>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {reasons.map((r, i) => (
               <Reveal key={r.title} delay={i * 100}>
-                <div className="hover-lift h-full rounded-sm bg-oak-light p-8 ring-1 ring-border transition-colors hover:ring-brass/40">
+                <div className="hover-lift h-full rounded-sm bg-oak p-8 ring-1 ring-border transition-colors hover:ring-brass/40">
                   <r.icon size={28} strokeWidth={1.5} className="mb-6 text-brass" />
                   <h3 className="mb-3 font-display-condensed text-xl tracking-wider text-paper">
                     {r.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-paper/75">{r.text}</p>
+                  <p className="text-sm leading-relaxed text-paper/80">{r.text}</p>
                 </div>
               </Reveal>
             ))}
@@ -312,7 +236,7 @@ function Home() {
             <div className="zoom-image overflow-hidden rounded-sm ring-1 ring-border">
               <img
                 src={interieurCafe.url}
-                alt="Interieur van StadsCafe — vintage bierposters, kroonluchter en bistrotafeltjes"
+                alt="Interieur van StadsCafe — houten tafels, bierposters en warme lampen"
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover"
               />
@@ -321,14 +245,19 @@ function Home() {
           <Reveal delay={150}>
             <div>
               <span className="mb-4 block font-script text-4xl leading-none text-brass md:text-5xl">
-                Sfeerimpressie
+                Sfeer
               </span>
               <h2 className="mb-6 font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
-                Terras, bar en donkerhouten zalen
+                Hout, koper en warm licht
               </h2>
-              <p className="mb-8 text-pretty text-lg leading-relaxed text-paper/80">
-                Van een zonovergoten borrel op het grootste terras van Dordrecht tot een zwoele
-                avond aan de bar onder koperen lampen — bij ons vindt elke gast zijn eigen plek.
+              <p className="mb-4 text-pretty text-lg leading-relaxed text-paper/85">
+                Donkere houten tafels, koperen tapkranen en verlichting die alles zachter maakt.
+                In de zomer schuiven we het terras uit op het Scheffersplein, in de winter
+                zit je binnen bij de warme lampen.
+              </p>
+              <p className="mb-8 text-pretty text-lg leading-relaxed text-paper/85">
+                Levendig als het druk is, rustig als je even bij wilt komen. Zo hoort een
+                bruin café te voelen.
               </p>
               <Link
                 to="/galerij"
@@ -341,41 +270,8 @@ function Home() {
         </div>
       </section>
 
-      {/* Evenementen */}
-      <section className="bg-oak-light py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="mb-14 max-w-2xl">
-            <Reveal>
-              <span className="mb-3 block font-script text-4xl leading-none text-mustard md:text-5xl">
-                Terugkerend
-              </span>
-            </Reveal>
-            <Reveal delay={100}>
-              <h2 className="font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
-                Evenementen bij StadsCafe
-              </h2>
-            </Reveal>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {events.map((e, i) => (
-              <Reveal key={e.title} delay={i * 120}>
-                <article className="hover-lift group flex h-full flex-col rounded-sm bg-oak p-8 ring-1 ring-border transition-colors hover:ring-mustard/40">
-                  <span className="mb-4 text-[10px] uppercase tracking-[0.3em] text-mustard">
-                    {e.date}
-                  </span>
-                  <h3 className="mb-3 font-display-condensed text-2xl tracking-wider text-paper">
-                    {e.title}
-                  </h3>
-                  <p className="text-sm text-paper/75">{e.note}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Reviews */}
-      <section className="bg-oak py-20 md:py-28">
+      <section className="bg-oak-light py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 text-center">
             <Reveal>
@@ -385,14 +281,14 @@ function Home() {
             </Reveal>
             <Reveal delay={100}>
               <h2 className="mx-auto max-w-[24ch] font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
-                Gastvrij, ambachtelijk, Dordts
+                Vaste gasten &amp; nieuwe gezichten
               </h2>
             </Reveal>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {reviews.map((r, i) => (
               <Reveal key={r.name} delay={i * 120}>
-                <figure className="hover-lift h-full rounded-sm bg-oak-light p-8 ring-1 ring-border">
+                <figure className="hover-lift h-full rounded-sm bg-oak p-8 ring-1 ring-border">
                   <div className="mb-4 flex gap-1 text-brass">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
@@ -448,7 +344,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Openingstijden + Route in één rustige, brede sectie */}
+      {/* Openingstijden + Route */}
       <section className="bg-oak py-20 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal>
@@ -468,6 +364,10 @@ function Home() {
                   </div>
                 ))}
               </div>
+              <p className="mt-8 text-sm text-paper/85">
+                Loop gerust binnen. We werken niet met reserveringen — er staat een plek voor je klaar
+                als die vrij is.
+              </p>
             </div>
           </Reveal>
           <Reveal delay={150}>
@@ -490,8 +390,7 @@ function Home() {
                 />
               </div>
               <p className="mt-6 text-sm text-paper/80">
-                Scheffersplein 12, 3311 PX Dordrecht — op 3 minuten lopen van station Dordrecht
-                Centrum.
+                Scheffersplein 12, 3311 PX Dordrecht — op 3 minuten lopen van station Dordrecht Centrum.
               </p>
             </div>
           </Reveal>

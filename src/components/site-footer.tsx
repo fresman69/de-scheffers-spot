@@ -8,21 +8,23 @@ export function SiteFooter() {
           <div>
             <span className="mb-1 block font-script text-5xl leading-none text-brass">Stads</span>
             <span className="mb-4 block font-display-condensed text-2xl tracking-[0.25em] text-paper">CAFE</span>
-            <p className="max-w-[30ch] text-sm leading-relaxed text-paper/75">
+            <p className="max-w-[32ch] text-sm leading-relaxed text-paper/75">
+              Een gezellig bruin café in het hart van Dordrecht — kom gerust langs.
+            </p>
+            <p className="mt-4 max-w-[30ch] text-sm leading-relaxed text-paper/75">
               Scheffersplein 12
               <br />
               3311 PX Dordrecht
             </p>
           </div>
           <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-3 sm:gap-16">
-
             <div>
               <h4 className="mb-6 font-script text-2xl leading-none text-brass">Bezoek</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><Link to="/over-ons" className="hover:text-brass">Over ons</Link></li>
+                <li><Link to="/bierkaart" className="hover:text-brass">Bierkaart</Link></li>
+                <li><Link to="/borrelkaart" className="hover:text-brass">Borrelkaart</Link></li>
                 <li><Link to="/galerij" className="hover:text-brass">Galerij</Link></li>
-                
-                <li><Link to="/reserveren" className="hover:text-brass">Reserveren</Link></li>
               </ul>
             </div>
             <div>
@@ -36,7 +38,7 @@ export function SiteFooter() {
             <div>
               <h4 className="mb-6 font-script text-2xl leading-none text-brass">Volg ons</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
-                <li><a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-brass">Instagram</a></li>
+                <li><a href="https://www.instagram.com/stadscafe_rijke/" target="_blank" rel="noreferrer" className="hover:text-brass">Instagram</a></li>
                 <li><a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-brass">Facebook</a></li>
                 <li><a href="https://untappd.com" target="_blank" rel="noreferrer" className="hover:text-brass">Untappd</a></li>
               </ul>

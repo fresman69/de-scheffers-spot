@@ -8,7 +8,6 @@ const links = [
   { to: "/bierkaart", label: "Bierkaart" },
   { to: "/dranken", label: "Dranken" },
   { to: "/borrelkaart", label: "Borrelkaart" },
-  
   { to: "/galerij", label: "Galerij" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -35,8 +34,8 @@ export function SiteNav() {
           <span className="font-script text-2xl leading-none text-brass sm:text-3xl">Stads</span>
           <span className="font-display-condensed text-lg tracking-[0.2em] text-paper sm:text-xl">CAFE</span>
         </Link>
-        <div className="hidden items-center gap-7 text-[12px] font-medium uppercase tracking-[0.18em] text-paper/70 lg:flex">
-          {links.slice(1, -1).map((l) => (
+        <div className="hidden items-center gap-7 text-[12px] font-medium uppercase tracking-[0.18em] text-paper/75 lg:flex">
+          {links.slice(1).map((l) => (
             <Link
               key={l.to}
               to={l.to}
@@ -47,23 +46,14 @@ export function SiteNav() {
             </Link>
           ))}
         </div>
-        <div className="flex shrink-0 items-center gap-2">
-          <Link
-            to="/reserveren"
-            className="hidden rounded-sm bg-wine px-4 py-2 text-xs font-medium uppercase tracking-widest text-paper transition-colors hover:bg-wine-dim sm:inline-flex"
-          >
-            Reserveren
-          </Link>
-          <button
-            aria-label="Menu"
-            aria-expanded={open}
-            onClick={() => setOpen((o) => !o)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-sm text-paper ring-1 ring-border transition-colors hover:text-brass lg:hidden"
-          >
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
-
+        <button
+          aria-label="Menu"
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-sm text-paper ring-1 ring-border transition-colors hover:text-brass lg:hidden"
+        >
+          {open ? <X size={20} /> : <Menu size={20} />}
+        </button>
       </div>
       {open && (
         <div className="border-t border-border bg-oak lg:hidden">
@@ -79,13 +69,6 @@ export function SiteNav() {
                 {l.label}
               </Link>
             ))}
-            <Link
-              to="/reserveren"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex justify-center rounded-sm px-4 py-2 text-sm font-medium text-brass ring-1 ring-brass"
-            >
-              Reserveren
-            </Link>
           </div>
         </div>
       )}

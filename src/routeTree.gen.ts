@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ReserverenRouteImport } from './routes/reserveren'
 import { Route as OverOnsRouteImport } from './routes/over-ons'
 import { Route as GalerijRouteImport } from './routes/galerij'
 import { Route as DrankenRouteImport } from './routes/dranken'
@@ -22,11 +21,6 @@ import { Route as IndexRouteImport } from './routes/index'
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ReserverenRoute = ReserverenRouteImport.update({
-  id: '/reserveren',
-  path: '/reserveren',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OverOnsRoute = OverOnsRouteImport.update({
@@ -73,7 +67,6 @@ export interface FileRoutesByFullPath {
   '/dranken': typeof DrankenRoute
   '/galerij': typeof GalerijRoute
   '/over-ons': typeof OverOnsRoute
-  '/reserveren': typeof ReserverenRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
@@ -84,7 +77,6 @@ export interface FileRoutesByTo {
   '/dranken': typeof DrankenRoute
   '/galerij': typeof GalerijRoute
   '/over-ons': typeof OverOnsRoute
-  '/reserveren': typeof ReserverenRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
@@ -96,7 +88,6 @@ export interface FileRoutesById {
   '/dranken': typeof DrankenRoute
   '/galerij': typeof GalerijRoute
   '/over-ons': typeof OverOnsRoute
-  '/reserveren': typeof ReserverenRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
@@ -109,7 +100,6 @@ export interface FileRouteTypes {
     | '/dranken'
     | '/galerij'
     | '/over-ons'
-    | '/reserveren'
     | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -120,7 +110,6 @@ export interface FileRouteTypes {
     | '/dranken'
     | '/galerij'
     | '/over-ons'
-    | '/reserveren'
     | '/sitemap.xml'
   id:
     | '__root__'
@@ -131,7 +120,6 @@ export interface FileRouteTypes {
     | '/dranken'
     | '/galerij'
     | '/over-ons'
-    | '/reserveren'
     | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
@@ -143,7 +131,6 @@ export interface RootRouteChildren {
   DrankenRoute: typeof DrankenRoute
   GalerijRoute: typeof GalerijRoute
   OverOnsRoute: typeof OverOnsRoute
-  ReserverenRoute: typeof ReserverenRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
@@ -154,13 +141,6 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/reserveren': {
-      id: '/reserveren'
-      path: '/reserveren'
-      fullPath: '/reserveren'
-      preLoaderRoute: typeof ReserverenRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/over-ons': {
@@ -223,7 +203,6 @@ const rootRouteChildren: RootRouteChildren = {
   DrankenRoute: DrankenRoute,
   GalerijRoute: GalerijRoute,
   OverOnsRoute: OverOnsRoute,
-  ReserverenRoute: ReserverenRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
