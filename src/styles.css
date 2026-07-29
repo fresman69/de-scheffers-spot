@@ -39,8 +39,14 @@
   --color-paper: var(--paper);
   --color-wine: var(--wine);
   --color-wine-dim: var(--wine-dim);
+  --color-mustard: var(--mustard);
+  --color-mustard-dim: var(--mustard-dim);
+  --color-teal: var(--teal);
+  --color-teal-dim: var(--teal-dim);
 
-  --font-display: "Cormorant Garamond", serif;
+  --font-display: "Oswald", "Cormorant Garamond", serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-script: "Alex Brush", "Yellowtail", cursive;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
