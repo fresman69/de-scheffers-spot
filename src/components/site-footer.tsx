@@ -6,8 +6,9 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:gap-12">
           <div>
-            <span className="mb-4 block font-display text-3xl text-brass">Rijke &amp; Zn.</span>
-            <p className="max-w-[30ch] text-sm leading-relaxed text-muted-foreground">
+            <span className="mb-1 block font-script text-4xl text-brass">Stadscafé</span>
+            <span className="mb-4 block font-display-condensed text-2xl tracking-widest text-paper">Rijke &amp; Zn.</span>
+            <p className="max-w-[30ch] text-sm leading-relaxed text-paper/75">
               Scheffersplein 12
               <br />
               3311 PX Dordrecht
