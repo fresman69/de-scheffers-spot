@@ -50,7 +50,7 @@ export function SiteNav() {
         <div className="flex shrink-0 items-center gap-2">
           <Link
             to="/reserveren"
-            className="hidden rounded-sm px-4 py-2 text-sm font-medium text-brass ring-1 ring-brass transition-colors hover:bg-brass/10 sm:inline-flex"
+            className="hidden rounded-sm bg-wine px-4 py-2 text-xs font-medium uppercase tracking-widest text-paper transition-colors hover:bg-wine-dim sm:inline-flex"
           >
             Reserveren
           </Link>
