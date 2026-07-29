@@ -4,13 +4,13 @@ import { PhotoPlaceholder } from "../components/photo-placeholder";
 export const Route = createFileRoute("/over-ons")({
   head: () => ({
     meta: [
-      { title: "Over ons — Stadscafé Rijke & Zn." },
+      { title: "Over ons — StadsCafe" },
       {
         name: "description",
         content:
-          "Het verhaal van Stadscafé Rijke & Zn.: historie, gastvrijheid en passie voor bier aan het Scheffersplein in Dordrecht.",
+          "Het verhaal van StadsCafe: historie, gastvrijheid en passie voor bier aan het Scheffersplein in Dordrecht.",
       },
-      { property: "og:title", content: "Over ons — Stadscafé Rijke & Zn." },
+      { property: "og:title", content: "Over ons — StadsCafe" },
       { property: "og:url", content: "/over-ons" },
     ],
     links: [{ rel: "canonical", href: "/over-ons" }],
@@ -25,7 +25,7 @@ const pillars = [
   },
   {
     title: "Gastvrijheid",
-    body: "Bij Rijke & Zn. ben je meer dan een gast — je bent onderdeel van de kroeg. Onze bediening onthoudt je favoriete bier.",
+    body: "Bij StadsCafe ben je meer dan een gast — je bent onderdeel van de kroeg. Onze bediening onthoudt je favoriete bier.",
   },
   {
     title: "Passie voor bier",
@@ -47,7 +47,7 @@ function OverOns() {
             Ons verhaal, ons huis.
           </h1>
           <p className="mx-auto max-w-[55ch] text-pretty text-lg text-paper/85">
-            Stadscafé Rijke &amp; Zn. is één van de bekendste bruine cafés van Dordrecht. Al
+            StadsCafe is één van de bekendste bruine cafés van Dordrecht. Al
             decennia lang tappen we het beste bier van de stad, met een gastvrijheid die je alleen
             in de mooiste kroegen tegenkomt.
           </p>

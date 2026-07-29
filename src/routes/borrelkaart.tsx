@@ -4,13 +4,13 @@ import { ProductCard, type Product } from "../components/product-card";
 export const Route = createFileRoute("/borrelkaart")({
   head: () => ({
     meta: [
-      { title: "Hapas — Borrelkaart in Dordrecht | Rijke & Zn." },
+      { title: "Hapas — Borrelkaart in Dordrecht | StadsCafe" },
       {
         name: "description",
         content:
           "Onze hapas 2025: fuet, kaashapjes, De Bourgondiër bitterballen, olijven, nachos, vegetarische vlammetjes, kaastengels en gehaktballen — bij ieder glas.",
       },
-      { property: "og:title", content: "Hapas — Rijke & Zn." },
+      { property: "og:title", content: "Hapas — StadsCafe" },
       { property: "og:url", content: "/borrelkaart" },
     ],
     links: [{ rel: "canonical", href: "/borrelkaart" }],
