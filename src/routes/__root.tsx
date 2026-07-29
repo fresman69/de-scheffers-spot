@@ -13,7 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteNav } from "../components/site-nav";
 import { SiteFooter } from "../components/site-footer";
-import { WhatsAppFloating } from "../components/whatsapp-button";
+
 
 function NotFoundComponent() {
   return (
@@ -77,25 +77,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "StadsCafe — Speciaalbier op het Scheffersplein Dordrecht" },
+      { title: "StadsCafe — Bruin café en speciaalbier in Dordrecht" },
       {
         name: "description",
         content:
-          "Dé ontmoetingsplek op het Scheffersplein. Speciaalbier, wijn, borrelhapjes en de gezellige sfeer van Dordrecht.",
+          "Een gezellig bruin café in het hart van Dordrecht. Speciaalbier van de tap, ambachtelijke borrelhapjes en een warme sfeer. Kom gerust binnen.",
       },
       { name: "author", content: "StadsCafe" },
       { name: "google-site-verification", content: "Ku2-ctAEbemhXWDqpPifgZQXgxgdPj5lXZcFxZkucdA" },
-      { property: "og:title", content: "StadsCafe — Speciaalbier op het Scheffersplein Dordrecht" },
+      { property: "og:title", content: "StadsCafe — Bruin café en speciaalbier in Dordrecht" },
       {
         property: "og:description",
         content:
-          "Dé ontmoetingsplek op het Scheffersplein. Speciaalbier, wijn, borrelhapjes en de gezellige sfeer van Dordrecht.",
+          "Speciaalbier, borrelhapjes en een warme kroegsfeer aan het Scheffersplein in Dordrecht. Loop gerust eens binnen.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "StadsCafe" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "StadsCafe — Speciaalbier op het Scheffersplein Dordrecht" },
-      { name: "twitter:description", content: "Dé ontmoetingsplek op het Scheffersplein. Speciaalbier, wijn, borrelhapjes en de gezellige sfeer van Dordrecht." },
+      { name: "twitter:title", content: "StadsCafe — Bruin café en speciaalbier in Dordrecht" },
+      { name: "twitter:description", content: "Speciaalbier, borrelhapjes en een warme kroegsfeer in hartje Dordrecht." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/864e9f43-d1ff-43f5-9042-fdaf210aadc0/id-preview-32eb416b--3030e587-0e2c-48b8-aabd-374eb7f88cb1.lovable.app-1784404156583.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/864e9f43-d1ff-43f5-9042-fdaf210aadc0/id-preview-32eb416b--3030e587-0e2c-48b8-aabd-374eb7f88cb1.lovable.app-1784404156583.png" },
     ],
@@ -157,7 +157,6 @@ function RootComponent() {
         <Outlet />
       </main>
       <SiteFooter />
-      <WhatsAppFloating />
     </QueryClientProvider>
   );
 }

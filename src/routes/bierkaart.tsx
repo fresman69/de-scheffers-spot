@@ -143,17 +143,16 @@ function Bierkaart() {
       <section className="bg-oak py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-4 font-script text-5xl leading-none text-brass md:text-6xl">Bierkaart</p>
-          <h1 className="mb-6 max-w-[20ch] font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
-            Zorgvuldig gekozen speciaalbier.
+          <h1 className="mb-6 max-w-[22ch] font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
+            Speciaalbier, met plezier gekozen
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
+          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
             Van huisbier Gouwe Ary op de tap tot klassieke trappisten, wilde sours en
-            alcoholvrije verfrissers — onze kaart is een eerbetoon aan het ambacht.
-            Onze bediening adviseert je graag over de juiste keuze voor de avond.
+            alcoholvrije verfrissers. Voor elk humeur staat er wel iets goeds klaar.
+            Vraag onze bediening gerust om een tip.
           </p>
           <p className="mt-6 max-w-[60ch] text-sm text-paper/75">
-            Prijzen zijn tijdelijk niet zichtbaar op de website — vraag onze bediening
-            of bekijk de kaart in het café. Productfoto's worden per bier toegevoegd.
+            Prijzen zie je op de kaart in het café. Foto's per bier volgen zodra we ze hebben.
           </p>
         </div>
       </section>

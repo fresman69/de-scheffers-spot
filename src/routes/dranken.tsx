@@ -5,11 +5,11 @@ import { ProductCard, type Product } from "../components/product-card";
 export const Route = createFileRoute("/dranken")({
   head: () => ({
     meta: [
-      { title: "Dranken — Wijn, gin, cocktails, sterk & meer | StadsCafe" },
+      { title: "Dranken — Wijn, sterk, koffie & fris | StadsCafe" },
       {
         name: "description",
         content:
-          "Onze wijnkaart, gin & tonic, cocktails, sterke dranken, koffie/thee en frisdranken — de officiële kaart 2025 van StadsCafe",
+          "Onze wijnkaart, sterke dranken, gin & tonic, koffie/thee en frisdranken — voor iedereen wat lekkers naast de bierkaart.",
       },
       { property: "og:title", content: "Dranken — StadsCafe" },
       { property: "og:url", content: "/dranken" },
@@ -148,18 +148,16 @@ function Dranken() {
     <>
       <section className="bg-oak py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="mb-4 font-script text-5xl leading-none text-teal md:text-6xl">Dranken</p>
+          <p className="mb-4 font-script text-5xl leading-none text-brass md:text-6xl">Dranken</p>
           <h1 className="mb-6 max-w-[24ch] font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
-            Wijn, gin, cocktails & meer.
+            Naast het bier
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
-            Onze volledige drankenkaart met wijnen, gin & tonic, cocktails,
-            sterke dranken, koffie/thee en frisdranken — zorgvuldig
-            samengesteld voor elk moment van de avond.
+          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
+            Wijn, gin & tonic, sterk, koffie en frisdrank. Voor als bier even niet
+            past bij het moment — of gewoon voor de afwisseling.
           </p>
           <p className="mt-6 max-w-[60ch] text-sm text-paper/75">
-            Prijzen worden voorlopig niet online getoond. Vraag onze bediening
-            of bekijk de kaart in het café.
+            Prijzen zie je op de kaart in het café. Vraag onze bediening gerust om een tip.
           </p>
         </div>
       </section>

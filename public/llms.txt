@@ -1,20 +1,18 @@
 # StadsCafe
 
-> Historisch bruin café aan de Voorstraat in Dordrecht — meer dan zestig bieren, ambachtelijke happas en een warme, klassieke sfeer.
+> Een gezellig bruin café in hartje Dordrecht — meer dan zestig speciaalbieren, ambachtelijke happas en een warme kroegsfeer.
 
-StadsCafe is een authentiek Dordts bruin café. Van huisbier Gele Ary op de tap tot klassieke trappisten, wijnen, cocktails en whisky's — met ambachtelijke borrelhapjes en een uitgebreid programma aan evenementen.
+StadsCafe is een gewoon, gezellig bruin café aan het Scheffersplein in Dordrecht. Van huisbier Gouwe Ary op de tap tot klassieke trappisten, IPA's, sours en alcoholvrij — met ambachtelijke borrelhapjes en tijd voor een praatje. We werken niet met reserveringen; loop gerust binnen.
 
 ## Pages
 
-- [Home](/): Introductie, openingstijden en highlights van StadsCafe
-- [Over ons](/over-ons): Geschiedenis, gastvrijheid en het verhaal van het huis.
+- [Home](/): Welkom, openingstijden en highlights van StadsCafe.
+- [Over ons](/over-ons): Ons verhaal, gastvrijheid en de sfeer van het huis.
 - [Bierkaart](/bierkaart): Volledige bierkaart met tap, blond, dubbel, tripel, quad, amber, wit, stout, saison, cider, sour, ale en alcoholvrij.
 - [Dranken](/dranken): Wijnen, sterke dranken, gin & tonic, warme dranken en frisdranken.
-- [Borrelkaart](/borrelkaart): Ambachtelijke happas — fuet, tosti, olijven, kaasplank, nacho's, gehaktballen, chorizo en ossenworst.
-
+- [Borrelkaart](/borrelkaart): Ambachtelijke happas — fuet, kaashapjes, bitterballen, olijven, nachos en meer.
 - [Galerij](/galerij): Sfeerbeelden van het café.
-- [Reserveren](/reserveren): Online tafelreservering.
-- [Contact](/contact): Adres, openingstijden en route naar Voorstraat 260, Dordrecht.
+- [Contact](/contact): Adres, openingstijden en route naar Scheffersplein 12, Dordrecht.
 
 ## Optional
 
