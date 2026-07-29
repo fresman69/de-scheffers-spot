@@ -42,7 +42,7 @@ function OverOns() {
     <>
       <section className="bg-oak py-32">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
-          <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Over ons</p>
+          <p className="mb-4 font-script text-5xl leading-none text-brass md:text-6xl">Over ons</p>
           <h1 className="mb-6 font-display text-4xl sm:text-5xl text-paper md:text-6xl">
             Ons verhaal, ons huis.
           </h1>
