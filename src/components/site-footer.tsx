@@ -34,7 +34,7 @@ export function SiteFooter() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-6 text-xs font-semibold uppercase tracking-widest text-paper">Volg ons</h4>
+              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Volg ons</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-brass">Instagram</a></li>
                 <li><a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-brass">Facebook</a></li>
