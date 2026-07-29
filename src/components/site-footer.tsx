@@ -17,7 +17,7 @@ export function SiteFooter() {
           <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-3 sm:gap-16">
 
             <div>
-              <h4 className="mb-6 text-xs font-semibold uppercase tracking-widest text-paper">Bezoek</h4>
+              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Bezoek</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><Link to="/over-ons" className="hover:text-brass">Over ons</Link></li>
                 <li><Link to="/galerij" className="hover:text-brass">Galerij</Link></li>
