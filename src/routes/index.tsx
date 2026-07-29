@@ -195,16 +195,20 @@ function Home() {
         </div>
       </section>
 
-      {/* Openingstijden */}
+      {/* Openingstijden — wijnrood paneel met stippellijn-leaders, exact het ritme van de kaart. */}
       <section className="bg-paper py-16 md:py-24 text-oak">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <div className="rounded-sm bg-white p-10 ring-1 ring-black/5 md:p-12">
-            <h2 className="mb-10 font-display text-4xl">Openingstijden</h2>
-            <div className="space-y-4 border-t border-black/5 pt-8">
+          <div className="rounded-sm bg-wine p-10 text-paper ring-1 ring-wine-dim md:p-14">
+            <p className="mb-2 font-script text-4xl leading-none text-mustard">Wanneer</p>
+            <h2 className="mb-10 font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
+              Openingstijden
+            </h2>
+            <div className="space-y-4">
               {hours.map(([d, t]) => (
-                <div key={d} className="flex justify-between border-b border-black/5 pb-3">
-                  <span className="font-medium">{d}</span>
-                  <span className="text-oak/75">{t}</span>
+                <div key={d} className="flex items-end gap-3">
+                  <span className="font-display-condensed text-base tracking-widest">{d}</span>
+                  <span aria-hidden className="mb-[3px] h-[6px] flex-1 leader-dots text-paper/40" />
+                  <span className="font-display-condensed text-base tracking-widest text-mustard">{t}</span>
                 </div>
               ))}
             </div>
