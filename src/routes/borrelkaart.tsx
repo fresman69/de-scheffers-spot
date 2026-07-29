@@ -35,18 +35,16 @@ function Borrelkaart() {
     <>
       <section className="bg-oak py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="mb-4 font-script text-5xl leading-none text-mustard md:text-6xl">Hapas</p>
+          <p className="mb-4 font-script text-5xl leading-none text-mustard md:text-6xl">Happas</p>
           <h1 className="mb-6 max-w-[22ch] font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
-            Ambachtelijke hapas bij ieder glas.
+            Iets lekkers bij je glas
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
-            Van fuet en olijven tot bitterballen van De Bourgondiër — met liefde
-            klaargemaakt en gemaakt om te delen. Onze bediening tipt graag het
-            juiste bier of de juiste wijn erbij.
+          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
+            Fuet, olijven, bitterballen van De Bourgondiër — eerlijk werk om mee te delen.
+            Perfect bij een pilsje of een goed glas speciaalbier.
           </p>
           <p className="mt-6 max-w-[60ch] text-sm text-paper/75">
-            Prijzen worden voorlopig niet online getoond. Foto's van de hapas
-            volgen per gerecht.
+            Prijzen zie je op de kaart in het café. Foto's per hap volgen zodra we ze hebben.
           </p>
         </div>
       </section>

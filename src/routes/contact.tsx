@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Adres, telefoonnummer, e-mail, openingstijden en socialmedia van StadsCafe aan het Scheffersplein in Dordrecht.",
+          "Adres, telefoonnummer, e-mail, openingstijden en socialmedia van StadsCafe aan het Scheffersplein in Dordrecht. Loop gerust binnen.",
       },
       { property: "og:title", content: "Contact — StadsCafe" },
       { property: "og:url", content: "/contact" },
@@ -34,9 +34,13 @@ function Contact() {
       <section className="bg-oak py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-4 font-script text-5xl leading-none text-brass md:text-6xl">Contact</p>
-          <h1 className="mb-6 max-w-[22ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
-            Loop binnen, bel of stuur een berichtje.
+          <h1 className="mb-6 max-w-[24ch] font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
+            Loop binnen of bel gewoon even
           </h1>
+          <p className="max-w-[58ch] text-pretty text-lg text-paper/85">
+            We werken niet met reserveringen — er staat een plek voor je klaar als die vrij is.
+            Wil je met een groep langskomen? Bel of mail ons dan even, dan denken we met je mee.
+          </p>
         </div>
       </section>
 
@@ -44,7 +48,7 @@ function Contact() {
         <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2">
           <div className="space-y-10">
             <div>
-              <h2 className="mb-8 font-display text-3xl">Bezoek</h2>
+              <h2 className="mb-8 font-display-condensed text-3xl tracking-wider">Bezoek</h2>
               <ul className="space-y-5">
                 <li className="flex gap-4">
                   <MapPin size={20} className="mt-1 shrink-0 text-brass-dim" />
@@ -65,21 +69,22 @@ function Contact() {
             </div>
 
             <div>
-              <h2 className="mb-8 font-display text-3xl">Openingstijden</h2>
+              <h2 className="mb-8 font-display-condensed text-3xl tracking-wider">Openingstijden</h2>
               <ul className="space-y-3">
                 {hours.map(([d, t]) => (
-                  <li key={d} className="flex justify-between border-b border-dashed border-oak/10 pb-2">
+                  <li key={d} className="flex items-end gap-3">
                     <span className="font-medium">{d}</span>
-                    <span className="text-oak/75">{t}</span>
+                    <span aria-hidden className="mb-[3px] h-[6px] flex-1 leader-dots text-oak/30" />
+                    <span className="text-oak/80">{t}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h2 className="mb-6 font-display text-3xl">Volg ons</h2>
-              <div className="flex gap-3">
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-sm border border-oak/15 px-4 py-2.5 text-sm hover:border-brass-dim">
+              <h2 className="mb-6 font-display-condensed text-3xl tracking-wider">Volg ons</h2>
+              <div className="flex flex-wrap gap-3">
+                <a href="https://www.instagram.com/stadscafe_rijke/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-sm border border-oak/15 px-4 py-2.5 text-sm hover:border-brass-dim">
                   <Instagram size={16} /> Instagram
                 </a>
                 <a href="https://facebook.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-sm border border-oak/15 px-4 py-2.5 text-sm hover:border-brass-dim">

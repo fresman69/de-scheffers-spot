@@ -35,12 +35,12 @@ function Galerij() {
       <section className="bg-oak py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-4 font-script text-5xl leading-none text-brass md:text-6xl">Galerij</p>
-          <h1 className="mb-6 max-w-[22ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
-            Sfeer, ambacht en Dordts leven.
+          <h1 className="mb-6 max-w-[22ch] font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
+            Een kijkje binnen
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
-            Een blik binnen — van de bar tot het terras, van tap tot borrelplank. Deze galerij
-            wordt gevuld met eigen foto's van StadsCafe
+          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
+            Van de bar tot het terras, van tap tot borrelplank. Deze galerij vullen we
+            zodra we onze eigen foto's van StadsCafe hebben.
           </p>
         </div>
       </section>
