@@ -136,7 +136,7 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.005em; text-transform: uppercase; }
   img, iframe, video { max-width: 100%; height: auto; }
   iframe { display: block; }
   ::selection { background: color-mix(in oklch, var(--brass) 40%, transparent); }
