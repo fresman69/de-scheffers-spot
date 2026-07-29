@@ -198,6 +198,98 @@ function Home() {
         </div>
       </section>
 
+      {/* Sfeer in het glas — moodboard geïnspireerd op onze Pinterest 'Drank StadsCafe' */}
+      <section className="relative overflow-hidden bg-oak-light py-20 md:py-28">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.08]"
+          style={{
+            backgroundImage:
+              "radial-gradient(ellipse at 20% 10%, var(--brass) 0%, transparent 55%), radial-gradient(ellipse at 80% 90%, var(--wine) 0%, transparent 60%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mb-12 grid gap-6 lg:grid-cols-[1fr_1.2fr] lg:items-end">
+            <Reveal>
+              <div>
+                <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
+                  Sfeer in het glas
+                </span>
+                <h2 className="font-display-condensed text-4xl leading-tight tracking-wider text-paper md:text-5xl lg:text-6xl">
+                  Amberkleurig licht, koperen tap, koud condens
+                </h2>
+              </div>
+            </Reveal>
+            <Reveal delay={120}>
+              <p className="max-w-[52ch] text-pretty text-lg leading-relaxed text-paper/85">
+                Een moodboard van hoe het bij ons voelt: gouden bier tegen donker hout,
+                schuimkraag die net afzakt, een glas dat door het licht van de kroonluchter
+                oplicht. Puur, warm, en zonder poespas.
+              </p>
+            </Reveal>
+          </div>
+
+          {/* Bento moodboard — grote hero-tile links, drie kleinere rechts + brede onderrij */}
+          <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-3 sm:[grid-auto-flow:dense] md:h-[640px]">
+            <Reveal className="sm:col-span-2 sm:row-span-2">
+              <div className="zoom-image relative h-full overflow-hidden rounded-sm ring-1 ring-border">
+                <PhotoPlaceholder aspect="4 / 3" label="Getapt bier, gouden gloed" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-oak/90 via-oak/20 to-transparent p-6">
+                  <span className="font-script text-3xl text-brass md:text-4xl">Van de tap</span>
+                  <p className="mt-1 text-[11px] uppercase tracking-[0.3em] text-paper/80">
+                    Gouwe Ary · vers ingeschonken
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={80}>
+              <div className="zoom-image h-full overflow-hidden rounded-sm ring-1 ring-border">
+                <PhotoPlaceholder aspect="1 / 1" label="Koperen tapkraan detail" />
+              </div>
+            </Reveal>
+            <Reveal delay={140}>
+              <div className="zoom-image h-full overflow-hidden rounded-sm ring-1 ring-border">
+                <PhotoPlaceholder aspect="1 / 1" label="Trappist in bolvormig glas" />
+              </div>
+            </Reveal>
+            <Reveal delay={200} className="sm:col-span-2">
+              <div className="zoom-image h-full overflow-hidden rounded-sm ring-1 ring-border">
+                <PhotoPlaceholder aspect="16 / 9" label="Bar bij avondlicht, glazen op rij" />
+              </div>
+            </Reveal>
+            <Reveal delay={260}>
+              <div className="zoom-image h-full overflow-hidden rounded-sm ring-1 ring-border">
+                <PhotoPlaceholder aspect="1 / 1" label="Gin & tonic met verse limoen" />
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Woordwolk — kleine typografische sfeeraanduidingen */}
+          <Reveal delay={200}>
+            <ul className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center">
+              {[
+                "Schuimkraag",
+                "Amber",
+                "Koper",
+                "Kaarslicht",
+                "Donker hout",
+                "Condens",
+                "Trappist",
+                "Gouwe Ary",
+              ].map((w, i) => (
+                <li
+                  key={w}
+                  className={`font-script text-2xl md:text-3xl ${i % 2 === 0 ? "text-brass" : "text-mustard"}`}
+                >
+                  {w}
+                  {i < 7 ? <span className="ml-8 text-paper/25">·</span> : null}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Waarom StadsCafe */}
       <section className="bg-oak-light py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
