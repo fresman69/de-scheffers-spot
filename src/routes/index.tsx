@@ -91,9 +91,12 @@ function Home() {
           <img
             src={gevelCafe.url}
             alt="Gevel van StadsCafe aan het Scheffersplein in Dordrecht"
+            fetchPriority="high"
+            decoding="async"
             className="h-full w-full object-cover opacity-60"
           />
         </div>
+
         <div className="absolute inset-0 bg-gradient-to-b from-oak/80 via-oak/45 to-oak" />
         <div
           aria-hidden
@@ -408,15 +411,24 @@ function Home() {
         </div>
       </section>
 
-      {/* Instagram */}
-      <section className="bg-paper py-20 text-oak md:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      {/* Instagram — warme amber/koper detaillering met fallback state */}
+      <section className="relative overflow-hidden bg-paper py-20 text-oak md:py-28">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              "radial-gradient(ellipse at 10% 0%, var(--brass) 0%, transparent 55%), radial-gradient(ellipse at 90% 100%, var(--wine) 0%, transparent 60%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <Reveal>
               <div>
                 <span className="mb-3 block font-script text-4xl leading-none text-brass-dim md:text-5xl">
                   Op Instagram
                 </span>
+                <Ornament tone="brass" className="mb-4 !mx-0 !max-w-[160px]" />
                 <h2 className="font-display-condensed text-4xl tracking-wider text-oak md:text-5xl">
                   @stadscafe_rijke
                 </h2>
@@ -427,23 +439,48 @@ function Home() {
                 href="https://www.instagram.com/stadscafe_rijke/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border-b border-brass-dim/40 pb-1 text-sm font-medium text-brass-dim transition-colors hover:border-brass-dim"
+                className="inline-flex items-center gap-2 rounded-sm bg-oak px-5 py-3 text-sm font-medium text-brass ring-1 ring-brass/40 hover:-translate-y-0.5 hover:bg-oak-light hover:text-mustard hover:ring-brass"
               >
                 <Instagram size={16} /> Volg ons
               </a>
             </Reveal>
           </div>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          {/* Feed placeholder — vervangt zich zodra Instagram-embed geladen is */}
+          <div
+            role="status"
+            aria-live="polite"
+            aria-label="Instagram feed wordt geladen"
+            className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6"
+          >
             {Array.from({ length: 6 }).map((_, i) => (
               <Reveal key={i} delay={i * 60}>
-                <div className="zoom-image aspect-square overflow-hidden rounded-sm">
-                  <PhotoPlaceholder tone="light" aspect="1 / 1" label="Instagram post" />
+                <div className="zoom-image group relative aspect-square overflow-hidden rounded-sm ring-1 ring-oak/10">
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-gradient-to-br from-brass/20 via-mustard/10 to-wine/20"
+                  />
+                  <div className="relative flex h-full w-full flex-col items-center justify-center gap-2 text-center">
+                    <Instagram size={20} strokeWidth={1.25} className="text-brass-dim/70" />
+                    <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-oak/60">
+                      Post volgt
+                    </span>
+                  </div>
+                  {/* Shimmer skeleton — subtiele beweging tot echte posts inladen */}
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-paper/40 to-transparent"
+                    style={{ animation: `soft-pulse 2.8s var(--ease-smooth) ${i * 0.15}s infinite` }}
+                  />
                 </div>
               </Reveal>
             ))}
           </div>
+          <p className="mt-8 text-center text-xs uppercase tracking-[0.25em] text-oak/55">
+            Geen posts geladen? Bekijk onze feed direct op Instagram.
+          </p>
         </div>
       </section>
+
 
       {/* Openingstijden + Route */}
       <section className="bg-oak py-20 md:py-28">
