@@ -26,7 +26,7 @@ export function SiteFooter() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-6 text-xs font-semibold uppercase tracking-widest text-paper">Contact</h4>
+              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Contact</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><a href="tel:+31786134242" className="hover:text-brass">078 613 4242</a></li>
                 <li><a href="mailto:info@rijke-zn.nl" className="hover:text-brass">info@rijke-zn.nl</a></li>
