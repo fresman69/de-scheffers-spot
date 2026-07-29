@@ -39,8 +39,14 @@
   --color-paper: var(--paper);
   --color-wine: var(--wine);
   --color-wine-dim: var(--wine-dim);
+  --color-mustard: var(--mustard);
+  --color-mustard-dim: var(--mustard-dim);
+  --color-teal: var(--teal);
+  --color-teal-dim: var(--teal-dim);
 
-  --font-display: "Cormorant Garamond", serif;
+  --font-display: "Oswald", "Cormorant Garamond", serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-script: "Alex Brush", "Yellowtail", cursive;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -49,11 +55,15 @@
 
   --oak: oklch(0.16 0.008 60);
   --oak-light: oklch(0.22 0.012 60);
-  --brass: oklch(0.68 0.09 78);
-  --brass-dim: oklch(0.56 0.08 78);
-  --paper: oklch(0.96 0.03 85);
-  --wine: oklch(0.48 0.16 25);
-  --wine-dim: oklch(0.38 0.14 25);
+  --brass: oklch(0.72 0.11 78);
+  --brass-dim: oklch(0.58 0.09 78);
+  --paper: oklch(0.94 0.035 82);
+  --wine: oklch(0.48 0.17 22);
+  --wine-dim: oklch(0.36 0.14 22);
+  --mustard: oklch(0.82 0.16 82);
+  --mustard-dim: oklch(0.68 0.14 78);
+  --teal: oklch(0.48 0.08 220);
+  --teal-dim: oklch(0.36 0.06 220);
 
   --background: var(--oak);
   --foreground: oklch(0.92 0.008 85);
@@ -92,6 +102,30 @@
   animation: fade-in 1.2s ease-out both;
 }
 
+/* Handgeschreven script — direct herkenbaar uit de fysieke menukaart. */
+@utility font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+/* Zware condensed serif — displaykop in menukaart-stijl. */
+@utility font-display-condensed {
+  font-family: "Oswald", "Bebas Neue", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Stippellijn-leader tussen naam en prijs/ABV — de handtekening van de kaart. */
+@utility leader-dots {
+  background-image: radial-gradient(circle, currentColor 0.6px, transparent 0.7px);
+  background-position: bottom;
+  background-size: 6px 2px;
+  background-repeat: repeat-x;
+}
+
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -102,7 +136,7 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.005em; text-transform: uppercase; }
   img, iframe, video { max-width: 100%; height: auto; }
   iframe { display: block; }
   ::selection { background: color-mix(in oklch, var(--brass) 40%, transparent); }

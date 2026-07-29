@@ -34,7 +34,7 @@ function Galerij() {
     <>
       <section className="bg-oak py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Galerij</p>
+          <p className="mb-4 font-script text-5xl leading-none text-brass md:text-6xl">Galerij</p>
           <h1 className="mb-6 max-w-[22ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
             Sfeer, ambacht en Dordts leven.
           </h1>

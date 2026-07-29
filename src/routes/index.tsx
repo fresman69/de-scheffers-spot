@@ -73,10 +73,13 @@ function Home() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-oak/60 via-oak/30 to-oak" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 text-center">
-          <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass animate-fade-in">
-            Sinds mensenheugenis · Scheffersplein
+          <p className="mb-4 font-script text-5xl leading-none text-brass animate-fade-in md:text-6xl">
+            Sinds mensenheugenis
           </p>
-          <h1 className="mx-auto mb-8 max-w-[22ch] text-balance font-display text-5xl leading-[1.05] text-paper md:text-7xl animate-fade-up">
+          <p className="mb-8 text-[11px] uppercase tracking-[0.4em] text-paper/70 animate-fade-in">
+            Scheffersplein · Dordrecht
+          </p>
+          <h1 className="mx-auto mb-8 max-w-[22ch] text-balance font-display-condensed text-5xl leading-[0.95] tracking-wider text-paper md:text-7xl lg:text-8xl animate-fade-up">
             Dé ontmoetingsplek op het Scheffersplein.
           </h1>
           <p className="mx-auto mb-10 max-w-[50ch] text-pretty text-lg leading-relaxed text-paper/85 md:text-xl animate-fade-up">
@@ -86,13 +89,13 @@ function Home() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-up">
             <Link
               to="/reserveren"
-              className="w-full rounded-sm bg-brass px-8 py-3.5 text-sm font-medium uppercase tracking-widest text-oak transition-colors hover:bg-paper sm:w-auto"
+              className="w-full rounded-sm bg-wine px-8 py-3.5 text-xs font-medium uppercase tracking-[0.25em] text-paper transition-colors hover:bg-wine-dim sm:w-auto"
             >
               Reserveer een tafel
             </Link>
             <Link
               to="/bierkaart"
-              className="w-full rounded-sm px-8 py-3.5 text-sm font-medium uppercase tracking-widest text-paper ring-1 ring-paper/40 transition-colors hover:ring-paper sm:w-auto"
+              className="w-full rounded-sm bg-mustard px-8 py-3.5 text-xs font-medium uppercase tracking-[0.25em] text-oak transition-colors hover:bg-mustard-dim sm:w-auto"
             >
               Bekijk onze bieren
             </Link>
@@ -104,7 +107,7 @@ function Home() {
       <section className="bg-paper py-16 md:py-24 text-oak">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="max-w-3xl">
-            <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass-dim">
+            <span className="mb-4 block font-script text-4xl leading-none text-brass-dim">
               Ambacht &amp; Gastvrijheid
             </span>
             <h2 className="mb-8 max-w-[35ch] text-balance font-display text-3xl sm:text-4xl leading-tight md:text-5xl">
@@ -130,7 +133,7 @@ function Home() {
             className="aspect-[4/3] w-full rounded-sm object-cover ring-1 ring-border"
           />
           <div>
-            <span className="mb-4 block text-xs font-semibold uppercase tracking-widest text-brass">
+            <span className="mb-4 block font-script text-4xl leading-none text-brass">
               Sfeerimpressie
             </span>
             <h2 className="mb-6 font-display text-3xl sm:text-4xl text-paper md:text-5xl">
@@ -156,7 +159,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-16 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <span className="mb-3 block text-xs font-semibold uppercase tracking-widest text-brass">
+              <span className="mb-3 block font-script text-4xl leading-none text-brass">
                 Van de tap
               </span>
               <h2 className="font-display text-3xl sm:text-4xl text-paper md:text-5xl">
@@ -192,16 +195,20 @@ function Home() {
         </div>
       </section>
 
-      {/* Openingstijden */}
+      {/* Openingstijden — wijnrood paneel met stippellijn-leaders, exact het ritme van de kaart. */}
       <section className="bg-paper py-16 md:py-24 text-oak">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <div className="rounded-sm bg-white p-10 ring-1 ring-black/5 md:p-12">
-            <h2 className="mb-10 font-display text-4xl">Openingstijden</h2>
-            <div className="space-y-4 border-t border-black/5 pt-8">
+          <div className="rounded-sm bg-wine p-10 text-paper ring-1 ring-wine-dim md:p-14">
+            <p className="mb-2 font-script text-4xl leading-none text-mustard">Wanneer</p>
+            <h2 className="mb-10 font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
+              Openingstijden
+            </h2>
+            <div className="space-y-4">
               {hours.map(([d, t]) => (
-                <div key={d} className="flex justify-between border-b border-black/5 pb-3">
-                  <span className="font-medium">{d}</span>
-                  <span className="text-oak/75">{t}</span>
+                <div key={d} className="flex items-end gap-3">
+                  <span className="font-display-condensed text-base tracking-widest">{d}</span>
+                  <span aria-hidden className="mb-[3px] h-[6px] flex-1 leader-dots text-paper/40" />
+                  <span className="font-display-condensed text-base tracking-widest text-mustard">{t}</span>
                 </div>
               ))}
             </div>
@@ -213,7 +220,7 @@ function Home() {
       <section className="bg-oak-light py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-12 text-center">
-            <span className="mb-3 block text-xs font-semibold uppercase tracking-widest text-brass">
+            <span className="mb-3 block font-script text-4xl leading-none text-brass">
               Wat gasten zeggen
             </span>
             <h2 className="mx-auto max-w-[24ch] font-display text-3xl sm:text-4xl text-paper md:text-5xl">

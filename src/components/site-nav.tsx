@@ -31,16 +31,17 @@ export function SiteNav() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
-        <Link to="/" className="min-w-0 truncate font-display text-xl tracking-tight text-brass sm:text-2xl">
-          Rijke &amp; Zn.
+        <Link to="/" className="flex min-w-0 shrink items-baseline gap-2 truncate">
+          <span className="font-script text-2xl leading-none text-brass sm:text-3xl">Stadscafé</span>
+          <span className="font-display-condensed text-lg tracking-widest text-paper sm:text-xl">Rijke &amp; Zn.</span>
         </Link>
-        <div className="hidden items-center gap-7 text-[13px] font-medium uppercase tracking-[0.14em] text-muted-foreground lg:flex">
+        <div className="hidden items-center gap-7 text-[12px] font-medium uppercase tracking-[0.18em] text-paper/70 lg:flex">
           {links.slice(1, -1).map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className="transition-colors hover:text-brass"
-              activeProps={{ className: "text-brass" }}
+              className="border-b border-transparent pb-1 transition-colors hover:text-brass"
+              activeProps={{ className: "text-paper border-wine" }}
             >
               {l.label}
             </Link>
@@ -49,7 +50,7 @@ export function SiteNav() {
         <div className="flex shrink-0 items-center gap-2">
           <Link
             to="/reserveren"
-            className="hidden rounded-sm px-4 py-2 text-sm font-medium text-brass ring-1 ring-brass transition-colors hover:bg-brass/10 sm:inline-flex"
+            className="hidden rounded-sm bg-wine px-4 py-2 text-xs font-medium uppercase tracking-widest text-paper transition-colors hover:bg-wine-dim sm:inline-flex"
           >
             Reserveren
           </Link>

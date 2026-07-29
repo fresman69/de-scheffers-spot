@@ -6,8 +6,9 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:gap-12">
           <div>
-            <span className="mb-4 block font-display text-3xl text-brass">Rijke &amp; Zn.</span>
-            <p className="max-w-[30ch] text-sm leading-relaxed text-muted-foreground">
+            <span className="mb-1 block font-script text-4xl text-brass">Stadscafé</span>
+            <span className="mb-4 block font-display-condensed text-2xl tracking-widest text-paper">Rijke &amp; Zn.</span>
+            <p className="max-w-[30ch] text-sm leading-relaxed text-paper/75">
               Scheffersplein 12
               <br />
               3311 PX Dordrecht
@@ -16,7 +17,7 @@ export function SiteFooter() {
           <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-3 sm:gap-16">
 
             <div>
-              <h4 className="mb-6 text-xs font-semibold uppercase tracking-widest text-paper">Bezoek</h4>
+              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Bezoek</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><Link to="/over-ons" className="hover:text-brass">Over ons</Link></li>
                 <li><Link to="/galerij" className="hover:text-brass">Galerij</Link></li>
@@ -25,7 +26,7 @@ export function SiteFooter() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-6 text-xs font-semibold uppercase tracking-widest text-paper">Contact</h4>
+              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Contact</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><a href="tel:+31786134242" className="hover:text-brass">078 613 4242</a></li>
                 <li><a href="mailto:info@rijke-zn.nl" className="hover:text-brass">info@rijke-zn.nl</a></li>
@@ -33,7 +34,7 @@ export function SiteFooter() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-6 text-xs font-semibold uppercase tracking-widest text-paper">Volg ons</h4>
+              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Volg ons</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-brass">Instagram</a></li>
                 <li><a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-brass">Facebook</a></li>

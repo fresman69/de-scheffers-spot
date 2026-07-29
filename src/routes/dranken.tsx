@@ -147,8 +147,8 @@ function Dranken() {
     <>
       <section className="bg-oak py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="mb-6 text-xs uppercase tracking-[0.35em] text-brass">Dranken</p>
-          <h1 className="mb-6 max-w-[24ch] font-display text-4xl sm:text-5xl text-paper md:text-6xl">
+          <p className="mb-4 font-script text-5xl leading-none text-teal md:text-6xl">Dranken</p>
+          <h1 className="mb-6 max-w-[24ch] font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
             Wijn, gin, cocktails & meer.
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-muted-foreground">
@@ -170,10 +170,10 @@ function Dranken() {
               <button
                 key={c}
                 onClick={() => setActive(c)}
-                className={`whitespace-nowrap rounded-sm px-4 py-2 text-xs font-medium uppercase tracking-widest transition-all ${
+                className={`whitespace-nowrap rounded-sm px-4 py-2 text-[11px] font-medium uppercase tracking-widest transition-all ${
                   active === c
-                    ? "bg-brass text-oak"
-                    : "text-muted-foreground ring-1 ring-border hover:text-brass"
+                    ? "bg-wine text-paper"
+                    : "text-paper/75 ring-1 ring-border hover:text-brass hover:ring-brass/50"
                 }`}
               >
                 {c}
