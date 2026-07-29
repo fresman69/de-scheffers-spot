@@ -27,20 +27,22 @@ type Props = {
  */
 export function ProductCard({ product, aspect = "4 / 3", tone = "dark" }: Props) {
   const isDark = tone === "dark";
-  const surface = isDark ? "bg-oak-light ring-border" : "bg-white ring-oak/10";
+  const surface = isDark ? "bg-oak-light ring-border" : "bg-paper ring-oak/10";
   const title = isDark ? "text-paper" : "text-oak";
-  const sub = isDark ? "text-muted-foreground" : "text-oak/75";
+  const sub = isDark ? "text-paper/60" : "text-oak/60";
   const meta = isDark ? "text-paper/85" : "text-oak/80";
-  const price = isDark ? "text-brass" : "text-brass-dim";
+  const priceCol = isDark ? "text-brass" : "text-wine";
+  const leaderCol = isDark ? "text-paper/25" : "text-oak/30";
 
   const hasMeta = Boolean(product.volume || product.abv);
+  const rightMeta = product.abv ?? product.volume ?? "";
 
   return (
     <article
-      className={`group flex flex-col overflow-hidden rounded-sm ring-1 transition-all hover:ring-brass/40 ${surface}`}
+      className={`group flex flex-col overflow-hidden rounded-sm ring-1 transition-all hover:ring-wine/60 ${surface}`}
     >
       <div
-        className={`relative w-full overflow-hidden ${isDark ? "bg-oak/60" : "bg-oak/[0.04]"}`}
+        className={`relative w-full overflow-hidden border-b ${isDark ? "bg-oak/60 border-oak/80" : "bg-oak/[0.04] border-oak/10"}`}
         style={{ aspectRatio: aspect }}
       >
         {product.photo ? (
@@ -70,24 +72,23 @@ export function ProductCard({ product, aspect = "4 / 3", tone = "dark" }: Props)
         )}
       </div>
       <div className="flex flex-1 flex-col p-5">
-        <div className="mb-1 flex items-start justify-between gap-4">
-          <h3 className={`font-display text-xl leading-tight ${title}`}>{product.name}</h3>
+        {/* Naam + prijs/ABV met stippellijn-leader — direct herkenbaar uit de kaart. */}
+        <div className="mb-2 flex items-end gap-2">
+          <h3 className={`font-display-condensed text-lg leading-tight tracking-wider ${title}`}>
+            {product.name}
+          </h3>
+          <span aria-hidden className={`mb-[3px] h-[6px] flex-1 leader-dots ${leaderCol}`} />
           {product.price ? (
-            <span className={`shrink-0 font-medium ${price}`}>{product.price}</span>
+            <span className={`font-display-condensed shrink-0 text-base ${priceCol}`}>{product.price}</span>
+          ) : rightMeta ? (
+            <span className={`shrink-0 text-[11px] uppercase tracking-widest ${priceCol}`}>{rightMeta}</span>
           ) : null}
         </div>
         {product.description ? (
-          <p className={`mb-4 text-sm ${meta}`}>{product.description}</p>
+          <p className={`text-sm italic ${meta}`}>{product.description}</p>
         ) : null}
-        {hasMeta ? (
-          <div
-            className={`mt-auto flex justify-between border-t pt-3 text-[11px] uppercase tracking-widest ${sub} ${
-              isDark ? "border-border" : "border-oak/10"
-            }`}
-          >
-            <span>{product.volume ?? "—"}</span>
-            {product.abv ? <span className="text-brass">{product.abv}</span> : <span />}
-          </div>
+        {hasMeta && product.volume && rightMeta !== product.volume ? (
+          <p className={`mt-3 text-[11px] uppercase tracking-widest ${sub}`}>{product.volume}</p>
         ) : null}
       </div>
     </article>
