@@ -102,6 +102,30 @@
   animation: fade-in 1.2s ease-out both;
 }
 
+/* Handgeschreven script — direct herkenbaar uit de fysieke menukaart. */
+@utility font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+/* Zware condensed serif — displaykop in menukaart-stijl. */
+@utility font-display-condensed {
+  font-family: "Oswald", "Bebas Neue", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Stippellijn-leader tussen naam en prijs/ABV — de handtekening van de kaart. */
+@utility leader-dots {
+  background-image: radial-gradient(circle, currentColor 0.6px, transparent 0.7px);
+  background-position: bottom;
+  background-size: 6px 2px;
+  background-repeat: repeat-x;
+}
+
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; overflow-x: hidden; }
