@@ -102,7 +102,7 @@ const drinks: Drink[] = [
   { category: "Koffie / Thee", name: "Koffie verkeerd" },
   { category: "Koffie / Thee", name: "Cappuccino" },
   { category: "Koffie / Thee", name: "Cortado" },
-  { category: "Koffie / Thee", name: "Warme chocomel", description: "Slagroom optioneel" },
+  { category: "Koffie / Thee", name: "Warme chocomel", description: "Slagroom + €0,50" },
   { category: "Koffie / Thee", name: "Italian Coffee", description: "Met Disaronno" },
   { category: "Koffie / Thee", name: "Irish Coffee", description: "Met Jameson" },
   { category: "Koffie / Thee", name: "Spanish Coffee", description: "Met Tia Maria" },
