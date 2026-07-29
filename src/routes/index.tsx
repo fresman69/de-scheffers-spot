@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Beer, Instagram, MapPin, Star, Users, Heart } from "lucide-react";
 import { PhotoPlaceholder } from "../components/photo-placeholder";
+import { Ornament } from "../components/ornament";
 import { Reveal } from "../components/reveal";
 import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
 import gevelCafe from "../assets/gevel-cafe.jpg.asset.json";
