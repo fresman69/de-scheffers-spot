@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.1",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://pkybyutnkkjassgixwla.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "dordrecht-s-warm-welcome",
+      "version": "0.1.0",
+      "title": "Dordrecht's Warm Welcome"
+    },
+    "tools": [
+      {
+        "name": "list_beers",
+        "title": "Bierkaart opvragen",
+        "description": "List the beers on the StadsCafe beer menu, optionally filtered by category (e.g. Tripel, Sour / Geuze, 0.0 / Alcoholarm) or a search term.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "description": "Filter on a beer category, case-insensitive."
+            },
+            "search": {
+              "type": "string",
+              "description": "Free-text search on beer name or description."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_drinks",
+        "title": "Drankenkaart opvragen",
+        "description": "List the non-beer drinks at StadsCafe (wine, sparkling, gin & tonic, spirits, coffee/tea, soft drinks), optionally filtered by category or search term.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "description": "Filter on a drink category, case-insensitive."
+            },
+            "search": {
+              "type": "string",
+              "description": "Free-text search on drink name or description."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_snacks",
+        "title": "Borrelkaart opvragen",
+        "description": "List the hapas / bar snacks served at StadsCafe.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "cafe_info",
+        "title": "Café-informatie",
+        "description": "Get StadsCafe's address, phone number, email, Instagram, opening hours and reservation policy.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
