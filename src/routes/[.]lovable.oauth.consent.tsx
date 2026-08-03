@@ -108,7 +108,7 @@ function Consent() {
         )}
         {scopes.length > 0 && (
           <ul className="mt-4 space-y-1 text-sm text-paper/75">
-            {scopes.map((s) => (
+            {scopes.map((s: string) => (
               <li key={s}>
                 {s === "email" ? "Je e-mailadres delen" : s === "profile" ? "Je basisprofiel delen" : `Extra rechten: ${s}`}
               </li>
