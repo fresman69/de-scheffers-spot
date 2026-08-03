@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ProductCard, type Product } from "../components/product-card";
+import { ProductCard } from "../components/product-card";
 import { hapas } from "../lib/menu/hapas";
 
 export const Route = createFileRoute("/borrelkaart")({
