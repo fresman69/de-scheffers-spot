@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ProductCard } from "../components/product-card";
-import { beers, type Beer } from "../lib/menu/beers";
+import { BeerCard } from "../components/beer-card";
+import { Ornament } from "../components/ornament";
+import { Reveal } from "../components/reveal";
+import { beers } from "../lib/menu/beers";
 
 export const Route = createFileRoute("/bierkaart")({
   head: () => ({
@@ -10,16 +12,21 @@ export const Route = createFileRoute("/bierkaart")({
       {
         name: "description",
         content:
-          "Onze volledige bierkaart 2025: van huisbier Gouwe Ary tot trappisten, sours, ciders, saisons en alcoholvrij. Zorgvuldig gekozen speciaalbieren in Dordrecht.",
+          "Onze volledige bierkaart: van huisbier Gouwe Ary tot trappisten, sours, ciders, saisons en alcoholvrij. Zorgvuldig gekozen speciaalbier in Dordrecht.",
       },
       { property: "og:title", content: "Bierkaart — Stadscafé" },
+      {
+        property: "og:description",
+        content: "Goed bier, goede sfeer. Ontdek de speciaalbieren van Stadscafé in Dordrecht.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/bierkaart" },
     ],
     links: [{ rel: "canonical", href: "/bierkaart" }],
   }),
   component: Bierkaart,
 });
-
 
 const categories = [
   "Alle",
@@ -32,7 +39,7 @@ const categories = [
   "Zwaar Blond",
   "Wit / Weizen",
   "Amber",
-  "Fruit / Zomer",
+  "Fruit / Zoeter",
   "Stout / Porter",
   "Saison",
   "Sour / Geuze",
@@ -43,28 +50,31 @@ const categories = [
 function Bierkaart() {
   const [active, setActive] = useState("Alle");
   const filtered = active === "Alle" ? beers : beers.filter((b) => b.category === active);
+  const shown = categories.filter((c) => c !== "Alle" && filtered.some((b) => b.category === c));
 
   return (
     <>
       <section className="bg-oak section-y">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="mb-4 font-script type-eyebrow text-brass">Bierkaart</p>
-          <h1 className="mb-6 max-w-[22ch] type-h1 text-paper">
-            Speciaalbier, met plezier gekozen
-          </h1>
-          <p className="max-w-[60ch] text-pretty type-body text-paper/85">
-            Van huisbier Gouwe Ary op de tap tot klassieke trappisten, wilde sours en
-            alcoholvrije verfrissers. Voor elk humeur staat er wel iets goeds klaar.
-            Vraag onze bediening gerust om een tip.
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
+          <p className="type-label text-brass/80">Stadscafé</p>
+          <h1 className="mt-3 type-h1 text-paper">Bierkaart</h1>
+          <p className="mt-4 font-display-condensed text-sm tracking-[0.3em] text-wine">
+            ★ Goed bier, goede sfeer ★
           </p>
-          <p className="mt-6 max-w-[60ch] text-sm text-paper/75">
-            Prijzen zie je op de kaart in het café. Foto's per bier volgen zodra we ze hebben.
+          <Ornament className="mt-8" />
+          <p className="mx-auto mt-8 max-w-[58ch] text-pretty type-body text-paper/80">
+            Van huisbier Gouwe Ary op de tap tot klassieke trappisten, wilde sours en alcoholvrije
+            verfrissers. Voor elk humeur staat er wel iets goeds klaar. Vraag onze bediening gerust
+            om een tip.
+          </p>
+          <p className="mt-4 text-sm text-paper/60">
+            Prijzen vind je op de kaart in het café. Productfoto's voegen we stap voor stap toe.
           </p>
         </div>
       </section>
 
       <section className="sticky top-16 z-20 border-y border-border bg-oak/95 backdrop-blur">
-        <div className="mx-auto max-w-7xl overflow-x-auto px-4 sm:px-6 py-4">
+        <div className="mx-auto max-w-7xl overflow-x-auto px-4 py-4 sm:px-6">
           <div className="flex gap-2">
             {categories.map((c) => (
               <button
@@ -84,19 +94,46 @@ function Bierkaart() {
         </div>
       </section>
 
-      <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
+      <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <h2 className="mb-8 type-h3 text-paper">
-            {active === "Alle" ? "Alle bieren" : active}
-            <span className="ml-3 align-middle type-label text-brass">{filtered.length}</span>
-          </h2>
+          {shown.map((cat) => {
+            const items = filtered.filter((b) => b.category === cat);
+            const compact = cat === "0.0 / Alcoholarm";
+            return (
+              <div key={cat} className="mb-14 last:mb-0">
+                <div className="mb-7 flex items-center gap-4">
+                  <span aria-hidden className="h-px flex-1 bg-wine/50" />
+                  <h2 className="type-h3 text-paper">{cat}</h2>
+                  <span className="type-label text-brass/70">{items.length}</span>
+                  <span aria-hidden className="h-px flex-1 bg-wine/50" />
+                </div>
+                <div
+                  className={`grid gap-4 ${compact ? "sm:grid-cols-2" : "md:grid-cols-2 xl:grid-cols-3"}`}
+                >
+                  {items.map((b, i) => (
+                    <Reveal key={`${b.category}-${b.name}`} delay={Math.min(i, 6) * 60} as="div">
+                      <BeerCard beer={b} compact={compact} />
+                    </Reveal>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((b) => (
-            <ProductCard key={`${b.category}-${b.name}`} product={b} aspect="4 / 3" tone="dark" />
-          ))}
+
+        <div className="mx-auto mt-16 max-w-7xl px-4 sm:px-6">
+          <div className="rounded-sm bg-paper px-6 py-5 text-center">
+            <p className="font-display-condensed text-lg tracking-[0.16em] text-oak">
+              Bier met verhaal, samen genieten.
+            </p>
+            <p className="mt-1 font-display-condensed text-base tracking-[0.3em] text-wine">Proost!</p>
+          </div>
+          <p className="mt-4 text-center text-[12px] uppercase tracking-[0.25em] text-paper/50">
+            Geniet met mate, maar geniet
+          </p>
         </div>
       </section>
     </>
   );
 }
+
