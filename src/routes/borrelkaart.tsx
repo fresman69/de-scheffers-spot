@@ -5,13 +5,13 @@ import { hapas } from "../lib/menu/hapas";
 export const Route = createFileRoute("/borrelkaart")({
   head: () => ({
     meta: [
-      { title: "Hapas — Borrelkaart in Dordrecht | StadsCafe" },
+      { title: "Hapas — Borrelkaart in Dordrecht | Stadscafé" },
       {
         name: "description",
         content:
           "Onze hapas 2025: fuet, kaashapjes, De Bourgondiër bitterballen, olijven, nachos, vegetarische vlammetjes, kaastengels en gehaktballen — bij ieder glas.",
       },
-      { property: "og:title", content: "Hapas — StadsCafe" },
+      { property: "og:title", content: "Hapas — Stadscafé" },
       { property: "og:url", content: "/borrelkaart" },
     ],
     links: [{ rel: "canonical", href: "/borrelkaart" }],

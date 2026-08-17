@@ -4,7 +4,7 @@ import { hapas } from "../../menu/hapas";
 export default defineTool({
   name: "list_snacks",
   title: "Borrelkaart opvragen",
-  description: "List the hapas / bar snacks served at StadsCafe.",
+  description: "List the hapas / bar snacks served at Stadscafé.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({

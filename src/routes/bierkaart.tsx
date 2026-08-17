@@ -6,13 +6,13 @@ import { beers, type Beer } from "../lib/menu/beers";
 export const Route = createFileRoute("/bierkaart")({
   head: () => ({
     meta: [
-      { title: "Bierkaart — Speciaalbier in Dordrecht | StadsCafe" },
+      { title: "Bierkaart — Speciaalbier in Dordrecht | Stadscafé" },
       {
         name: "description",
         content:
           "Onze volledige bierkaart 2025: van huisbier Gouwe Ary tot trappisten, sours, ciders, saisons en alcoholvrij. Zorgvuldig gekozen speciaalbieren in Dordrecht.",
       },
-      { property: "og:title", content: "Bierkaart — StadsCafe" },
+      { property: "og:title", content: "Bierkaart — Stadscafé" },
       { property: "og:url", content: "/bierkaart" },
     ],
     links: [{ rel: "canonical", href: "/bierkaart" }],

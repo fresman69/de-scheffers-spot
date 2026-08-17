@@ -19,7 +19,7 @@
       {
         "name": "list_beers",
         "title": "Bierkaart opvragen",
-        "description": "List the beers on the StadsCafe beer menu, optionally filtered by category (e.g. Tripel, Sour / Geuze, 0.0 / Alcoholarm) or a search term.",
+        "description": "List the beers on the Stadscafé beer menu, optionally filtered by category (e.g. Tripel, Sour / Geuze, 0.0 / Alcoholarm) or a search term.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -44,7 +44,7 @@
       {
         "name": "list_drinks",
         "title": "Drankenkaart opvragen",
-        "description": "List the non-beer drinks at StadsCafe (wine, sparkling, gin & tonic, spirits, coffee/tea, soft drinks), optionally filtered by category or search term.",
+        "description": "List the non-beer drinks at Stadscafé (wine, sparkling, gin & tonic, spirits, coffee/tea, soft drinks), optionally filtered by category or search term.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -69,7 +69,7 @@
       {
         "name": "list_snacks",
         "title": "Borrelkaart opvragen",
-        "description": "List the hapas / bar snacks served at StadsCafe.",
+        "description": "List the hapas / bar snacks served at Stadscafé.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
@@ -85,7 +85,7 @@
       {
         "name": "cafe_info",
         "title": "Café-informatie",
-        "description": "Get StadsCafe's address, phone number, email, Instagram, opening hours and reservation policy.",
+        "description": "Get Stadscafé's address, phone number, email, Instagram, opening hours and reservation policy.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,

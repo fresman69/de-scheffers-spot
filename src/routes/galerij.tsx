@@ -4,13 +4,13 @@ import { PhotoPlaceholder } from "../components/photo-placeholder";
 export const Route = createFileRoute("/galerij")({
   head: () => ({
     meta: [
-      { title: "Galerij — Sfeerbeelden StadsCafe" },
+      { title: "Galerij — Sfeerbeelden Stadscafé" },
       {
         name: "description",
         content:
-          "Sfeerbeelden van interieur, terras, speciaalbieren, evenementen en gasten van StadsCafe in Dordrecht.",
+          "Sfeerbeelden van interieur, terras, speciaalbieren, evenementen en gasten van Stadscafé in Dordrecht.",
       },
-      { property: "og:title", content: "Galerij — StadsCafe" },
+      { property: "og:title", content: "Galerij — Stadscafé" },
       { property: "og:url", content: "/galerij" },
     ],
     links: [{ rel: "canonical", href: "/galerij" }],
@@ -40,7 +40,7 @@ function Galerij() {
           </h1>
           <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
             Van de bar tot het terras, van tap tot borrelplank. Deze galerij vullen we
-            zodra we onze eigen foto's van StadsCafe hebben.
+            zodra we onze eigen foto's van Stadscafé hebben.
           </p>
         </div>
       </section>

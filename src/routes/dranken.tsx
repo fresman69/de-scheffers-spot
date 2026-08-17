@@ -6,13 +6,13 @@ import { drinks, type Drink } from "../lib/menu/drinks";
 export const Route = createFileRoute("/dranken")({
   head: () => ({
     meta: [
-      { title: "Dranken — Wijn, sterk, koffie & fris | StadsCafe" },
+      { title: "Dranken — Wijn, sterk, koffie & fris | Stadscafé" },
       {
         name: "description",
         content:
           "Onze wijnkaart, sterke dranken, gin & tonic, koffie/thee en frisdranken — voor iedereen wat lekkers naast de bierkaart.",
       },
-      { property: "og:title", content: "Dranken — StadsCafe" },
+      { property: "og:title", content: "Dranken — Stadscafé" },
       { property: "og:url", content: "/dranken" },
     ],
     links: [{ rel: "canonical", href: "/dranken" }],

@@ -6,7 +6,7 @@ export default defineTool({
   name: "list_drinks",
   title: "Drankenkaart opvragen",
   description:
-    "List the non-beer drinks at StadsCafe (wine, sparkling, gin & tonic, spirits, coffee/tea, soft drinks), optionally filtered by category or search term.",
+    "List the non-beer drinks at Stadscafé (wine, sparkling, gin & tonic, spirits, coffee/tea, soft drinks), optionally filtered by category or search term.",
   inputSchema: {
     category: z.string().optional().describe("Filter on a drink category, case-insensitive."),
     search: z.string().optional().describe("Free-text search on drink name or description."),

@@ -9,13 +9,13 @@ import gevelCafe from "../assets/gevel-cafe.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "StadsCafe — Bruin café en speciaalbier in Dordrecht" },
+      { title: "Stadscafé — Bruin café en speciaalbier in Dordrecht" },
       {
         name: "description",
         content:
           "Een gezellig bruin café in het hart van Dordrecht. Speciaalbier van de tap, ambachtelijke happas en een warme sfeer. Loop gerust binnen.",
       },
-      { property: "og:title", content: "StadsCafe — Bruin café in Dordrecht" },
+      { property: "og:title", content: "Stadscafé — Bruin café in Dordrecht" },
       {
         property: "og:description",
         content:
@@ -90,7 +90,7 @@ function Home() {
         <div className="absolute inset-0" data-video-slot="hero">
           <img
             src={gevelCafe.url}
-            alt="Gevel van StadsCafe aan het Scheffersplein in Dordrecht"
+            alt="Gevel van Stadscafé aan het Scheffersplein in Dordrecht"
             fetchPriority="high"
             decoding="async"
             className="h-full w-full object-cover opacity-60"
@@ -114,7 +114,7 @@ function Home() {
             Een goed glas bier &amp; een goed gesprek.
           </h1>
           <p className="mx-auto mb-10 max-w-[54ch] text-pretty text-lg leading-relaxed text-paper/85 animate-fade-up md:text-xl">
-            StadsCafe is een gewoon, gezellig bruin café in hartje Dordrecht.
+            Stadscafé is een gewoon, gezellig bruin café in hartje Dordrecht.
             Speciaalbier van de tap, ambachtelijke happas en tijd voor een praatje.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 animate-fade-up sm:flex-row">
@@ -210,7 +210,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Sfeer in het glas — moodboard geïnspireerd op onze Pinterest 'Drank StadsCafe' */}
+      {/* Sfeer in het glas — moodboard geïnspireerd op onze Pinterest 'Drank Stadscafé' */}
       <section className="relative overflow-hidden bg-oak-light py-20 md:py-28">
         <div
           aria-hidden
@@ -302,13 +302,13 @@ function Home() {
         </div>
       </section>
 
-      {/* Waarom StadsCafe */}
+      {/* Waarom Stadscafé */}
       <section className="bg-oak-light py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 text-center">
             <Reveal>
               <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
-                Waarom StadsCafe
+                Waarom Stadscafé
               </span>
             </Reveal>
             <Reveal delay={100}>
@@ -340,7 +340,7 @@ function Home() {
             <div className="zoom-image overflow-hidden rounded-sm ring-1 ring-border">
               <img
                 src={interieurCafe.url}
-                alt="Interieur van StadsCafe — houten tafels, bierposters en warme lampen"
+                alt="Interieur van Stadscafé — houten tafels, bierposters en warme lampen"
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover"
               />

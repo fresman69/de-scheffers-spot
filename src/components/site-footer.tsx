@@ -46,7 +46,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="mt-16 flex flex-col items-start justify-between gap-3 border-t border-border pt-8 text-[11px] uppercase tracking-widest text-muted-foreground sm:flex-row sm:items-center">
-          <span>© {new Date().getFullYear()} StadsCafe</span>
+          <span>© {new Date().getFullYear()} Stadscafé</span>
           <span>Dordrecht, Nederland</span>
         </div>
       </div>

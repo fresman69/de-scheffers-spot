@@ -4,13 +4,13 @@ import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — StadsCafe Dordrecht" },
+      { title: "Contact — Stadscafé Dordrecht" },
       {
         name: "description",
         content:
-          "Adres, telefoonnummer, e-mail, openingstijden en socialmedia van StadsCafe aan het Scheffersplein in Dordrecht. Loop gerust binnen.",
+          "Adres, telefoonnummer, e-mail, openingstijden en socialmedia van Stadscafé aan het Scheffersplein in Dordrecht. Loop gerust binnen.",
       },
-      { property: "og:title", content: "Contact — StadsCafe" },
+      { property: "og:title", content: "Contact — Stadscafé" },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],

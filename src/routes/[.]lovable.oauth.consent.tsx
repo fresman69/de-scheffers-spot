@@ -27,11 +27,11 @@ export const Route = createFileRoute("/.lovable/oauth/consent")({
   }),
   head: () => ({
     meta: [
-      { title: "App verbinden — StadsCafe" },
-      { name: "description", content: "Geef een externe app toegang tot StadsCafe namens jouw account." },
+      { title: "App verbinden — Stadscafé" },
+      { name: "description", content: "Geef een externe app toegang tot Stadscafé namens jouw account." },
       { name: "robots", content: "noindex" },
-      { property: "og:title", content: "App verbinden — StadsCafe" },
-      { property: "og:description", content: "Geef een externe app toegang tot StadsCafe." },
+      { property: "og:title", content: "App verbinden — Stadscafé" },
+      { property: "og:description", content: "Geef een externe app toegang tot Stadscafé." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -96,10 +96,10 @@ function Consent() {
       <div className="w-full max-w-md rounded-sm border border-border bg-oak-light/40 p-6 sm:p-8">
         <p className="font-script text-4xl leading-none text-brass">Toegang</p>
         <h1 className="mt-3 font-display-condensed text-2xl tracking-wider text-paper">
-          {clientName} verbinden met StadsCafe
+          {clientName} verbinden met Stadscafé
         </h1>
         <p className="mt-4 text-sm text-paper/80">
-          Hiermee mag {clientName} de StadsCafe-tools gebruiken namens jou, zolang je bent ingelogd.
+          Hiermee mag {clientName} de Stadscafé-tools gebruiken namens jou, zolang je bent ingelogd.
         </p>
         {details?.client?.redirect_uri && (
           <p className="mt-3 break-all text-xs text-paper/60">

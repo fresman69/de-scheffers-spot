@@ -4,13 +4,13 @@ import { PhotoPlaceholder } from "../components/photo-placeholder";
 export const Route = createFileRoute("/over-ons")({
   head: () => ({
     meta: [
-      { title: "Over ons — StadsCafe Dordrecht" },
+      { title: "Over ons — Stadscafé Dordrecht" },
       {
         name: "description",
         content:
-          "Het verhaal van StadsCafe: een gezellig bruin café aan het Scheffersplein in Dordrecht, met passie voor speciaalbier en oprechte gastvrijheid.",
+          "Het verhaal van Stadscafé: een gezellig bruin café aan het Scheffersplein in Dordrecht, met passie voor speciaalbier en oprechte gastvrijheid.",
       },
-      { property: "og:title", content: "Over ons — StadsCafe" },
+      { property: "og:title", content: "Over ons — Stadscafé" },
       { property: "og:url", content: "/over-ons" },
     ],
     links: [{ rel: "canonical", href: "/over-ons" }],
@@ -47,7 +47,7 @@ function OverOns() {
             Gewoon een goed café
           </h1>
           <p className="mx-auto max-w-[58ch] text-pretty text-lg text-paper/85">
-            StadsCafe is een van die vertrouwde bruine cafés van Dordrecht. Al jaren tappen we
+            Stadscafé is een van die vertrouwde bruine cafés van Dordrecht. Al jaren tappen we
             speciaalbier, schuiven mensen aan die je nog niet kende, en gaat de deur pas dicht als
             de laatste gast klaar is met z'n glas.
           </p>
