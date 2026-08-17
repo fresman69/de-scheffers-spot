@@ -104,33 +104,42 @@ function Home() {
           style={{ background: "radial-gradient(circle, var(--brass) 0%, transparent 70%)" }}
         />
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6">
-          <p className="mb-4 font-script type-eyebrow text-brass animate-fade-in">
+          <p className="mb-3 font-script type-eyebrow text-brass animate-fade-in">
             Welkom bij
           </p>
-          <p className="mb-8 text-[11px] uppercase tracking-[0.4em] text-paper/70 animate-fade-in">
+          <p className="mb-8 type-label text-paper/75 animate-fade-in">
             Scheffersplein · Dordrecht
           </p>
-          <h1 className="mx-auto mb-8 max-w-[22ch] text-balance type-h1 leading-[0.95] text-paper animate-fade-up">
-            Een goed glas bier &amp; een goed gesprek.
+          <h1 className="mx-auto mb-6 max-w-[18ch] text-balance type-h1 text-paper animate-fade-up">
+            Een goed glas bier{" "}
+            <span className="font-script normal-case text-brass" style={{ textTransform: "none" }}>
+              &amp;
+            </span>{" "}
+            een goed gesprek
           </h1>
-          <p className="mx-auto mb-10 max-w-[54ch] text-pretty text-lg leading-relaxed text-paper/85 animate-fade-up md:text-xl">
+          <p className="mb-8 type-label text-brass animate-fade-up">
+            Oude ziel. Nieuwe verhalen.
+          </p>
+          <p className="mx-auto mb-10 max-w-[54ch] text-pretty type-body text-paper/85 animate-fade-up">
             Stadscafé is een gewoon, gezellig bruin café in hartje Dordrecht.
             Speciaalbier van de tap, ambachtelijke happas en tijd voor een praatje.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 animate-fade-up sm:flex-row">
             <Link
               to="/bierkaart"
-              className="rounded-sm bg-wine px-8 py-4 text-sm font-medium uppercase tracking-[0.25em] text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-wine-dim"
+              className="rounded-sm bg-wine px-8 py-4 type-label text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-wine-dim"
             >
               Ontdek onze bierkaart
             </Link>
             <Link
               to="/contact"
-              className="rounded-sm px-8 py-4 text-sm font-medium uppercase tracking-[0.25em] text-paper ring-1 ring-paper/30 transition-all duration-300 hover:-translate-y-0.5 hover:text-brass hover:ring-brass"
+              className="rounded-sm px-8 py-4 type-label text-paper ring-1 ring-paper/40 transition-all duration-300 hover:-translate-y-0.5 hover:text-brass hover:ring-brass"
             >
               Route &amp; openingstijden
             </Link>
           </div>
+        </div>
+
         </div>
         <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-paper/60 md:flex">
           <span className="text-[10px] uppercase tracking-[0.35em]">Scroll</span>
