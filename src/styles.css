@@ -195,7 +195,7 @@
 
 /* Zware condensed serif — displaykop in menukaart-stijl. */
 @utility font-display-condensed {
-  font-family: "Oswald", "Bebas Neue", sans-serif;
+  font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;

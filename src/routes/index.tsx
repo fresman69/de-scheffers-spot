@@ -110,7 +110,7 @@ function Home() {
           <p className="mb-8 text-[11px] uppercase tracking-[0.4em] text-paper/70 animate-fade-in">
             Scheffersplein · Dordrecht
           </p>
-          <h1 className="mx-auto mb-8 max-w-[22ch] text-balance font-display-condensed text-5xl leading-[0.95] tracking-wider text-paper animate-fade-up md:text-7xl lg:text-8xl">
+          <h1 className="mx-auto mb-8 max-w-[22ch] text-balance type-h1 leading-[0.95] text-paper animate-fade-up">
             Een goed glas bier &amp; een goed gesprek.
           </h1>
           <p className="mx-auto mb-10 max-w-[54ch] text-pretty text-lg leading-relaxed text-paper/85 animate-fade-up md:text-xl">
@@ -150,7 +150,7 @@ function Home() {
             <Ornament tone="wine" className="mb-6" />
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="mb-8 text-balance font-display-condensed text-4xl leading-tight tracking-wider text-oak md:text-6xl">
+            <h2 className="mb-8 text-balance type-h2 text-oak">
               Een café zoals ze vroeger waren
             </h2>
           </Reveal>
@@ -173,7 +173,7 @@ function Home() {
                 <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
                   Van de tap
                 </span>
-                <h2 className="font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
+                <h2 className="type-h2 text-paper">
                   Vers getapt, elke dag
                 </h2>
               </div>
@@ -198,7 +198,7 @@ function Home() {
                     </span>
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <h3 className="mb-3 font-display-condensed text-2xl tracking-wider text-paper">
+                    <h3 className="mb-3 type-h3 text-paper">
                       {c.name}
                     </h3>
                     <p className="text-pretty text-sm leading-relaxed text-paper/85">{c.note}</p>
@@ -227,7 +227,7 @@ function Home() {
                 <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
                   Sfeer in het glas
                 </span>
-                <h2 className="font-display-condensed text-4xl leading-tight tracking-wider text-paper md:text-5xl lg:text-6xl">
+                <h2 className="type-h2 text-paper">
                   Amberkleurig licht, koperen tap, koud condens
                 </h2>
               </div>
@@ -312,7 +312,7 @@ function Home() {
               </span>
             </Reveal>
             <Reveal delay={100}>
-              <h2 className="mx-auto max-w-[24ch] font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
+              <h2 className="mx-auto max-w-[24ch] type-h2 text-paper">
                 Vier redenen om aan te schuiven
               </h2>
             </Reveal>
@@ -322,7 +322,7 @@ function Home() {
               <Reveal key={r.title} delay={i * 100}>
                 <div className="hover-lift h-full rounded-sm bg-oak p-8 ring-1 ring-border transition-colors hover:ring-brass/40">
                   <r.icon size={28} strokeWidth={1.5} className="mb-6 text-brass" />
-                  <h3 className="mb-3 font-display-condensed text-xl tracking-wider text-paper">
+                  <h3 className="mb-3 type-h3 text-paper">
                     {r.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-paper/80">{r.text}</p>
@@ -351,7 +351,7 @@ function Home() {
               <span className="mb-4 block font-script text-4xl leading-none text-brass md:text-5xl">
                 Sfeer
               </span>
-              <h2 className="mb-6 font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
+              <h2 className="mb-6 type-h2 text-paper">
                 Hout, koper en warm licht
               </h2>
               <p className="mb-4 text-pretty text-lg leading-relaxed text-paper/85">
@@ -384,7 +384,7 @@ function Home() {
               </span>
             </Reveal>
             <Reveal delay={100}>
-              <h2 className="mx-auto max-w-[24ch] font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
+              <h2 className="mx-auto max-w-[24ch] type-h2 text-paper">
                 Vaste gasten &amp; nieuwe gezichten
               </h2>
             </Reveal>
@@ -429,7 +429,7 @@ function Home() {
                   Op Instagram
                 </span>
                 <Ornament tone="brass" className="mb-4 !mx-0 !max-w-[160px]" />
-                <h2 className="font-display-condensed text-4xl tracking-wider text-oak md:text-5xl">
+                <h2 className="type-h2 text-oak">
                   @stadscafe_rijke
                 </h2>
               </div>
@@ -488,7 +488,7 @@ function Home() {
           <Reveal>
             <div className="h-full rounded-sm bg-wine p-8 text-paper ring-1 ring-wine-dim md:p-12">
               <p className="mb-2 font-script text-4xl leading-none text-mustard">Wanneer</p>
-              <h2 className="mb-8 font-display-condensed text-3xl tracking-wider text-paper md:text-4xl">
+              <h2 className="mb-8 type-h2 text-paper">
                 Openingstijden
               </h2>
               <div className="space-y-4">
@@ -516,7 +516,7 @@ function Home() {
                   Vind ons
                 </span>
               </div>
-              <h2 className="mb-6 font-display-condensed text-3xl tracking-wider text-paper md:text-4xl">
+              <h2 className="mb-6 type-h2 text-paper">
                 Hartje Dordrecht
               </h2>
               <div className="aspect-[16/10] overflow-hidden rounded-sm ring-1 ring-border">

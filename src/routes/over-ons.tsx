@@ -43,7 +43,7 @@ function OverOns() {
       <section className="bg-oak py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
           <p className="mb-4 font-script text-5xl leading-none text-brass md:text-6xl">Over ons</p>
-          <h1 className="mb-6 font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
+          <h1 className="mb-6 type-h1 text-paper">
             Gewoon een goed café
           </h1>
           <p className="mx-auto max-w-[58ch] text-pretty text-lg text-paper/85">
@@ -63,7 +63,7 @@ function OverOns() {
             <span className="mb-4 block font-script text-4xl leading-none text-brass-dim md:text-5xl">
               Zoals het hoort
             </span>
-            <h2 className="mb-6 font-display-condensed text-3xl tracking-wider text-oak sm:text-4xl md:text-5xl">
+            <h2 className="mb-6 type-h2 text-oak">
               Hout, koper en een glas bier
             </h2>
             <p className="mb-6 text-pretty text-oak/85">
@@ -86,7 +86,7 @@ function OverOns() {
             <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
               Waar we voor staan
             </span>
-            <h2 className="font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl">Vier pijlers</h2>
+            <h2 className="type-h2 text-paper">Vier pijlers</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             {pillars.map((p, i) => (
@@ -94,7 +94,7 @@ function OverOns() {
                 <span className="mb-4 block font-display-condensed text-3xl text-brass">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mb-3 font-display-condensed text-2xl tracking-wider text-paper">{p.title}</h3>
+                <h3 className="mb-3 type-h3 text-paper">{p.title}</h3>
                 <p className="text-pretty text-paper/80">{p.body}</p>
               </article>
             ))}

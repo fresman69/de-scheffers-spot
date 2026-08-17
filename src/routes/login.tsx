@@ -83,7 +83,7 @@ function Login() {
     <section className="flex min-h-[80svh] items-center justify-center bg-oak px-4 py-16 sm:px-6">
       <div className="w-full max-w-md rounded-sm border border-border bg-oak-light/40 p-6 sm:p-8">
         <p className="font-script text-4xl leading-none text-brass">Welkom</p>
-        <h1 className="mt-3 font-display-condensed text-3xl tracking-wider text-paper">
+        <h1 className="mt-3 type-h1 text-paper">
           {mode === "signin" ? "Inloggen" : "Account aanmaken"}
         </h1>
         <p className="mt-3 text-sm text-paper/75">
