@@ -104,7 +104,7 @@ function Home() {
           style={{ background: "radial-gradient(circle, var(--brass) 0%, transparent 70%)" }}
         />
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6">
-          <p className="mb-4 font-script text-5xl leading-none text-brass animate-fade-in md:text-6xl">
+          <p className="mb-4 font-script type-eyebrow text-brass animate-fade-in">
             Welkom bij
           </p>
           <p className="mb-8 text-[11px] uppercase tracking-[0.4em] text-paper/70 animate-fade-in">
@@ -142,7 +142,7 @@ function Home() {
       <section className="bg-paper py-20 text-oak md:py-28">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <Reveal>
-            <span className="mb-4 block font-script text-4xl leading-none text-brass-dim md:text-5xl">
+            <span className="mb-4 block font-script type-eyebrow text-brass-dim">
               Kom binnen
             </span>
           </Reveal>
@@ -170,7 +170,7 @@ function Home() {
           <div className="mb-14 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <Reveal>
               <div>
-                <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
+                <span className="mb-3 block font-script type-eyebrow text-brass">
                   Van de tap
                 </span>
                 <h2 className="type-h2 text-paper">
@@ -224,7 +224,7 @@ function Home() {
           <div className="mb-12 grid gap-6 lg:grid-cols-[1fr_1.2fr] lg:items-end">
             <Reveal>
               <div>
-                <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
+                <span className="mb-3 block font-script type-eyebrow text-brass">
                   Sfeer in het glas
                 </span>
                 <h2 className="type-h2 text-paper">
@@ -247,7 +247,7 @@ function Home() {
               <div className="zoom-image relative h-full overflow-hidden rounded-sm ring-1 ring-border">
                 <PhotoPlaceholder aspect="4 / 3" label="Getapt bier, gouden gloed" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-oak/90 via-oak/20 to-transparent p-6">
-                  <span className="font-script text-3xl text-brass md:text-4xl">Van de tap</span>
+                  <span className="font-script type-eyebrow text-brass">Van de tap</span>
                   <p className="mt-1 text-[11px] uppercase tracking-[0.3em] text-paper/80">
                     Gouwe Ary · vers ingeschonken
                   </p>
@@ -307,7 +307,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 text-center">
             <Reveal>
-              <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
+              <span className="mb-3 block font-script type-eyebrow text-brass">
                 Waarom Stadscafé
               </span>
             </Reveal>
@@ -348,7 +348,7 @@ function Home() {
           </Reveal>
           <Reveal delay={150}>
             <div>
-              <span className="mb-4 block font-script text-4xl leading-none text-brass md:text-5xl">
+              <span className="mb-4 block font-script type-eyebrow text-brass">
                 Sfeer
               </span>
               <h2 className="mb-6 type-h2 text-paper">
@@ -379,7 +379,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 text-center">
             <Reveal>
-              <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
+              <span className="mb-3 block font-script type-eyebrow text-brass">
                 Wat gasten zeggen
               </span>
             </Reveal>
@@ -425,7 +425,7 @@ function Home() {
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <Reveal>
               <div>
-                <span className="mb-3 block font-script text-4xl leading-none text-brass-dim md:text-5xl">
+                <span className="mb-3 block font-script type-eyebrow text-brass-dim">
                   Op Instagram
                 </span>
                 <Ornament tone="brass" className="mb-4 !mx-0 !max-w-[160px]" />
@@ -487,7 +487,7 @@ function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal>
             <div className="h-full rounded-sm bg-wine p-8 text-paper ring-1 ring-wine-dim md:p-12">
-              <p className="mb-2 font-script text-4xl leading-none text-mustard">Wanneer</p>
+              <p className="mb-2 font-script type-eyebrow text-mustard">Wanneer</p>
               <h2 className="mb-8 type-h2 text-paper">
                 Openingstijden
               </h2>

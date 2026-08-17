@@ -31,7 +31,7 @@ export function SiteNav() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
         <Link to="/" className="flex min-w-0 shrink items-baseline gap-1.5 truncate">
-          <span className="font-script text-2xl leading-none text-brass sm:text-3xl">Stads</span>
+          <span className="font-script type-eyebrow text-2xl text-brass">Stads</span>
           <span className="font-display-condensed text-lg tracking-[0.2em] text-paper sm:text-xl">CAFE</span>
         </Link>
         <div className="hidden items-center gap-7 text-[12px] font-medium uppercase tracking-[0.18em] text-paper/75 lg:flex">

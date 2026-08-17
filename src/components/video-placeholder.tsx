@@ -63,7 +63,7 @@ export function VideoPlaceholder({
           className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-to-b from-oak-light via-oak to-oak p-6 text-center"
         >
           <Film size={26} strokeWidth={1.25} className="text-brass/70" />
-          <span className="font-script text-3xl leading-none text-brass/90">{label}</span>
+          <span className="font-script type-eyebrow text-brass/90">{label}</span>
           <span className="max-w-[36ch] text-[11px] uppercase tracking-[0.25em] text-paper/60">
             De eigenaar levert deze video zelf aan — plek en formaat blijven identiek.
           </span>
