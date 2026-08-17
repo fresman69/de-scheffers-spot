@@ -6,13 +6,13 @@ import { beers, type Beer } from "../lib/menu/beers";
 export const Route = createFileRoute("/bierkaart")({
   head: () => ({
     meta: [
-      { title: "Bierkaart — Speciaalbier in Dordrecht | StadsCafe" },
+      { title: "Bierkaart — Speciaalbier in Dordrecht | Stadscafé" },
       {
         name: "description",
         content:
           "Onze volledige bierkaart 2025: van huisbier Gouwe Ary tot trappisten, sours, ciders, saisons en alcoholvrij. Zorgvuldig gekozen speciaalbieren in Dordrecht.",
       },
-      { property: "og:title", content: "Bierkaart — StadsCafe" },
+      { property: "og:title", content: "Bierkaart — Stadscafé" },
       { property: "og:url", content: "/bierkaart" },
     ],
     links: [{ rel: "canonical", href: "/bierkaart" }],
@@ -46,13 +46,13 @@ function Bierkaart() {
 
   return (
     <>
-      <section className="bg-oak py-16 md:py-24">
+      <section className="bg-oak section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="mb-4 font-script text-5xl leading-none text-brass md:text-6xl">Bierkaart</p>
-          <h1 className="mb-6 max-w-[22ch] font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
+          <p className="mb-4 font-script type-eyebrow text-brass">Bierkaart</p>
+          <h1 className="mb-6 max-w-[22ch] type-h1 text-paper">
             Speciaalbier, met plezier gekozen
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
+          <p className="max-w-[60ch] text-pretty type-body text-paper/85">
             Van huisbier Gouwe Ary op de tap tot klassieke trappisten, wilde sours en
             alcoholvrije verfrissers. Voor elk humeur staat er wel iets goeds klaar.
             Vraag onze bediening gerust om een tip.
@@ -70,7 +70,8 @@ function Bierkaart() {
               <button
                 key={c}
                 onClick={() => setActive(c)}
-                className={`whitespace-nowrap rounded-sm px-4 py-2 text-[11px] font-medium uppercase tracking-widest transition-all ${
+                aria-pressed={active === c}
+                className={`min-h-11 whitespace-nowrap rounded-sm px-4 py-2 type-label transition-all ${
                   active === c
                     ? "bg-wine text-paper"
                     : "text-paper/75 ring-1 ring-border hover:text-brass hover:ring-brass/50"
@@ -83,7 +84,13 @@ function Bierkaart() {
         </div>
       </section>
 
-      <section className="bg-oak pb-24 pt-12">
+      <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <h2 className="mb-8 type-h3 text-paper">
+            {active === "Alle" ? "Alle bieren" : active}
+            <span className="ml-3 align-middle type-label text-brass">{filtered.length}</span>
+          </h2>
+        </div>
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((b) => (
             <ProductCard key={`${b.category}-${b.name}`} product={b} aspect="4 / 3" tone="dark" />

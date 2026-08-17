@@ -6,13 +6,13 @@ import { drinks, type Drink } from "../lib/menu/drinks";
 export const Route = createFileRoute("/dranken")({
   head: () => ({
     meta: [
-      { title: "Dranken — Wijn, sterk, koffie & fris | StadsCafe" },
+      { title: "Dranken — Wijn, sterk, koffie & fris | Stadscafé" },
       {
         name: "description",
         content:
           "Onze wijnkaart, sterke dranken, gin & tonic, koffie/thee en frisdranken — voor iedereen wat lekkers naast de bierkaart.",
       },
-      { property: "og:title", content: "Dranken — StadsCafe" },
+      { property: "og:title", content: "Dranken — Stadscafé" },
       { property: "og:url", content: "/dranken" },
     ],
     links: [{ rel: "canonical", href: "/dranken" }],
@@ -40,13 +40,13 @@ function Dranken() {
 
   return (
     <>
-      <section className="bg-oak py-16 md:py-24">
+      <section className="bg-oak section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="mb-4 font-script text-5xl leading-none text-brass md:text-6xl">Dranken</p>
-          <h1 className="mb-6 max-w-[24ch] font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
+          <p className="mb-4 font-script type-eyebrow text-brass">Dranken</p>
+          <h1 className="mb-6 max-w-[24ch] type-h1 text-paper">
             Naast het bier
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
+          <p className="max-w-[60ch] text-pretty type-body text-paper/85">
             Wijn, gin & tonic, sterk, koffie en frisdrank. Voor als bier even niet
             past bij het moment — of gewoon voor de afwisseling.
           </p>
@@ -63,7 +63,8 @@ function Dranken() {
               <button
                 key={c}
                 onClick={() => setActive(c)}
-                className={`whitespace-nowrap rounded-sm px-4 py-2 text-[11px] font-medium uppercase tracking-widest transition-all ${
+                aria-pressed={active === c}
+                className={`min-h-11 whitespace-nowrap rounded-sm px-4 py-2 type-label transition-all ${
                   active === c
                     ? "bg-wine text-paper"
                     : "text-paper/75 ring-1 ring-border hover:text-brass hover:ring-brass/50"
@@ -76,7 +77,13 @@ function Dranken() {
         </div>
       </section>
 
-      <section className="bg-oak pb-24 pt-12">
+      <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <h2 className="mb-8 type-h3 text-paper">
+            {active === "Alle" ? "Alle dranken" : active}
+            <span className="ml-3 align-middle type-label text-brass">{filtered.length}</span>
+          </h2>
+        </div>
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((d) => (
             <ProductCard key={`${d.category}-${d.name}`} product={d} aspect="4 / 3" tone="dark" />

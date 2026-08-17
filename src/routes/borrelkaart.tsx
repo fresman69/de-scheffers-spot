@@ -5,13 +5,13 @@ import { hapas } from "../lib/menu/hapas";
 export const Route = createFileRoute("/borrelkaart")({
   head: () => ({
     meta: [
-      { title: "Hapas — Borrelkaart in Dordrecht | StadsCafe" },
+      { title: "Happas — Borrelkaart in Dordrecht | Stadscafé" },
       {
         name: "description",
         content:
-          "Onze hapas 2025: fuet, kaashapjes, De Bourgondiër bitterballen, olijven, nachos, vegetarische vlammetjes, kaastengels en gehaktballen — bij ieder glas.",
+          "Onze happas 2025: fuet, kaashapjes, De Bourgondiër bitterballen, olijven, nachos, vegetarische vlammetjes, kaastengels en gehaktballen — bij ieder glas.",
       },
-      { property: "og:title", content: "Hapas — StadsCafe" },
+      { property: "og:title", content: "Happas — Stadscafé" },
       { property: "og:url", content: "/borrelkaart" },
     ],
     links: [{ rel: "canonical", href: "/borrelkaart" }],
@@ -23,13 +23,13 @@ export const Route = createFileRoute("/borrelkaart")({
 function Borrelkaart() {
   return (
     <>
-      <section className="bg-oak py-16 md:py-24">
+      <section className="bg-oak section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="mb-4 font-script text-5xl leading-none text-mustard md:text-6xl">Happas</p>
-          <h1 className="mb-6 max-w-[22ch] font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
+          <p className="mb-4 font-script type-eyebrow text-mustard">Happas</p>
+          <h1 className="mb-6 max-w-[22ch] type-h1 text-paper">
             Iets lekkers bij je glas
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
+          <p className="max-w-[60ch] text-pretty type-body text-paper/85">
             Fuet, olijven, bitterballen van De Bourgondiër — eerlijk werk om mee te delen.
             Perfect bij een pilsje of een goed glas speciaalbier.
           </p>
@@ -39,7 +39,10 @@ function Borrelkaart() {
         </div>
       </section>
 
-      <section className="bg-oak pb-24 pt-12">
+      <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <h2 className="mb-8 type-h3 text-paper">Onze happas</h2>
+        </div>
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3">
           {hapas.map((h) => (
             <ProductCard key={h.name} product={h} aspect="4 / 3" tone="dark" />

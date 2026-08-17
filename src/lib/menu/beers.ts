@@ -4,7 +4,7 @@ export type Beer = Product & { category: string };
 
 export const beers: Beer[] = [
   // Van de Tap / Op fles
-  { category: "Van de Tap", name: "Gouwe Ary", description: "Huisbier StadsCafe", abv: "5%" },
+  { category: "Van de Tap", name: "Gouwe Ary", description: "Huisbier Stadscafé", abv: "5%" },
   { category: "Van de Tap", name: "Heineken Fluit / Vaas", description: "Pilsener — 0,18L · 0,25L · 0,5L", abv: "5%" },
   { category: "Van de Tap", name: "6 wisselende tapkranen", description: "Vraag onze bediening naar de actuele selectie" },
 

@@ -9,13 +9,13 @@ import gevelCafe from "../assets/gevel-cafe.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "StadsCafe — Bruin café en speciaalbier in Dordrecht" },
+      { title: "Stadscafé — Bruin café en speciaalbier in Dordrecht" },
       {
         name: "description",
         content:
           "Een gezellig bruin café in het hart van Dordrecht. Speciaalbier van de tap, ambachtelijke happas en een warme sfeer. Loop gerust binnen.",
       },
-      { property: "og:title", content: "StadsCafe — Bruin café in Dordrecht" },
+      { property: "og:title", content: "Stadscafé — Bruin café in Dordrecht" },
       {
         property: "og:description",
         content:
@@ -90,7 +90,7 @@ function Home() {
         <div className="absolute inset-0" data-video-slot="hero">
           <img
             src={gevelCafe.url}
-            alt="Gevel van StadsCafe aan het Scheffersplein in Dordrecht"
+            alt="Gevel van Stadscafé aan het Scheffersplein in Dordrecht"
             fetchPriority="high"
             decoding="async"
             className="h-full w-full object-cover opacity-60"
@@ -104,29 +104,36 @@ function Home() {
           style={{ background: "radial-gradient(circle, var(--brass) 0%, transparent 70%)" }}
         />
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6">
-          <p className="mb-4 font-script text-5xl leading-none text-brass animate-fade-in md:text-6xl">
+          <p className="mb-3 font-script type-eyebrow text-brass animate-fade-in">
             Welkom bij
           </p>
-          <p className="mb-8 text-[11px] uppercase tracking-[0.4em] text-paper/70 animate-fade-in">
+          <p className="mb-8 type-label text-paper/75 animate-fade-in">
             Scheffersplein · Dordrecht
           </p>
-          <h1 className="mx-auto mb-8 max-w-[22ch] text-balance font-display-condensed text-5xl leading-[0.95] tracking-wider text-paper animate-fade-up md:text-7xl lg:text-8xl">
-            Een goed glas bier &amp; een goed gesprek.
+          <h1 className="mx-auto mb-6 max-w-[18ch] text-balance type-h1 text-paper animate-fade-up">
+            Een goed glas bier{" "}
+            <span className="font-script normal-case text-brass" style={{ textTransform: "none" }}>
+              &amp;
+            </span>{" "}
+            een goed gesprek
           </h1>
-          <p className="mx-auto mb-10 max-w-[54ch] text-pretty text-lg leading-relaxed text-paper/85 animate-fade-up md:text-xl">
-            StadsCafe is een gewoon, gezellig bruin café in hartje Dordrecht.
+          <p className="mb-8 type-label text-brass animate-fade-up">
+            Oude ziel. Nieuwe verhalen.
+          </p>
+          <p className="mx-auto mb-10 max-w-[54ch] text-pretty type-body text-paper/85 animate-fade-up">
+            Stadscafé is een gewoon, gezellig bruin café in hartje Dordrecht.
             Speciaalbier van de tap, ambachtelijke happas en tijd voor een praatje.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 animate-fade-up sm:flex-row">
             <Link
               to="/bierkaart"
-              className="rounded-sm bg-wine px-8 py-4 text-sm font-medium uppercase tracking-[0.25em] text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-wine-dim"
+              className="rounded-sm bg-wine px-8 py-4 type-label text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-wine-dim"
             >
               Ontdek onze bierkaart
             </Link>
             <Link
               to="/contact"
-              className="rounded-sm px-8 py-4 text-sm font-medium uppercase tracking-[0.25em] text-paper ring-1 ring-paper/30 transition-all duration-300 hover:-translate-y-0.5 hover:text-brass hover:ring-brass"
+              className="rounded-sm px-8 py-4 type-label text-paper ring-1 ring-paper/40 transition-all duration-300 hover:-translate-y-0.5 hover:text-brass hover:ring-brass"
             >
               Route &amp; openingstijden
             </Link>
@@ -142,7 +149,7 @@ function Home() {
       <section className="bg-paper py-20 text-oak md:py-28">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <Reveal>
-            <span className="mb-4 block font-script text-4xl leading-none text-brass-dim md:text-5xl">
+            <span className="mb-4 block font-script type-eyebrow text-brass-dim">
               Kom binnen
             </span>
           </Reveal>
@@ -150,12 +157,12 @@ function Home() {
             <Ornament tone="wine" className="mb-6" />
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="mb-8 text-balance font-display-condensed text-4xl leading-tight tracking-wider text-oak md:text-6xl">
+            <h2 className="mb-8 text-balance type-h2 text-oak">
               Een café zoals ze vroeger waren
             </h2>
           </Reveal>
           <Reveal delay={200}>
-            <p className="mx-auto max-w-[60ch] text-pretty text-lg leading-relaxed text-oak/80 md:text-xl">
+            <p className="mx-auto max-w-[60ch] text-pretty type-body text-oak/80">
               Bij ons hoeft niks. Neem plaats aan de bar, schuif aan bij vrienden of pak
               een tafeltje bij het raam. We schenken graag een goed glas, praten mee als je
               zin hebt en laten je met rust als dat lekkerder is. Zo simpel is het.
@@ -165,15 +172,15 @@ function Home() {
       </section>
 
       {/* Bier centraal — Van de tap */}
-      <section className="bg-oak py-20 md:py-28">
+      <section className="bg-oak section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <Reveal>
               <div>
-                <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
+                <span className="mb-3 block font-script type-eyebrow text-brass">
                   Van de tap
                 </span>
-                <h2 className="font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
+                <h2 className="type-h2 text-paper">
                   Vers getapt, elke dag
                 </h2>
               </div>
@@ -198,7 +205,7 @@ function Home() {
                     </span>
                   </div>
                   <div className="flex flex-1 flex-col p-6">
-                    <h3 className="mb-3 font-display-condensed text-2xl tracking-wider text-paper">
+                    <h3 className="mb-3 type-h3 text-paper">
                       {c.name}
                     </h3>
                     <p className="text-pretty text-sm leading-relaxed text-paper/85">{c.note}</p>
@@ -210,8 +217,8 @@ function Home() {
         </div>
       </section>
 
-      {/* Sfeer in het glas — moodboard geïnspireerd op onze Pinterest 'Drank StadsCafe' */}
-      <section className="relative overflow-hidden bg-oak-light py-20 md:py-28">
+      {/* Sfeer in het glas — moodboard geïnspireerd op onze Pinterest 'Drank Stadscafé' */}
+      <section className="relative overflow-hidden bg-oak-light section-y">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-[0.08]"
@@ -224,16 +231,16 @@ function Home() {
           <div className="mb-12 grid gap-6 lg:grid-cols-[1fr_1.2fr] lg:items-end">
             <Reveal>
               <div>
-                <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
+                <span className="mb-3 block font-script type-eyebrow text-brass">
                   Sfeer in het glas
                 </span>
-                <h2 className="font-display-condensed text-4xl leading-tight tracking-wider text-paper md:text-5xl lg:text-6xl">
+                <h2 className="type-h2 text-paper">
                   Amberkleurig licht, koperen tap, koud condens
                 </h2>
               </div>
             </Reveal>
             <Reveal delay={120}>
-              <p className="max-w-[52ch] text-pretty text-lg leading-relaxed text-paper/85">
+              <p className="max-w-[52ch] text-pretty type-body text-paper/85">
                 Een moodboard van hoe het bij ons voelt: gouden bier tegen donker hout,
                 schuimkraag die net afzakt, een glas dat door het licht van de kroonluchter
                 oplicht. Puur, warm, en zonder poespas.
@@ -247,7 +254,7 @@ function Home() {
               <div className="zoom-image relative h-full overflow-hidden rounded-sm ring-1 ring-border">
                 <PhotoPlaceholder aspect="4 / 3" label="Getapt bier, gouden gloed" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-oak/90 via-oak/20 to-transparent p-6">
-                  <span className="font-script text-3xl text-brass md:text-4xl">Van de tap</span>
+                  <span className="font-script type-eyebrow text-brass">Van de tap</span>
                   <p className="mt-1 text-[11px] uppercase tracking-[0.3em] text-paper/80">
                     Gouwe Ary · vers ingeschonken
                   </p>
@@ -302,17 +309,17 @@ function Home() {
         </div>
       </section>
 
-      {/* Waarom StadsCafe */}
-      <section className="bg-oak-light py-20 md:py-28">
+      {/* Waarom Stadscafé */}
+      <section className="bg-oak-light section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 text-center">
             <Reveal>
-              <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
-                Waarom StadsCafe
+              <span className="mb-3 block font-script type-eyebrow text-brass">
+                Waarom Stadscafé
               </span>
             </Reveal>
             <Reveal delay={100}>
-              <h2 className="mx-auto max-w-[24ch] font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
+              <h2 className="mx-auto max-w-[24ch] type-h2 text-paper">
                 Vier redenen om aan te schuiven
               </h2>
             </Reveal>
@@ -322,7 +329,7 @@ function Home() {
               <Reveal key={r.title} delay={i * 100}>
                 <div className="hover-lift h-full rounded-sm bg-oak p-8 ring-1 ring-border transition-colors hover:ring-brass/40">
                   <r.icon size={28} strokeWidth={1.5} className="mb-6 text-brass" />
-                  <h3 className="mb-3 font-display-condensed text-xl tracking-wider text-paper">
+                  <h3 className="mb-3 type-h3 text-paper">
                     {r.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-paper/80">{r.text}</p>
@@ -334,13 +341,13 @@ function Home() {
       </section>
 
       {/* Sfeerimpressie */}
-      <section className="bg-oak py-20 md:py-28">
+      <section className="bg-oak section-y">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <div className="zoom-image overflow-hidden rounded-sm ring-1 ring-border">
               <img
                 src={interieurCafe.url}
-                alt="Interieur van StadsCafe — houten tafels, bierposters en warme lampen"
+                alt="Interieur van Stadscafé — houten tafels, bierposters en warme lampen"
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover"
               />
@@ -348,18 +355,18 @@ function Home() {
           </Reveal>
           <Reveal delay={150}>
             <div>
-              <span className="mb-4 block font-script text-4xl leading-none text-brass md:text-5xl">
+              <span className="mb-4 block font-script type-eyebrow text-brass">
                 Sfeer
               </span>
-              <h2 className="mb-6 font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
+              <h2 className="mb-6 type-h2 text-paper">
                 Hout, koper en warm licht
               </h2>
-              <p className="mb-4 text-pretty text-lg leading-relaxed text-paper/85">
+              <p className="mb-4 text-pretty type-body text-paper/85">
                 Donkere houten tafels, koperen tapkranen en verlichting die alles zachter maakt.
                 In de zomer schuiven we het terras uit op het Scheffersplein, in de winter
                 zit je binnen bij de warme lampen.
               </p>
-              <p className="mb-8 text-pretty text-lg leading-relaxed text-paper/85">
+              <p className="mb-8 text-pretty type-body text-paper/85">
                 Levendig als het druk is, rustig als je even bij wilt komen. Zo hoort een
                 bruin café te voelen.
               </p>
@@ -375,16 +382,16 @@ function Home() {
       </section>
 
       {/* Reviews */}
-      <section className="bg-oak-light py-20 md:py-28">
+      <section className="bg-oak-light section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 text-center">
             <Reveal>
-              <span className="mb-3 block font-script text-4xl leading-none text-brass md:text-5xl">
+              <span className="mb-3 block font-script type-eyebrow text-brass">
                 Wat gasten zeggen
               </span>
             </Reveal>
             <Reveal delay={100}>
-              <h2 className="mx-auto max-w-[24ch] font-display-condensed text-4xl tracking-wider text-paper md:text-5xl">
+              <h2 className="mx-auto max-w-[24ch] type-h2 text-paper">
                 Vaste gasten &amp; nieuwe gezichten
               </h2>
             </Reveal>
@@ -425,11 +432,11 @@ function Home() {
           <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <Reveal>
               <div>
-                <span className="mb-3 block font-script text-4xl leading-none text-brass-dim md:text-5xl">
+                <span className="mb-3 block font-script type-eyebrow text-brass-dim">
                   Op Instagram
                 </span>
                 <Ornament tone="brass" className="mb-4 !mx-0 !max-w-[160px]" />
-                <h2 className="font-display-condensed text-4xl tracking-wider text-oak md:text-5xl">
+                <h2 className="type-h2 text-oak">
                   @stadscafe_rijke
                 </h2>
               </div>
@@ -483,12 +490,12 @@ function Home() {
 
 
       {/* Openingstijden + Route */}
-      <section className="bg-oak py-20 md:py-28">
+      <section className="bg-oak section-y">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal>
             <div className="h-full rounded-sm bg-wine p-8 text-paper ring-1 ring-wine-dim md:p-12">
-              <p className="mb-2 font-script text-4xl leading-none text-mustard">Wanneer</p>
-              <h2 className="mb-8 font-display-condensed text-3xl tracking-wider text-paper md:text-4xl">
+              <p className="mb-2 font-script type-eyebrow text-mustard">Wanneer</p>
+              <h2 className="mb-8 type-h2 text-paper">
                 Openingstijden
               </h2>
               <div className="space-y-4">
@@ -516,7 +523,7 @@ function Home() {
                   Vind ons
                 </span>
               </div>
-              <h2 className="mb-6 font-display-condensed text-3xl tracking-wider text-paper md:text-4xl">
+              <h2 className="mb-6 type-h2 text-paper">
                 Hartje Dordrecht
               </h2>
               <div className="aspect-[16/10] overflow-hidden rounded-sm ring-1 ring-border">

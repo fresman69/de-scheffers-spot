@@ -4,13 +4,13 @@ import { PhotoPlaceholder } from "../components/photo-placeholder";
 export const Route = createFileRoute("/galerij")({
   head: () => ({
     meta: [
-      { title: "Galerij — Sfeerbeelden StadsCafe" },
+      { title: "Galerij — Sfeerbeelden Stadscafé" },
       {
         name: "description",
         content:
-          "Sfeerbeelden van interieur, terras, speciaalbieren, evenementen en gasten van StadsCafe in Dordrecht.",
+          "Sfeerbeelden van interieur, terras, speciaalbieren, evenementen en gasten van Stadscafé in Dordrecht.",
       },
-      { property: "og:title", content: "Galerij — StadsCafe" },
+      { property: "og:title", content: "Galerij — Stadscafé" },
       { property: "og:url", content: "/galerij" },
     ],
     links: [{ rel: "canonical", href: "/galerij" }],
@@ -32,15 +32,15 @@ const slots = [
 function Galerij() {
   return (
     <>
-      <section className="bg-oak py-16 md:py-24">
+      <section className="bg-oak section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <p className="mb-4 font-script text-5xl leading-none text-brass md:text-6xl">Galerij</p>
-          <h1 className="mb-6 max-w-[22ch] font-display-condensed text-4xl tracking-wider text-paper sm:text-5xl md:text-6xl">
+          <p className="mb-4 font-script type-eyebrow text-brass">Galerij</p>
+          <h1 className="mb-6 max-w-[22ch] type-h1 text-paper">
             Een kijkje binnen
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
+          <p className="max-w-[60ch] text-pretty type-body text-paper/85">
             Van de bar tot het terras, van tap tot borrelplank. Deze galerij vullen we
-            zodra we onze eigen foto's van StadsCafe hebben.
+            zodra we onze eigen foto's van Stadscafé hebben.
           </p>
         </div>
       </section>

@@ -1,12 +1,12 @@
-# StadsCafe
+# Stadscafé
 
 > Een gezellig bruin café in hartje Dordrecht — meer dan zestig speciaalbieren, ambachtelijke happas en een warme kroegsfeer.
 
-StadsCafe is een gewoon, gezellig bruin café aan het Scheffersplein in Dordrecht. Van huisbier Gouwe Ary op de tap tot klassieke trappisten, IPA's, sours en alcoholvrij — met ambachtelijke borrelhapjes en tijd voor een praatje. We werken niet met reserveringen; loop gerust binnen.
+Stadscafé is een gewoon, gezellig bruin café aan het Scheffersplein in Dordrecht. Van huisbier Gouwe Ary op de tap tot klassieke trappisten, IPA's, sours en alcoholvrij — met ambachtelijke borrelhapjes en tijd voor een praatje. We werken niet met reserveringen; loop gerust binnen.
 
 ## Pages
 
-- [Home](/): Welkom, openingstijden en highlights van StadsCafe.
+- [Home](/): Welkom, openingstijden en highlights van Stadscafé.
 - [Over ons](/over-ons): Ons verhaal, gastvrijheid en de sfeer van het huis.
 - [Bierkaart](/bierkaart): Volledige bierkaart met tap, blond, dubbel, tripel, quad, amber, wit, stout, saison, cider, sour, ale en alcoholvrij.
 - [Dranken](/dranken): Wijnen, sterke dranken, gin & tonic, warme dranken en frisdranken.

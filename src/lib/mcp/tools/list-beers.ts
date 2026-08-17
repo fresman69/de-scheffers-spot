@@ -6,7 +6,7 @@ export default defineTool({
   name: "list_beers",
   title: "Bierkaart opvragen",
   description:
-    "List the beers on the StadsCafe beer menu, optionally filtered by category (e.g. Tripel, Sour / Geuze, 0.0 / Alcoholarm) or a search term.",
+    "List the beers on the Stadscafé beer menu, optionally filtered by category (e.g. Tripel, Sour / Geuze, 0.0 / Alcoholarm) or a search term.",
   inputSchema: {
     category: z.string().optional().describe("Filter on a beer category, case-insensitive."),
     search: z.string().optional().describe("Free-text search on beer name or description."),

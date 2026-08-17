@@ -77,24 +77,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "StadsCafe — Bruin café en speciaalbier in Dordrecht" },
+      { title: "Stadscafé — Bruin café en speciaalbier in Dordrecht" },
       {
         name: "description",
         content:
           "Een gezellig bruin café in het hart van Dordrecht. Speciaalbier van de tap, ambachtelijke borrelhapjes en een warme sfeer. Kom gerust binnen.",
       },
-      { name: "author", content: "StadsCafe" },
+      { name: "author", content: "Stadscafé" },
       { name: "google-site-verification", content: "Ku2-ctAEbemhXWDqpPifgZQXgxgdPj5lXZcFxZkucdA" },
-      { property: "og:title", content: "StadsCafe — Bruin café en speciaalbier in Dordrecht" },
+      { property: "og:title", content: "Stadscafé — Bruin café en speciaalbier in Dordrecht" },
       {
         property: "og:description",
         content:
           "Speciaalbier, borrelhapjes en een warme kroegsfeer aan het Scheffersplein in Dordrecht. Loop gerust eens binnen.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "StadsCafe" },
+      { property: "og:site_name", content: "Stadscafé" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "StadsCafe — Bruin café en speciaalbier in Dordrecht" },
+      { name: "twitter:title", content: "Stadscafé — Bruin café en speciaalbier in Dordrecht" },
       { name: "twitter:description", content: "Speciaalbier, borrelhapjes en een warme kroegsfeer in hartje Dordrecht." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/864e9f43-d1ff-43f5-9042-fdaf210aadc0/id-preview-32eb416b--3030e587-0e2c-48b8-aabd-374eb7f88cb1.lovable.app-1784404156583.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/864e9f43-d1ff-43f5-9042-fdaf210aadc0/id-preview-32eb416b--3030e587-0e2c-48b8-aabd-374eb7f88cb1.lovable.app-1784404156583.png" },
@@ -105,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=Yellowtail&display=swap",
       },
     ],
     scripts: [
@@ -114,7 +114,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BarOrPub",
-          name: "StadsCafe",
+          name: "Stadscafé",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Scheffersplein 12",

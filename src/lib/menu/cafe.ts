@@ -1,5 +1,5 @@
 export const cafeInfo = {
-  name: "StadsCafe",
+  name: "Stadscafé",
   description:
     "Modern bruin café in het hart van Dordrecht. Speciaalbier, gezelligheid en gastvrijheid zonder poespas. We werken niet met reserveringen.",
   address: {
