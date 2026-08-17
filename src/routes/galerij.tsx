@@ -38,7 +38,7 @@ function Galerij() {
           <h1 className="mb-6 max-w-[22ch] type-h1 text-paper">
             Een kijkje binnen
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
+          <p className="max-w-[60ch] text-pretty type-body text-paper/85">
             Van de bar tot het terras, van tap tot borrelplank. Deze galerij vullen we
             zodra we onze eigen foto's van Stadscafé hebben.
           </p>

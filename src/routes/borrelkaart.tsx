@@ -29,7 +29,7 @@ function Borrelkaart() {
           <h1 className="mb-6 max-w-[22ch] type-h1 text-paper">
             Iets lekkers bij je glas
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
+          <p className="max-w-[60ch] text-pretty type-body text-paper/85">
             Fuet, olijven, bitterballen van De Bourgondiër — eerlijk werk om mee te delen.
             Perfect bij een pilsje of een goed glas speciaalbier.
           </p>

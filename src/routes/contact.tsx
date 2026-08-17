@@ -37,7 +37,7 @@ function Contact() {
           <h1 className="mb-6 max-w-[24ch] type-h1 text-paper">
             Loop binnen of bel gewoon even
           </h1>
-          <p className="max-w-[58ch] text-pretty text-lg text-paper/85">
+          <p className="max-w-[58ch] text-pretty type-body text-paper/85">
             We werken niet met reserveringen — er staat een plek voor je klaar als die vrij is.
             Wil je met een groep langskomen? Bel of mail ons dan even, dan denken we met je mee.
           </p>

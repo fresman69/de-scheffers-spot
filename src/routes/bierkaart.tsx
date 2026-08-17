@@ -52,7 +52,7 @@ function Bierkaart() {
           <h1 className="mb-6 max-w-[22ch] type-h1 text-paper">
             Speciaalbier, met plezier gekozen
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
+          <p className="max-w-[60ch] text-pretty type-body text-paper/85">
             Van huisbier Gouwe Ary op de tap tot klassieke trappisten, wilde sours en
             alcoholvrije verfrissers. Voor elk humeur staat er wel iets goeds klaar.
             Vraag onze bediening gerust om een tip.
@@ -70,7 +70,8 @@ function Bierkaart() {
               <button
                 key={c}
                 onClick={() => setActive(c)}
-                className={`whitespace-nowrap rounded-sm px-4 py-2 text-[11px] font-medium uppercase tracking-widest transition-all ${
+                aria-pressed={active === c}
+                className={`min-h-11 whitespace-nowrap rounded-sm px-4 py-2 type-label transition-all ${
                   active === c
                     ? "bg-wine text-paper"
                     : "text-paper/75 ring-1 ring-border hover:text-brass hover:ring-brass/50"

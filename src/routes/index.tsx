@@ -162,7 +162,7 @@ function Home() {
             </h2>
           </Reveal>
           <Reveal delay={200}>
-            <p className="mx-auto max-w-[60ch] text-pretty text-lg leading-relaxed text-oak/80 md:text-xl">
+            <p className="mx-auto max-w-[60ch] text-pretty type-body text-oak/80">
               Bij ons hoeft niks. Neem plaats aan de bar, schuif aan bij vrienden of pak
               een tafeltje bij het raam. We schenken graag een goed glas, praten mee als je
               zin hebt en laten je met rust als dat lekkerder is. Zo simpel is het.
@@ -240,7 +240,7 @@ function Home() {
               </div>
             </Reveal>
             <Reveal delay={120}>
-              <p className="max-w-[52ch] text-pretty text-lg leading-relaxed text-paper/85">
+              <p className="max-w-[52ch] text-pretty type-body text-paper/85">
                 Een moodboard van hoe het bij ons voelt: gouden bier tegen donker hout,
                 schuimkraag die net afzakt, een glas dat door het licht van de kroonluchter
                 oplicht. Puur, warm, en zonder poespas.
@@ -361,12 +361,12 @@ function Home() {
               <h2 className="mb-6 type-h2 text-paper">
                 Hout, koper en warm licht
               </h2>
-              <p className="mb-4 text-pretty text-lg leading-relaxed text-paper/85">
+              <p className="mb-4 text-pretty type-body text-paper/85">
                 Donkere houten tafels, koperen tapkranen en verlichting die alles zachter maakt.
                 In de zomer schuiven we het terras uit op het Scheffersplein, in de winter
                 zit je binnen bij de warme lampen.
               </p>
-              <p className="mb-8 text-pretty text-lg leading-relaxed text-paper/85">
+              <p className="mb-8 text-pretty type-body text-paper/85">
                 Levendig als het druk is, rustig als je even bij wilt komen. Zo hoort een
                 bruin café te voelen.
               </p>

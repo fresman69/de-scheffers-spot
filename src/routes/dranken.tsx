@@ -46,7 +46,7 @@ function Dranken() {
           <h1 className="mb-6 max-w-[24ch] type-h1 text-paper">
             Naast het bier
           </h1>
-          <p className="max-w-[60ch] text-pretty text-lg text-paper/85">
+          <p className="max-w-[60ch] text-pretty type-body text-paper/85">
             Wijn, gin & tonic, sterk, koffie en frisdrank. Voor als bier even niet
             past bij het moment — of gewoon voor de afwisseling.
           </p>
@@ -63,7 +63,8 @@ function Dranken() {
               <button
                 key={c}
                 onClick={() => setActive(c)}
-                className={`whitespace-nowrap rounded-sm px-4 py-2 text-[11px] font-medium uppercase tracking-widest transition-all ${
+                aria-pressed={active === c}
+                className={`min-h-11 whitespace-nowrap rounded-sm px-4 py-2 type-label transition-all ${
                   active === c
                     ? "bg-wine text-paper"
                     : "text-paper/75 ring-1 ring-border hover:text-brass hover:ring-brass/50"

@@ -46,7 +46,7 @@ function OverOns() {
           <h1 className="mb-6 type-h1 text-paper">
             Gewoon een goed café
           </h1>
-          <p className="mx-auto max-w-[58ch] text-pretty text-lg text-paper/85">
+          <p className="mx-auto max-w-[58ch] text-pretty type-body text-paper/85">
             Stadscafé is een van die vertrouwde bruine cafés van Dordrecht. Al jaren tappen we
             speciaalbier, schuiven mensen aan die je nog niet kende, en gaat de deur pas dicht als
             de laatste gast klaar is met z'n glas.
