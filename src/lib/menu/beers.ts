@@ -1,3 +1,12 @@
+import corsendonkpaterdubbelPhoto from "../../assets/bier/corsendonk-pater-dubbel.jpg.asset.json";
+import latrappedubbelPhoto from "../../assets/bier/la-trappe-dubbel.jpg.asset.json";
+import latrappetripelPhoto from "../../assets/bier/la-trappe-tripel.jpg.asset.json";
+import kasteelrougePhoto from "../../assets/bier/kasteel-rouge.jpg.asset.json";
+import boonkriekboonPhoto from "../../assets/bier/boon-kriek-boon.jpg.asset.json";
+import desperadosPhoto from "../../assets/bier/desperados.jpg.asset.json";
+import latrappeisidorPhoto from "../../assets/bier/la-trappe-isid-or.jpg.asset.json";
+import frontaaljuicepunchPhoto from "../../assets/bier/frontaal-juice-punch.jpg.asset.json";
+import magnerspintPhoto from "../../assets/bier/magners-pint.jpg.asset.json";
 import type { Product } from "../../components/product-card";
 
 export type Beer = Product & {
@@ -63,6 +72,7 @@ export const beers: Beer[] = [
   {
     category: "Dubbel",
     name: "La Trappe — Dubbel",
+    photo: latrappedubbelPhoto.url,
     description: "Donkerbruin trappistenbier met karamel, gedroogd fruit en een volle mout.",
     abv: "7%",
     note: "Gebrouwen binnen de muren van abdij Koningshoeven.",
@@ -70,6 +80,7 @@ export const beers: Beer[] = [
   {
     category: "Dubbel",
     name: "Corsendonk — Pater Dubbel",
+    photo: corsendonkpaterdubbelPhoto.url,
     description: "Zacht en moutig met tonen van rozijn, karamel en donkere chocolade.",
     abv: "6,5%",
     note: "Een Belgische klassieker sinds 1982.",
@@ -93,6 +104,7 @@ export const beers: Beer[] = [
   {
     category: "Tripel",
     name: "La Trappe — Tripel",
+    photo: latrappetripelPhoto.url,
     description: "Goudblonde trappist met banaan, kruidnagel en een stevige, warme afdronk.",
     abv: "8%",
     note: "De enige Nederlandse trappistenbrouwerij.",
@@ -266,6 +278,7 @@ export const beers: Beer[] = [
   {
     category: "Fruit / Zoeter",
     name: "Kasteel — Rouge",
+    photo: kasteelrougePhoto.url,
     description: "Robijnrood bier met zoete fruittonen van kersen, vanille en amandel. Zacht en verrassend vol.",
     abv: "8%",
     note: "Gebrouwen met echte kersen voor een rijke smaak.",
@@ -280,6 +293,7 @@ export const beers: Beer[] = [
   {
     category: "Fruit / Zoeter",
     name: "Boon — Kriek Boon",
+    photo: boonkriekboonPhoto.url,
     description: "Traditionele kriek met honderd procent verse krieken. Fris, zuur en fruitig met een droge afdronk.",
     abv: "4%",
     note: "Natuurlijke gisting op eikenhouten foeders. Pure ambacht.",
@@ -287,6 +301,7 @@ export const beers: Beer[] = [
   {
     category: "Fruit / Zoeter",
     name: "Desperados",
+    photo: desperadosPhoto.url,
     description: "Mexicaans geïnspireerd bier met tequila-aroma. Fris, lichtzoet en een tikje rebels.",
     abv: "5,9%",
     note: "Het originele bier met tequilasmaak, sinds 1995.",
@@ -400,6 +415,7 @@ export const beers: Beer[] = [
   {
     category: "Cider",
     name: "Magners — Pint",
+    photo: magnerspintPhoto.url,
     description: "Dezelfde frisse cider, in een groter formaat om extra lang van te genieten.",
     volume: "568 ml",
     abv: "4,5%",
@@ -408,6 +424,7 @@ export const beers: Beer[] = [
   {
     category: "Cider",
     name: "La Trappe — Isid'or",
+    photo: latrappeisidorPhoto.url,
     description: "Amberkleurig trappistenbier met karamel, mout en een kruidige afdronk.",
     abv: "7,5%",
     note: "Gebrouwen ter ere van broeder Isidorus.",
@@ -429,6 +446,7 @@ export const beers: Beer[] = [
   {
     category: "0.0 / Alcoholarm",
     name: "Frontaal — Juice Punch",
+    photo: frontaaljuicepunchPhoto.url,
     description: "Tropisch en sappig IPA-karakter, alcoholarm maar vol smaak.",
     abv: "0,5%",
   },
