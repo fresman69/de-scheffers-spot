@@ -139,8 +139,6 @@ function Home() {
             </Link>
           </div>
         </div>
-
-        </div>
         <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-paper/60 md:flex">
           <span className="text-[10px] uppercase tracking-[0.35em]">Scroll</span>
           <span className="h-8 w-px animate-pulse bg-brass/60" />
