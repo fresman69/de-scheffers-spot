@@ -40,7 +40,7 @@ const pillars = [
 function OverOns() {
   return (
     <>
-      <section className="bg-oak py-24 md:py-32">
+      <section className="bg-oak section-y">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
           <p className="mb-4 font-script type-eyebrow text-brass">Over ons</p>
           <h1 className="mb-6 type-h1 text-paper">
@@ -54,7 +54,7 @@ function OverOns() {
         </div>
       </section>
 
-      <section className="bg-paper py-20 md:py-28 text-oak">
+      <section className="bg-paper section-y text-oak">
         <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-5 lg:items-center">
           <div className="lg:col-span-2">
             <PhotoPlaceholder tone="light" aspect="4 / 5" label="Cafédetail — nog toe te voegen" />
@@ -80,7 +80,7 @@ function OverOns() {
         </div>
       </section>
 
-      <section className="bg-oak py-20 md:py-28">
+      <section className="bg-oak section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 max-w-2xl">
             <span className="mb-3 block font-script type-eyebrow text-brass">

@@ -32,7 +32,7 @@ const slots = [
 function Galerij() {
   return (
     <>
-      <section className="bg-oak py-16 md:py-24">
+      <section className="bg-oak section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-4 font-script type-eyebrow text-brass">Galerij</p>
           <h1 className="mb-6 max-w-[22ch] type-h1 text-paper">

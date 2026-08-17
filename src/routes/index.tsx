@@ -172,7 +172,7 @@ function Home() {
       </section>
 
       {/* Bier centraal — Van de tap */}
-      <section className="bg-oak py-20 md:py-28">
+      <section className="bg-oak section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <Reveal>
@@ -218,7 +218,7 @@ function Home() {
       </section>
 
       {/* Sfeer in het glas — moodboard geïnspireerd op onze Pinterest 'Drank Stadscafé' */}
-      <section className="relative overflow-hidden bg-oak-light py-20 md:py-28">
+      <section className="relative overflow-hidden bg-oak-light section-y">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-[0.08]"
@@ -310,7 +310,7 @@ function Home() {
       </section>
 
       {/* Waarom Stadscafé */}
-      <section className="bg-oak-light py-20 md:py-28">
+      <section className="bg-oak-light section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 text-center">
             <Reveal>
@@ -341,7 +341,7 @@ function Home() {
       </section>
 
       {/* Sfeerimpressie */}
-      <section className="bg-oak py-20 md:py-28">
+      <section className="bg-oak section-y">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <div className="zoom-image overflow-hidden rounded-sm ring-1 ring-border">
@@ -382,7 +382,7 @@ function Home() {
       </section>
 
       {/* Reviews */}
-      <section className="bg-oak-light py-20 md:py-28">
+      <section className="bg-oak-light section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 text-center">
             <Reveal>
@@ -490,7 +490,7 @@ function Home() {
 
 
       {/* Openingstijden + Route */}
-      <section className="bg-oak py-20 md:py-28">
+      <section className="bg-oak section-y">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal>
             <div className="h-full rounded-sm bg-wine p-8 text-paper ring-1 ring-wine-dim md:p-12">

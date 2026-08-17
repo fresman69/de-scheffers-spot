@@ -46,7 +46,7 @@ function Bierkaart() {
 
   return (
     <>
-      <section className="bg-oak py-16 md:py-24">
+      <section className="bg-oak section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-4 font-script type-eyebrow text-brass">Bierkaart</p>
           <h1 className="mb-6 max-w-[22ch] type-h1 text-paper">
@@ -83,7 +83,7 @@ function Bierkaart() {
         </div>
       </section>
 
-      <section className="bg-oak pb-24 pt-12">
+      <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((b) => (
             <ProductCard key={`${b.category}-${b.name}`} product={b} aspect="4 / 3" tone="dark" />
