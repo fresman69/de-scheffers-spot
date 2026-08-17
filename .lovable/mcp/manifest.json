@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sdk_version": "0.26.1",
+  "sdk_version": "0.26.2",
   "path": "/mcp",
   "auth": {
     "type": "oauth",
@@ -26,19 +26,18 @@
           "openWorldHint": false
         },
         "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
           "type": "object",
           "properties": {
             "category": {
-              "type": "string",
-              "description": "Filter on a beer category, case-insensitive."
+              "description": "Filter on a beer category, case-insensitive.",
+              "type": "string"
             },
             "search": {
-              "type": "string",
-              "description": "Free-text search on beer name or description."
+              "description": "Free-text search on beer name or description.",
+              "type": "string"
             }
-          },
-          "additionalProperties": false,
-          "$schema": "http://json-schema.org/draft-07/schema#"
+          }
         },
         "outputSchema": null
       },
@@ -52,19 +51,18 @@
           "openWorldHint": false
         },
         "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
           "type": "object",
           "properties": {
             "category": {
-              "type": "string",
-              "description": "Filter on a drink category, case-insensitive."
+              "description": "Filter on a drink category, case-insensitive.",
+              "type": "string"
             },
             "search": {
-              "type": "string",
-              "description": "Free-text search on drink name or description."
+              "description": "Free-text search on drink name or description.",
+              "type": "string"
             }
-          },
-          "additionalProperties": false,
-          "$schema": "http://json-schema.org/draft-07/schema#"
+          }
         },
         "outputSchema": null
       },
