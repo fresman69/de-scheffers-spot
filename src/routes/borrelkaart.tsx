@@ -5,13 +5,13 @@ import { hapas } from "../lib/menu/hapas";
 export const Route = createFileRoute("/borrelkaart")({
   head: () => ({
     meta: [
-      { title: "Hapas — Borrelkaart in Dordrecht | Stadscafé" },
+      { title: "Happas — Borrelkaart in Dordrecht | Stadscafé" },
       {
         name: "description",
         content:
-          "Onze hapas 2025: fuet, kaashapjes, De Bourgondiër bitterballen, olijven, nachos, vegetarische vlammetjes, kaastengels en gehaktballen — bij ieder glas.",
+          "Onze happas 2025: fuet, kaashapjes, De Bourgondiër bitterballen, olijven, nachos, vegetarische vlammetjes, kaastengels en gehaktballen — bij ieder glas.",
       },
-      { property: "og:title", content: "Hapas — Stadscafé" },
+      { property: "og:title", content: "Happas — Stadscafé" },
       { property: "og:url", content: "/borrelkaart" },
     ],
     links: [{ rel: "canonical", href: "/borrelkaart" }],
@@ -40,6 +40,9 @@ function Borrelkaart() {
       </section>
 
       <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <h2 className="mb-8 type-h3 text-paper">Onze happas</h2>
+        </div>
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3">
           {hapas.map((h) => (
             <ProductCard key={h.name} product={h} aspect="4 / 3" tone="dark" />

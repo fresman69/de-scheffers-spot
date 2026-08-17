@@ -85,6 +85,12 @@ function Bierkaart() {
       </section>
 
       <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <h2 className="mb-8 type-h3 text-paper">
+            {active === "Alle" ? "Alle bieren" : active}
+            <span className="ml-3 align-middle type-label text-brass">{filtered.length}</span>
+          </h2>
+        </div>
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((b) => (
             <ProductCard key={`${b.category}-${b.name}`} product={b} aspect="4 / 3" tone="dark" />

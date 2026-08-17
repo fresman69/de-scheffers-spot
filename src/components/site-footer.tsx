@@ -19,7 +19,7 @@ export function SiteFooter() {
           </div>
           <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-3 sm:gap-16">
             <div>
-              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Bezoek</h4>
+              <h2 className="mb-6 font-script text-2xl leading-none text-brass">Bezoek</h2>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><Link to="/over-ons" className="hover:text-brass">Over ons</Link></li>
                 <li><Link to="/bierkaart" className="hover:text-brass">Bierkaart</Link></li>
@@ -28,7 +28,7 @@ export function SiteFooter() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Contact</h4>
+              <h2 className="mb-6 font-script text-2xl leading-none text-brass">Contact</h2>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><a href="tel:+31786134242" className="hover:text-brass">078 613 4242</a></li>
                 <li><a href="mailto:info@rijke-zn.nl" className="hover:text-brass">info@rijke-zn.nl</a></li>
@@ -36,7 +36,7 @@ export function SiteFooter() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Volg ons</h4>
+              <h2 className="mb-6 font-script text-2xl leading-none text-brass">Volg ons</h2>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><a href="https://www.instagram.com/stadscafe_rijke/" target="_blank" rel="noreferrer" className="hover:text-brass">Instagram</a></li>
                 <li><a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-brass">Facebook</a></li>
