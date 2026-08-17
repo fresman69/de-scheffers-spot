@@ -6,8 +6,8 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:gap-12">
           <div>
-            <span className="mb-1 block font-script type-eyebrow text-brass">Stads</span>
-            <span className="mb-4 block font-display-condensed text-2xl tracking-[0.25em] text-paper">CAFE</span>
+            <span className="mb-1 block font-script text-5xl leading-none text-brass">Stads</span>
+            <span className="mb-4 block font-display-condensed text-2xl tracking-[0.25em] text-paper">CAFÉ</span>
             <p className="max-w-[32ch] text-sm leading-relaxed text-paper/75">
               Een gezellig bruin café in het hart van Dordrecht — kom gerust langs.
             </p>
@@ -19,7 +19,7 @@ export function SiteFooter() {
           </div>
           <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-3 sm:gap-16">
             <div>
-              <h4 className="mb-6 font-script type-eyebrow text-2xl text-brass">Bezoek</h4>
+              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Bezoek</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><Link to="/over-ons" className="hover:text-brass">Over ons</Link></li>
                 <li><Link to="/bierkaart" className="hover:text-brass">Bierkaart</Link></li>
@@ -28,7 +28,7 @@ export function SiteFooter() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-6 font-script type-eyebrow text-2xl text-brass">Contact</h4>
+              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Contact</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><a href="tel:+31786134242" className="hover:text-brass">078 613 4242</a></li>
                 <li><a href="mailto:info@rijke-zn.nl" className="hover:text-brass">info@rijke-zn.nl</a></li>
@@ -36,7 +36,7 @@ export function SiteFooter() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-6 font-script type-eyebrow text-2xl text-brass">Volg ons</h4>
+              <h4 className="mb-6 font-script text-2xl leading-none text-brass">Volg ons</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><a href="https://www.instagram.com/stadscafe_rijke/" target="_blank" rel="noreferrer" className="hover:text-brass">Instagram</a></li>
                 <li><a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-brass">Facebook</a></li>
