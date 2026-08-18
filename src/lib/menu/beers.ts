@@ -288,6 +288,7 @@ export const beers: Beer[] = [
   {
     category: "Fruit / Zoeter",
     name: "Liefmans — Fruitesse",
+    photo: liefmansfruitessePhoto.url,
     description: "Fruitig en verfrissend bier met tonen van aardbei, framboos, kers en bosbes. Licht zoet en sprankelend.",
     abv: "3,8%",
     note: "Perfect als dorstlesser op elk moment van de dag.",
