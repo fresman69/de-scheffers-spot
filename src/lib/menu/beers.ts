@@ -1,8 +1,10 @@
 import corsendonkpaterdubbelPhoto from "../../assets/bier/corsendonk-pater-dubbel.jpg.asset.json";
 import latrappedubbelPhoto from "../../assets/bier/la-trappe-dubbel.jpg.asset.json";
 import latrappetripelPhoto from "../../assets/bier/la-trappe-tripel.jpg.asset.json";
-import kasteelrougePhoto from "../../assets/bier/kasteel-rouge.jpg.asset.json";
-import boonkriekboonPhoto from "../../assets/bier/boon-kriek-boon.jpg.asset.json";
+import kasteelrougePhoto from "../../assets/bier/kasteel-rouge.png.asset.json";
+import boonkriekboonPhoto from "../../assets/bier/boon-kriek.png.asset.json";
+import liefmansfruitessePhoto from "../../assets/bier/liefmans-fruitesse.png.asset.json";
+import oudegeuzeboonPhoto from "../../assets/bier/oude-geuze-boon.png.asset.json";
 import desperadosPhoto from "../../assets/bier/desperados.jpg.asset.json";
 import latrappeisidorPhoto from "../../assets/bier/la-trappe-isid-or.jpg.asset.json";
 import frontaaljuicepunchPhoto from "../../assets/bier/frontaal-juice-punch.jpg.asset.json";
@@ -286,6 +288,7 @@ export const beers: Beer[] = [
   {
     category: "Fruit / Zoeter",
     name: "Liefmans — Fruitesse",
+    photo: liefmansfruitessePhoto.url,
     description: "Fruitig en verfrissend bier met tonen van aardbei, framboos, kers en bosbes. Licht zoet en sprankelend.",
     abv: "3,8%",
     note: "Perfect als dorstlesser op elk moment van de dag.",
@@ -385,6 +388,7 @@ export const beers: Beer[] = [
   {
     category: "Sour / Geuze",
     name: "Oude Geuze Boon",
+    photo: oudegeuzeboonPhoto.url,
     description: "Authentieke lambiekgeuze uit de Pajottenland. Droog, sprankelend en complex met toetsen van appel en citrus.",
     abv: "7%",
     note: "Een blend van één, twee en drie jaar oude lambiek, ongefilterd.",
