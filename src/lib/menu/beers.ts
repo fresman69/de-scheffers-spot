@@ -388,6 +388,7 @@ export const beers: Beer[] = [
   {
     category: "Sour / Geuze",
     name: "Oude Geuze Boon",
+    photo: oudegeuzeboonPhoto.url,
     description: "Authentieke lambiekgeuze uit de Pajottenland. Droog, sprankelend en complex met toetsen van appel en citrus.",
     abv: "7%",
     note: "Een blend van één, twee en drie jaar oude lambiek, ongefilterd.",
