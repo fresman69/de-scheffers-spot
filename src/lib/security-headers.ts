@@ -20,7 +20,8 @@ const CSP = [
 
 export function withSecurityHeaders(response: Response): Response {
   const headers = new Headers(response.headers);
-  if (!headers.has("content-security-policy")) {
+  // Dev tooling (HMR, preview bridge) needs eval; only enforce CSP in production.
+  if (import.meta.env.PROD && !headers.has("content-security-policy")) {
     headers.set("content-security-policy", CSP);
   }
   headers.set("x-content-type-options", "nosniff");
