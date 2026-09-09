@@ -379,7 +379,7 @@ function Home() {
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {reviews.map((r, i) => (
-              <Reveal key={r.name} delay={i * 120}>
+              <Reveal key={r.text} delay={i * 120}>
                 <figure className="card-cozy hover-lift h-full bg-oak p-8 ring-1 ring-border">
                   <div className="mb-4 flex gap-1 text-brass">
                     {Array.from({ length: 5 }).map((_, i) => (
@@ -390,11 +390,21 @@ function Home() {
                     &ldquo;{r.text}&rdquo;
                   </blockquote>
                   <figcaption className="mt-6 text-[11px] uppercase tracking-widest text-paper/70">
-                    {r.name} · {r.src}
+                    {r.src}
                   </figcaption>
                 </figure>
               </Reveal>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Stadscaf%C3%A9%20Rijke%20%26%20Zn%20Voorstraat%20260%20Dordrecht"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border-b border-brass/40 pb-1 text-sm font-medium text-brass transition-colors hover:border-brass"
+            >
+              Lees alle recensies op Google →
+            </a>
           </div>
         </div>
       </section>
