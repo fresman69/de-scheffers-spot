@@ -297,6 +297,29 @@ main > section {
   isolation: isolate;
 }
 
+main > section:first-child:not(.vintage-hero) {
+  overflow: hidden;
+  border-bottom: 1px solid color-mix(in oklch, var(--warm-red) 30%, transparent);
+  background-image:
+    linear-gradient(104deg, transparent 0 63%, color-mix(in oklch, var(--wine) 45%, transparent) 63% 100%),
+    repeating-linear-gradient(7deg, transparent 0 7px, color-mix(in oklch, var(--paper) 2.2%, transparent) 8px);
+}
+
+main > section:first-child:not(.vintage-hero)::after {
+  content: "";
+  position: absolute;
+  right: clamp(1rem, 5vw, 5rem);
+  bottom: 12%;
+  width: clamp(4rem, 10vw, 8rem);
+  aspect-ratio: 1;
+  z-index: -1;
+  border: 1px solid color-mix(in oklch, var(--brass) 28%, transparent);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 8px color-mix(in oklch, var(--wine) 25%, transparent);
+  opacity: 0.55;
+  transform: rotate(-8deg);
+}
+
 main > section.bg-paper::before,
 .warm-grain::before {
   content: "";
@@ -354,6 +377,15 @@ button.rounded-sm.bg-brass:hover {
 
 .vintage-footer {
   background-image: repeating-linear-gradient(5deg, transparent 0 7px, color-mix(in oklch, var(--paper) 2.5%, transparent) 8px);
+}
+
+.vintage-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.14;
+  background-image: repeating-linear-gradient(9deg, transparent 0 5px, color-mix(in oklch, var(--paper) 8%, transparent) 6px);
 }
 
 .vintage-mobile-menu {
@@ -520,6 +552,7 @@ button.rounded-sm.bg-brass:hover {
 
 @media (max-width: 390px) {
   .beer-cap-scene { max-width: 17rem; }
+  main > section:first-child:not(.vintage-hero)::after { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
