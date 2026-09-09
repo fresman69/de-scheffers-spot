@@ -1,79 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AmbientPanel, type AmbientVariant } from "../components/ambient";
-import { Reveal } from "../components/reveal";
+import { PhotoPlaceholder } from "../components/photo-placeholder";
 
 export const Route = createFileRoute("/galerij")({
   head: () => ({
     meta: [
-      { title: "Galerij — Sfeerbeelden Stadscafé Dordrecht" },
+      { title: "Galerij — Sfeerbeelden Stadscafé" },
       {
         name: "description",
         content:
-          "Een abstracte sfeergalerij van Stadscafé in Dordrecht: amberkleurig licht, koper, schuim en warm houtgevoel, volledig in code getekend.",
+          "Sfeerbeelden van interieur, terras, speciaalbieren, evenementen en gasten van Stadscafé in Dordrecht.",
       },
       { property: "og:title", content: "Galerij — Stadscafé" },
-      {
-        property: "og:description",
-        content: "Abstracte sfeerbeelden van amber licht, koper en schuim.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { property: "og:url", content: "https://de-scheffers-spot.lovable.app/galerij" },
+      { property: "og:url", content: "/galerij" },
     ],
-    links: [{ rel: "canonical", href: "https://de-scheffers-spot.lovable.app/galerij" }],
+    links: [{ rel: "canonical", href: "/galerij" }],
   }),
   component: Galerij,
 });
 
-const panels: { title: string; caption: string; variant: AmbientVariant; aspect: string }[] = [
-  {
-    title: "Van de tap",
-    caption: "Goud dat langzaam het glas vult.",
-    variant: "tap",
-    aspect: "3 / 4",
-  },
-  {
-    title: "Koper",
-    caption: "Warm metaal in het licht van de bar.",
-    variant: "copper",
-    aspect: "4 / 3",
-  },
-  {
-    title: "Schuimkraag",
-    caption: "Fijne belletjes die net tot rust komen.",
-    variant: "foam",
-    aspect: "4 / 3",
-  },
-  {
-    title: "Amber",
-    caption: "De kleur van een avond die lang duurt.",
-    variant: "amber",
-    aspect: "4 / 5",
-  },
-  {
-    title: "Glasreflectie",
-    caption: "Licht dat langs koud condens glijdt.",
-    variant: "glass",
-    aspect: "3 / 4",
-  },
-  {
-    title: "Rood in het glas",
-    caption: "Diepe tinten van kriek en donker bier.",
-    variant: "wine",
-    aspect: "4 / 3",
-  },
-  {
-    title: "Bubbels",
-    caption: "Rustig opstijgend, altijd in beweging.",
-    variant: "bubbles",
-    aspect: "4 / 3",
-  },
-  {
-    title: "Kaarslicht",
-    caption: "Zachte vlekken licht tegen donker hout.",
-    variant: "light",
-    aspect: "4 / 5",
-  },
+const slots = [
+  { label: "Interieur", aspect: "3 / 4" },
+  { label: "Terras", aspect: "4 / 3" },
+  { label: "Tapkranen", aspect: "4 / 3" },
+  { label: "Speciaalbier", aspect: "4 / 5" },
+  { label: "Bruine cafésfeer", aspect: "3 / 4" },
+  { label: "Borrelplank", aspect: "4 / 3" },
+  { label: "Evenement", aspect: "4 / 3" },
+  { label: "Gasten", aspect: "4 / 5" },
 ];
 
 function Galerij() {
@@ -82,10 +35,12 @@ function Galerij() {
       <section className="bg-oak section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-4 font-script type-eyebrow text-brass">Galerij</p>
-          <h1 className="mb-6 max-w-[22ch] type-h1 text-paper">Sfeer in beeld</h1>
+          <h1 className="mb-6 max-w-[22ch] type-h1 text-paper">
+            Een kijkje binnen
+          </h1>
           <p className="max-w-[60ch] text-pretty type-body text-paper/85">
-            Amberkleurig licht, koper, schuim en glasreflecties. Deze sfeerbeelden zijn abstract en
-            volledig in code getekend — een gevoel van het café, geen foto's.
+            Van de bar tot het terras, van tap tot borrelplank. Deze galerij vullen we
+            zodra we onze eigen foto's van Stadscafé hebben.
           </p>
         </div>
       </section>
@@ -93,16 +48,10 @@ function Galerij() {
       <section className="bg-oak pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
-            {panels.map((p, i) => (
-              <Reveal key={p.title} delay={i * 70} className="mb-4 block break-inside-avoid">
-                <figure className="relative overflow-hidden rounded-sm ring-1 ring-border">
-                  <AmbientPanel variant={p.variant} aspect={p.aspect} seed={i + 2} />
-                  <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-oak/90 to-transparent p-5">
-                    <span className="font-script text-xl text-brass">{p.title}</span>
-                    <p className="mt-1 text-[12px] leading-snug text-paper/80">{p.caption}</p>
-                  </figcaption>
-                </figure>
-              </Reveal>
+            {slots.map((s, i) => (
+              <div key={i} className="mb-4 break-inside-avoid">
+                <PhotoPlaceholder aspect={s.aspect} label={s.label} />
+              </div>
             ))}
           </div>
         </div>

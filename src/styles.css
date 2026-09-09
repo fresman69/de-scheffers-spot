@@ -109,37 +109,6 @@
   50% { opacity: 1; }
 }
 
-/* ——— Abstracte sfeeranimaties (geen foto's, alleen licht en beweging) ——— */
-@keyframes ambient-drift {
-  from { transform: translate3d(0, 0, 0) scale(1); opacity: 0.55; }
-  to { transform: translate3d(12%, -8%, 0) scale(1.15); opacity: 0.85; }
-}
-@keyframes ambient-breathe {
-  from { transform: translate(-50%, -50%) scale(0.92); opacity: 0.5; }
-  to { transform: translate(-50%, -50%) scale(1.12); opacity: 0.85; }
-}
-@keyframes ambient-rise {
-  0% { transform: translate3d(0, 0, 0) scale(0.7); opacity: 0; }
-  12% { opacity: 1; }
-  85% { opacity: 0.7; }
-  100% { transform: translate3d(10px, -700%, 0) scale(1.1); opacity: 0; }
-}
-@keyframes ambient-sheen {
-  0% { transform: translate3d(0, 0, 0) skewX(-12deg); opacity: 0; }
-  18% { opacity: 0.9; }
-  60% { transform: translate3d(420%, 0, 0) skewX(-12deg); opacity: 0; }
-  100% { transform: translate3d(420%, 0, 0) skewX(-12deg); opacity: 0; }
-}
-@keyframes ambient-foam {
-  from { transform: translate3d(-2%, 0, 0) scaleY(1); }
-  to { transform: translate3d(2%, 0, 0) scaleY(1.18); }
-}
-@keyframes ambient-sway {
-  from { transform: translate3d(0, -6px, 0); }
-  to { transform: translate3d(0, 8px, 0); }
-}
-
-
 @utility animate-fade-up {
   animation: fade-up var(--dur-slow) var(--ease-smooth) both;
 }
@@ -298,8 +267,6 @@
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.001ms !important;
-      animation-iteration-count: 1 !important;
-
       transition-duration: 0.001ms !important;
     }
   }

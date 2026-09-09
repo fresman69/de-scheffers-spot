@@ -97,6 +97,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Stadscafé — Bruin café en speciaalbier in Dordrecht" },
       { name: "twitter:description", content: "Speciaalbier, borrelhapjes en een warme kroegsfeer in hartje Dordrecht." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/864e9f43-d1ff-43f5-9042-fdaf210aadc0/id-preview-32eb416b--3030e587-0e2c-48b8-aabd-374eb7f88cb1.lovable.app-1784404156583.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/864e9f43-d1ff-43f5-9042-fdaf210aadc0/id-preview-32eb416b--3030e587-0e2c-48b8-aabd-374eb7f88cb1.lovable.app-1784404156583.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -120,6 +122,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           },
           telephone: "+31-78-613-4242",
           email: "info@rijke-zn.nl",
+          sameAs: ["https://www.instagram.com/stadscafe_rijke/"],
           acceptsReservations: false,
           servesCuisine: ["Speciaalbier", "Borrelhapjes", "Wijn"],
           openingHoursSpecification: [

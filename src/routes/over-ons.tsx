@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { AmbientPanel } from "../components/ambient";
+import { PhotoPlaceholder } from "../components/photo-placeholder";
 
 export const Route = createFileRoute("/over-ons")({
   head: () => ({
@@ -29,7 +29,7 @@ const pillars = [
   },
   {
     title: "Passie voor bier",
-    body: "Wisselende tapkranen en een ruime flessenkaart. Van huisbier tot trappist, van saison tot alcoholvrij.",
+    body: "Zes wisselende tapkranen, meer dan zestig bieren op fles. Van huisbier tot trappist, van saison tot alcoholvrij.",
   },
   {
     title: "Hartje Dordrecht",
@@ -70,7 +70,7 @@ function OverOns() {
       <section className="bg-paper section-y text-oak">
         <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-5 lg:items-center">
           <div className="lg:col-span-2">
-            <AmbientPanel variant="copper" seed={4} aspect="4 / 5" className="ring-1 ring-oak/10" />
+            <PhotoPlaceholder tone="light" aspect="4 / 5" label="Cafédetail — nog toe te voegen" />
           </div>
           <div className="lg:col-span-3">
             <span className="mb-4 block font-script type-eyebrow text-brass-dim">

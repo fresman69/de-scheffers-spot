@@ -5,7 +5,7 @@ export default defineTool({
   name: "cafe_info",
   title: "Café-informatie",
   description:
-    "Get Stadscafé's address, phone number, email, opening hours and reservation policy.",
+    "Get Stadscafé's address, phone number, email, Instagram, opening hours and reservation policy.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => ({

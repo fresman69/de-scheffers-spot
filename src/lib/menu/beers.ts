@@ -1,3 +1,33 @@
+import goudenCarolusWhiskyPhoto from "../../assets/bier/gouden-carolus-whisky-infused.avif.asset.json";
+import keesBarleyWinePhoto from "../../assets/bier/kees-barley-wine.webp.asset.json";
+import rochefort10Photo from "../../assets/bier/rochefort-10.webp.asset.json";
+import stBernardusPhoto from "../../assets/bier/st-bernardus-abt-12.jpg.asset.json";
+import goudenCarolusTripelPhoto from "../../assets/bier/gouden-carolus-tripel.jpg.asset.json";
+import laTrappeTripelOfficieelPhoto from "../../assets/bier/la-trappe-tripel-officieel.jpg.asset.json";
+import zeezuiperPhoto from "../../assets/bier/zeezuiper.jpg.asset.json";
+import tripelKarmelietPhoto from "../../assets/bier/tripel-karmeliet.jpg.asset.json";
+import duvelPhoto from "../../assets/bier/duvel.png.asset.json";
+import laChouffePhoto from "../../assets/bier/la-chouffe.png.asset.json";
+import corsendonkPaterNosterPhoto from "../../assets/bier/corsendonk-pater-noster.jpg.asset.json";
+import westmalleDubbelPhoto from "../../assets/bier/westmalle-dubbel.jpg.asset.json";
+import laTrappeDubbelOfficieelPhoto from "../../assets/bier/la-trappe-dubbel-officieel.jpg.asset.json";
+import lefortDonkerPhoto from "../../assets/bier/lefort-donker.jpg.asset.json";
+import elvisJuicePhoto from "../../assets/bier/elvis-juice.avif.asset.json";
+import gladjanusPhoto from "../../assets/bier/gladjanus.webp.asset.json";
+import keesHazySunrisePhoto from "../../assets/bier/kees-hazy-sunrise.png.asset.json";
+import twoChefsBonChefPhoto from "../../assets/bier/two-chefs-bon-chef.png.asset.json";
+import vandestreekHopArtPhoto from "../../assets/bier/vandestreek-hop-art.png.asset.json";
+import kasteelrougePhoto from "../../assets/bier/kasteel-rouge.png.asset.json";
+import boonkriekboonPhoto from "../../assets/bier/boon-kriek.png.asset.json";
+import liefmansfruitessePhoto from "../../assets/bier/liefmans-fruitesse.png.asset.json";
+import oudegeuzeboonPhoto from "../../assets/bier/oude-geuze-boon.png.asset.json";
+import desperadosPhoto from "../../assets/bier/desperados.jpg.asset.json";
+import latrappeisidorPhoto from "../../assets/bier/la-trappe-isid-or.jpg.asset.json";
+import frontaaljuicepunchPhoto from "../../assets/bier/frontaal-juice-punch.jpg.asset.json";
+import magnerspintPhoto from "../../assets/bier/magners-pint.jpg.asset.json";
+import affligemBlondPhoto from "../../assets/bier/affligem-blond-fles-en-glas.png.asset.json";
+import strandgaperPhoto from "../../assets/bier/strandgaper.jpg.asset.json";
+import toewijdingPhoto from "../../assets/bier/van-moll-toewijding.jpg.asset.json";
 import type { Product } from "../../components/product-card";
 
 export type Beer = Product & {
@@ -40,6 +70,7 @@ export const beers: Beer[] = [
   {
     category: "Blond",
     name: "Affligem — Blond",
+    photo: affligemBlondPhoto.url,
     description: "Klassiek Belgisch abdijblond met tonen van honing, kruidnagel en mout.",
     abv: "6,8%",
     note: "Naar een recept uit de abdij van Affligem.",
@@ -47,6 +78,7 @@ export const beers: Beer[] = [
   {
     category: "Blond",
     name: "Van Moll — Toewijding",
+    photo: toewijdingPhoto.url,
     description: "Licht en toegankelijk blond met een fijne hopbitterheid en droge afdronk.",
     abv: "5,5%",
     note: "Gebrouwen in Eindhoven door Van Moll.",
@@ -54,6 +86,7 @@ export const beers: Beer[] = [
   {
     category: "Blond",
     name: "Scheldebrouwerij — Strandgaper",
+    photo: strandgaperPhoto.url,
     description: "Fruitig blond met citrus, kruiden en een zachte, ronde afdronk.",
     abv: "6,2%",
     note: "Uit Meer, pal aan de Belgisch-Nederlandse grens.",
@@ -63,6 +96,7 @@ export const beers: Beer[] = [
   {
     category: "Dubbel",
     name: "La Trappe — Dubbel",
+    photo: laTrappeDubbelOfficieelPhoto.url,
     description: "Donkerbruin trappistenbier met karamel, gedroogd fruit en een volle mout.",
     abv: "7%",
     note: "Gebrouwen binnen de muren van abdij Koningshoeven.",
@@ -70,6 +104,7 @@ export const beers: Beer[] = [
   {
     category: "Dubbel",
     name: "Corsendonk — Pater Dubbel",
+    photo: corsendonkPaterNosterPhoto.url,
     description: "Zacht en moutig met tonen van rozijn, karamel en donkere chocolade.",
     abv: "6,5%",
     note: "Een Belgische klassieker sinds 1982.",
@@ -77,6 +112,7 @@ export const beers: Beer[] = [
   {
     category: "Dubbel",
     name: "Lefort — Belgian Brown Ale",
+    photo: lefortDonkerPhoto.url,
     description: "Bruine ale met rood fruit, kruiden en een licht zoete, warme afdronk.",
     abv: "5,8%",
     note: "Verrassend soepel voor een donker bier.",
@@ -84,6 +120,7 @@ export const beers: Beer[] = [
   {
     category: "Dubbel",
     name: "Westmalle — Dubbel",
+    photo: westmalleDubbelPhoto.url,
     description: "Diepbruine trappist met een rijke mout, donker fruit en een droge finale.",
     abv: "7%",
     note: "Het bier dat de stijl dubbel definieerde.",
@@ -93,6 +130,7 @@ export const beers: Beer[] = [
   {
     category: "Tripel",
     name: "La Trappe — Tripel",
+    photo: laTrappeTripelOfficieelPhoto.url,
     description: "Goudblonde trappist met banaan, kruidnagel en een stevige, warme afdronk.",
     abv: "8%",
     note: "De enige Nederlandse trappistenbrouwerij.",
@@ -100,6 +138,7 @@ export const beers: Beer[] = [
   {
     category: "Tripel",
     name: "Tripel Karmeliet",
+    photo: tripelKarmelietPhoto.url,
     description: "Zijdezacht tripel van gerst, tarwe en haver, met vanille en citrus.",
     abv: "8,4%",
     note: "Naar een driegranenrecept uit 1679.",
@@ -107,6 +146,7 @@ export const beers: Beer[] = [
   {
     category: "Tripel",
     name: "Gouden Carolus — Tripel",
+    photo: goudenCarolusTripelPhoto.url,
     description: "Vol en kruidig tripel met honing, koriander en een lange, droge afdronk.",
     abv: "9%",
     note: "Uit Mechelen, van brouwerij Het Anker.",
@@ -114,6 +154,7 @@ export const beers: Beer[] = [
   {
     category: "Tripel",
     name: "Scheldebrouwerij — Zeezuiper",
+    photo: zeezuiperPhoto.url,
     description: "Fris tripel met citrus en kruiden, verrassend licht op de tong.",
     abv: "8%",
     note: "Vernoemd naar de zeilende zeezuipers van weleer.",
@@ -123,6 +164,7 @@ export const beers: Beer[] = [
   {
     category: "Quad / Barley Wine",
     name: "Trappistes Rochefort 10",
+    photo: rochefort10Photo.url,
     description: "Zwaar en donker met port, pruim, chocolade en een fluweelzachte afdronk.",
     abv: "11,3%",
     note: "Wereldwijd geroemd — rustig drinken loont.",
@@ -130,6 +172,7 @@ export const beers: Beer[] = [
   {
     category: "Quad / Barley Wine",
     name: "Kees — Barley Wine",
+    photo: keesBarleyWinePhoto.url,
     description: "Krachtige barley wine met karamel, toffee en gedroogd fruit.",
     abv: "11,5%",
     note: "Gebrouwen in Middelburg door Kees Bubberman.",
@@ -137,6 +180,7 @@ export const beers: Beer[] = [
   {
     category: "Quad / Barley Wine",
     name: "Gouden Carolus — Whisky Infused",
+    photo: goudenCarolusWhiskyPhoto.url,
     description: "Quadrupel gerijpt op whiskyvaten, met vanille, eiken en warme mout.",
     abv: "11,7%",
     note: "Rijpt op vaten van de eigen Gouden Carolus-whisky.",
@@ -144,6 +188,7 @@ export const beers: Beer[] = [
   {
     category: "Quad / Barley Wine",
     name: "St. Bernardus — Abt 12",
+    photo: stBernardusPhoto.url,
     description: "Volle quadrupel met donker fruit, karamel en een romige, lange afdronk.",
     abv: "10%",
     note: "Uit Watou, al generaties een vaste waarde.",
@@ -153,6 +198,7 @@ export const beers: Beer[] = [
   {
     category: "Indian Pale Ale",
     name: "Two Chefs — Bon Chef",
+    photo: twoChefsBonChefPhoto.url,
     description: "Sappige IPA met tropisch fruit, citrus en een stevige hopbitterheid.",
     abv: "6,5%",
     note: "Gebrouwen in Amsterdam door Two Chefs Brewing.",
@@ -160,6 +206,7 @@ export const beers: Beer[] = [
   {
     category: "Indian Pale Ale",
     name: "Kees — Hazy Sunrise",
+    photo: keesHazySunrisePhoto.url,
     description: "Troebele hazy IPA met mango, perzik en een zachte, romige body.",
     abv: "7,5%",
     note: "Weinig bitter, veel fruit — een fijne instapper.",
@@ -167,6 +214,7 @@ export const beers: Beer[] = [
   {
     category: "Indian Pale Ale",
     name: "BrewDog — Elvis Juice",
+    photo: elvisJuicePhoto.url,
     description: "Grapefruit-IPA: fris, bitterzoet en lekker scherp in de afdronk.",
     abv: "6,5%",
     note: "Gebrouwen met echte grapefruitschil.",
@@ -174,6 +222,7 @@ export const beers: Beer[] = [
   {
     category: "Indian Pale Ale",
     name: "Van de Streek — Hop Art IPA",
+    photo: vandestreekHopArtPhoto.url,
     description: "Klassieke IPA met dennen, hars en een droge, bittere finale.",
     abv: "6,5%",
     note: "Van twee broers uit Utrecht, altijd hopgedreven.",
@@ -181,6 +230,7 @@ export const beers: Beer[] = [
   {
     category: "Indian Pale Ale",
     name: "De Eeuwige Jeugd — Gladjanus White IPA",
+    photo: gladjanusPhoto.url,
     description: "Witbier en IPA in één: koriander, citrus en een frisse hoptoets.",
     abv: "5%",
     note: "Glutenvrij, zonder dat je iets mist.",
@@ -190,6 +240,7 @@ export const beers: Beer[] = [
   {
     category: "Zwaar Blond",
     name: "Duvel",
+    photo: duvelPhoto.url,
     description: "Krachtig blond met een verfijnde bitterheid en fijne, fruitige aroma's.",
     abv: "8,5%",
     ibu: "33",
@@ -198,6 +249,7 @@ export const beers: Beer[] = [
   {
     category: "Zwaar Blond",
     name: "La Chouffe Blond",
+    photo: laChouffePhoto.url,
     description: "Blond bier met een fruitig aroma, kruiden en een lichte hopbitterheid.",
     abv: "8%",
     ibu: "20",
@@ -266,6 +318,7 @@ export const beers: Beer[] = [
   {
     category: "Fruit / Zoeter",
     name: "Kasteel — Rouge",
+    photo: kasteelrougePhoto.url,
     description: "Robijnrood bier met zoete fruittonen van kersen, vanille en amandel. Zacht en verrassend vol.",
     abv: "8%",
     note: "Gebrouwen met echte kersen voor een rijke smaak.",
@@ -273,6 +326,7 @@ export const beers: Beer[] = [
   {
     category: "Fruit / Zoeter",
     name: "Liefmans — Fruitesse",
+    photo: liefmansfruitessePhoto.url,
     description: "Fruitig en verfrissend bier met tonen van aardbei, framboos, kers en bosbes. Licht zoet en sprankelend.",
     abv: "3,8%",
     note: "Perfect als dorstlesser op elk moment van de dag.",
@@ -280,6 +334,7 @@ export const beers: Beer[] = [
   {
     category: "Fruit / Zoeter",
     name: "Boon — Kriek Boon",
+    photo: boonkriekboonPhoto.url,
     description: "Traditionele kriek met honderd procent verse krieken. Fris, zuur en fruitig met een droge afdronk.",
     abv: "4%",
     note: "Natuurlijke gisting op eikenhouten foeders. Pure ambacht.",
@@ -287,6 +342,7 @@ export const beers: Beer[] = [
   {
     category: "Fruit / Zoeter",
     name: "Desperados",
+    photo: desperadosPhoto.url,
     description: "Mexicaans geïnspireerd bier met tequila-aroma. Fris, lichtzoet en een tikje rebels.",
     abv: "5,9%",
     note: "Het originele bier met tequilasmaak, sinds 1995.",
@@ -370,6 +426,7 @@ export const beers: Beer[] = [
   {
     category: "Sour / Geuze",
     name: "Oude Geuze Boon",
+    photo: oudegeuzeboonPhoto.url,
     description: "Authentieke lambiekgeuze uit de Pajottenland. Droog, sprankelend en complex met toetsen van appel en citrus.",
     abv: "7%",
     note: "Een blend van één, twee en drie jaar oude lambiek, ongefilterd.",
@@ -400,6 +457,7 @@ export const beers: Beer[] = [
   {
     category: "Cider",
     name: "Magners — Pint",
+    photo: magnerspintPhoto.url,
     description: "Dezelfde frisse cider, in een groter formaat om extra lang van te genieten.",
     volume: "568 ml",
     abv: "4,5%",
@@ -408,6 +466,7 @@ export const beers: Beer[] = [
   {
     category: "Cider",
     name: "La Trappe — Isid'or",
+    photo: latrappeisidorPhoto.url,
     description: "Amberkleurig trappistenbier met karamel, mout en een kruidige afdronk.",
     abv: "7,5%",
     note: "Gebrouwen ter ere van broeder Isidorus.",
@@ -429,6 +488,7 @@ export const beers: Beer[] = [
   {
     category: "0.0 / Alcoholarm",
     name: "Frontaal — Juice Punch",
+    photo: frontaaljuicepunchPhoto.url,
     description: "Tropisch en sappig IPA-karakter, alcoholarm maar vol smaak.",
     abv: "0,5%",
   },

@@ -10,6 +10,7 @@ export const cafeInfo = {
   },
   phone: "+31 78 613 4242",
   email: "info@rijke-zn.nl",
+  instagram: "https://www.instagram.com/stadscafe_rijke/",
   reservations: false,
   openingHours: [
     { day: "Maandag", hours: "Gesloten" },
