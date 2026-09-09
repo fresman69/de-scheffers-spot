@@ -1,5 +1,12 @@
-import corsendonkpaterdubbelPhoto from "../../assets/bier/corsendonk-pater-dubbel.jpg.asset.json";
-import latrappedubbelPhoto from "../../assets/bier/la-trappe-dubbel.jpg.asset.json";
+import corsendonkPaterNosterPhoto from "../../assets/bier/corsendonk-pater-noster.jpg.asset.json";
+import westmalleDubbelPhoto from "../../assets/bier/westmalle-dubbel.jpg.asset.json";
+import laTrappeDubbelOfficieelPhoto from "../../assets/bier/la-trappe-dubbel-officieel.jpg.asset.json";
+import lefortDonkerPhoto from "../../assets/bier/lefort-donker.jpg.asset.json";
+import elvisJuicePhoto from "../../assets/bier/elvis-juice.avif.asset.json";
+import gladjanusPhoto from "../../assets/bier/gladjanus.webp.asset.json";
+import keesHazySunrisePhoto from "../../assets/bier/kees-hazy-sunrise.png.asset.json";
+import twoChefsBonChefPhoto from "../../assets/bier/two-chefs-bon-chef.png.asset.json";
+import vandestreekHopArtPhoto from "../../assets/bier/vandestreek-hop-art.png.asset.json";
 import latrappetripelPhoto from "../../assets/bier/la-trappe-tripel.jpg.asset.json";
 import kasteelrougePhoto from "../../assets/bier/kasteel-rouge.png.asset.json";
 import boonkriekboonPhoto from "../../assets/bier/boon-kriek.png.asset.json";
@@ -80,7 +87,7 @@ export const beers: Beer[] = [
   {
     category: "Dubbel",
     name: "La Trappe — Dubbel",
-    photo: latrappedubbelPhoto.url,
+    photo: laTrappeDubbelOfficieelPhoto.url,
     description: "Donkerbruin trappistenbier met karamel, gedroogd fruit en een volle mout.",
     abv: "7%",
     note: "Gebrouwen binnen de muren van abdij Koningshoeven.",
@@ -88,7 +95,7 @@ export const beers: Beer[] = [
   {
     category: "Dubbel",
     name: "Corsendonk — Pater Dubbel",
-    photo: corsendonkpaterdubbelPhoto.url,
+    photo: corsendonkPaterNosterPhoto.url,
     description: "Zacht en moutig met tonen van rozijn, karamel en donkere chocolade.",
     abv: "6,5%",
     note: "Een Belgische klassieker sinds 1982.",
@@ -96,6 +103,7 @@ export const beers: Beer[] = [
   {
     category: "Dubbel",
     name: "Lefort — Belgian Brown Ale",
+    photo: lefortDonkerPhoto.url,
     description: "Bruine ale met rood fruit, kruiden en een licht zoete, warme afdronk.",
     abv: "5,8%",
     note: "Verrassend soepel voor een donker bier.",
@@ -103,6 +111,7 @@ export const beers: Beer[] = [
   {
     category: "Dubbel",
     name: "Westmalle — Dubbel",
+    photo: westmalleDubbelPhoto.url,
     description: "Diepbruine trappist met een rijke mout, donker fruit en een droge finale.",
     abv: "7%",
     note: "Het bier dat de stijl dubbel definieerde.",
@@ -173,6 +182,7 @@ export const beers: Beer[] = [
   {
     category: "Indian Pale Ale",
     name: "Two Chefs — Bon Chef",
+    photo: twoChefsBonChefPhoto.url,
     description: "Sappige IPA met tropisch fruit, citrus en een stevige hopbitterheid.",
     abv: "6,5%",
     note: "Gebrouwen in Amsterdam door Two Chefs Brewing.",
@@ -180,6 +190,7 @@ export const beers: Beer[] = [
   {
     category: "Indian Pale Ale",
     name: "Kees — Hazy Sunrise",
+    photo: keesHazySunrisePhoto.url,
     description: "Troebele hazy IPA met mango, perzik en een zachte, romige body.",
     abv: "7,5%",
     note: "Weinig bitter, veel fruit — een fijne instapper.",
@@ -187,6 +198,7 @@ export const beers: Beer[] = [
   {
     category: "Indian Pale Ale",
     name: "BrewDog — Elvis Juice",
+    photo: elvisJuicePhoto.url,
     description: "Grapefruit-IPA: fris, bitterzoet en lekker scherp in de afdronk.",
     abv: "6,5%",
     note: "Gebrouwen met echte grapefruitschil.",
@@ -194,6 +206,7 @@ export const beers: Beer[] = [
   {
     category: "Indian Pale Ale",
     name: "Van de Streek — Hop Art IPA",
+    photo: vandestreekHopArtPhoto.url,
     description: "Klassieke IPA met dennen, hars en een droge, bittere finale.",
     abv: "6,5%",
     note: "Van twee broers uit Utrecht, altijd hopgedreven.",
@@ -201,6 +214,7 @@ export const beers: Beer[] = [
   {
     category: "Indian Pale Ale",
     name: "De Eeuwige Jeugd — Gladjanus White IPA",
+    photo: gladjanusPhoto.url,
     description: "Witbier en IPA in één: koriander, citrus en een frisse hoptoets.",
     abv: "5%",
     note: "Glutenvrij, zonder dat je iets mist.",
