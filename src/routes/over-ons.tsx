@@ -70,7 +70,15 @@ function OverOns() {
       <section className="bg-paper section-y text-oak">
         <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-5 lg:items-center">
           <div className="lg:col-span-2">
-            <PhotoPlaceholder tone="light" aspect="4 / 5" label="Cafédetail — nog toe te voegen" />
+            <div className="zoom-image group overflow-hidden rounded-sm ring-1 ring-oak/10">
+              <img
+                src={sfeerBierglasTerras.url}
+                alt="Glas bier met het logo van Stadscafé Rijke & Zn op tafel"
+                loading="lazy"
+                decoding="async"
+                className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+              />
+            </div>
           </div>
           <div className="lg:col-span-3">
             <span className="mb-4 block font-script type-eyebrow text-brass-dim">

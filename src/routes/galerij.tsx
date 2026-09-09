@@ -42,8 +42,8 @@ function Galerij() {
             Een kijkje binnen
           </h1>
           <p className="max-w-[60ch] text-pretty type-body text-paper/85">
-            Van de bar tot het terras, van tap tot borrelplank. Deze galerij vullen we
-            zodra we onze eigen foto's van Stadscafé hebben.
+            Van de bar tot het terras, van tap tot borrelplank. Beelden uit ons café, gemaakt
+            in en rond de zaak aan de Voorstraat.
           </p>
         </div>
       </section>
