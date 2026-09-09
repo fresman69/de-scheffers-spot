@@ -34,7 +34,7 @@ export function BeerCard({ beer, compact = false }: Props) {
 
   return (
     <article className="group flex gap-5 rounded-sm bg-oak-light/70 p-5 ring-1 ring-border transition-all hover:bg-oak-light hover:ring-brass/45">
-      <PhotoSlot beer={beer} className="h-36 w-20 shrink-0 sm:h-44 sm:w-24" iconSize={18} />
+      <PhotoSlot beer={beer} className="h-40 w-28 shrink-0 sm:h-44 sm:w-32" iconSize={18} />
       <div className="flex min-w-0 flex-col">
         <h3 className="font-display-condensed text-xl leading-[1.05] text-paper sm:text-2xl">
           {beer.name}
@@ -76,7 +76,7 @@ function PhotoSlot({
         alt={beer.name}
         loading="lazy"
         decoding="async"
-        className={`rounded-sm object-contain transition-transform duration-700 group-hover:scale-[1.04] ${className}`}
+        className={`rounded-sm object-contain object-center transition-transform duration-700 group-hover:scale-[1.04] ${className}`}
       />
     );
   }
