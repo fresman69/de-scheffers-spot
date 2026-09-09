@@ -2,9 +2,9 @@ import { useState } from "react";
 import { MapPin } from "lucide-react";
 
 const MAP_SRC =
-  "https://www.openstreetmap.org/export/embed.html?bbox=4.6870%2C51.8130%2C4.6930%2C51.8160&layer=mapnik&marker=51.8145%2C4.6900";
+  "https://www.openstreetmap.org/export/embed.html?bbox=4.6641%2C51.8133%2C4.6701%2C51.8163&layer=mapnik&marker=51.8148%2C4.6671";
 
-const ROUTE_URL = "https://www.openstreetmap.org/?mlat=51.8145&mlon=4.6900#map=18/51.8145/4.6900";
+const ROUTE_URL = "https://www.openstreetmap.org/?mlat=51.8148&mlon=4.6671#map=18/51.8148/4.6671";
 
 /**
  * Privacyvriendelijke kaart: de externe kaartdienst wordt pas geladen
@@ -23,7 +23,7 @@ export function MapConsent({
   if (loaded) {
     return (
       <iframe
-        title="Kaart Scheffersplein Dordrecht"
+        title="Kaart Voorstraat 260 Dordrecht"
         src={MAP_SRC}
         className={`h-full w-full ${light ? "" : "grayscale-[0.3]"}`}
         loading="lazy"
@@ -40,9 +40,9 @@ export function MapConsent({
     >
       <MapPin size={22} className="text-brass" aria-hidden />
       <p className={`type-body ${light ? "text-oak/85" : "text-paper/85"}`}>
-        Scheffersplein 12
+        Voorstraat 260
         <br />
-        3311 PX Dordrecht
+        3311 ET Dordrecht
       </p>
       <p className={`max-w-[38ch] text-xs leading-relaxed ${light ? "text-oak/65" : "text-paper/65"}`}>
         De kaart wordt geleverd door OpenStreetMap. Bij het laden wordt een externe dienst

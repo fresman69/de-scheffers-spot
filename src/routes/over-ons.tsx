@@ -8,7 +8,7 @@ export const Route = createFileRoute("/over-ons")({
       {
         name: "description",
         content:
-          "Het verhaal van Stadscafé: een gezellig bruin café aan het Scheffersplein in Dordrecht, met passie voor speciaalbier en oprechte gastvrijheid.",
+          "Het verhaal van Stadscafé: een gezellig bruin café aan de Voorstraat in Dordrecht, met passie voor speciaalbier en oprechte gastvrijheid.",
       },
       { property: "og:title", content: "Over ons — Stadscafé" },
       { property: "og:url", content: "/over-ons" },
@@ -33,7 +33,7 @@ const pillars = [
   },
   {
     title: "Hartje Dordrecht",
-    body: "Aan het Scheffersplein, tussen de terrassen. Perfect na een middag winkelen of een wandeling langs de haven.",
+    body: "Aan de Voorstraat, midden in de binnenstad. Perfect na een middag winkelen of een wandeling langs de haven.",
   },
 ];
 

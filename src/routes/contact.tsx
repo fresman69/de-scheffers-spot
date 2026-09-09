@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { Mail, MapPin, Instagram } from "lucide-react";
 import { MapConsent } from "../components/map-consent";
 
 export const Route = createFileRoute("/contact")({
@@ -9,7 +9,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Adres, telefoonnummer, e-mail, openingstijden en socialmedia van Stadscafé aan het Scheffersplein in Dordrecht. Loop gerust binnen.",
+          "Adres, e-mail, openingstijden en socialmedia van Stadscafé aan de Voorstraat 260 in Dordrecht. Loop gerust binnen.",
       },
       { property: "og:title", content: "Contact — Stadscafé" },
       { property: "og:url", content: "/contact" },
@@ -20,13 +20,13 @@ export const Route = createFileRoute("/contact")({
 });
 
 const hours = [
-  ["Maandag", "Gesloten"],
-  ["Dinsdag", "11:00 — 00:00"],
-  ["Woensdag", "11:00 — 00:00"],
-  ["Donderdag", "11:00 — 00:00"],
-  ["Vrijdag", "11:00 — 01:00"],
-  ["Zaterdag", "11:00 — 01:00"],
-  ["Zondag", "12:00 — 23:00"],
+  ["Maandag", "15:00 — 02:00"],
+  ["Dinsdag", "15:00 — 02:00"],
+  ["Woensdag", "15:00 — 02:00"],
+  ["Donderdag", "15:00 — 02:00"],
+  ["Vrijdag", "14:00 — 02:00"],
+  ["Zaterdag", "13:00 — 02:00"],
+  ["Zondag", "13:00 — 02:00"],
 ];
 
 function Contact() {
@@ -36,11 +36,11 @@ function Contact() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <p className="mb-4 font-script type-eyebrow text-brass">Contact</p>
           <h1 className="mb-6 max-w-[24ch] type-h1 text-paper">
-            Loop binnen of bel gewoon even
+            Loop gewoon even binnen
           </h1>
           <p className="max-w-[58ch] text-pretty type-body text-paper/85">
             We werken niet met reserveringen — er staat een plek voor je klaar als die vrij is.
-            Wil je met een groep langskomen? Bel of mail ons dan even, dan denken we met je mee.
+            Wil je met een groep langskomen? Mail ons dan even, dan denken we met je mee.
           </p>
         </div>
       </section>
@@ -54,13 +54,9 @@ function Contact() {
                 <li className="flex gap-4">
                   <MapPin size={20} className="mt-1 shrink-0 text-brass-dim" />
                   <div>
-                    <p className="font-medium">Scheffersplein 12</p>
-                    <p className="text-oak/75">3311 PX Dordrecht</p>
+                    <p className="font-medium">Voorstraat 260</p>
+                    <p className="text-oak/75">3311 ET Dordrecht</p>
                   </div>
-                </li>
-                <li className="flex gap-4">
-                  <Phone size={20} className="mt-1 shrink-0 text-brass-dim" />
-                  <a href="tel:+31786134242" className="hover:text-brass-dim">078 613 4242</a>
                 </li>
                 <li className="flex gap-4">
                   <Mail size={20} className="mt-1 shrink-0 text-brass-dim" />
@@ -97,7 +93,7 @@ function Contact() {
               <MapConsent tone="light" />
             </div>
             <p className="mt-6 text-sm text-oak/80">
-              Op 3 minuten lopen van station Dordrecht Centrum. Parkeergarage Visstraat op 200 meter.
+              Midden in de historische binnenstad, op loopafstand van het Scheffersplein en de Visstraat.
             </p>
           </div>
         </div>
