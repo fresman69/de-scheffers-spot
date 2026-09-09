@@ -86,7 +86,7 @@ function Home() {
       {/* Hero — abstracte, in code gemaakte sfeer: amber gloed, koperlijnen, bubbels */}
       <section className="relative flex min-h-[88svh] items-center justify-center overflow-hidden bg-oak md:min-h-[92vh]">
         <AmbientHero />
-        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-oak/80 via-oak/45 to-oak" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-oak/55 via-oak/25 to-oak" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6">
           <p className="mb-3 font-script type-eyebrow text-brass animate-fade-in">Welkom bij</p>
           <p className="mb-8 type-label text-paper/75 animate-fade-in">Scheffersplein · Dordrecht</p>

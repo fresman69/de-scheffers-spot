@@ -130,6 +130,28 @@ export function AmbientPanel({
           animation: `ambient-foam ${9 + seed}s var(--ease-smooth) infinite alternate`,
         }}
       />
+      {/* Grafische koperlijnen — maakt het beeld duidelijk illustratief */}
+      <svg
+        aria-hidden
+        className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.28]"
+        viewBox="0 0 200 200"
+        preserveAspectRatio="none"
+      >
+        {[26, 62, 100, 138, 174].map((x, i) => (
+          <line
+            key={x}
+            x1={x}
+            y1="0"
+            x2={x + 10}
+            y2="200"
+            stroke={p.accent}
+            strokeWidth={i % 2 === 0 ? 0.6 : 0.3}
+            vectorEffect="non-scaling-stroke"
+          />
+        ))}
+        <ellipse cx="100" cy="34" rx="72" ry="9" fill="none" stroke={p.accent} strokeWidth="0.5" vectorEffect="non-scaling-stroke" />
+        <ellipse cx="100" cy="168" rx="60" ry="7" fill="none" stroke={p.accent} strokeWidth="0.4" vectorEffect="non-scaling-stroke" />
+      </svg>
       {/* Fijne koperen contour */}
       <div aria-hidden className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-brass/15" />
       {children}
@@ -144,7 +166,7 @@ export function AmbientHero({ className = "" }: { className?: string }) {
       <div
         className="absolute inset-0"
         style={{
-          background: `radial-gradient(90% 70% at 50% 10%, color-mix(in oklch, var(--brass) 30%, transparent) 0%, transparent 60%),
+          background: `radial-gradient(90% 70% at 50% 10%, color-mix(in oklch, var(--brass) 45%, transparent) 0%, transparent 62%),
                        radial-gradient(70% 60% at 15% 85%, color-mix(in oklch, var(--wine) 28%, transparent) 0%, transparent 65%),
                        radial-gradient(70% 60% at 85% 80%, color-mix(in oklch, var(--mustard) 18%, transparent) 0%, transparent 65%)`,
         }}
