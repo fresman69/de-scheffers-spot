@@ -18,7 +18,7 @@ export function SiteFooter() {
               3311 PX Dordrecht
             </p>
           </div>
-          <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-16">
+          <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 lg:gap-16">
             <div>
               <h2 className="mb-6 font-script text-2xl leading-none text-brass">Bezoek</h2>
               <ul className="space-y-3 text-sm text-muted-foreground">
