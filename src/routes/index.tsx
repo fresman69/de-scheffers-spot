@@ -1,15 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Beer, Instagram, MapPin, Star, Users, Heart } from "lucide-react";
+import { Beer, MapPin, Star, Users, Heart } from "lucide-react";
 import { Ornament } from "../components/ornament";
+import { DordrechtQuiz } from "../components/dordrecht-quiz";
 import { Reveal } from "../components/reveal";
 import { MapConsent } from "../components/map-consent";
 import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
 import gevelCafe from "../assets/gevel-cafe.png.asset.json";
 import sfeerGevelDag from "../assets/sfeer/gevel-dag.jpg.asset.json";
-import sfeerBierglas from "../assets/sfeer/bierglas.jpg.asset.json";
-import sfeerInterieur from "../assets/sfeer/interieur.jpg.asset.json";
-import sfeerMenukaart from "../assets/sfeer/menukaart.jpg.asset.json";
-import sfeerGevelAvond from "../assets/sfeer/gevel-avond.jpg.asset.json";
 import sfeerBierglasTerras from "../assets/sfeer/bierglas-terras.jpg.asset.json";
 
 /** Sfeerfoto die de volledige tegel vult. */
@@ -47,11 +44,12 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const taps = [
+const taps: { name: string; note: string; tag: string; foto?: string }[] = [
   {
     name: "Gouwe Ary",
     note: "Ons huisbier — blonde tap die er altijd is.",
     tag: "Vast op de tap",
+    foto: sfeerBierglasTerras.url,
   },
   {
     name: "Heineken Pilsener",
@@ -62,6 +60,7 @@ const taps = [
     name: "6 wisselende tapkranen",
     note: "Van blond tot stout, iets nieuws of iets vertrouwds. Vraag onze bediening wat er staat.",
     tag: "Wisselend",
+    foto: sfeerGevelDag.url,
   },
 ];
 
@@ -94,10 +93,20 @@ const hours = [
   ["Zaterdag – Zondag", "13:00 — 02:00"],
 ];
 
+// Openbare gastrecensies over Stadscafé Rijke & Zn, letterlijk overgenomen.
 const reviews = [
-  { name: "Sanne V.", text: "Warm, gezellig en een geweldige bierkaart. Voelt echt als een tweede huiskamer.", src: "Google" },
-  { name: "Martijn D.", text: "Fijne kroeg met eerlijke bediening en een terras dat er in de zomer altijd is.", src: "Tripadvisor" },
-  { name: "Eva K.", text: "Klassiek bruin café met een enorm hart voor bier. Kom hier vaak terug.", src: "Google" },
+  {
+    text: "Wat een fijne kroeg! Voelt zoals een kroeg bedoeld is. Altijd vriendelijk personeel.",
+    src: "Google-recensie",
+  },
+  {
+    text: "Mooi assortiment bieren. Ook meerdere opties op tap, die wisselen. Goed advies van vriendelijke barman.",
+    src: "Google-recensie",
+  },
+  {
+    text: "Een zeer gastvrij en fijn café met een uitgebreide bierkaart en hapjes! Fijn personeel en goede muziek.",
+    src: "Google-recensie",
+  },
 ];
 
 function Home() {
@@ -216,13 +225,28 @@ function Home() {
             {taps.map((c, i) => (
               <Reveal key={c.name} delay={i * 120}>
                 <article className="card-cozy hover-lift group flex h-full flex-col overflow-hidden bg-oak-light ring-1 ring-border">
-                  <div className="zoom-image relative aspect-[4/5] w-full overflow-hidden bg-oak/60">
-                    <SfeerImg
-                      src={
-                        [sfeerBierglasTerras.url, sfeerBierglas.url, sfeerGevelDag.url][i % 3]
-                      }
-                      alt={`Sfeerbeeld bij ${c.name} in Stadscafé Rijke & Zn`}
-                    />
+                  <div
+                    className={`zoom-image relative w-full overflow-hidden bg-oak/60 ${
+                      c.foto ? "aspect-[4/5]" : "py-10"
+                    }`}
+                  >
+                    {c.foto ? (
+                      <SfeerImg
+                        src={c.foto}
+                        alt={`Sfeerbeeld bij ${c.name} in Stadscafé Rijke & Zn`}
+                      />
+                    ) : (
+                      <div
+                        aria-hidden
+                        className="flex h-full w-full items-center justify-center"
+                        style={{
+                          backgroundImage:
+                            "radial-gradient(ellipse at 50% 40%, var(--brass) 0%, transparent 70%)",
+                        }}
+                      >
+                        <Beer size={40} strokeWidth={1.2} className="text-brass/80" />
+                      </div>
+                    )}
                     <span className="absolute left-4 top-4 rounded-sm bg-brass px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-oak">
                       {c.tag}
                     </span>
@@ -240,7 +264,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Sfeer in het glas — moodboard geïnspireerd op onze Pinterest 'Drank Stadscafé' */}
+      {/* Ken je Dordt? — interactieve quiz over de stad */}
       <section className="relative overflow-hidden bg-oak-light section-y">
         <div
           aria-hidden
@@ -251,101 +275,33 @@ function Home() {
           }}
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="mb-12 grid gap-6 lg:grid-cols-[1fr_1.2fr] lg:items-end">
+          <div className="mb-12 text-center">
             <Reveal>
-              <div>
-                <span className="mb-3 block font-script type-eyebrow text-brass">
-                  Sfeer in het glas
-                </span>
-                <h2 className="type-h2 text-paper">
-                  Amberkleurig licht, koperen tap, koud condens
-                </h2>
-              </div>
+              <span className="mb-3 block font-script type-eyebrow text-brass">
+                Ken je Dordt?
+              </span>
             </Reveal>
-            <Reveal delay={120}>
-              <p className="max-w-[52ch] text-pretty type-body text-paper/85">
-                Een moodboard van hoe het bij ons voelt: gouden bier tegen donker hout,
-                schuimkraag die net afzakt, een glas dat door het licht van de kroonluchter
-                oplicht. Puur, warm, en zonder poespas.
+            <Reveal delay={60}>
+              <Ornament tone="brass" className="mb-6" />
+            </Reveal>
+            <Reveal delay={100}>
+              <h2 className="mx-auto max-w-[24ch] text-balance type-h2 text-paper">
+                Het kroegspel over de oudste stad van Holland
+              </h2>
+            </Reveal>
+            <Reveal delay={160}>
+              <p className="mx-auto mt-5 max-w-[52ch] text-pretty type-body text-paper/85">
+                Vijf vragen over Dordrecht — over stadsrechten, watersnood en de scheve toren.
+                Elk antwoord levert een weetje op dat je aan de bar kunt navertellen.
               </p>
             </Reveal>
           </div>
-
-          {/* Bento moodboard — grote hero-tile links, drie kleinere rechts + brede onderrij */}
-          <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-3 sm:[grid-auto-flow:dense] md:h-[640px]">
-            <Reveal className="group sm:col-span-2 sm:row-span-2">
-              <div className="zoom-image relative h-full min-h-[240px] overflow-hidden rounded-sm ring-1 ring-border">
-                <SfeerImg
-                  src={sfeerInterieur.url}
-                  alt="Interieur van Stadscafé bij kaarslicht met houten tafels en emaillen borden"
-                />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-oak/90 via-oak/20 to-transparent p-6">
-                  <span className="font-script type-eyebrow text-brass">Aan tafel</span>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.3em] text-paper/80">
-                    Kaarslicht · donker hout
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-            <Reveal delay={80} className="group">
-              <div className="zoom-image h-full min-h-[180px] overflow-hidden rounded-sm ring-1 ring-border">
-                <SfeerImg
-                  src={sfeerBierglas.url}
-                  alt="Glas bier met het logo van Stadscafé Rijke & Zn"
-                />
-              </div>
-            </Reveal>
-            <Reveal delay={140} className="group">
-              <div className="zoom-image h-full min-h-[180px] overflow-hidden rounded-sm ring-1 ring-border">
-                <SfeerImg
-                  src={sfeerMenukaart.url}
-                  alt="De kaart van Stadscafé Rijke & Zn op tafel"
-                />
-              </div>
-            </Reveal>
-            <Reveal delay={200} className="group sm:col-span-2">
-              <div className="zoom-image h-full min-h-[180px] overflow-hidden rounded-sm ring-1 ring-border">
-                <SfeerImg
-                  src={sfeerGevelAvond.url}
-                  alt="De gevel van het café bij avondlicht in de Dordtse binnenstad"
-                />
-              </div>
-            </Reveal>
-            <Reveal delay={260} className="group">
-              <div className="zoom-image h-full min-h-[180px] overflow-hidden rounded-sm ring-1 ring-border">
-                <SfeerImg
-                  src={sfeerGevelDag.url}
-                  alt="De verlichte gevel van Stadscafé Rijke & Zn met het bord met bieren van de tap"
-                />
-              </div>
-            </Reveal>
-          </div>
-
-          {/* Woordwolk — kleine typografische sfeeraanduidingen */}
           <Reveal delay={200}>
-            <ul className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center">
-              {[
-                "Schuimkraag",
-                "Amber",
-                "Koper",
-                "Kaarslicht",
-                "Donker hout",
-                "Condens",
-                "Trappist",
-                "Gouwe Ary",
-              ].map((w, i) => (
-                <li
-                  key={w}
-                  className={`font-script text-2xl md:text-3xl ${i % 2 === 0 ? "text-brass" : "text-mustard"}`}
-                >
-                  {w}
-                  {i < 7 ? <span className="ml-8 text-paper/25">·</span> : null}
-                </li>
-              ))}
-            </ul>
+            <DordrechtQuiz />
           </Reveal>
         </div>
       </section>
+
 
       {/* Waarom Stadscafé */}
       <section className="bg-oak-light section-y">
@@ -436,7 +392,7 @@ function Home() {
           </div>
           <div className="grid gap-8 md:grid-cols-3">
             {reviews.map((r, i) => (
-              <Reveal key={r.name} delay={i * 120}>
+              <Reveal key={r.text} delay={i * 120}>
                 <figure className="card-cozy hover-lift h-full bg-oak p-8 ring-1 ring-border">
                   <div className="mb-4 flex gap-1 text-brass">
                     {Array.from({ length: 5 }).map((_, i) => (
@@ -447,84 +403,25 @@ function Home() {
                     &ldquo;{r.text}&rdquo;
                   </blockquote>
                   <figcaption className="mt-6 text-[11px] uppercase tracking-widest text-paper/70">
-                    {r.name} · {r.src}
+                    {r.src}
                   </figcaption>
                 </figure>
               </Reveal>
             ))}
           </div>
+          <div className="mt-10 text-center">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Stadscaf%C3%A9%20Rijke%20%26%20Zn%20Voorstraat%20260%20Dordrecht"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border-b border-brass/40 pb-1 text-sm font-medium text-brass transition-colors hover:border-brass"
+            >
+              Lees alle recensies op Google →
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Instagram — warme amber/koper detaillering met fallback state */}
-      <section className="relative overflow-hidden bg-paper py-20 text-oak md:py-28">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage:
-              "radial-gradient(ellipse at 10% 0%, var(--brass) 0%, transparent 55%), radial-gradient(ellipse at 90% 100%, var(--wine) 0%, transparent 60%)",
-          }}
-        />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-            <Reveal>
-              <div>
-                <span className="mb-3 block font-script type-eyebrow text-brass-dim">
-                  Op Instagram
-                </span>
-                <Ornament tone="brass" className="mb-4 !mx-0 !max-w-[160px]" />
-                <h2 className="type-h2 text-oak">
-                  @stadscafe_rijke
-                </h2>
-              </div>
-            </Reveal>
-            <Reveal delay={100}>
-              <a
-                href="https://www.instagram.com/stadscafe_rijke/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-sm bg-oak px-5 py-3 text-sm font-medium text-brass ring-1 ring-brass/40 hover:-translate-y-0.5 hover:bg-oak-light hover:text-mustard hover:ring-brass"
-              >
-                <Instagram size={16} /> Volg ons
-              </a>
-            </Reveal>
-          </div>
-          {/* Feed placeholder — vervangt zich zodra Instagram-embed geladen is */}
-          <div
-            role="status"
-            aria-live="polite"
-            aria-label="Instagram feed wordt geladen"
-            className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6"
-          >
-            {Array.from({ length: 6 }).map((_, i) => (
-              <Reveal key={i} delay={i * 60}>
-                <div className="zoom-image group relative aspect-square overflow-hidden rounded-sm ring-1 ring-oak/10">
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-gradient-to-br from-brass/20 via-mustard/10 to-wine/20"
-                  />
-                  <div className="relative flex h-full w-full flex-col items-center justify-center gap-2 text-center">
-                    <Instagram size={20} strokeWidth={1.25} className="text-brass-dim/70" />
-                    <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-oak/60">
-                      Post volgt
-                    </span>
-                  </div>
-                  {/* Shimmer skeleton — subtiele beweging tot echte posts inladen */}
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-paper/40 to-transparent"
-                    style={{ animation: `soft-pulse 2.8s var(--ease-smooth) ${i * 0.15}s infinite` }}
-                  />
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <p className="mt-8 text-center text-xs uppercase tracking-[0.25em] text-oak/55">
-            Geen posts geladen? Bekijk onze feed direct op Instagram.
-          </p>
-        </div>
-      </section>
 
 
       {/* Openingstijden + Route */}
