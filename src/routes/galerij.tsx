@@ -24,14 +24,12 @@ export const Route = createFileRoute("/galerij")({
 });
 
 const slots = [
-  { label: "Interieur", aspect: "3 / 4" },
-  { label: "Terras", aspect: "4 / 3" },
-  { label: "Tapkranen", aspect: "4 / 3" },
-  { label: "Speciaalbier", aspect: "4 / 5" },
-  { label: "Bruine cafésfeer", aspect: "3 / 4" },
-  { label: "Borrelplank", aspect: "4 / 3" },
-  { label: "Evenement", aspect: "4 / 3" },
-  { label: "Gasten", aspect: "4 / 5" },
+  { label: "Interieur bij kaarslicht", src: sfeerInterieur.url },
+  { label: "De gevel aan de Voorstraat", src: sfeerGevelDag.url },
+  { label: "Vers getapt in ons eigen glas", src: sfeerBierglasTerras.url },
+  { label: "Onze kaart op tafel", src: sfeerMenukaart.url },
+  { label: "Avondlicht in de binnenstad", src: sfeerGevelAvond.url },
+  { label: "Goud in het glas", src: sfeerBierglas.url },
 ];
 
 function Galerij() {
