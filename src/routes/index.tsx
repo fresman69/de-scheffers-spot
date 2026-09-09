@@ -146,8 +146,8 @@ function Home() {
       </section>
 
       {/* Introductie — de gastheer aan het woord */}
-      <section className="bg-paper py-20 text-oak md:py-28">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+      <section className="warm-grain bg-paper py-20 text-oak md:py-28">
+        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6">
           <Reveal>
             <span className="mb-4 block font-script type-eyebrow text-brass-dim">
               Kom binnen
@@ -197,7 +197,7 @@ function Home() {
           <div className="grid gap-8 md:grid-cols-3">
             {taps.map((c, i) => (
               <Reveal key={c.name} delay={i * 120}>
-                <article className="hover-lift group flex h-full flex-col overflow-hidden rounded-sm bg-oak-light ring-1 ring-border">
+                <article className="card-cozy hover-lift group flex h-full flex-col overflow-hidden bg-oak-light ring-1 ring-border">
                   <div className="zoom-image relative aspect-[4/5] w-full bg-oak/60">
                     <PhotoPlaceholder aspect="4 / 5" label={`Foto ${c.name}`} />
                     <span className="absolute left-4 top-4 rounded-sm bg-brass px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-oak">
@@ -327,7 +327,7 @@ function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {reasons.map((r, i) => (
               <Reveal key={r.title} delay={i * 100}>
-                <div className="hover-lift h-full rounded-sm bg-oak p-8 ring-1 ring-border transition-colors hover:ring-brass/40">
+                <div className="card-cozy hover-lift h-full bg-oak p-8 ring-1 ring-border transition-colors hover:ring-brass/40">
                   <r.icon size={28} strokeWidth={1.5} className="mb-6 text-brass" />
                   <h3 className="mb-3 type-h3 text-paper">
                     {r.title}
@@ -399,7 +399,7 @@ function Home() {
           <div className="grid gap-8 md:grid-cols-3">
             {reviews.map((r, i) => (
               <Reveal key={r.name} delay={i * 120}>
-                <figure className="hover-lift h-full rounded-sm bg-oak p-8 ring-1 ring-border">
+                <figure className="card-cozy hover-lift h-full bg-oak p-8 ring-1 ring-border">
                   <div className="mb-4 flex gap-1 text-brass">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
@@ -493,7 +493,7 @@ function Home() {
       <section className="bg-oak section-y">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal>
-            <div className="h-full rounded-sm bg-wine p-8 text-paper ring-1 ring-wine-dim md:p-12">
+            <div className="card-cozy h-full bg-wine p-8 text-paper ring-1 ring-wine-dim md:p-12">
               <p className="mb-2 font-script type-eyebrow text-mustard">Wanneer</p>
               <h2 className="mb-8 type-h2 text-paper">
                 Openingstijden
