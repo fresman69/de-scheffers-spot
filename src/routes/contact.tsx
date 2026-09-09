@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { MapConsent } from "../components/map-consent";
 
 export const Route = createFileRoute("/contact")({
@@ -82,14 +82,6 @@ function Contact() {
               </ul>
             </div>
 
-            <div>
-              <h2 className="mb-6 type-h2">Volg ons</h2>
-              <div className="flex flex-wrap gap-3">
-                <a href="https://www.instagram.com/stadscafe_rijke/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-2 rounded-sm border border-oak/15 px-4 py-2.5 text-sm hover:border-brass-dim">
-                  <Instagram size={16} /> Instagram
-                </a>
-              </div>
-            </div>
           </div>
 
           <div>

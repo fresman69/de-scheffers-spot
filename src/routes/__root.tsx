@@ -122,7 +122,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           },
           telephone: "+31-78-613-4242",
           email: "info@rijke-zn.nl",
-          sameAs: ["https://www.instagram.com/stadscafe_rijke/"],
           acceptsReservations: false,
           servesCuisine: ["Speciaalbier", "Borrelhapjes", "Wijn"],
           openingHoursSpecification: [
