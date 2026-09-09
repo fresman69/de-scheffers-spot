@@ -51,10 +51,22 @@ function Galerij() {
       <section className="bg-oak pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
-            {slots.map((s, i) => (
-              <div key={i} className="mb-4 break-inside-avoid">
-                <PhotoPlaceholder aspect={s.aspect} label={s.label} />
-              </div>
+            {slots.map((s) => (
+              <figure
+                key={s.label}
+                className="zoom-image group mb-4 break-inside-avoid overflow-hidden rounded-sm ring-1 ring-border"
+              >
+                <img
+                  src={s.src}
+                  alt={s.label}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                />
+                <figcaption className="bg-oak-light px-4 py-3 text-[11px] uppercase tracking-[0.2em] text-paper/70">
+                  {s.label}
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>
