@@ -20,7 +20,7 @@ function NotFoundComponent() {
   return (
     <>
       <SiteNav />
-      <main className="flex min-h-[70svh] items-center justify-center bg-oak px-4 sm:px-6">
+      <main className="flex min-h-[70svh] items-center justify-center bg-oak px-4 pt-16 sm:px-6">
         <div className="max-w-md text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-brass">Foutmelding</p>
           <h1 className="mt-4 font-display text-6xl text-paper">404</h1>
@@ -51,7 +51,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-oak px-4 sm:px-6">
+    <main className="flex min-h-screen items-center justify-center bg-oak px-4 pt-16 sm:px-6">
       <div className="max-w-md text-center">
         <h1 className="font-display text-3xl text-paper">Er ging iets mis</h1>
         <p className="mt-3 text-sm text-muted-foreground">
@@ -156,10 +156,10 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
-    <QueryClientProvider client={queryClient}>
-      <SiteNav />
-      <main>
-        <Outlet />
+      <QueryClientProvider client={queryClient}>
+        <SiteNav />
+        <main className="pt-16">
+          <Outlet />
       </main>
       <SiteFooter />
       <CookieNotice />
