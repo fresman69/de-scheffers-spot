@@ -1,5 +1,6 @@
 import { ImageIcon, Wheat } from "lucide-react";
 import type { Beer } from "../lib/menu/beers";
+import { SHOW_PRODUCT_PHOTOS } from "../lib/menu/display";
 
 type Props = {
   beer: Beer;
@@ -69,6 +70,7 @@ function PhotoSlot({
   iconSize?: number;
   minimal?: boolean;
 }) {
+  if (!SHOW_PRODUCT_PHOTOS) return null;
   if (beer.photo) {
     return (
       <img

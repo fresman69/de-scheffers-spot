@@ -1,4 +1,5 @@
 import { ImageIcon } from "lucide-react";
+import { SHOW_PRODUCT_PHOTOS } from "../lib/menu/display";
 
 export type Product = {
   name: string;
@@ -41,36 +42,35 @@ export function ProductCard({ product, aspect = "4 / 3", tone = "dark" }: Props)
     <article
       className={`group flex flex-col overflow-hidden rounded-sm ring-1 transition-all hover:ring-wine/60 ${surface}`}
     >
-      <div
-        className={`relative w-full overflow-hidden border-b ${isDark ? "bg-oak/60 border-oak/80" : "bg-oak/[0.04] border-oak/10"}`}
-        style={{ aspectRatio: aspect }}
-      >
-        {product.photo ? (
-          <img
-            src={product.photo}
-            alt={product.name}
-            loading="lazy"
-            decoding="async"
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-          />
-        ) : (
-          <div
-            role="img"
-            aria-label={`Foto van ${product.name} — nog toe te voegen`}
-            data-photo-placeholder="true"
-            data-product-name={product.name}
-            className="flex h-full w-full flex-col items-center justify-center gap-2 p-4 text-center"
-          >
-            <ImageIcon size={22} strokeWidth={1.25} className="text-brass/60" />
-            <span className={`text-[10px] font-medium uppercase tracking-[0.25em] ${sub}`}>
-              Foto volgt
-            </span>
-            <span className={`max-w-[24ch] text-[10px] leading-relaxed ${sub} opacity-70`}>
-              Eigen productfoto — later te uploaden zonder layoutwijziging.
-            </span>
-          </div>
-        )}
-      </div>
+      {SHOW_PRODUCT_PHOTOS ? (
+        <div
+          className={`relative w-full overflow-hidden border-b ${isDark ? "bg-oak/60 border-oak/80" : "bg-oak/[0.04] border-oak/10"}`}
+          style={{ aspectRatio: aspect }}
+        >
+          {product.photo ? (
+            <img
+              src={product.photo}
+              alt={product.name}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            />
+          ) : (
+            <div
+              role="img"
+              aria-label={`Foto van ${product.name} — nog toe te voegen`}
+              data-photo-placeholder="true"
+              data-product-name={product.name}
+              className="flex h-full w-full flex-col items-center justify-center gap-2 p-4 text-center"
+            >
+              <ImageIcon size={22} strokeWidth={1.25} className="text-brass/60" />
+              <span className={`text-[10px] font-medium uppercase tracking-[0.25em] ${sub}`}>
+                Foto volgt
+              </span>
+            </div>
+          )}
+        </div>
+      ) : null}
       <div className="flex flex-1 flex-col p-5">
         {/* Naam + prijs/ABV met stippellijn-leader — direct herkenbaar uit de kaart. */}
         <div className="mb-2 flex items-end gap-2">

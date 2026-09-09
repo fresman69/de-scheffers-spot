@@ -43,7 +43,7 @@ function Borrelkaart() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="mb-8 type-h3 text-paper">Onze happas</h2>
         </div>
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {hapas.map((h) => (
             <ProductCard key={h.name} product={h} aspect="4 / 3" tone="dark" />
           ))}
