@@ -58,7 +58,7 @@ function Bierkaart() {
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <p className="type-label text-brass/80">Stadscafé</p>
           <h1 className="mt-3 type-h1 text-paper">Bierkaart</h1>
-          <p className="mt-4 font-display-condensed text-sm tracking-[0.3em] text-wine">
+          <p className="mt-4 font-script text-3xl text-warm-red">
             ★ Goed bier, goede sfeer ★
           </p>
           <Ornament className="mt-8" />
@@ -108,7 +108,7 @@ function Bierkaart() {
                   <span aria-hidden className="h-px flex-1 bg-wine/50" />
                 </div>
                 <div
-                  className={`grid gap-4 ${compact ? "sm:grid-cols-2" : "md:grid-cols-2 xl:grid-cols-3"}`}
+                  className={`grid gap-x-5 gap-y-9 ${compact ? "sm:grid-cols-2" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"}`}
                 >
                   {items.map((b, i) => (
                     <Reveal key={`${b.category}-${b.name}`} delay={Math.min(i, 6) * 60} as="div">

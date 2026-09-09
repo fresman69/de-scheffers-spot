@@ -113,31 +113,27 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex min-h-[88svh] items-center justify-center overflow-hidden bg-oak md:min-h-[92vh]">
+      <section className="vintage-hero relative flex min-h-[88svh] items-center overflow-hidden bg-oak md:min-h-[92vh]">
         <div className="absolute inset-0" data-video-slot="hero">
           <img
             src={gevelCafe.url}
             alt="Gevel van Stadscafé aan de Voorstraat in Dordrecht"
             fetchPriority="high"
             decoding="async"
-            className="h-full w-full object-cover opacity-60"
+            className="h-full w-full object-cover opacity-55 saturate-[0.8] sepia-[0.12]"
           />
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-oak/80 via-oak/45 to-oak" />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute left-1/2 top-1/3 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-40 blur-3xl"
-          style={{ background: "radial-gradient(circle, var(--brass) 0%, transparent 70%)" }}
-        />
-        <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6">
+        <div className="absolute inset-0 bg-oak/55" />
+        <div className="absolute inset-y-0 left-0 w-full bg-oak/45 md:w-[62%]" />
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 text-left sm:px-6">
           <p className="mb-3 font-script type-eyebrow text-brass animate-fade-in">
             Welkom bij
           </p>
           <p className="mb-8 type-label text-paper/75 animate-fade-in">
             Stadscafé · Dordrecht
           </p>
-          <h1 className="mx-auto mb-6 max-w-[18ch] text-balance type-h1 text-paper animate-fade-up">
+          <h1 className="mb-6 max-w-[12ch] text-balance type-h1 text-paper animate-fade-up">
             Een goed glas bier{" "}
             <span className="font-script normal-case text-brass" style={{ textTransform: "none" }}>
               &amp;
@@ -147,11 +143,11 @@ function Home() {
           <p className="mb-8 type-label text-brass animate-fade-up">
             Oude ziel. Nieuwe verhalen.
           </p>
-          <p className="mx-auto mb-10 max-w-[54ch] text-pretty type-body text-paper/85 animate-fade-up">
+          <p className="mb-10 max-w-[48ch] text-pretty type-body text-paper/85 animate-fade-up">
             Stadscafé is een gewoon, gezellig bruin café in hartje Dordrecht.
             Speciaalbier van de tap, ambachtelijke happas en tijd voor een praatje.
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 animate-fade-up sm:flex-row">
+          <div className="flex flex-col items-start gap-4 animate-fade-up sm:flex-row">
             <Link
               to="/bierkaart"
               className="rounded-sm bg-wine px-8 py-4 type-label text-paper transition-all duration-300 hover:-translate-y-0.5 hover:bg-wine-dim"
@@ -174,7 +170,8 @@ function Home() {
 
       {/* Introductie — de gastheer aan het woord */}
       <section className="warm-grain bg-paper py-20 text-oak md:py-28">
-        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6">
+        <div className="relative z-10 mx-auto max-w-5xl px-4 text-left sm:px-6 md:grid md:grid-cols-[0.8fr_2fr] md:gap-16">
+          <div>
           <Reveal>
             <span className="mb-4 block font-script type-eyebrow text-brass-dim">
               Kom binnen
@@ -183,18 +180,20 @@ function Home() {
           <Reveal delay={60}>
             <Ornament tone="wine" className="mb-6" />
           </Reveal>
+          </div><div>
           <Reveal delay={100}>
             <h2 className="mb-8 text-balance type-h2 text-oak">
               Een café zoals ze vroeger waren
             </h2>
           </Reveal>
           <Reveal delay={200}>
-            <p className="mx-auto max-w-[60ch] text-pretty type-body text-oak/80">
+            <p className="max-w-[60ch] text-pretty type-body text-oak/80">
               Bij ons hoeft niks. Neem plaats aan de bar, schuif aan bij vrienden of pak
               een tafeltje bij het raam. We schenken graag een goed glas, praten mee als je
               zin hebt en laten je met rust als dat lekkerder is. Zo simpel is het.
             </p>
           </Reveal>
+          </div>
         </div>
       </section>
 
@@ -221,10 +220,10 @@ function Home() {
               </Link>
             </Reveal>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3 md:[&>*:nth-child(2)]:translate-y-8 md:[&>*:nth-child(3)]:-translate-y-3">
             {taps.map((c, i) => (
               <Reveal key={c.name} delay={i * 120}>
-                <article className="card-cozy hover-lift group flex h-full flex-col overflow-hidden bg-oak-light ring-1 ring-border">
+                <article className="paper-label hover-lift group flex h-full flex-col overflow-hidden bg-oak-light ring-1 ring-border">
                   <div
                     className={`zoom-image relative w-full overflow-hidden bg-oak/60 ${
                       c.foto ? "aspect-[4/5]" : "py-10"
@@ -338,7 +337,7 @@ function Home() {
       <section className="bg-oak section-y">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <Reveal>
-            <div className="zoom-image overflow-hidden rounded-sm ring-1 ring-border">
+            <div className="paper-label zoom-image -rotate-1 overflow-hidden ring-1 ring-border">
               <img
                 src={interieurCafe.url}
                 alt="Interieur van Stadscafé — houten tafels, bierposters en warme lampen"

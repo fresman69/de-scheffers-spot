@@ -3,12 +3,12 @@ import { OPEN_COOKIE_SETTINGS } from "./cookie-notice";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-oak py-12 md:py-16">
+    <footer className="vintage-footer border-t border-wine/50 bg-oak py-12 md:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:gap-12">
           <div>
-            <span className="mb-1 block font-script text-5xl leading-none text-brass">Stads</span>
-            <span className="mb-4 block font-display-condensed text-2xl tracking-[0.25em] text-paper">CAFÉ</span>
+            <span className="mb-1 block font-script text-5xl leading-none text-warm-red">Stads</span>
+            <span className="mb-4 block font-display-condensed text-2xl text-paper">CAFÉ</span>
             <p className="max-w-[32ch] text-sm leading-relaxed text-paper/75">
               Een gezellig bruin café in het hart van Dordrecht — kom gerust langs.
             </p>
