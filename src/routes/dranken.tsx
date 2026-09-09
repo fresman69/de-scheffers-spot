@@ -84,7 +84,7 @@ function Dranken() {
             <span className="ml-3 align-middle type-label text-brass">{filtered.length}</span>
           </h2>
         </div>
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filtered.map((d) => (
             <ProductCard key={`${d.category}-${d.name}`} product={d} aspect="4 / 3" tone="dark" />
           ))}

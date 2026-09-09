@@ -6,6 +6,25 @@ import { Reveal } from "../components/reveal";
 import { MapConsent } from "../components/map-consent";
 import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
 import gevelCafe from "../assets/gevel-cafe.png.asset.json";
+import sfeerGevelDag from "../assets/sfeer/gevel-dag.jpg.asset.json";
+import sfeerBierglas from "../assets/sfeer/bierglas.jpg.asset.json";
+import sfeerInterieur from "../assets/sfeer/interieur.jpg.asset.json";
+import sfeerMenukaart from "../assets/sfeer/menukaart.jpg.asset.json";
+import sfeerGevelAvond from "../assets/sfeer/gevel-avond.jpg.asset.json";
+import sfeerBierglasTerras from "../assets/sfeer/bierglas-terras.jpg.asset.json";
+
+/** Sfeerfoto die de volledige tegel vult. */
+function SfeerImg({ src, alt }: { src: string; alt: string }) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+    />
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -199,8 +218,13 @@ function Home() {
             {taps.map((c, i) => (
               <Reveal key={c.name} delay={i * 120}>
                 <article className="card-cozy hover-lift group flex h-full flex-col overflow-hidden bg-oak-light ring-1 ring-border">
-                  <div className="zoom-image relative aspect-[4/5] w-full bg-oak/60">
-                    <PhotoPlaceholder aspect="4 / 5" label={`Foto ${c.name}`} />
+                  <div className="zoom-image relative aspect-[4/5] w-full overflow-hidden bg-oak/60">
+                    <SfeerImg
+                      src={
+                        [sfeerBierglasTerras.url, sfeerBierglas.url, sfeerGevelDag.url][i % 3]
+                      }
+                      alt={`Sfeerbeeld bij ${c.name} in Stadscafé Rijke & Zn`}
+                    />
                     <span className="absolute left-4 top-4 rounded-sm bg-brass px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-oak">
                       {c.tag}
                     </span>
@@ -251,9 +275,12 @@ function Home() {
 
           {/* Bento moodboard — grote hero-tile links, drie kleinere rechts + brede onderrij */}
           <div className="grid gap-4 sm:grid-cols-3 sm:grid-rows-3 sm:[grid-auto-flow:dense] md:h-[640px]">
-            <Reveal className="sm:col-span-2 sm:row-span-2">
-              <div className="zoom-image relative h-full overflow-hidden rounded-sm ring-1 ring-border">
-                <PhotoPlaceholder aspect="4 / 3" label="Getapt bier, gouden gloed" />
+            <Reveal className="group sm:col-span-2 sm:row-span-2">
+              <div className="zoom-image relative h-full min-h-[240px] overflow-hidden rounded-sm ring-1 ring-border">
+                <SfeerImg
+                  src={sfeerInterieur.url}
+                  alt="Interieur van Stadscafé bij kaarslicht met houten tafels en emaillen borden"
+                />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-oak/90 via-oak/20 to-transparent p-6">
                   <span className="font-script type-eyebrow text-brass">Van de tap</span>
                   <p className="mt-1 text-[11px] uppercase tracking-[0.3em] text-paper/80">
@@ -262,24 +289,36 @@ function Home() {
                 </div>
               </div>
             </Reveal>
-            <Reveal delay={80}>
-              <div className="zoom-image h-full overflow-hidden rounded-sm ring-1 ring-border">
-                <PhotoPlaceholder aspect="1 / 1" label="Koperen tapkraan detail" />
+            <Reveal delay={80} className="group">
+              <div className="zoom-image h-full min-h-[180px] overflow-hidden rounded-sm ring-1 ring-border">
+                <SfeerImg
+                  src={sfeerBierglas.url}
+                  alt="Glas bier met het logo van Stadscafé Rijke & Zn"
+                />
               </div>
             </Reveal>
-            <Reveal delay={140}>
-              <div className="zoom-image h-full overflow-hidden rounded-sm ring-1 ring-border">
-                <PhotoPlaceholder aspect="1 / 1" label="Trappist in bolvormig glas" />
+            <Reveal delay={140} className="group">
+              <div className="zoom-image h-full min-h-[180px] overflow-hidden rounded-sm ring-1 ring-border">
+                <SfeerImg
+                  src={sfeerMenukaart.url}
+                  alt="De kaart van Stadscafé Rijke & Zn op tafel"
+                />
               </div>
             </Reveal>
-            <Reveal delay={200} className="sm:col-span-2">
-              <div className="zoom-image h-full overflow-hidden rounded-sm ring-1 ring-border">
-                <PhotoPlaceholder aspect="16 / 9" label="Bar bij avondlicht, glazen op rij" />
+            <Reveal delay={200} className="group sm:col-span-2">
+              <div className="zoom-image h-full min-h-[180px] overflow-hidden rounded-sm ring-1 ring-border">
+                <SfeerImg
+                  src={sfeerGevelAvond.url}
+                  alt="De gevel van het café bij avondlicht in de Dordtse binnenstad"
+                />
               </div>
             </Reveal>
-            <Reveal delay={260}>
-              <div className="zoom-image h-full overflow-hidden rounded-sm ring-1 ring-border">
-                <PhotoPlaceholder aspect="1 / 1" label="Gin & tonic met verse limoen" />
+            <Reveal delay={260} className="group">
+              <div className="zoom-image h-full min-h-[180px] overflow-hidden rounded-sm ring-1 ring-border">
+                <SfeerImg
+                  src={sfeerGevelDag.url}
+                  alt="De verlichte gevel van Stadscafé Rijke & Zn met het bord met bieren van de tap"
+                />
               </div>
             </Reveal>
           </div>
