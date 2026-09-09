@@ -87,9 +87,9 @@ export function AmbientPanel({
       {/* Zwevende lichtvlek */}
       <div
         aria-hidden
-        className="absolute -left-10 top-1/4 h-[70%] w-[70%] rounded-full blur-3xl"
+        className="absolute -left-10 top-1/4 h-[75%] w-[75%] rounded-full mix-blend-screen blur-3xl"
         style={{
-          background: `radial-gradient(circle, color-mix(in oklch, ${p.accent} 35%, transparent) 0%, transparent 70%)`,
+          background: `radial-gradient(circle, color-mix(in oklch, ${p.accent} 70%, transparent) 0%, transparent 70%)`,
           animation: `ambient-drift ${18 + seed}s var(--ease-smooth) infinite alternate`,
         }}
       />
@@ -172,10 +172,10 @@ export function AmbientHero({ className = "" }: { className?: string }) {
         }}
       />
       <div
-        className="absolute left-1/2 top-1/3 h-[70vmin] w-[70vmin] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
+        className="absolute left-1/2 top-1/3 h-[85vmin] w-[85vmin] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-80 mix-blend-screen blur-3xl"
         style={{
           background:
-            "radial-gradient(circle, color-mix(in oklch, var(--brass) 40%, transparent) 0%, transparent 70%)",
+            "radial-gradient(circle, color-mix(in oklch, var(--brass) 85%, transparent) 0%, color-mix(in oklch, var(--brass) 25%, transparent) 45%, transparent 72%)",
           animation: "ambient-breathe 14s var(--ease-smooth) infinite alternate",
         }}
       />
