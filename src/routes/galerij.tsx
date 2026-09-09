@@ -1,5 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PhotoPlaceholder } from "../components/photo-placeholder";
+import sfeerGevelDag from "../assets/sfeer/gevel-dag.jpg.asset.json";
+import sfeerBierglas from "../assets/sfeer/bierglas.jpg.asset.json";
+import sfeerInterieur from "../assets/sfeer/interieur.jpg.asset.json";
+import sfeerMenukaart from "../assets/sfeer/menukaart.jpg.asset.json";
+import sfeerGevelAvond from "../assets/sfeer/gevel-avond.jpg.asset.json";
+import sfeerBierglasTerras from "../assets/sfeer/bierglas-terras.jpg.asset.json";
 
 export const Route = createFileRoute("/galerij")({
   head: () => ({
