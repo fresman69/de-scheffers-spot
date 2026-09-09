@@ -201,6 +201,30 @@
   text-transform: uppercase;
 }
 
+/* Zachte, huiselijke kaart — geïnspireerd op cosy café-interieurs.
+   Iets rondere hoeken, warme rand en een heel zachte binnengloed. */
+@utility card-cozy {
+  border-radius: 0.875rem;
+  box-shadow: inset 0 1px 0 color-mix(in oklch, var(--brass) 12%, transparent),
+              0 10px 30px -26px color-mix(in oklch, black 80%, transparent);
+}
+
+/* Nauwelijks zichtbare warme korrel — papier/hout-gevoel over grote vlakken. */
+@utility warm-grain {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image: radial-gradient(circle at 30% 20%,
+        color-mix(in oklch, var(--brass) 7%, transparent) 0%, transparent 60%),
+      radial-gradient(circle at 75% 85%,
+        color-mix(in oklch, var(--wine) 7%, transparent) 0%, transparent 62%);
+  }
+}
+
 /* Stippellijn-leader tussen naam en prijs/ABV — de handtekening van de kaart. */
 @utility leader-dots {
   background-image: radial-gradient(circle, currentColor 0.6px, transparent 0.7px);
