@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { MapConsent } from "../components/map-consent";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -93,12 +94,7 @@ function Contact() {
 
           <div>
             <div className="aspect-square overflow-hidden rounded-sm ring-1 ring-black/10">
-              <iframe
-                title="Kaart Scheffersplein Dordrecht"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=4.6870%2C51.8130%2C4.6930%2C51.8160&layer=mapnik&marker=51.8145%2C4.6900"
-                className="h-full w-full"
-                loading="lazy"
-              />
+              <MapConsent tone="light" />
             </div>
             <p className="mt-6 text-sm text-oak/80">
               Op 3 minuten lopen van station Dordrecht Centrum. Parkeergarage Visstraat op 200 meter.

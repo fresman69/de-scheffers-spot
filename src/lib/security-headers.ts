@@ -5,8 +5,9 @@ const CSP = [
   "default-src 'self'",
   // Inline scripts are required for SSR hydration payloads and JSON-LD.
   "script-src 'self' 'unsafe-inline'",
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "font-src 'self' data: https://fonts.gstatic.com",
+  "style-src 'self' 'unsafe-inline'",
+  // Lettertypen worden lokaal geserveerd; geen externe fontdiensten.
+  "font-src 'self' data:",
   "img-src 'self' data: blob: https:",
   "connect-src 'self' https://*.supabase.co https://*.lovable.app wss://*.supabase.co",
   // OpenStreetMap map embed on /contact.

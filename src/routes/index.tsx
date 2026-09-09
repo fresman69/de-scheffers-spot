@@ -3,6 +3,7 @@ import { Beer, Instagram, MapPin, Star, Users, Heart } from "lucide-react";
 import { PhotoPlaceholder } from "../components/photo-placeholder";
 import { Ornament } from "../components/ornament";
 import { Reveal } from "../components/reveal";
+import { MapConsent } from "../components/map-consent";
 import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
 import gevelCafe from "../assets/gevel-cafe.png.asset.json";
 
@@ -527,12 +528,7 @@ function Home() {
                 Hartje Dordrecht
               </h2>
               <div className="aspect-[16/10] overflow-hidden rounded-sm ring-1 ring-border">
-                <iframe
-                  title="Kaart Scheffersplein Dordrecht"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=4.6870%2C51.8130%2C4.6930%2C51.8160&layer=mapnik&marker=51.8145%2C4.6900"
-                  className="h-full w-full grayscale-[0.3]"
-                  loading="lazy"
-                />
+                <MapConsent />
               </div>
               <p className="mt-6 text-sm text-paper/80">
                 Scheffersplein 12, 3311 PX Dordrecht — op 3 minuten lopen van station Dordrecht Centrum.
