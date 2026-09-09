@@ -70,7 +70,7 @@ function OverOns() {
       <section className="bg-paper section-y text-oak">
         <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-5 lg:items-center">
           <div className="lg:col-span-2">
-            <div className="zoom-image group overflow-hidden rounded-sm ring-1 ring-oak/10">
+            <div className="paper-label zoom-image group -rotate-2 overflow-hidden ring-1 ring-oak/10">
               <img
                 src={sfeerBierglasTerras.url}
                 alt="Glas bier met het logo van Stadscafé Rijke & Zn op tafel"
@@ -111,7 +111,7 @@ function OverOns() {
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             {pillars.map((p, i) => (
-              <article key={p.title} className="hover-lift rounded-sm bg-oak-light p-8 ring-1 ring-border">
+              <article key={p.title} className={`paper-label hover-lift bg-oak-light p-8 ring-1 ring-border ${i % 2 ? "rotate-[0.4deg]" : "-rotate-[0.4deg]"}`}>
                 <span className="mb-4 block font-display-condensed text-3xl text-brass">
                   {String(i + 1).padStart(2, "0")}
                 </span>

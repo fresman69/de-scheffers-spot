@@ -15,7 +15,7 @@ export function LegalPage({
   return (
     <>
       <section className="bg-oak section-y">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+        <div className="paper-label mx-auto max-w-3xl bg-paper px-6 py-10 text-oak sm:px-10">
           <p className="mb-4 font-script type-eyebrow text-brass">{eyebrow}</p>
           <h1 className="mb-6 type-h1 text-paper">{title}</h1>
           <p className="max-w-[62ch] text-pretty type-body text-paper/85">{intro}</p>
