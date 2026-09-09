@@ -7,10 +7,6 @@ import { MapConsent } from "../components/map-consent";
 import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
 import gevelCafe from "../assets/gevel-cafe.png.asset.json";
 import sfeerGevelDag from "../assets/sfeer/gevel-dag.jpg.asset.json";
-import sfeerBierglas from "../assets/sfeer/bierglas.jpg.asset.json";
-import sfeerInterieur from "../assets/sfeer/interieur.jpg.asset.json";
-import sfeerMenukaart from "../assets/sfeer/menukaart.jpg.asset.json";
-import sfeerGevelAvond from "../assets/sfeer/gevel-avond.jpg.asset.json";
 import sfeerBierglasTerras from "../assets/sfeer/bierglas-terras.jpg.asset.json";
 
 /** Sfeerfoto die de volledige tegel vult. */
