@@ -93,7 +93,7 @@ function Contact() {
               <MapConsent tone="light" />
             </div>
             <p className="mt-6 text-sm text-oak/80">
-              Op 3 minuten lopen van station Dordrecht Centrum. Parkeergarage Visstraat op 200 meter.
+              Midden in de historische binnenstad, op loopafstand van het Scheffersplein en de Visstraat.
             </p>
           </div>
         </div>

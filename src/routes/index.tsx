@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Speciaalbier, borrelhapjes en een warme kroegsfeer aan het Scheffersplein.",
+          "Speciaalbier, borrelhapjes en een warme kroegsfeer aan de Voorstraat in Dordrecht.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -84,15 +84,14 @@ const reasons = [
   {
     icon: MapPin,
     title: "Hartje Dordrecht",
-    text: "Aan het Scheffersplein, tussen de terrassen. Zo naar binnen gelopen na het winkelen of een wandeling langs de haven.",
+    text: "Aan de Voorstraat, midden in de binnenstad. Zo naar binnen gelopen na het winkelen of een wandeling langs de haven.",
   },
 ];
 
 const hours = [
-  ["Maandag", "Gesloten"],
-  ["Dinsdag – Donderdag", "11:00 — 00:00"],
-  ["Vrijdag – Zaterdag", "11:00 — 01:00"],
-  ["Zondag", "12:00 — 23:00"],
+  ["Maandag – Donderdag", "15:00 — 02:00"],
+  ["Vrijdag", "14:00 — 02:00"],
+  ["Zaterdag – Zondag", "13:00 — 02:00"],
 ];
 
 const reviews = [
@@ -109,7 +108,7 @@ function Home() {
         <div className="absolute inset-0" data-video-slot="hero">
           <img
             src={gevelCafe.url}
-            alt="Gevel van Stadscafé aan het Scheffersplein in Dordrecht"
+            alt="Gevel van Stadscafé aan de Voorstraat in Dordrecht"
             fetchPriority="high"
             decoding="async"
             className="h-full w-full object-cover opacity-60"
@@ -127,7 +126,7 @@ function Home() {
             Welkom bij
           </p>
           <p className="mb-8 type-label text-paper/75 animate-fade-in">
-            Scheffersplein · Dordrecht
+            Stadscafé · Dordrecht
           </p>
           <h1 className="mx-auto mb-6 max-w-[18ch] text-balance type-h1 text-paper animate-fade-up">
             Een goed glas bier{" "}
@@ -402,7 +401,7 @@ function Home() {
               </h2>
               <p className="mb-4 text-pretty type-body text-paper/85">
                 Donkere houten tafels, koperen tapkranen en verlichting die alles zachter maakt.
-                In de zomer schuiven we het terras uit op het Scheffersplein, in de winter
+                In de zomer schuiven we het terras uit op de stoep, in de winter
                 zit je binnen bij de warme lampen.
               </p>
               <p className="mb-8 text-pretty type-body text-paper/85">
@@ -569,7 +568,7 @@ function Home() {
                 <MapConsent />
               </div>
               <p className="mt-6 text-sm text-paper/80">
-                Scheffersplein 12, 3311 PX Dordrecht — op 3 minuten lopen van station Dordrecht Centrum.
+                Voorstraat 260, 3311 ET Dordrecht — midden in de historische binnenstad.
               </p>
             </div>
           </Reveal>
