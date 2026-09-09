@@ -1,64 +1,39 @@
+# Sfeerfoto's plaatsen + strakke tekstkaart voor de menu's
 
-# Menukaart-stijl doorvertalen naar de website
+Doel: morgen live met een afgewerkte site — echte sfeerbeelden op de homepage, en menukaarten zonder foto's of lege "Foto volgt"-vakjes.
 
-De fysieke kaart van Rijke & Zn. (design: Sinisters.nl) heeft een heel eigen, poster-achtig karakter. Doel: de website onmiskenbaar dezelfde merktaal geven, zonder de kaart 1-op-1 na te maken.
+## 1. Foto's uit het aangeleverde beeld
 
-## Wat ik uit de kaart heb geleerd
+Uit het aangeleverde moodboard snijd ik de losse foto's uit op hoge kwaliteit:
 
-**Kleur** — cremewit papier als basis, met blokken in vier signaalkleuren:
-- Wijnrood / bordeaux (dominant, koppen & accenten)
-- Diep aubergine/oak (bijna-zwart bruin, panelen)
-- Mosterdgeel (warm accent, badges)
-- Petrol/teal blauw (koel contrast, één paneel)
+- de gevel van het café overdag
+- het glas bier met logo
+- het interieur met kaarslicht en emaillen borden
+- de menukaart op tafel
+- de gevel bij avondlicht in de straat
 
-**Typografie** — drie duidelijke lagen:
-- Sierlijk handgeschreven **script** voor sectie-koppen ("Wijnen", "Hapas", "Koffie/Thee") — een Lobster/Alex Brush-achtige stijl
-- Zware **condensed serif / slab** in hoofdletters voor titels en het reuzenwoord "KAART"
-- Strakke **condensed sans-caps** met wijde letterspacing voor productnamen; prijzen rechts uitgelijnd met **stippellijn-leaders** ertussen
+Deze worden als aparte beelden opgeslagen en vervangen de lege fotoplekken op de homepage (de sfeersectie met tapbier, koperdetail, trappist, bar bij avondlicht) en het blok met kaartverwijzingen. Elk beeld krijgt een passende beschrijving voor toegankelijkheid en laadt pas wanneer het in beeld komt.
 
-**Grafiek** — houtsnede-illustraties (hop, gerst, vat, druiven, bebaarde barman), geometrische badges (driehoek, ruit, cirkel), NIX18-label, bliksemflits, sterrenburst achter de hop. Alles matte, ingetogen, ambachtelijk drukwerk-gevoel.
+De rode tekstvlakken en tekeningen uit het moodboard gebruik ik niet als foto — die zijn drukwerk, geen fotografie.
 
-**Compositie** — harde kleurvlakken naast elkaar, alsof panelen aan elkaar geplakt zijn; ruime marges binnen elk paneel; korte hairline scheidingen; consequent asymmetrisch grid.
+## 2. Menukaarten tekst-only
 
-## Wat er op de site verandert
+Bierkaart, dranken en happas worden strak tekstueel:
 
-### 1. Kleurpalet (`src/styles.css`)
-- `--paper` blijft de rustige achtergrond, maar krijgt een fractie warmer/geliger tint zodat het aan het drukwerk-crème raakt.
-- Nieuwe tokens: `--mustard` (mosterdgeel) en `--teal` (petrol) toegevoegd aan `@theme inline`, naast bestaande `--wine`, `--oak`, `--brass`.
-- `--brass` blijft bestaan maar wordt secundair; **wijnrood wordt de primaire accentkleur** (nu al `--wine`, promoveren naar `--primary`).
+- geen productfoto's en geen "Foto volgt"-vakjes meer
+- bredere kaartjes met de naam in condensed kapitalen, ABV/IBU en volume in koper, omschrijving eronder en het weetje met het korenaar-icoon
+- meer kolommen per rij nu de foto's wegvallen, zodat de kaart compact en overzichtelijk oogt op telefoon, tablet en desktop
+- categoriekoppen met koperen lijnen blijven zoals ze nu zijn
 
-### 2. Typografie (`__root.tsx` + `styles.css`)
-- Script-font toevoegen via `<link>` in de root head: **Alex Brush** of **Yellowtail** voor sectie-eyebrows/koppen (menukaart-gevoel, goed leesbaar op web).
-- Display-font wisselen van Cormorant Garamond naar een zwaardere condensed serif/slab: **Oswald** of **Bebas Neue** voor UPPERCASE titels — matcht de "KAART"-letters.
-- Body blijft Inter.
-- Nieuwe utility-klassen: `.font-script`, `.font-display-condensed`.
+## 3. Eén schakelaar om foto's terug te zetten
 
-### 3. Herkenbare menukaart-componenten
-- **`ProductCard` (dark tone)**: item-regel krijgt optioneel een variant met **stippellijn-leader** tussen naam en prijs/ABV (`border-b border-dotted border-brass/40`) — direct herkenbaar patroon uit de kaart. Foto-vlak blijft, maar krijgt een subtiele cremewit-rand alsof op papier geplakt.
-- **`SectionHeader`** (nieuw, klein): script-woord ("Hapas", "Wijnen", …) boven een zware condensed titel — hergebruikt op alle menu- en contentpagina's.
-- **`Panel`** (nieuw, klein): kleurvlak-wrapper (`wine` / `mustard` / `teal` / `oak`) met dikke rand en interne padding — voor hero-blokken en highlight-secties op home, over-ons, contact.
+De bierfoto's blijven bewaard in het project. Er komt één instelling waarmee alle productfoto's in één keer weer aan gaan zodra je zover bent; er hoeft dan niets opnieuw gekoppeld te worden.
 
-### 4. Pagina-updates (alleen presentatie, geen data)
-- **Home**: hero krijgt een menukaart-achtige compositie — cremewit paneel met script "Sinds…" boven grote condensed "STADSCAFÉ RIJKE & ZN." en gevelfoto rechts. Openingstijden-blok wordt een wijnrood paneel met stippellijn-leaders (dag ⋯ tijd), exact het ritme van de kaart.
-- **Bierkaart / Dranken / Borrelkaart**: hero-eyebrow in script, categorie-chips krijgen paneel-look (actieve chip = wijnrood met crème letters), grid-cards krijgen de stippellijn-leader tussen naam en ABV/volume.
-- **Over ons / Contact / Reserveren / Galerij**: script-eyebrows + condensed titels, kleine mosterd/teal accent-blokken voor quotes, adres of openingstijden. Geen inhoudelijke tekstwijzigingen.
-- **`site-nav`**: logo-woordmerk in condensed uppercase, actieve link krijgt wijnrode onderstreping.
-- **`site-footer`**: kolomkoppen in script, adres in condensed caps.
+## Technisch
 
-### 5. Grafische accenten (SVG, geen AI)
-- Kleine ambachtelijke SVG-ornamenten (hairline hop-tak, gerst-aar, ster-burst) als subtiele section-dividers — met de hand getekend in code, geen AI/stock. Sober ingezet: één per pagina, niet overal.
-
-### 6. Toegankelijkheid & responsive
-- Alle nieuwe kleurcombinaties (wijn op crème, crème op wijn, oak op mosterd) worden getoetst op WCAG AA.
-- Script-font alleen voor korte eyebrows (max ~3 woorden), nooit voor body-tekst.
-- Bestaande responsive gedrag blijft; nieuwe panelen stacken netjes onder `md:`.
-
-## Wat NIET verandert
-- Geen wijzigingen in menu-inhoud, prijzen, routes of backend.
-- Geen AI-beelden. Bestaande echte foto's (gevel, interieur) blijven.
-- Geen nieuwe pagina's.
-
-## Technische notities
-- Fonts via `<link rel="preconnect">` + `<link rel="stylesheet">` in `src/routes/__root.tsx` (nooit `@import` in CSS — Tailwind v4/Lightning CSS).
-- Nieuwe tokens in `@theme inline` zodat `bg-mustard`, `text-teal` etc. direct als Tailwind-klasse werken.
-- Alle kleurgebruik via semantische tokens; geen hardcoded hex in componenten.
+- Croppen van het moodboard met Pillow, uploaden via `lovable-assets`, pointers onder `src/assets/sfeer/`.
+- `src/lib/menu/display.ts` met `SHOW_PRODUCT_PHOTOS = false`.
+- `src/components/beer-card.tsx` en `src/components/product-card.tsx`: fotoslot en placeholder-tak alleen renderen als de vlag aan staat; tekst-only layout als standaard.
+- `src/routes/bierkaart.tsx`, `dranken.tsx`, `borrelkaart.tsx`: grid-kolommen aanpassen aan de smallere kaartjes.
+- `src/routes/index.tsx`: `PhotoPlaceholder`-instanties vervangen door de nieuwe beelden; component blijft bestaan voor plekken zonder beeld.
+- Afsluiten met typecheck/build en een visuele controle op 320–1440px.
