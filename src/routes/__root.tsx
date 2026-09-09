@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteNav } from "../components/site-nav";
 import { SiteFooter } from "../components/site-footer";
+import { CookieNotice } from "../components/cookie-notice";
 
 
 function NotFoundComponent() {
@@ -101,12 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=Yellowtail&display=swap",
-      },
+      { rel: "stylesheet", href: "/fonts/fonts.css" },
     ],
     scripts: [
       {
@@ -167,6 +163,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <SiteFooter />
+      <CookieNotice />
     </QueryClientProvider>
   );
 }

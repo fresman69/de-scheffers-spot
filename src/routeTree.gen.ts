@@ -10,14 +10,19 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as OverOnsRouteImport } from './routes/over-ons'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as GalerijRouteImport } from './routes/galerij'
 import { Route as DrankenRouteImport } from './routes/dranken'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ColofonRouteImport } from './routes/colofon'
 import { Route as BorrelkaartRouteImport } from './routes/borrelkaart'
 import { Route as BierkaartRouteImport } from './routes/bierkaart'
+import { Route as AlgemeneVoorwaardenRouteImport } from './routes/algemene-voorwaarden'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
@@ -27,6 +32,11 @@ import { Route as DotlovableOauthConsentRouteImport } from './routes/[.]lovable.
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OverOnsRoute = OverOnsRouteImport.update({
@@ -54,9 +64,24 @@ const DrankenRoute = DrankenRouteImport.update({
   path: '/dranken',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ColofonRoute = ColofonRouteImport.update({
+  id: '/colofon',
+  path: '/colofon',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BorrelkaartRoute = BorrelkaartRouteImport.update({
@@ -67,6 +92,11 @@ const BorrelkaartRoute = BorrelkaartRouteImport.update({
 const BierkaartRoute = BierkaartRouteImport.update({
   id: '/bierkaart',
   path: '/bierkaart',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AlgemeneVoorwaardenRoute = AlgemeneVoorwaardenRouteImport.update({
+  id: '/algemene-voorwaarden',
+  path: '/algemene-voorwaarden',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -100,14 +130,19 @@ const DotlovableOauthConsentRoute = DotlovableOauthConsentRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
   '/bierkaart': typeof BierkaartRoute
   '/borrelkaart': typeof BorrelkaartRoute
+  '/colofon': typeof ColofonRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/dranken': typeof DrankenRoute
   '/galerij': typeof GalerijRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
   '/over-ons': typeof OverOnsRoute
+  '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -116,14 +151,19 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
   '/bierkaart': typeof BierkaartRoute
   '/borrelkaart': typeof BorrelkaartRoute
+  '/colofon': typeof ColofonRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/dranken': typeof DrankenRoute
   '/galerij': typeof GalerijRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
   '/over-ons': typeof OverOnsRoute
+  '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -133,14 +173,19 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
   '/bierkaart': typeof BierkaartRoute
   '/borrelkaart': typeof BorrelkaartRoute
+  '/colofon': typeof ColofonRoute
   '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/dranken': typeof DrankenRoute
   '/galerij': typeof GalerijRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
   '/over-ons': typeof OverOnsRoute
+  '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -151,14 +196,19 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/algemene-voorwaarden'
     | '/bierkaart'
     | '/borrelkaart'
+    | '/colofon'
     | '/contact'
+    | '/cookies'
+    | '/disclaimer'
     | '/dranken'
     | '/galerij'
     | '/login'
     | '/mcp'
     | '/over-ons'
+    | '/privacy'
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -167,14 +217,19 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/algemene-voorwaarden'
     | '/bierkaart'
     | '/borrelkaart'
+    | '/colofon'
     | '/contact'
+    | '/cookies'
+    | '/disclaimer'
     | '/dranken'
     | '/galerij'
     | '/login'
     | '/mcp'
     | '/over-ons'
+    | '/privacy'
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -183,14 +238,19 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/algemene-voorwaarden'
     | '/bierkaart'
     | '/borrelkaart'
+    | '/colofon'
     | '/contact'
+    | '/cookies'
+    | '/disclaimer'
     | '/dranken'
     | '/galerij'
     | '/login'
     | '/mcp'
     | '/over-ons'
+    | '/privacy'
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -200,14 +260,19 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AlgemeneVoorwaardenRoute: typeof AlgemeneVoorwaardenRoute
   BierkaartRoute: typeof BierkaartRoute
   BorrelkaartRoute: typeof BorrelkaartRoute
+  ColofonRoute: typeof ColofonRoute
   ContactRoute: typeof ContactRoute
+  CookiesRoute: typeof CookiesRoute
+  DisclaimerRoute: typeof DisclaimerRoute
   DrankenRoute: typeof DrankenRoute
   GalerijRoute: typeof GalerijRoute
   LoginRoute: typeof LoginRoute
   McpRoute: typeof McpRoute
   OverOnsRoute: typeof OverOnsRoute
+  PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -222,6 +287,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/over-ons': {
@@ -259,11 +331,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DrankenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/colofon': {
+      id: '/colofon'
+      path: '/colofon'
+      fullPath: '/colofon'
+      preLoaderRoute: typeof ColofonRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/borrelkaart': {
@@ -278,6 +371,13 @@ declare module '@tanstack/react-router' {
       path: '/bierkaart'
       fullPath: '/bierkaart'
       preLoaderRoute: typeof BierkaartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/algemene-voorwaarden': {
+      id: '/algemene-voorwaarden'
+      path: '/algemene-voorwaarden'
+      fullPath: '/algemene-voorwaarden'
+      preLoaderRoute: typeof AlgemeneVoorwaardenRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -320,14 +420,19 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AlgemeneVoorwaardenRoute: AlgemeneVoorwaardenRoute,
   BierkaartRoute: BierkaartRoute,
   BorrelkaartRoute: BorrelkaartRoute,
+  ColofonRoute: ColofonRoute,
   ContactRoute: ContactRoute,
+  CookiesRoute: CookiesRoute,
+  DisclaimerRoute: DisclaimerRoute,
   DrankenRoute: DrankenRoute,
   GalerijRoute: GalerijRoute,
   LoginRoute: LoginRoute,
   McpRoute: McpRoute,
   OverOnsRoute: OverOnsRoute,
+  PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:

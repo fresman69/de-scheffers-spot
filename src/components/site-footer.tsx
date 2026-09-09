@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { OPEN_COOKIE_SETTINGS } from "./cookie-notice";
 
 export function SiteFooter() {
   return (
@@ -17,7 +18,7 @@ export function SiteFooter() {
               3311 PX Dordrecht
             </p>
           </div>
-          <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-3 sm:gap-16">
+          <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-16">
             <div>
               <h2 className="mb-6 font-script text-2xl leading-none text-brass">Bezoek</h2>
               <ul className="space-y-3 text-sm text-muted-foreground">
@@ -40,6 +41,25 @@ export function SiteFooter() {
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li><a href="https://www.instagram.com/stadscafe_rijke/" target="_blank" rel="noopener noreferrer" className="hover:text-brass">Instagram</a></li>
                 <li><a href="tel:+31786134242" className="hover:text-brass">Bel ons</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 font-script text-2xl leading-none text-brass">Juridisch</h2>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                <li><Link to="/privacy" className="hover:text-brass">Privacy</Link></li>
+                <li><Link to="/cookies" className="hover:text-brass">Cookies</Link></li>
+                <li><Link to="/algemene-voorwaarden" className="hover:text-brass">Algemene voorwaarden</Link></li>
+                <li><Link to="/colofon" className="hover:text-brass">Colofon</Link></li>
+                <li><Link to="/disclaimer" className="hover:text-brass">Disclaimer</Link></li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => window.dispatchEvent(new Event(OPEN_COOKIE_SETTINGS))}
+                    className="text-left hover:text-brass"
+                  >
+                    Cookie-instellingen
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
