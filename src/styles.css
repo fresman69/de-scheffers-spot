@@ -44,10 +44,10 @@
   --color-teal: var(--teal);
   --color-teal-dim: var(--teal-dim);
 
-  --font-display: "Barlow Condensed", "Oswald", sans-serif;
-  --font-serif: "Cormorant Garamond", serif;
-  --font-script: "Yellowtail", "Alex Brush", cursive;
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Barlow Condensed", "Oswald", "Haettenschweiler", "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, "Times New Roman", serif;
+  --font-script: "Yellowtail", "Alex Brush", "Segoe Script", "Snell Roundhand", "Apple Chancery", cursive;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 :root {
