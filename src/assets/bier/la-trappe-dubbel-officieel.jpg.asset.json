@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "bb6044d1-4abb-46ed-960a-57adc42001b1",
-  "project_id": "3030e587-0e2c-48b8-aabd-374eb7f88cb1",
-  "url": "/__l5e/assets-v1/bb6044d1-4abb-46ed-960a-57adc42001b1/la-trappe-dubbel-officieel.jpg",
-  "r2_key": "a/v1/3030e587-0e2c-48b8-aabd-374eb7f88cb1/bb6044d1-4abb-46ed-960a-57adc42001b1/la-trappe-dubbel-officieel.jpg",
-  "original_filename": "la-trappe-dubbel-officieel.jpg",
-  "size": 18840,
   "content_type": "image/jpeg",
-  "created_at": "2026-09-09T00:27:55Z"
+  "created_at": "2026-09-09T00:27:55Z",
+  "original_filename": "la-trappe-dubbel-officieel.jpg",
+  "project_id": "f0296c42-0757-4fc5-95ce-14dedc0c3174",
+  "r2_key": "a/v1/f0296c42-0757-4fc5-95ce-14dedc0c3174/bb6044d1-4abb-46ed-960a-57adc42001b1/la-trappe-dubbel-officieel.jpg",
+  "size": 18840,
+  "url": "/__l5e/assets-v1/bb6044d1-4abb-46ed-960a-57adc42001b1/la-trappe-dubbel-officieel.jpg",
+  "version": 1
 }

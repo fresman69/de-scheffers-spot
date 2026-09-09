@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "501be2ee-7cb2-4aa5-8622-b6ff995f49f6",
-  "project_id": "3030e587-0e2c-48b8-aabd-374eb7f88cb1",
-  "url": "/__l5e/assets-v1/501be2ee-7cb2-4aa5-8622-b6ff995f49f6/lefort-donker.jpg",
-  "r2_key": "a/v1/3030e587-0e2c-48b8-aabd-374eb7f88cb1/501be2ee-7cb2-4aa5-8622-b6ff995f49f6/lefort-donker.jpg",
-  "original_filename": "lefort-donker.jpg",
-  "size": 52943,
   "content_type": "image/jpeg",
-  "created_at": "2026-09-09T00:28:00Z"
+  "created_at": "2026-09-09T00:28:00Z",
+  "original_filename": "lefort-donker.jpg",
+  "project_id": "f0296c42-0757-4fc5-95ce-14dedc0c3174",
+  "r2_key": "a/v1/f0296c42-0757-4fc5-95ce-14dedc0c3174/501be2ee-7cb2-4aa5-8622-b6ff995f49f6/lefort-donker.jpg",
+  "size": 52943,
+  "url": "/__l5e/assets-v1/501be2ee-7cb2-4aa5-8622-b6ff995f49f6/lefort-donker.jpg",
+  "version": 1
 }

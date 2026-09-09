@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "ff86a142-bfdb-4a50-8e32-c06f289bd008",
-  "project_id": "3030e587-0e2c-48b8-aabd-374eb7f88cb1",
-  "url": "/__l5e/assets-v1/ff86a142-bfdb-4a50-8e32-c06f289bd008/duvel.png",
-  "r2_key": "a/v1/3030e587-0e2c-48b8-aabd-374eb7f88cb1/ff86a142-bfdb-4a50-8e32-c06f289bd008/duvel.png",
-  "original_filename": "duvel.png",
-  "size": 375699,
   "content_type": "image/png",
-  "created_at": "2026-09-09T00:30:48Z"
+  "created_at": "2026-09-09T00:30:48Z",
+  "original_filename": "duvel.png",
+  "project_id": "f0296c42-0757-4fc5-95ce-14dedc0c3174",
+  "r2_key": "a/v1/f0296c42-0757-4fc5-95ce-14dedc0c3174/ff86a142-bfdb-4a50-8e32-c06f289bd008/duvel.png",
+  "size": 375699,
+  "url": "/__l5e/assets-v1/ff86a142-bfdb-4a50-8e32-c06f289bd008/duvel.png",
+  "version": 1
 }

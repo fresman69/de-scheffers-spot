@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "753442c3-9f7f-48c2-81f4-aa6b0b7fef60",
-  "project_id": "3030e587-0e2c-48b8-aabd-374eb7f88cb1",
-  "url": "/__l5e/assets-v1/753442c3-9f7f-48c2-81f4-aa6b0b7fef60/magners-pint.jpg",
-  "r2_key": "a/v1/3030e587-0e2c-48b8-aabd-374eb7f88cb1/753442c3-9f7f-48c2-81f4-aa6b0b7fef60/magners-pint.jpg",
-  "original_filename": "magners-pint.jpg",
-  "size": 53318,
   "content_type": "image/jpeg",
-  "created_at": "2026-08-17T22:35:47Z"
+  "created_at": "2026-08-17T22:35:47Z",
+  "original_filename": "magners-pint.jpg",
+  "project_id": "f0296c42-0757-4fc5-95ce-14dedc0c3174",
+  "r2_key": "a/v1/f0296c42-0757-4fc5-95ce-14dedc0c3174/753442c3-9f7f-48c2-81f4-aa6b0b7fef60/magners-pint.jpg",
+  "size": 53318,
+  "url": "/__l5e/assets-v1/753442c3-9f7f-48c2-81f4-aa6b0b7fef60/magners-pint.jpg",
+  "version": 1
 }

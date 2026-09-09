@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "25294a20-97b1-49fc-ba6d-1ee0bd6f25d8",
-  "project_id": "3030e587-0e2c-48b8-aabd-374eb7f88cb1",
-  "url": "/__l5e/assets-v1/25294a20-97b1-49fc-ba6d-1ee0bd6f25d8/kasteel-rouge.png",
-  "r2_key": "a/v1/3030e587-0e2c-48b8-aabd-374eb7f88cb1/25294a20-97b1-49fc-ba6d-1ee0bd6f25d8/kasteel-rouge.png",
-  "original_filename": "kasteel-rouge.png",
-  "size": 265927,
   "content_type": "image/png",
-  "created_at": "2026-08-18T11:37:19Z"
+  "created_at": "2026-08-18T11:37:19Z",
+  "original_filename": "kasteel-rouge.png",
+  "project_id": "f0296c42-0757-4fc5-95ce-14dedc0c3174",
+  "r2_key": "a/v1/f0296c42-0757-4fc5-95ce-14dedc0c3174/25294a20-97b1-49fc-ba6d-1ee0bd6f25d8/kasteel-rouge.png",
+  "size": 265927,
+  "url": "/__l5e/assets-v1/25294a20-97b1-49fc-ba6d-1ee0bd6f25d8/kasteel-rouge.png",
+  "version": 1
 }

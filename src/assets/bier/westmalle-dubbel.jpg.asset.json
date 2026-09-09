@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "b7b4aea8-458c-435b-92ac-975ee8b06b3b",
-  "project_id": "3030e587-0e2c-48b8-aabd-374eb7f88cb1",
-  "url": "/__l5e/assets-v1/b7b4aea8-458c-435b-92ac-975ee8b06b3b/westmalle-dubbel.jpg",
-  "r2_key": "a/v1/3030e587-0e2c-48b8-aabd-374eb7f88cb1/b7b4aea8-458c-435b-92ac-975ee8b06b3b/westmalle-dubbel.jpg",
-  "original_filename": "westmalle-dubbel.jpg",
-  "size": 28740,
   "content_type": "image/jpeg",
-  "created_at": "2026-09-09T00:27:50Z"
+  "created_at": "2026-09-09T00:27:50Z",
+  "original_filename": "westmalle-dubbel.jpg",
+  "project_id": "f0296c42-0757-4fc5-95ce-14dedc0c3174",
+  "r2_key": "a/v1/f0296c42-0757-4fc5-95ce-14dedc0c3174/b7b4aea8-458c-435b-92ac-975ee8b06b3b/westmalle-dubbel.jpg",
+  "size": 28740,
+  "url": "/__l5e/assets-v1/b7b4aea8-458c-435b-92ac-975ee8b06b3b/westmalle-dubbel.jpg",
+  "version": 1
 }

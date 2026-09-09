@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "a89b0fb3-1a4a-4ef2-a73f-8414461a81bf",
-  "project_id": "3030e587-0e2c-48b8-aabd-374eb7f88cb1",
-  "url": "/__l5e/assets-v1/a89b0fb3-1a4a-4ef2-a73f-8414461a81bf/rochefort-10.webp",
-  "r2_key": "a/v1/3030e587-0e2c-48b8-aabd-374eb7f88cb1/a89b0fb3-1a4a-4ef2-a73f-8414461a81bf/rochefort-10.webp",
-  "original_filename": "rochefort-10.webp",
-  "size": 52420,
   "content_type": "image/webp",
-  "created_at": "2026-09-09T00:30:17Z"
+  "created_at": "2026-09-09T00:30:17Z",
+  "original_filename": "rochefort-10.webp",
+  "project_id": "f0296c42-0757-4fc5-95ce-14dedc0c3174",
+  "r2_key": "a/v1/f0296c42-0757-4fc5-95ce-14dedc0c3174/a89b0fb3-1a4a-4ef2-a73f-8414461a81bf/rochefort-10.webp",
+  "size": 52420,
+  "url": "/__l5e/assets-v1/a89b0fb3-1a4a-4ef2-a73f-8414461a81bf/rochefort-10.webp",
+  "version": 1
 }
