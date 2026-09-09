@@ -1,3 +1,13 @@
+import goudenCarolusWhiskyPhoto from "../../assets/bier/gouden-carolus-whisky-infused.avif.asset.json";
+import keesBarleyWinePhoto from "../../assets/bier/kees-barley-wine.webp.asset.json";
+import rochefort10Photo from "../../assets/bier/rochefort-10.webp.asset.json";
+import stBernardusPhoto from "../../assets/bier/st-bernardus-abt-12.jpg.asset.json";
+import goudenCarolusTripelPhoto from "../../assets/bier/gouden-carolus-tripel.jpg.asset.json";
+import laTrappeTripelOfficieelPhoto from "../../assets/bier/la-trappe-tripel-officieel.jpg.asset.json";
+import zeezuiperPhoto from "../../assets/bier/zeezuiper.jpg.asset.json";
+import tripelKarmelietPhoto from "../../assets/bier/tripel-karmeliet.jpg.asset.json";
+import duvelPhoto from "../../assets/bier/duvel.png.asset.json";
+import laChouffePhoto from "../../assets/bier/la-chouffe.png.asset.json";
 import corsendonkPaterNosterPhoto from "../../assets/bier/corsendonk-pater-noster.jpg.asset.json";
 import westmalleDubbelPhoto from "../../assets/bier/westmalle-dubbel.jpg.asset.json";
 import laTrappeDubbelOfficieelPhoto from "../../assets/bier/la-trappe-dubbel-officieel.jpg.asset.json";
@@ -7,7 +17,6 @@ import gladjanusPhoto from "../../assets/bier/gladjanus.webp.asset.json";
 import keesHazySunrisePhoto from "../../assets/bier/kees-hazy-sunrise.png.asset.json";
 import twoChefsBonChefPhoto from "../../assets/bier/two-chefs-bon-chef.png.asset.json";
 import vandestreekHopArtPhoto from "../../assets/bier/vandestreek-hop-art.png.asset.json";
-import latrappetripelPhoto from "../../assets/bier/la-trappe-tripel.jpg.asset.json";
 import kasteelrougePhoto from "../../assets/bier/kasteel-rouge.png.asset.json";
 import boonkriekboonPhoto from "../../assets/bier/boon-kriek.png.asset.json";
 import liefmansfruitessePhoto from "../../assets/bier/liefmans-fruitesse.png.asset.json";
@@ -121,7 +130,7 @@ export const beers: Beer[] = [
   {
     category: "Tripel",
     name: "La Trappe — Tripel",
-    photo: latrappetripelPhoto.url,
+    photo: laTrappeTripelOfficieelPhoto.url,
     description: "Goudblonde trappist met banaan, kruidnagel en een stevige, warme afdronk.",
     abv: "8%",
     note: "De enige Nederlandse trappistenbrouwerij.",
@@ -129,6 +138,7 @@ export const beers: Beer[] = [
   {
     category: "Tripel",
     name: "Tripel Karmeliet",
+    photo: tripelKarmelietPhoto.url,
     description: "Zijdezacht tripel van gerst, tarwe en haver, met vanille en citrus.",
     abv: "8,4%",
     note: "Naar een driegranenrecept uit 1679.",
@@ -136,6 +146,7 @@ export const beers: Beer[] = [
   {
     category: "Tripel",
     name: "Gouden Carolus — Tripel",
+    photo: goudenCarolusTripelPhoto.url,
     description: "Vol en kruidig tripel met honing, koriander en een lange, droge afdronk.",
     abv: "9%",
     note: "Uit Mechelen, van brouwerij Het Anker.",
@@ -143,6 +154,7 @@ export const beers: Beer[] = [
   {
     category: "Tripel",
     name: "Scheldebrouwerij — Zeezuiper",
+    photo: zeezuiperPhoto.url,
     description: "Fris tripel met citrus en kruiden, verrassend licht op de tong.",
     abv: "8%",
     note: "Vernoemd naar de zeilende zeezuipers van weleer.",
@@ -152,6 +164,7 @@ export const beers: Beer[] = [
   {
     category: "Quad / Barley Wine",
     name: "Trappistes Rochefort 10",
+    photo: rochefort10Photo.url,
     description: "Zwaar en donker met port, pruim, chocolade en een fluweelzachte afdronk.",
     abv: "11,3%",
     note: "Wereldwijd geroemd — rustig drinken loont.",
@@ -159,6 +172,7 @@ export const beers: Beer[] = [
   {
     category: "Quad / Barley Wine",
     name: "Kees — Barley Wine",
+    photo: keesBarleyWinePhoto.url,
     description: "Krachtige barley wine met karamel, toffee en gedroogd fruit.",
     abv: "11,5%",
     note: "Gebrouwen in Middelburg door Kees Bubberman.",
@@ -166,6 +180,7 @@ export const beers: Beer[] = [
   {
     category: "Quad / Barley Wine",
     name: "Gouden Carolus — Whisky Infused",
+    photo: goudenCarolusWhiskyPhoto.url,
     description: "Quadrupel gerijpt op whiskyvaten, met vanille, eiken en warme mout.",
     abv: "11,7%",
     note: "Rijpt op vaten van de eigen Gouden Carolus-whisky.",
@@ -173,6 +188,7 @@ export const beers: Beer[] = [
   {
     category: "Quad / Barley Wine",
     name: "St. Bernardus — Abt 12",
+    photo: stBernardusPhoto.url,
     description: "Volle quadrupel met donker fruit, karamel en een romige, lange afdronk.",
     abv: "10%",
     note: "Uit Watou, al generaties een vaste waarde.",
@@ -224,6 +240,7 @@ export const beers: Beer[] = [
   {
     category: "Zwaar Blond",
     name: "Duvel",
+    photo: duvelPhoto.url,
     description: "Krachtig blond met een verfijnde bitterheid en fijne, fruitige aroma's.",
     abv: "8,5%",
     ibu: "33",
@@ -232,6 +249,7 @@ export const beers: Beer[] = [
   {
     category: "Zwaar Blond",
     name: "La Chouffe Blond",
+    photo: laChouffePhoto.url,
     description: "Blond bier met een fruitig aroma, kruiden en een lichte hopbitterheid.",
     abv: "8%",
     ibu: "20",
