@@ -1,6 +1,6 @@
-import { RotateCcw, Wheat } from "lucide-react";
-import { useState } from "react";
+import { ImageIcon, Wheat } from "lucide-react";
 import type { Beer } from "../lib/menu/beers";
+import { SHOW_PRODUCT_PHOTOS } from "../lib/menu/display";
 
 type Props = {
   beer: Beer;
@@ -14,71 +14,88 @@ type Props = {
  * korte omschrijving en een weetje met korenaar-icoon.
  */
 export function BeerCard({ beer, compact = false }: Props) {
-  const [flipped, setFlipped] = useState(false);
   const specs = [beer.abv ? `${beer.abv} ABV` : null, beer.ibu ? `${beer.ibu} IBU` : null]
     .filter(Boolean)
     .join(" — ");
 
   if (compact) {
     return (
-      <button
-        type="button"
-        aria-expanded={flipped}
-        onClick={() => setFlipped((value) => !value)}
-        className="beer-label-card group w-full p-5 text-left"
-      >
-        <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-4">
-          <div className="min-w-0">
-            <h3 className="font-display-condensed text-lg leading-tight text-paper">{beer.name}</h3>
-            <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-brass">{specs || beer.category}</p>
-          </div>
-          <RotateCcw size={16} className={`shrink-0 text-brass transition-transform ${flipped ? "rotate-180" : ""}`} aria-hidden />
+      <article className="flex items-center gap-4 rounded-sm bg-oak-light/70 px-4 py-3 ring-1 ring-border transition-colors hover:ring-brass/40">
+        <PhotoSlot beer={beer} className="h-14 w-9 shrink-0" iconSize={14} minimal />
+        <div className="min-w-0">
+          <h3 className="font-display-condensed text-base leading-tight text-paper">{beer.name}</h3>
+          <p className="text-[12px] leading-snug text-paper/70">
+            <span className="text-brass">{specs || "—"}</span>
+            {beer.description ? <span> · {beer.description}</span> : null}
+          </p>
         </div>
-        {flipped ? (
-          <div className="mt-4 border-t border-brass/20 pt-4 text-sm leading-relaxed text-paper/80">
-            {beer.description ? <p>{beer.description}</p> : null}
-            {beer.note ? <p className="mt-2 italic text-brass/85">{beer.note}</p> : null}
-          </div>
-        ) : null}
-      </button>
+      </article>
     );
   }
 
   return (
-    <button
-      type="button"
-      aria-expanded={flipped}
-      aria-label={`${beer.name}: ${flipped ? "toon voorkant" : "toon bierinformatie"}`}
-      onClick={() => setFlipped((value) => !value)}
-      className="beer-cap-scene group mx-auto block w-full max-w-[19rem] text-left"
+    <article className="group flex gap-5 rounded-sm bg-oak-light/70 p-5 ring-1 ring-border transition-all hover:bg-oak-light hover:ring-brass/45">
+      <PhotoSlot beer={beer} className="h-40 w-28 shrink-0 sm:h-44 sm:w-32" iconSize={18} />
+      <div className="flex min-w-0 flex-col">
+        <h3 className="font-display-condensed text-xl leading-[1.05] text-paper sm:text-2xl">
+          {beer.name}
+        </h3>
+        {specs || beer.volume ? (
+          <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-brass">
+            {[specs, beer.volume].filter(Boolean).join(" · ")}
+          </p>
+        ) : null}
+        {beer.description ? (
+          <p className="mt-2 text-sm leading-relaxed text-paper/75">{beer.description}</p>
+        ) : null}
+        {beer.note ? (
+          <p className="mt-auto flex items-start gap-2 pt-3 text-[12px] italic leading-snug text-brass/85">
+            <Wheat size={14} strokeWidth={1.5} className="mt-[2px] shrink-0 opacity-80" aria-hidden />
+            <span>{beer.note}</span>
+          </p>
+        ) : null}
+      </div>
+    </article>
+  );
+}
+
+function PhotoSlot({
+  beer,
+  className = "",
+  iconSize = 18,
+  minimal = false,
+}: {
+  beer: Beer;
+  className?: string;
+  iconSize?: number;
+  minimal?: boolean;
+}) {
+  if (!SHOW_PRODUCT_PHOTOS) return null;
+  if (beer.photo) {
+    return (
+      <img
+        src={beer.photo}
+        alt={beer.name}
+        loading="lazy"
+        decoding="async"
+        className={`rounded-sm object-contain object-center transition-transform duration-700 group-hover:scale-[1.04] ${className}`}
+      />
+    );
+  }
+  return (
+    <div
+      role="img"
+      aria-label={`Foto van ${beer.name} — nog toe te voegen`}
+      data-photo-placeholder="true"
+      data-product-name={beer.name}
+      className={`flex flex-col items-center justify-center gap-1 rounded-sm bg-oak/70 ring-1 ring-border ${className}`}
     >
-      <span className={`beer-cap ${flipped ? "is-flipped" : ""}`}>
-        <span className="beer-cap-face beer-cap-front">
-          <span className="beer-cap-ridges" aria-hidden />
-          <span className="beer-cap-kicker">{beer.category}</span>
-          {beer.photo ? (
-            <img src={beer.photo} alt="" loading="lazy" decoding="async" className="beer-cap-image" />
-          ) : (
-            <span className="beer-cap-mark" aria-hidden>{beer.name.charAt(0)}</span>
-          )}
-          <span className="beer-cap-title">{beer.name}</span>
-          <span className="beer-cap-spec">{[specs, beer.volume].filter(Boolean).join(" · ") || "Draai de dop"}</span>
-          <span className="beer-cap-hint">Klik om te draaien ↻</span>
+      <ImageIcon size={iconSize} strokeWidth={1.25} className="text-brass/55" aria-hidden />
+      {!minimal ? (
+        <span className="px-1 text-center text-[9px] uppercase tracking-[0.2em] text-paper/45">
+          Foto volgt
         </span>
-        <span className="beer-cap-face beer-cap-back">
-          <span className="beer-cap-ridges" aria-hidden />
-          <span className="beer-cap-kicker">{[specs, beer.volume].filter(Boolean).join(" · ") || beer.category}</span>
-          <span className="beer-cap-title beer-cap-title-back">{beer.name}</span>
-          {beer.description ? <span className="beer-cap-description">{beer.description}</span> : null}
-          {beer.note ? (
-            <span className="beer-cap-note">
-              <Wheat size={13} strokeWidth={1.5} aria-hidden />
-              <span>{beer.note}</span>
-            </span>
-          ) : null}
-          {beer.price ? <span className="beer-cap-price">{beer.price}</span> : null}
-        </span>
-      </span>
-    </button>
+      ) : null}
+    </div>
   );
 }

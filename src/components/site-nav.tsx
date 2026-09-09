@@ -26,20 +26,20 @@ export function SiteNav() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
-        scrolled ? "bg-oak/95 backdrop-blur-md border-b border-wine/60 shadow-vintage" : "bg-oak/75 backdrop-blur-sm"
+        scrolled ? "bg-oak/95 backdrop-blur-md border-b border-border" : "bg-oak/40 backdrop-blur-sm"
       }`}
     >
-      <div className="mx-auto grid h-16 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 sm:px-6 lg:flex lg:justify-between">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
         <Link to="/" className="flex min-w-0 shrink items-baseline gap-1.5 truncate">
-          <span className="font-script text-[1.7rem] leading-none text-warm-red sm:text-[2rem]">Stads</span>
-          <span className="font-display-condensed text-lg text-paper sm:text-xl">CAFÉ</span>
+          <span className="font-script text-[1.7rem] leading-none text-brass sm:text-[2rem]">Stads</span>
+          <span className="font-display-condensed text-lg tracking-[0.22em] text-paper sm:text-xl">CAFÉ</span>
         </Link>
         <div className="hidden items-center gap-7 text-[12px] font-medium uppercase tracking-[0.18em] text-paper/75 lg:flex">
           {links.slice(1).map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className="relative border-b-2 border-transparent pb-1 transition-colors hover:border-warm-red/70 hover:text-paper"
+              className="border-b-2 border-transparent pb-1 transition-colors hover:border-brass/60 hover:text-brass"
               activeProps={{ className: "text-paper border-brass" }}
             >
               {l.label}
@@ -50,13 +50,13 @@ export function SiteNav() {
           aria-label="Menu"
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
-          className="poster-button-icon inline-flex h-11 w-11 shrink-0 items-center justify-center text-paper lg:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-sm text-paper ring-1 ring-border transition-colors hover:text-brass lg:hidden"
         >
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
       {open && (
-        <div className="vintage-mobile-menu border-t border-wine/50 bg-oak lg:hidden">
+        <div className="border-t border-border bg-oak lg:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 sm:px-6 py-4">
             {links.map((l) => (
               <Link

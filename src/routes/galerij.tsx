@@ -51,10 +51,10 @@ function Galerij() {
       <section className="bg-oak pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
-            {slots.map((s, index) => (
+            {slots.map((s) => (
               <figure
                 key={s.label}
-                className={`paper-label zoom-image group mb-7 break-inside-avoid overflow-hidden ring-1 ring-border ${index % 3 === 1 ? "rotate-1" : index % 3 === 2 ? "-rotate-1" : ""}`}
+                className="zoom-image group mb-4 break-inside-avoid overflow-hidden rounded-sm ring-1 ring-border"
               >
                 <img
                   src={s.src}

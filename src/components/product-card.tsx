@@ -40,7 +40,7 @@ export function ProductCard({ product, aspect = "4 / 3", tone = "dark" }: Props)
 
   return (
     <article
-      className={`paper-label group flex flex-col overflow-hidden ring-1 transition-all hover:-rotate-[0.35deg] hover:ring-wine/60 ${surface}`}
+      className={`group flex flex-col overflow-hidden rounded-sm ring-1 transition-all hover:ring-wine/60 ${surface}`}
     >
       {SHOW_PRODUCT_PHOTOS ? (
         <div
