@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PhotoPlaceholder } from "../components/photo-placeholder";
+import sfeerBierglasTerras from "../assets/sfeer/bierglas-terras.jpg.asset.json";
 
 export const Route = createFileRoute("/over-ons")({
   head: () => ({
