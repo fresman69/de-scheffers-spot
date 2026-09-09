@@ -18,7 +18,7 @@ export function SiteFooter() {
               3311 PX Dordrecht
             </p>
           </div>
-          <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-16">
+          <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 lg:gap-16">
             <div>
               <h2 className="mb-6 font-script text-2xl leading-none text-brass">Bezoek</h2>
               <ul className="space-y-3 text-sm text-muted-foreground">
@@ -34,12 +34,6 @@ export function SiteFooter() {
                 <li><a href="tel:+31786134242" className="hover:text-brass">078 613 4242</a></li>
                 <li><a href="mailto:info@rijke-zn.nl" className="hover:text-brass">info@rijke-zn.nl</a></li>
                 <li><Link to="/contact" className="hover:text-brass">Route &amp; kaart</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 font-script text-2xl leading-none text-brass">Contact</h2>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                <li><a href="tel:+31786134242" className="hover:text-brass">Bel ons</a></li>
               </ul>
             </div>
             <div>
