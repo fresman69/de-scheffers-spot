@@ -9,6 +9,9 @@ import desperadosPhoto from "../../assets/bier/desperados.jpg.asset.json";
 import latrappeisidorPhoto from "../../assets/bier/la-trappe-isid-or.jpg.asset.json";
 import frontaaljuicepunchPhoto from "../../assets/bier/frontaal-juice-punch.jpg.asset.json";
 import magnerspintPhoto from "../../assets/bier/magners-pint.jpg.asset.json";
+import affligemBlondPhoto from "../../assets/bier/affligem-blond-fles-en-glas.png.asset.json";
+import strandgaperPhoto from "../../assets/bier/strandgaper.jpg.asset.json";
+import toewijdingPhoto from "../../assets/bier/van-moll-toewijding.jpg.asset.json";
 import type { Product } from "../../components/product-card";
 
 export type Beer = Product & {
@@ -51,6 +54,7 @@ export const beers: Beer[] = [
   {
     category: "Blond",
     name: "Affligem — Blond",
+    photo: affligemBlondPhoto.url,
     description: "Klassiek Belgisch abdijblond met tonen van honing, kruidnagel en mout.",
     abv: "6,8%",
     note: "Naar een recept uit de abdij van Affligem.",
@@ -58,6 +62,7 @@ export const beers: Beer[] = [
   {
     category: "Blond",
     name: "Van Moll — Toewijding",
+    photo: toewijdingPhoto.url,
     description: "Licht en toegankelijk blond met een fijne hopbitterheid en droge afdronk.",
     abv: "5,5%",
     note: "Gebrouwen in Eindhoven door Van Moll.",
@@ -65,6 +70,7 @@ export const beers: Beer[] = [
   {
     category: "Blond",
     name: "Scheldebrouwerij — Strandgaper",
+    photo: strandgaperPhoto.url,
     description: "Fruitig blond met citrus, kruiden en een zachte, ronde afdronk.",
     abv: "6,2%",
     note: "Uit Meer, pal aan de Belgisch-Nederlandse grens.",
