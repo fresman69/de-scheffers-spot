@@ -281,9 +281,9 @@ function Home() {
                   alt="Interieur van Stadscafé bij kaarslicht met houten tafels en emaillen borden"
                 />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-oak/90 via-oak/20 to-transparent p-6">
-                  <span className="font-script type-eyebrow text-brass">Van de tap</span>
+                  <span className="font-script type-eyebrow text-brass">Aan tafel</span>
                   <p className="mt-1 text-[11px] uppercase tracking-[0.3em] text-paper/80">
-                    Gouwe Ary · vers ingeschonken
+                    Kaarslicht · donker hout
                   </p>
                 </div>
               </div>
