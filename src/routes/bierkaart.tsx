@@ -68,7 +68,7 @@ function Bierkaart() {
             om een tip.
           </p>
           <p className="mt-4 text-sm text-paper/60">
-            Prijzen vind je op de kaart in het café. Productfoto's voegen we stap voor stap toe.
+            Prijzen vind je op de kaart in het café.
           </p>
         </div>
       </section>
