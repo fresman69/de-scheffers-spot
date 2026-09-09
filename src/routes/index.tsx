@@ -229,13 +229,28 @@ function Home() {
             {taps.map((c, i) => (
               <Reveal key={c.name} delay={i * 120}>
                 <article className="card-cozy hover-lift group flex h-full flex-col overflow-hidden bg-oak-light ring-1 ring-border">
-                  <div className="zoom-image relative aspect-[4/5] w-full overflow-hidden bg-oak/60">
-                    <SfeerImg
-                      src={
-                        [sfeerBierglasTerras.url, sfeerBierglas.url, sfeerGevelDag.url][i % 3]
-                      }
-                      alt={`Sfeerbeeld bij ${c.name} in Stadscafé Rijke & Zn`}
-                    />
+                  <div
+                    className={`zoom-image relative w-full overflow-hidden bg-oak/60 ${
+                      c.foto ? "aspect-[4/5]" : "py-10"
+                    }`}
+                  >
+                    {c.foto ? (
+                      <SfeerImg
+                        src={c.foto}
+                        alt={`Sfeerbeeld bij ${c.name} in Stadscafé Rijke & Zn`}
+                      />
+                    ) : (
+                      <div
+                        aria-hidden
+                        className="flex h-full w-full items-center justify-center"
+                        style={{
+                          backgroundImage:
+                            "radial-gradient(ellipse at 50% 40%, var(--brass) 0%, transparent 70%)",
+                        }}
+                      >
+                        <Beer size={40} strokeWidth={1.2} className="text-brass/80" />
+                      </div>
+                    )}
                     <span className="absolute left-4 top-4 rounded-sm bg-brass px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-oak">
                       {c.tag}
                     </span>
