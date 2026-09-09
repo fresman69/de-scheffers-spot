@@ -7,8 +7,6 @@ import gladjanusPhoto from "../../assets/bier/gladjanus.webp.asset.json";
 import keesHazySunrisePhoto from "../../assets/bier/kees-hazy-sunrise.png.asset.json";
 import twoChefsBonChefPhoto from "../../assets/bier/two-chefs-bon-chef.png.asset.json";
 import vandestreekHopArtPhoto from "../../assets/bier/vandestreek-hop-art.png.asset.json";
-import corsendonkpaterdubbelPhoto from "../../assets/bier/corsendonk-pater-dubbel.jpg.asset.json";
-import latrappedubbelPhoto from "../../assets/bier/la-trappe-dubbel.jpg.asset.json";
 import latrappetripelPhoto from "../../assets/bier/la-trappe-tripel.jpg.asset.json";
 import kasteelrougePhoto from "../../assets/bier/kasteel-rouge.png.asset.json";
 import boonkriekboonPhoto from "../../assets/bier/boon-kriek.png.asset.json";
