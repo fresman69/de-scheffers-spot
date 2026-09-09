@@ -48,11 +48,12 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const taps = [
+const taps: { name: string; note: string; tag: string; foto?: string }[] = [
   {
     name: "Gouwe Ary",
     note: "Ons huisbier — blonde tap die er altijd is.",
     tag: "Vast op de tap",
+    foto: sfeerBierglasTerras.url,
   },
   {
     name: "Heineken Pilsener",
@@ -63,6 +64,7 @@ const taps = [
     name: "6 wisselende tapkranen",
     note: "Van blond tot stout, iets nieuws of iets vertrouwds. Vraag onze bediening wat er staat.",
     tag: "Wisselend",
+    foto: sfeerGevelDag.url,
   },
 ];
 
