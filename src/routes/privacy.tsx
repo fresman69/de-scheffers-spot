@@ -98,10 +98,10 @@ function Privacy() {
         </p>
       </LegalSection>
 
-      <LegalSection title="Externe links en sociale media">
+      <LegalSection title="Externe links">
         <p>
-          Onze site bevat links naar externe pagina's, waaronder ons Instagram-profiel. Dat is een
-          gewone link; we tonen geen ingesloten feed. Klik je door, dan geldt het privacybeleid van
+          Onze site kan links naar externe pagina's bevatten. Dat zijn gewone links; we tonen geen
+          ingesloten feeds of sociale-mediakanalen. Klik je door, dan geldt het privacybeleid van
           die andere partij. Wij hebben geen invloed op wat zij met je gegevens doen.
         </p>
       </LegalSection>

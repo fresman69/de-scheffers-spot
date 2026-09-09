@@ -1,4 +1,4 @@
-import { ImageIcon } from "lucide-react";
+import { AmbientPanel } from "./ambient";
 
 export type Product = {
   name: string;
@@ -8,22 +8,18 @@ export type Product = {
   /** Prijs wordt bewust weggelaten totdat de eigenaar deze weer wil tonen.
    *  Laat dit veld leeg — layout blijft identiek zodra het later terugkomt. */
   price?: string;
-  /** Absolute of asset-URL van een echte productfoto. Zonder foto → nette placeholder. */
-  photo?: string;
 };
 
 type Props = {
   product: Product;
-  /** Tailwind aspect-ratio voor het foto-vlak. Standaard 4/3 voor luxe, rustige look. */
+  /** Aspect-ratio voor het sfeervlak. Standaard 4/3 voor een rustige look. */
   aspect?: string;
   tone?: "dark" | "light";
 };
 
 /**
  * Uniforme productkaart voor alle menukaarten.
- * Layout: Foto · Naam · Omschrijving · (optioneel Inhoud/ABV) · (optioneel Prijs).
- * Prijzen zijn tijdelijk verborgen; het prijs-slot blijft in de layout zodat
- * ze later één-op-één teruggeplaatst kunnen worden zonder herontwerp.
+ * Het beeldvlak is een abstract, in code gemaakt sfeerpaneel — geen foto's.
  */
 export function ProductCard({ product, aspect = "4 / 3", tone = "dark" }: Props) {
   const isDark = tone === "dark";
@@ -36,40 +32,22 @@ export function ProductCard({ product, aspect = "4 / 3", tone = "dark" }: Props)
 
   const hasMeta = Boolean(product.volume || product.abv);
   const rightMeta = product.abv ?? product.volume ?? "";
+  const seed = product.name.length + 1;
 
   return (
     <article
       className={`group flex flex-col overflow-hidden rounded-sm ring-1 transition-all hover:ring-wine/60 ${surface}`}
     >
       <div
-        className={`relative w-full overflow-hidden border-b ${isDark ? "bg-oak/60 border-oak/80" : "bg-oak/[0.04] border-oak/10"}`}
+        className={`relative w-full overflow-hidden border-b ${isDark ? "border-oak/80" : "border-oak/10"}`}
         style={{ aspectRatio: aspect }}
       >
-        {product.photo ? (
-          <img
-            src={product.photo}
-            alt={product.name}
-            loading="lazy"
-            decoding="async"
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-          />
-        ) : (
-          <div
-            role="img"
-            aria-label={`Foto van ${product.name} — nog toe te voegen`}
-            data-photo-placeholder="true"
-            data-product-name={product.name}
-            className="flex h-full w-full flex-col items-center justify-center gap-2 p-4 text-center"
-          >
-            <ImageIcon size={22} strokeWidth={1.25} className="text-brass/60" />
-            <span className={`text-[10px] font-medium uppercase tracking-[0.25em] ${sub}`}>
-              Foto volgt
-            </span>
-            <span className={`max-w-[24ch] text-[10px] leading-relaxed ${sub} opacity-70`}>
-              Eigen productfoto — later te uploaden zonder layoutwijziging.
-            </span>
-          </div>
-        )}
+        <AmbientPanel
+          variant={seed % 3 === 0 ? "copper" : seed % 3 === 1 ? "amber" : "glass"}
+          seed={seed}
+          bubbleCount={7}
+          className="rounded-none"
+        />
       </div>
       <div className="flex flex-1 flex-col p-5">
         {/* Naam + prijs/ABV met stippellijn-leader — direct herkenbaar uit de kaart. */}

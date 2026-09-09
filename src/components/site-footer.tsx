@@ -37,9 +37,8 @@ export function SiteFooter() {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 font-script text-2xl leading-none text-brass">Volg ons</h2>
+              <h2 className="mb-6 font-script text-2xl leading-none text-brass">Contact</h2>
               <ul className="space-y-3 text-sm text-muted-foreground">
-                <li><a href="https://www.instagram.com/stadscafe_rijke/" target="_blank" rel="noopener noreferrer" className="hover:text-brass">Instagram</a></li>
                 <li><a href="tel:+31786134242" className="hover:text-brass">Bel ons</a></li>
               </ul>
             </div>
