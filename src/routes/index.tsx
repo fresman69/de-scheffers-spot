@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Beer, Instagram, MapPin, Star, Users, Heart } from "lucide-react";
+import { Beer, MapPin, Star, Users, Heart } from "lucide-react";
 import { Ornament } from "../components/ornament";
+import { DordrechtQuiz } from "../components/dordrecht-quiz";
 import { Reveal } from "../components/reveal";
 import { MapConsent } from "../components/map-consent";
 import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
@@ -94,10 +95,20 @@ const hours = [
   ["Zaterdag – Zondag", "13:00 — 02:00"],
 ];
 
+// Openbare gastrecensies over Stadscafé Rijke & Zn, letterlijk overgenomen.
 const reviews = [
-  { name: "Sanne V.", text: "Warm, gezellig en een geweldige bierkaart. Voelt echt als een tweede huiskamer.", src: "Google" },
-  { name: "Martijn D.", text: "Fijne kroeg met eerlijke bediening en een terras dat er in de zomer altijd is.", src: "Tripadvisor" },
-  { name: "Eva K.", text: "Klassiek bruin café met een enorm hart voor bier. Kom hier vaak terug.", src: "Google" },
+  {
+    text: "Wat een fijne kroeg! Voelt zoals een kroeg bedoeld is. Altijd vriendelijk personeel.",
+    src: "Google-recensie",
+  },
+  {
+    text: "Mooi assortiment bieren. Ook meerdere opties op tap, die wisselen. Goed advies van vriendelijke barman.",
+    src: "Google-recensie",
+  },
+  {
+    text: "Een zeer gastvrij en fijn café met een uitgebreide bierkaart en hapjes! Fijn personeel en goede muziek.",
+    src: "Google-recensie",
+  },
 ];
 
 function Home() {
