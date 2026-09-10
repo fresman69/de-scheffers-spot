@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { MenuSearch } from "../components/menu-search";
 import { ProductCard } from "../components/product-card";
 import { drinks, type Drink } from "../lib/menu/drinks";
 
