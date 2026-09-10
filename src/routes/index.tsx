@@ -289,17 +289,17 @@ function Home() {
       </section>
 
 
-      {/* Waarom Stadscafé */}
-      <section className="bg-oak-light section-y">
+      {/* Waarom Stadscafé — het rode vlak van de gevel */}
+      <section className="bg-wine section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 text-center">
             <Reveal>
-              <span className="mb-3 block font-script type-eyebrow text-brass">
+              <span className="mb-3 block font-script type-eyebrow text-mustard">
                 Waarom Stadscafé
               </span>
             </Reveal>
             <Reveal delay={100}>
-              <h2 className="mx-auto max-w-[24ch] type-h2 text-paper">
+              <h2 className="mx-auto max-w-[24ch] type-h2 text-cream">
                 Vier redenen om aan te schuiven
               </h2>
             </Reveal>
@@ -307,12 +307,12 @@ function Home() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {reasons.map((r, i) => (
               <Reveal key={r.title} delay={i * 100}>
-                <div className="card-cozy hover-lift h-full bg-oak p-8 ring-1 ring-border transition-colors hover:ring-brass/40">
-                  <r.icon size={28} strokeWidth={1.5} className="mb-6 text-brass" />
-                  <h3 className="mb-3 type-h3 text-paper">
+                <div className="card-cozy hover-lift h-full bg-cream p-8 ring-1 ring-ink/10">
+                  <r.icon size={28} strokeWidth={1.5} className="mb-6 text-wine" />
+                  <h3 className="mb-3 type-h3 text-ink">
                     {r.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-paper/80">{r.text}</p>
+                  <p className="text-sm leading-relaxed text-ink/75">{r.text}</p>
                 </div>
               </Reveal>
             ))}
