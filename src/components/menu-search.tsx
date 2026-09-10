@@ -1,15 +1,21 @@
 import { Link } from "@tanstack/react-router";
-import { Search, X } from "lucide-react";
+import { Beer, Search, UtensilsCrossed, Wine, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { BeerCard } from "./beer-card";
 import { ProductCard } from "./product-card";
 import {
-  kindIcon,
   searchMenu,
   suggest,
+  type MenuKind,
   type MenuMatch,
   type Suggestion,
 } from "../lib/menu/search";
+
+const kindIcon: Record<MenuKind, typeof Beer> = {
+  bier: Beer,
+  drank: Wine,
+  hap: UtensilsCrossed,
+};
 
 const QUICK = ["Bier", "Tripel", "IPA", "Wijn", "Koffie", "Borrel"];
 const RECENT_KEY = "stadscafe-recent-zoek";
@@ -29,6 +35,7 @@ export function MenuSearch({ onSearchingChange }: Props) {
   const [cursor, setCursor] = useState(-1);
   const [recent, setRecent] = useState<string[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
+  const justChose = useRef(false);
   const wrapRef = useRef<HTMLDivElement>(null);
 
   const trimmed = query.trim();
@@ -71,7 +78,9 @@ export function MenuSearch({ onSearchingChange }: Props) {
     remember(term);
     setOpen(false);
     setCursor(-1);
+    justChose.current = true;
     inputRef.current?.focus();
+    justChose.current = false;
   }
 
   function onKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
@@ -134,7 +143,9 @@ export function MenuSearch({ onSearchingChange }: Props) {
               setOpen(true);
               setCursor(-1);
             }}
-            onFocus={() => setOpen(true)}
+            onFocus={() => {
+              if (!justChose.current) setOpen(true);
+            }}
             onKeyDown={onKeyDown}
             className="min-h-11 w-full bg-transparent text-base text-paper placeholder:text-paper/45 focus:outline-none [&::-webkit-search-cancel-button]:hidden"
           />
@@ -174,7 +185,12 @@ export function MenuSearch({ onSearchingChange }: Props) {
                     cursor === i ? "bg-wine/25 text-paper" : "text-paper/85 hover:bg-wine/15"
                   }`}
                 >
-                  <span aria-hidden>{kindIcon[s.kind]}</span>
+                  {(() => {
+                    const Icon = kindIcon[s.kind];
+                    return (
+                      <Icon size={15} strokeWidth={1.5} className="shrink-0 text-brass" aria-hidden />
+                    );
+                  })()}
                   <span className="font-display-condensed text-base tracking-wide">{s.label}</span>
                   <span className="ml-auto text-[11px] uppercase tracking-[0.2em] text-brass/80">
                     {s.type === "category" ? "Categorie" : s.category}
