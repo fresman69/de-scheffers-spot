@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useState } from "react";
 import { BeerCard } from "../components/beer-card";
+import { BeerFlipCard } from "../components/beer-flip-card";
 import { MenuSearch } from "../components/menu-search";
 import { Ornament } from "../components/ornament";
 import { Reveal } from "../components/reveal";
@@ -122,15 +123,23 @@ function Bierkaart() {
                   <span className="type-label text-mustard">{items.length}</span>
                   <span aria-hidden className="h-px flex-1 bg-wine/60" />
                 </div>
-                <div
-                  className={`grid gap-4 ${compact ? "sm:grid-cols-2" : "md:grid-cols-2 xl:grid-cols-3"}`}
-                >
-                  {items.map((b, i) => (
-                    <Reveal key={`${b.category}-${b.name}`} delay={Math.min(i, 6) * 60} as="div">
-                      <BeerCard beer={b} compact={compact} />
-                    </Reveal>
-                  ))}
-                </div>
+                {compact ? (
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {items.map((b, i) => (
+                      <Reveal key={`${b.category}-${b.name}`} delay={Math.min(i, 6) * 60} as="div">
+                        <BeerCard beer={b} compact />
+                      </Reveal>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+                    {items.map((b, i) => (
+                      <Reveal key={`${b.category}-${b.name}`} delay={Math.min(i, 6) * 60} as="div">
+                        <BeerFlipCard beer={b} />
+                      </Reveal>
+                    ))}
+                  </div>
+                )}
               </div>
             );
           })}
