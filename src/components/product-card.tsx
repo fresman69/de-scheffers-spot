@@ -28,12 +28,12 @@ type Props = {
  */
 export function ProductCard({ product, aspect = "4 / 3", tone = "dark" }: Props) {
   const isDark = tone === "dark";
-  const surface = isDark ? "bg-oak-light ring-border" : "bg-paper ring-oak/10";
-  const title = isDark ? "text-paper" : "text-oak";
-  const sub = isDark ? "text-paper/60" : "text-oak/60";
-  const meta = isDark ? "text-paper/85" : "text-oak/80";
+  const surface = isDark ? "bg-oak-light ring-border" : "bg-white/60 ring-ink/10";
+  const title = isDark ? "text-paper" : "text-ink";
+  const sub = isDark ? "text-paper/60" : "text-ink/60";
+  const meta = isDark ? "text-paper/85" : "text-ink/75";
   const priceCol = isDark ? "text-brass" : "text-wine";
-  const leaderCol = isDark ? "text-paper/25" : "text-oak/30";
+  const leaderCol = isDark ? "text-paper/25" : "text-ink/25";
 
   const hasMeta = Boolean(product.volume || product.abv);
   const rightMeta = product.abv ?? product.volume ?? "";
