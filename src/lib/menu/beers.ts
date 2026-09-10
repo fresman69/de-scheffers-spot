@@ -36,6 +36,14 @@ export type Beer = Product & {
   ibu?: string;
   /** Klein weetje onderaan de kaart — verhaal, herkomst of serveertip. */
   note?: string;
+  /** Brouwerij, alleen invullen als die zeker bekend is. */
+  brewery?: string;
+  /** Bierstijl, bijvoorbeeld "Tripel" of "Oude geuze". */
+  style?: string;
+  /** Geadviseerde serveertemperatuur. */
+  serveTemp?: string;
+  /** Suggestie om bij te eten. */
+  pairing?: string;
 };
 
 /**
