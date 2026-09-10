@@ -367,6 +367,56 @@ function Home() {
         </div>
       </section>
 
+      {/* Kunst aan de wand */}
+      <section className="warm-grain relative bg-oak-light/60 section-y">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+          <SectionHeader
+            eyebrow="Aan de wand"
+            title="Kunst hoort hier gewoon bij"
+            intro="Schilderijen over bier, cafés en kroegleven hangen bij ons tussen de taps en de tafels. Geen museum — gewoon werk dat bij de plek past."
+            action={<TextLink to="/galerij">Bekijk alle kunst →</TextLink>}
+          />
+          <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { caption: "Schilderij boven de bar", ratio: "3 / 4" as const },
+              { caption: "Werk bij de tafels aan het raam", ratio: "4 / 3" as const },
+              { caption: "Kroegtafereel naast de taps", ratio: "3 / 4" as const },
+            ].map((a, i) => (
+              <Reveal key={a.caption} delay={i * 110}>
+                <ArtworkFrame artwork={a} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Eten & borrel */}
+      <section className="bg-cream section-y text-ink">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <SectionHeader
+            tone="light"
+            eyebrow="Happas"
+            title="Iets lekkers bij je glas"
+            intro="Eerlijk borrelwerk om te delen — geen fine dining, wel precies wat je bij een goed bier wilt."
+            action={<TextLink to="/borrelkaart">Naar de borrelkaart →</TextLink>}
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {hapas.slice(0, 6).map((h, i) => (
+              <Reveal key={h.name} delay={Math.min(i, 5) * 80}>
+                <article className="card-cozy h-full bg-white/60 p-5 ring-1 ring-ink/10">
+                  <h3 className="font-display-condensed text-lg leading-tight tracking-wider text-ink">
+                    {h.name}
+                  </h3>
+                  {h.description ? (
+                    <p className="mt-2 text-sm italic text-ink/70">{h.description}</p>
+                  ) : null}
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Reviews — donkerrood vlak, het dubbel/quad-gevoel */}
       <section className="bg-bordeaux section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
