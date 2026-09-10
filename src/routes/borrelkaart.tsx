@@ -44,7 +44,11 @@ function Borrelkaart() {
         </div>
       </section>
 
-      <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
+      <section className="bg-oak pb-4">
+        <MenuSearch onSearchingChange={onSearchingChange} />
+      </section>
+
+      <section hidden={searching} className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="mb-8 type-h3 text-paper">Onze happas</h2>
         </div>
