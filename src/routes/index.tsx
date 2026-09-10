@@ -361,17 +361,17 @@ function Home() {
         </div>
       </section>
 
-      {/* Reviews */}
-      <section className="bg-oak-light section-y">
+      {/* Reviews — donkerrood vlak, het dubbel/quad-gevoel */}
+      <section className="bg-bordeaux section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-14 text-center">
             <Reveal>
-              <span className="mb-3 block font-script type-eyebrow text-brass">
+              <span className="mb-3 block font-script type-eyebrow text-mustard">
                 Wat gasten zeggen
               </span>
             </Reveal>
             <Reveal delay={100}>
-              <h2 className="mx-auto max-w-[24ch] type-h2 text-paper">
+              <h2 className="mx-auto max-w-[24ch] type-h2 text-cream">
                 Vaste gasten &amp; nieuwe gezichten
               </h2>
             </Reveal>
@@ -379,16 +379,16 @@ function Home() {
           <div className="grid gap-8 md:grid-cols-3">
             {reviews.map((r, i) => (
               <Reveal key={r.text} delay={i * 120}>
-                <figure className="card-cozy hover-lift h-full bg-oak p-8 ring-1 ring-border">
-                  <div className="mb-4 flex gap-1 text-brass">
+                <figure className="card-cozy hover-lift h-full bg-bordeaux-dim p-8 ring-1 ring-cream/15">
+                  <div className="mb-4 flex gap-1 text-mustard">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
                     ))}
                   </div>
-                  <blockquote className="font-display text-xl leading-snug text-paper">
+                  <blockquote className="text-lg italic leading-snug text-cream">
                     &ldquo;{r.text}&rdquo;
                   </blockquote>
-                  <figcaption className="mt-6 text-[11px] uppercase tracking-widest text-paper/70">
+                  <figcaption className="mt-6 type-label text-cream/70">
                     {r.src}
                   </figcaption>
                 </figure>
