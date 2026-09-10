@@ -54,13 +54,13 @@ function OverOns() {
         </div>
       </section>
 
-      <section aria-label="Onze merkgedachte" className="bg-oak-light py-14 text-center">
+      <section aria-label="Onze merkgedachte" className="bg-wine py-14 text-center">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
-          <p className="type-h2 text-balance text-paper">
+          <p className="type-h2 text-balance text-cream">
             Oude ziel.{" "}
-            <span className="text-brass">Nieuwe verhalen.</span>
+            <span className="text-mustard">Nieuwe verhalen.</span>
           </p>
-          <p className="mx-auto mt-4 max-w-[46ch] type-body text-paper/75">
+          <p className="mx-auto mt-4 max-w-[46ch] type-body text-cream/85">
             Dezelfde kroeg als altijd — met elke avond weer andere gesprekken aan de bar.
           </p>
         </div>
