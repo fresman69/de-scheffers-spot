@@ -104,7 +104,7 @@ function Bierkaart() {
         </div>
       </section>
 
-      <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-14">
+      <section hidden={searching} className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           {shown.map((cat) => {
             const items = filtered.filter((b) => b.category === cat);
