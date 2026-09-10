@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Beer, MapPin, Star, Users, Heart } from "lucide-react";
 import { Ornament } from "../components/ornament";
-import { DordrechtQuiz } from "../components/dordrecht-quiz";
+import { RestaurantPromo } from "../components/restaurant-promo";
 import { Reveal } from "../components/reveal";
 import { MapConsent } from "../components/map-consent";
 import interieurCafe from "../assets/interieur-cafe.jpg.asset.json";
@@ -264,40 +264,26 @@ function Home() {
         </div>
       </section>
 
-      {/* Ken je Dordt? — interactieve quiz over de stad */}
-      <section className="relative overflow-hidden bg-oak-light section-y">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage:
-              "radial-gradient(ellipse at 20% 10%, var(--brass) 0%, transparent 55%), radial-gradient(ellipse at 80% 90%, var(--wine) 0%, transparent 60%)",
-          }}
-        />
+      {/* Zusterzaak — advertentiepost voor wijnbar Ary & Co */}
+      <section className="warm-grain relative overflow-hidden bg-cream section-y text-ink">
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="mb-12 text-center">
+          <div className="mb-10 text-center">
             <Reveal>
-              <span className="mb-3 block font-script type-eyebrow text-brass">
-                Ken je Dordt?
+              <span className="mb-3 block font-script type-eyebrow text-wine">
+                Aan de overkant
               </span>
             </Reveal>
             <Reveal delay={60}>
-              <Ornament tone="brass" className="mb-6" />
+              <Ornament tone="wine" className="mb-6" />
             </Reveal>
             <Reveal delay={100}>
-              <h2 className="mx-auto max-w-[24ch] text-balance type-h2 text-paper">
-                Het kroegspel over de oudste stad van Holland
+              <h2 className="mx-auto max-w-[26ch] text-balance type-h2 text-ink">
+                Blijf je hangen? Er is meer op het plein
               </h2>
             </Reveal>
-            <Reveal delay={160}>
-              <p className="mx-auto mt-5 max-w-[52ch] text-pretty type-body text-paper/85">
-                Vijf vragen over Dordrecht — over stadsrechten, watersnood en de scheve toren.
-                Elk antwoord levert een weetje op dat je aan de bar kunt navertellen.
-              </p>
-            </Reveal>
           </div>
-          <Reveal delay={200}>
-            <DordrechtQuiz />
+          <Reveal delay={160}>
+            <RestaurantPromo />
           </Reveal>
         </div>
       </section>
