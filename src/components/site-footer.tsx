@@ -38,7 +38,8 @@ export function SiteFooter() {
                 <li><Link to="/over-ons" className="hover:text-brass">Over ons</Link></li>
                 <li><Link to="/bierkaart" className="hover:text-brass">Bierkaart</Link></li>
                 <li><Link to="/borrelkaart" className="hover:text-brass">Borrelkaart</Link></li>
-                <li><Link to="/galerij" className="hover:text-brass">Galerij &amp; kunst</Link></li>
+                <li><Link to="/galerij" className="hover:text-brass">Kunst aan de wand</Link></li>
+                <li><Link to="/sfeer" className="hover:text-brass">Sfeer</Link></li>
                 <li><Link to="/evenementen" className="hover:text-brass">Evenementen</Link></li>
               </ul>
             </div>
