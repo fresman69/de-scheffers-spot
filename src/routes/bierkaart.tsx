@@ -57,18 +57,23 @@ function Bierkaart() {
 
   return (
     <>
-      <section className="bg-oak section-y">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <p className="type-label text-brass/80">Stadscafé</p>
+      <section className="relative overflow-hidden bg-oak section-y">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-40 opacity-70"
+          style={{ background: "linear-gradient(180deg, var(--bordeaux) 0%, transparent 100%)" }}
+        />
+        <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
+          <p className="font-script type-eyebrow text-brass">Van vaas tot cuvée</p>
           <h1 className="mt-3 type-h1 text-paper">Bierkaart</h1>
-          <p className="mt-4 font-display-condensed text-sm tracking-[0.3em] text-wine">
+          <p className="mt-4 font-display-condensed text-sm tracking-[0.3em] text-mustard">
             ★ Goed bier, goede sfeer ★
           </p>
           <Ornament className="mt-8" />
           <p className="mx-auto mt-8 max-w-[58ch] text-pretty type-body text-paper/80">
-            Van huisbier Gouwe Ary op de tap tot klassieke trappisten, wilde sours en alcoholvrije
-            verfrissers. Voor elk humeur staat er wel iets goeds klaar. Vraag onze bediening gerust
-            om een tip.
+            Bier is weer helemaal van nu, en daar investeren we in. Van een simpele vaas Heineken
+            tot een Whisky Infused Cuvée: trappisten, IPA's, wilde sours, ciders en alcoholvrije
+            verfrissers. De keuze is reuze — vraag onze bediening gerust om een tip.
           </p>
           <p className="mt-4 text-sm text-paper/60">
             Prijzen vind je op de kaart in het café.
