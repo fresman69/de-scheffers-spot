@@ -137,11 +137,11 @@ function Bierkaart() {
         </div>
 
         <div className="mx-auto mt-16 max-w-7xl px-4 sm:px-6">
-          <div className="rounded-sm bg-paper px-6 py-5 text-center">
-            <p className="font-display-condensed text-lg tracking-[0.16em] text-oak">
+          <div className="card-cozy bg-cream px-6 py-6 text-center">
+            <p className="font-display-condensed text-lg tracking-[0.12em] text-ink">
               Bier met verhaal, samen genieten.
             </p>
-            <p className="mt-1 font-display-condensed text-base tracking-[0.3em] text-wine">Proost!</p>
+            <p className="mt-1 font-script text-3xl leading-none text-wine">Proost!</p>
           </div>
           <p className="mt-4 text-center text-[12px] uppercase tracking-[0.25em] text-paper/50">
             Geniet met mate, maar geniet
