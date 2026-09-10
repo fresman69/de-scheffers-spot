@@ -77,7 +77,8 @@ function Bierkaart() {
             verfrissers. De keuze is reuze — vraag onze bediening gerust om een tip.
           </p>
           <p className="mt-4 text-sm text-paper/60">
-            Prijzen vind je op de kaart in het café.
+            Tik op een bier voor stijl, alcohol, smaak en serveertip. Prijzen vind je op de kaart in
+            het café.
           </p>
         </div>
       </section>
