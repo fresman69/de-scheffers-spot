@@ -117,10 +117,10 @@ function Bierkaart() {
             return (
               <div key={cat} className="mb-14 last:mb-0">
                 <div className="mb-7 flex items-center gap-4">
-                  <span aria-hidden className="h-px flex-1 bg-wine/50" />
-                  <h2 className="type-h3 text-paper">{cat}</h2>
-                  <span className="type-label text-brass/70">{items.length}</span>
-                  <span aria-hidden className="h-px flex-1 bg-wine/50" />
+                  <span aria-hidden className="h-px flex-1 bg-wine/60" />
+                  <h2 className="rounded-sm bg-bordeaux px-4 py-1.5 type-h3 text-cream">{cat}</h2>
+                  <span className="type-label text-mustard">{items.length}</span>
+                  <span aria-hidden className="h-px flex-1 bg-wine/60" />
                 </div>
                 <div
                   className={`grid gap-4 ${compact ? "sm:grid-cols-2" : "md:grid-cols-2 xl:grid-cols-3"}`}
