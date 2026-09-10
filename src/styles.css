@@ -283,10 +283,12 @@
   height: 5.5rem;
   border-radius: 9999px;
   background: radial-gradient(circle at 50% 40%,
-      color-mix(in oklch, var(--brass) 55%, transparent) 0%,
-      color-mix(in oklch, var(--wine) 45%, transparent) 65%,
-      transparent 72%);
-  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--brass) 35%, transparent);
+      color-mix(in oklch, var(--brass) 85%, transparent) 0%,
+      color-mix(in oklch, var(--wine) 80%, transparent) 62%,
+      color-mix(in oklch, var(--bordeaux) 70%, transparent) 74%,
+      transparent 78%);
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--brass) 55%, transparent),
+              0 10px 24px -18px color-mix(in oklch, var(--brass) 60%, transparent);
 }
 
 /* ——— Kunst aan de caféwand ——— */
