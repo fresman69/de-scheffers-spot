@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { BeerCard } from "../components/beer-card";
+import { MenuSearch } from "../components/menu-search";
 import { Ornament } from "../components/ornament";
 import { Reveal } from "../components/reveal";
 import { beers } from "../lib/menu/beers";
@@ -49,6 +50,8 @@ const categories = [
 
 function Bierkaart() {
   const [active, setActive] = useState("Alle");
+  const [searching, setSearching] = useState(false);
+  const onSearchingChange = useCallback((v: boolean) => setSearching(v), []);
   const filtered = active === "Alle" ? beers : beers.filter((b) => b.category === active);
   const shown = categories.filter((c) => c !== "Alle" && filtered.some((b) => b.category === c));
 
@@ -73,7 +76,14 @@ function Bierkaart() {
         </div>
       </section>
 
-      <section className="sticky top-16 z-20 border-y border-border bg-oak/95 backdrop-blur">
+      <section className="bg-oak pb-4">
+        <MenuSearch onSearchingChange={onSearchingChange} />
+      </section>
+
+      <section
+        hidden={searching}
+        className="sticky top-16 z-20 border-y border-border bg-oak/95 backdrop-blur"
+      >
         <div className="mx-auto max-w-7xl overflow-x-auto px-4 py-4 sm:px-6">
           <div className="flex gap-2">
             {categories.map((c) => (
@@ -94,7 +104,7 @@ function Bierkaart() {
         </div>
       </section>
 
-      <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-14">
+      <section hidden={searching} className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           {shown.map((cat) => {
             const items = filtered.filter((b) => b.category === cat);

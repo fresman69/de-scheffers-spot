@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { MenuSearch } from "../components/menu-search";
 import { ProductCard } from "../components/product-card";
 import { drinks, type Drink } from "../lib/menu/drinks";
 
@@ -36,6 +37,8 @@ const categories = [
 
 function Dranken() {
   const [active, setActive] = useState("Alle");
+  const [searching, setSearching] = useState(false);
+  const onSearchingChange = useCallback((v: boolean) => setSearching(v), []);
   const filtered = active === "Alle" ? drinks : drinks.filter((d) => d.category === active);
 
   return (
@@ -56,7 +59,14 @@ function Dranken() {
         </div>
       </section>
 
-      <section className="sticky top-16 z-20 border-y border-border bg-oak/95 backdrop-blur">
+      <section className="bg-oak pb-4">
+        <MenuSearch onSearchingChange={onSearchingChange} />
+      </section>
+
+      <section
+        hidden={searching}
+        className="sticky top-16 z-20 border-y border-border bg-oak/95 backdrop-blur"
+      >
         <div className="mx-auto max-w-7xl overflow-x-auto px-4 sm:px-6 py-4">
           <div className="flex gap-2">
             {categories.map((c) => (
@@ -77,7 +87,7 @@ function Dranken() {
         </div>
       </section>
 
-      <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
+      <section hidden={searching} className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="mb-8 type-h3 text-paper">
             {active === "Alle" ? "Alle dranken" : active}

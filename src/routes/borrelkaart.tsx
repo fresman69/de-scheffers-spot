@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useCallback, useState } from "react";
+import { MenuSearch } from "../components/menu-search";
 import { ProductCard } from "../components/product-card";
 import { hapas } from "../lib/menu/hapas";
 
@@ -21,6 +23,9 @@ export const Route = createFileRoute("/borrelkaart")({
 
 
 function Borrelkaart() {
+  const [searching, setSearching] = useState(false);
+  const onSearchingChange = useCallback((v: boolean) => setSearching(v), []);
+
   return (
     <>
       <section className="bg-oak section-y">
@@ -39,7 +44,11 @@ function Borrelkaart() {
         </div>
       </section>
 
-      <section className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
+      <section className="bg-oak pb-4">
+        <MenuSearch onSearchingChange={onSearchingChange} />
+      </section>
+
+      <section hidden={searching} className="bg-oak pb-[clamp(4rem,7vw,7rem)] pt-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <h2 className="mb-8 type-h3 text-paper">Onze happas</h2>
         </div>
