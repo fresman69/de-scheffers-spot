@@ -1,5 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Beer, MapPin, Star, Users, Heart } from "lucide-react";
+import { Beer, MapPin, Users, Heart } from "lucide-react";
+import { SectionHeader } from "../components/section-header";
+import { TextLink } from "../components/cta-button";
+import { ReviewCard } from "../components/review-card";
+import { HoursCard, LocationCard } from "../components/info-cards";
+import { ArtworkFrame } from "../components/artwork-frame";
+import { hapas } from "../lib/menu/hapas";
 import { Ornament } from "../components/ornament";
 import { RestaurantPromo } from "../components/restaurant-promo";
 import { Reveal } from "../components/reveal";
@@ -379,19 +385,7 @@ function Home() {
           <div className="grid gap-8 md:grid-cols-3">
             {reviews.map((r, i) => (
               <Reveal key={r.text} delay={i * 120}>
-                <figure className="card-cozy hover-lift h-full bg-bordeaux-dim p-8 ring-1 ring-cream/15">
-                  <div className="mb-4 flex gap-1 text-mustard">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
-                    ))}
-                  </div>
-                  <blockquote className="text-lg italic leading-snug text-cream">
-                    &ldquo;{r.text}&rdquo;
-                  </blockquote>
-                  <figcaption className="mt-6 type-label text-cream/70">
-                    {r.src}
-                  </figcaption>
-                </figure>
+                <ReviewCard review={r} />
               </Reveal>
             ))}
           </div>
@@ -414,46 +408,10 @@ function Home() {
       <section className="bg-oak section-y">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal>
-            <div className="card-cozy h-full bg-wine p-8 text-paper ring-1 ring-wine-dim md:p-12">
-              <p className="mb-2 font-script type-eyebrow text-mustard">Wanneer</p>
-              <h2 className="mb-8 type-h2 text-paper">
-                Openingstijden
-              </h2>
-              <div className="space-y-4">
-                {hours.map(([d, t]) => (
-                  <div key={d} className="flex items-end gap-3">
-                    <span className="font-display-condensed text-base tracking-widest">{d}</span>
-                    <span aria-hidden className="mb-[3px] h-[6px] flex-1 leader-dots text-paper/40" />
-                    <span className="font-display-condensed text-base tracking-widest text-mustard">
-                      {t}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-8 text-sm text-paper/85">
-                Loop gerust binnen. We werken niet met reserveringen — er staat een plek voor je klaar
-                als die vrij is.
-              </p>
-            </div>
+            <HoursCard />
           </Reveal>
           <Reveal delay={150}>
-            <div className="h-full">
-              <div className="mb-6 flex items-center gap-3">
-                <MapPin size={18} className="text-brass" />
-                <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-brass">
-                  Vind ons
-                </span>
-              </div>
-              <h2 className="mb-6 type-h2 text-paper">
-                Hartje Dordrecht
-              </h2>
-              <div className="aspect-[16/10] overflow-hidden rounded-sm ring-1 ring-border">
-                <MapConsent />
-              </div>
-              <p className="mt-6 text-sm text-paper/80">
-                Voorstraat 260, 3311 ET Dordrecht — midden in de historische binnenstad.
-              </p>
-            </div>
+            <LocationCard />
           </Reveal>
         </div>
       </section>
