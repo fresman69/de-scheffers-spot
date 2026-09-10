@@ -1,5 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Beer, MapPin, Star, Users, Heart } from "lucide-react";
+import { Beer, MapPin, Users, Heart } from "lucide-react";
+import { SectionHeader } from "../components/section-header";
+import { TextLink } from "../components/cta-button";
+import { ReviewCard } from "../components/review-card";
+import { HoursCard, LocationCard } from "../components/info-cards";
+import { ArtworkFrame } from "../components/artwork-frame";
+import { hapas } from "../lib/menu/hapas";
 import { Ornament } from "../components/ornament";
 import { RestaurantPromo } from "../components/restaurant-promo";
 import { Reveal } from "../components/reveal";
@@ -361,6 +367,56 @@ function Home() {
         </div>
       </section>
 
+      {/* Kunst aan de wand */}
+      <section className="warm-grain relative bg-oak-light/60 section-y">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+          <SectionHeader
+            eyebrow="Aan de wand"
+            title="Kunst hoort hier gewoon bij"
+            intro="Schilderijen over bier, cafés en kroegleven hangen bij ons tussen de taps en de tafels. Geen museum — gewoon werk dat bij de plek past."
+            action={<TextLink to="/galerij">Bekijk alle kunst →</TextLink>}
+          />
+          <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { caption: "Schilderij boven de bar", ratio: "3 / 4" as const },
+              { caption: "Werk bij de tafels aan het raam", ratio: "4 / 3" as const },
+              { caption: "Kroegtafereel naast de taps", ratio: "3 / 4" as const },
+            ].map((a, i) => (
+              <Reveal key={a.caption} delay={i * 110}>
+                <ArtworkFrame artwork={a} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Eten & borrel */}
+      <section className="bg-cream section-y text-ink">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <SectionHeader
+            tone="light"
+            eyebrow="Happas"
+            title="Iets lekkers bij je glas"
+            intro="Eerlijk borrelwerk om te delen — geen fine dining, wel precies wat je bij een goed bier wilt."
+            action={<TextLink to="/borrelkaart">Naar de borrelkaart →</TextLink>}
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {hapas.slice(0, 6).map((h, i) => (
+              <Reveal key={h.name} delay={Math.min(i, 5) * 80}>
+                <article className="card-cozy h-full bg-white/60 p-5 ring-1 ring-ink/10">
+                  <h3 className="font-display-condensed text-lg leading-tight tracking-wider text-ink">
+                    {h.name}
+                  </h3>
+                  {h.description ? (
+                    <p className="mt-2 text-sm italic text-ink/70">{h.description}</p>
+                  ) : null}
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Reviews — donkerrood vlak, het dubbel/quad-gevoel */}
       <section className="bg-bordeaux section-y">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -379,19 +435,7 @@ function Home() {
           <div className="grid gap-8 md:grid-cols-3">
             {reviews.map((r, i) => (
               <Reveal key={r.text} delay={i * 120}>
-                <figure className="card-cozy hover-lift h-full bg-bordeaux-dim p-8 ring-1 ring-cream/15">
-                  <div className="mb-4 flex gap-1 text-mustard">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
-                    ))}
-                  </div>
-                  <blockquote className="text-lg italic leading-snug text-cream">
-                    &ldquo;{r.text}&rdquo;
-                  </blockquote>
-                  <figcaption className="mt-6 type-label text-cream/70">
-                    {r.src}
-                  </figcaption>
-                </figure>
+                <ReviewCard review={r} />
               </Reveal>
             ))}
           </div>
@@ -414,46 +458,10 @@ function Home() {
       <section className="bg-oak section-y">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2">
           <Reveal>
-            <div className="card-cozy h-full bg-wine p-8 text-paper ring-1 ring-wine-dim md:p-12">
-              <p className="mb-2 font-script type-eyebrow text-mustard">Wanneer</p>
-              <h2 className="mb-8 type-h2 text-paper">
-                Openingstijden
-              </h2>
-              <div className="space-y-4">
-                {hours.map(([d, t]) => (
-                  <div key={d} className="flex items-end gap-3">
-                    <span className="font-display-condensed text-base tracking-widest">{d}</span>
-                    <span aria-hidden className="mb-[3px] h-[6px] flex-1 leader-dots text-paper/40" />
-                    <span className="font-display-condensed text-base tracking-widest text-mustard">
-                      {t}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-8 text-sm text-paper/85">
-                Loop gerust binnen. We werken niet met reserveringen — er staat een plek voor je klaar
-                als die vrij is.
-              </p>
-            </div>
+            <HoursCard />
           </Reveal>
           <Reveal delay={150}>
-            <div className="h-full">
-              <div className="mb-6 flex items-center gap-3">
-                <MapPin size={18} className="text-brass" />
-                <span className="text-[11px] font-semibold uppercase tracking-[0.3em] text-brass">
-                  Vind ons
-                </span>
-              </div>
-              <h2 className="mb-6 type-h2 text-paper">
-                Hartje Dordrecht
-              </h2>
-              <div className="aspect-[16/10] overflow-hidden rounded-sm ring-1 ring-border">
-                <MapConsent />
-              </div>
-              <p className="mt-6 text-sm text-paper/80">
-                Voorstraat 260, 3311 ET Dordrecht — midden in de historische binnenstad.
-              </p>
-            </div>
+            <LocationCard />
           </Reveal>
         </div>
       </section>

@@ -8,7 +8,8 @@ const links = [
   { to: "/bierkaart", label: "Bierkaart" },
   { to: "/dranken", label: "Dranken" },
   { to: "/borrelkaart", label: "Borrelkaart" },
-  { to: "/galerij", label: "Galerij" },
+  { to: "/galerij", label: "Galerij & kunst" },
+  { to: "/evenementen", label: "Evenementen" },
   { to: "/contact", label: "Contact" },
 ] as const;
 

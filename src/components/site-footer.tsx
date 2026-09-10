@@ -17,6 +17,19 @@ export function SiteFooter() {
               <br />
               3311 ET Dordrecht
             </p>
+            <dl className="mt-5 max-w-[30ch] space-y-1.5 text-sm text-paper/70">
+              {[
+                ["Ma – do", "15:00 — 02:00"],
+                ["Vrijdag", "14:00 — 02:00"],
+                ["Za – zo", "13:00 — 02:00"],
+              ].map(([d, t]) => (
+                <div key={d} className="flex items-end gap-2">
+                  <dt className="uppercase tracking-widest text-[11px]">{d}</dt>
+                  <span aria-hidden className="mb-[4px] h-[6px] flex-1 leader-dots text-paper/25" />
+                  <dd className="text-[11px] uppercase tracking-widest text-brass">{t}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
           <div className="grid w-full grid-cols-1 gap-8 sm:w-auto sm:grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-16">
             <div>
@@ -25,7 +38,8 @@ export function SiteFooter() {
                 <li><Link to="/over-ons" className="hover:text-brass">Over ons</Link></li>
                 <li><Link to="/bierkaart" className="hover:text-brass">Bierkaart</Link></li>
                 <li><Link to="/borrelkaart" className="hover:text-brass">Borrelkaart</Link></li>
-                <li><Link to="/galerij" className="hover:text-brass">Galerij</Link></li>
+                <li><Link to="/galerij" className="hover:text-brass">Galerij &amp; kunst</Link></li>
+                <li><Link to="/evenementen" className="hover:text-brass">Evenementen</Link></li>
               </ul>
             </div>
             <div>
