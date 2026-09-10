@@ -23,6 +23,9 @@ export const Route = createFileRoute("/borrelkaart")({
 
 
 function Borrelkaart() {
+  const [searching, setSearching] = useState(false);
+  const onSearchingChange = useCallback((v: boolean) => setSearching(v), []);
+
   return (
     <>
       <section className="bg-oak section-y">
