@@ -15,6 +15,7 @@ import { Route as OverOnsRouteImport } from './routes/over-ons'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as GalerijRouteImport } from './routes/galerij'
+import { Route as EvenementenRouteImport } from './routes/evenementen'
 import { Route as DrankenRouteImport } from './routes/dranken'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as CookiesRouteImport } from './routes/cookies'
@@ -57,6 +58,11 @@ const LoginRoute = LoginRouteImport.update({
 const GalerijRoute = GalerijRouteImport.update({
   id: '/galerij',
   path: '/galerij',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvenementenRoute = EvenementenRouteImport.update({
+  id: '/evenementen',
+  path: '/evenementen',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DrankenRoute = DrankenRouteImport.update({
@@ -138,6 +144,7 @@ export interface FileRoutesByFullPath {
   '/cookies': typeof CookiesRoute
   '/disclaimer': typeof DisclaimerRoute
   '/dranken': typeof DrankenRoute
+  '/evenementen': typeof EvenementenRoute
   '/galerij': typeof GalerijRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
@@ -159,6 +166,7 @@ export interface FileRoutesByTo {
   '/cookies': typeof CookiesRoute
   '/disclaimer': typeof DisclaimerRoute
   '/dranken': typeof DrankenRoute
+  '/evenementen': typeof EvenementenRoute
   '/galerij': typeof GalerijRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
@@ -181,6 +189,7 @@ export interface FileRoutesById {
   '/cookies': typeof CookiesRoute
   '/disclaimer': typeof DisclaimerRoute
   '/dranken': typeof DrankenRoute
+  '/evenementen': typeof EvenementenRoute
   '/galerij': typeof GalerijRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
@@ -204,6 +213,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/disclaimer'
     | '/dranken'
+    | '/evenementen'
     | '/galerij'
     | '/login'
     | '/mcp'
@@ -225,6 +235,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/disclaimer'
     | '/dranken'
+    | '/evenementen'
     | '/galerij'
     | '/login'
     | '/mcp'
@@ -246,6 +257,7 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/disclaimer'
     | '/dranken'
+    | '/evenementen'
     | '/galerij'
     | '/login'
     | '/mcp'
@@ -268,6 +280,7 @@ export interface RootRouteChildren {
   CookiesRoute: typeof CookiesRoute
   DisclaimerRoute: typeof DisclaimerRoute
   DrankenRoute: typeof DrankenRoute
+  EvenementenRoute: typeof EvenementenRoute
   GalerijRoute: typeof GalerijRoute
   LoginRoute: typeof LoginRoute
   McpRoute: typeof McpRoute
@@ -322,6 +335,13 @@ declare module '@tanstack/react-router' {
       path: '/galerij'
       fullPath: '/galerij'
       preLoaderRoute: typeof GalerijRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/evenementen': {
+      id: '/evenementen'
+      path: '/evenementen'
+      fullPath: '/evenementen'
+      preLoaderRoute: typeof EvenementenRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dranken': {
@@ -428,6 +448,7 @@ const rootRouteChildren: RootRouteChildren = {
   CookiesRoute: CookiesRoute,
   DisclaimerRoute: DisclaimerRoute,
   DrankenRoute: DrankenRoute,
+  EvenementenRoute: EvenementenRoute,
   GalerijRoute: GalerijRoute,
   LoginRoute: LoginRoute,
   McpRoute: McpRoute,
