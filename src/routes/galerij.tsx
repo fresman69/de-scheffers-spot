@@ -93,15 +93,16 @@ function Galerij() {
         </div>
       </section>
 
-      {/* Sfeerfotografie */}
+      {/* Sfeerfotografie — korte greep, de volledige serie staat op /sfeer */}
       <section className="bg-oak pb-24 pt-4">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionHeader
             eyebrow="Sfeer"
             title="Hout, koper en warm licht"
-            action={<TextLink to="/over-ons">Lees ons verhaal →</TextLink>}
+            intro="De kunst hangt in een café, geen galerie. Zo ziet die plek eruit."
+            action={<TextLink to="/sfeer">Alle sfeerbeelden →</TextLink>}
           />
-          <GalleryMasonry items={sfeer} />
+          <GalleryMasonry items={sfeer.slice(0, 3)} />
         </div>
       </section>
     </>
