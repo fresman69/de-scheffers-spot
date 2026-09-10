@@ -37,6 +37,8 @@ const categories = [
 
 function Dranken() {
   const [active, setActive] = useState("Alle");
+  const [searching, setSearching] = useState(false);
+  const onSearchingChange = useCallback((v: boolean) => setSearching(v), []);
   const filtered = active === "Alle" ? drinks : drinks.filter((d) => d.category === active);
 
   return (
@@ -57,7 +59,14 @@ function Dranken() {
         </div>
       </section>
 
-      <section className="sticky top-16 z-20 border-y border-border bg-oak/95 backdrop-blur">
+      <section className="bg-oak pb-4">
+        <MenuSearch onSearchingChange={onSearchingChange} />
+      </section>
+
+      <section
+        hidden={searching}
+        className="sticky top-16 z-20 border-y border-border bg-oak/95 backdrop-blur"
+      >
         <div className="mx-auto max-w-7xl overflow-x-auto px-4 sm:px-6 py-4">
           <div className="flex gap-2">
             {categories.map((c) => (
