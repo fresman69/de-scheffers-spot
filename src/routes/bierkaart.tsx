@@ -76,7 +76,14 @@ function Bierkaart() {
         </div>
       </section>
 
-      <section className="sticky top-16 z-20 border-y border-border bg-oak/95 backdrop-blur">
+      <section className="bg-oak pb-4">
+        <MenuSearch onSearchingChange={onSearchingChange} />
+      </section>
+
+      <section
+        hidden={searching}
+        className="sticky top-16 z-20 border-y border-border bg-oak/95 backdrop-blur"
+      >
         <div className="mx-auto max-w-7xl overflow-x-auto px-4 py-4 sm:px-6">
           <div className="flex gap-2">
             {categories.map((c) => (
