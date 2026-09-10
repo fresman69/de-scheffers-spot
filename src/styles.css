@@ -37,32 +37,47 @@
   --color-brass: var(--brass);
   --color-brass-dim: var(--brass-dim);
   --color-paper: var(--paper);
+  --color-cream: var(--cream);
+  --color-cream-dim: var(--cream-dim);
+  --color-ink: var(--ink);
   --color-wine: var(--wine);
   --color-wine-dim: var(--wine-dim);
+  --color-bordeaux: var(--bordeaux);
+  --color-bordeaux-dim: var(--bordeaux-dim);
   --color-mustard: var(--mustard);
   --color-mustard-dim: var(--mustard-dim);
   --color-teal: var(--teal);
   --color-teal-dim: var(--teal-dim);
 
-  --font-display: "Barlow Condensed", "Oswald", "Haettenschweiler", "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+  /* Mont-familie (functie & structuur) → Montserrat Bold als vrij te gebruiken vervanger. */
+  --font-display: "Montserrat", "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Cormorant Garamond", ui-serif, Georgia, "Times New Roman", serif;
+  /* Karaktervolle displayscript (Reality Sunday-gevoel). */
   --font-script: "Yellowtail", "Alex Brush", "Segoe Script", "Snell Roundhand", "Apple Chancery", cursive;
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Raleway — omschrijvingen en ondersteunende tekst. */
+  --font-sans: "Raleway", "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
 
-  /* Warmer, natuurlijker palet: walnoot, eik, cognac, olijf. */
-  --oak: oklch(0.17 0.014 50);
-  --oak-light: oklch(0.23 0.016 52);
-  --brass: oklch(0.79 0.105 82);
-  --brass-dim: oklch(0.60 0.085 80);
-  --paper: oklch(0.955 0.032 82);
-  /* Cognac — warm bruin met roodgloed. */
-  --wine: oklch(0.52 0.125 47);
-  --wine-dim: oklch(0.40 0.10 47);
-  --mustard: oklch(0.82 0.135 82);
+  /* Gevelpalet Stadscafé: beige, het kenmerkende rood, donkerrood en donkerbruin. */
+  --oak: oklch(0.19 0.026 45);
+  --oak-light: oklch(0.25 0.030 45);
+  --brass: oklch(0.80 0.110 80);
+  --brass-dim: oklch(0.62 0.090 78);
+  /* Beige / crème — de rustige basis van de gevel en de kaart. */
+  --paper: oklch(0.945 0.034 82);
+  --cream: oklch(0.955 0.030 84);
+  --cream-dim: oklch(0.905 0.040 80);
+  --ink: oklch(0.235 0.028 45);
+  /* Het kenmerkende Stadscafé-rood. */
+  --wine: oklch(0.522 0.180 30);
+  --wine-dim: oklch(0.425 0.150 29);
+  /* Donkerrood / bordeaux — dubbel & quad, speciaalbiergevoel. */
+  --bordeaux: oklch(0.325 0.115 26);
+  --bordeaux-dim: oklch(0.255 0.085 26);
+  --mustard: oklch(0.83 0.140 82);
   --mustard-dim: oklch(0.68 0.115 78);
   /* Olijf / diep flesgroen accent. */
   --teal: oklch(0.38 0.055 145);
@@ -80,18 +95,18 @@
   --card-foreground: oklch(0.955 0.012 85);
   --popover: var(--oak-light);
   --popover-foreground: oklch(0.955 0.012 85);
-  --primary: var(--brass);
-  --primary-foreground: var(--oak);
-  --secondary: oklch(0.30 0.014 60);
+  --primary: var(--wine);
+  --primary-foreground: var(--cream);
+  --secondary: oklch(0.31 0.020 45);
   --secondary-foreground: oklch(0.955 0.012 85);
-  --muted: oklch(0.26 0.012 60);
-  --muted-foreground: oklch(0.76 0.022 82);
+  --muted: oklch(0.27 0.018 45);
+  --muted-foreground: oklch(0.78 0.024 82);
   --accent: var(--brass);
   --accent-foreground: var(--oak);
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.32 0.012 60);
-  --input: oklch(0.30 0.012 60);
+  --border: oklch(0.33 0.020 45);
+  --input: oklch(0.31 0.018 45);
   --ring: var(--brass);
 }
 
@@ -131,30 +146,33 @@
 }
 
 
-/* ——— Typografisch systeem: één schaal voor de hele site ——— */
+/* ——— Typografisch systeem ———
+   Script  → emotie en karakter
+   Mont    → structuur, koppen, labels en navigatie (Montserrat Bold)
+   Raleway → omschrijvingen en uitleg                                   */
 @utility type-h1 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: clamp(2.625rem, 6.2vw, 5.5rem);
-  line-height: 0.98;
-  letter-spacing: 0.012em;
+  font-size: clamp(2.25rem, 5.2vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.005em;
 }
 @utility type-h2 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.04;
-  letter-spacing: 0.014em;
+  font-size: clamp(1.75rem, 3.4vw, 2.875rem);
+  line-height: 1.08;
+  letter-spacing: 0;
 }
 @utility type-h3 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: clamp(1.5rem, 2.2vw, 2.25rem);
-  line-height: 1.1;
-  letter-spacing: 0.016em;
+  font-size: clamp(1.25rem, 1.9vw, 1.75rem);
+  line-height: 1.15;
+  letter-spacing: 0.005em;
 }
 @utility type-eyebrow {
   font-family: var(--font-script);
@@ -164,15 +182,17 @@
   letter-spacing: 0;
 }
 @utility type-label {
-  font-size: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
   line-height: 1.4;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
 }
 @utility type-body {
+  font-family: var(--font-sans);
   font-size: clamp(1rem, 0.5vw + 0.9rem, 1.125rem);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 /* Eén sectieritme voor alle pagina's. */
 @utility section-y {
@@ -193,11 +213,11 @@
   line-height: 1;
 }
 
-/* Zware condensed serif — displaykop in menukaart-stijl. */
+/* Mont Bold-stijl: functionele kop in kapitalen. */
 @utility font-display-condensed {
   font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
 }
 

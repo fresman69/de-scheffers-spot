@@ -57,18 +57,23 @@ function Bierkaart() {
 
   return (
     <>
-      <section className="bg-oak section-y">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <p className="type-label text-brass/80">Stadscafé</p>
+      <section className="relative overflow-hidden bg-oak section-y">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-40 opacity-70"
+          style={{ background: "linear-gradient(180deg, var(--bordeaux) 0%, transparent 100%)" }}
+        />
+        <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
+          <p className="font-script type-eyebrow text-brass">Van vaas tot cuvée</p>
           <h1 className="mt-3 type-h1 text-paper">Bierkaart</h1>
-          <p className="mt-4 font-display-condensed text-sm tracking-[0.3em] text-wine">
+          <p className="mt-4 font-display-condensed text-sm tracking-[0.3em] text-mustard">
             ★ Goed bier, goede sfeer ★
           </p>
           <Ornament className="mt-8" />
           <p className="mx-auto mt-8 max-w-[58ch] text-pretty type-body text-paper/80">
-            Van huisbier Gouwe Ary op de tap tot klassieke trappisten, wilde sours en alcoholvrije
-            verfrissers. Voor elk humeur staat er wel iets goeds klaar. Vraag onze bediening gerust
-            om een tip.
+            Bier is weer helemaal van nu, en daar investeren we in. Van een simpele vaas Heineken
+            tot een Whisky Infused Cuvée: trappisten, IPA's, wilde sours, ciders en alcoholvrije
+            verfrissers. De keuze is reuze — vraag onze bediening gerust om een tip.
           </p>
           <p className="mt-4 text-sm text-paper/60">
             Prijzen vind je op de kaart in het café.
@@ -112,10 +117,10 @@ function Bierkaart() {
             return (
               <div key={cat} className="mb-14 last:mb-0">
                 <div className="mb-7 flex items-center gap-4">
-                  <span aria-hidden className="h-px flex-1 bg-wine/50" />
-                  <h2 className="type-h3 text-paper">{cat}</h2>
-                  <span className="type-label text-brass/70">{items.length}</span>
-                  <span aria-hidden className="h-px flex-1 bg-wine/50" />
+                  <span aria-hidden className="h-px flex-1 bg-wine/60" />
+                  <h2 className="rounded-sm bg-bordeaux px-4 py-1.5 type-h3 text-cream">{cat}</h2>
+                  <span className="type-label text-mustard">{items.length}</span>
+                  <span aria-hidden className="h-px flex-1 bg-wine/60" />
                 </div>
                 <div
                   className={`grid gap-4 ${compact ? "sm:grid-cols-2" : "md:grid-cols-2 xl:grid-cols-3"}`}
@@ -132,11 +137,11 @@ function Bierkaart() {
         </div>
 
         <div className="mx-auto mt-16 max-w-7xl px-4 sm:px-6">
-          <div className="rounded-sm bg-paper px-6 py-5 text-center">
-            <p className="font-display-condensed text-lg tracking-[0.16em] text-oak">
+          <div className="card-cozy bg-cream px-6 py-6 text-center">
+            <p className="font-display-condensed text-lg tracking-[0.12em] text-ink">
               Bier met verhaal, samen genieten.
             </p>
-            <p className="mt-1 font-display-condensed text-base tracking-[0.3em] text-wine">Proost!</p>
+            <p className="mt-1 font-script text-3xl leading-none text-wine">Proost!</p>
           </div>
           <p className="mt-4 text-center text-[12px] uppercase tracking-[0.25em] text-paper/50">
             Geniet met mate, maar geniet
