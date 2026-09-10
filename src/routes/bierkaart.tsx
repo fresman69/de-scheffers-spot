@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { BeerCard } from "../components/beer-card";
+import { MenuSearch } from "../components/menu-search";
 import { Ornament } from "../components/ornament";
 import { Reveal } from "../components/reveal";
 import { beers } from "../lib/menu/beers";
@@ -49,6 +50,8 @@ const categories = [
 
 function Bierkaart() {
   const [active, setActive] = useState("Alle");
+  const [searching, setSearching] = useState(false);
+  const onSearchingChange = useCallback((v: boolean) => setSearching(v), []);
   const filtered = active === "Alle" ? beers : beers.filter((b) => b.category === active);
   const shown = categories.filter((c) => c !== "Alle" && filtered.some((b) => b.category === c));
 
