@@ -10,13 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as SfeerRouteImport } from './routes/sfeer'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as OverOnsRouteImport } from './routes/over-ons'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as GalerijRouteImport } from './routes/galerij'
-import { Route as EvenementenRouteImport } from './routes/evenementen'
 import { Route as DrankenRouteImport } from './routes/dranken'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as CookiesRouteImport } from './routes/cookies'
@@ -34,11 +32,6 @@ import { Route as DotlovableOauthConsentRouteImport } from './routes/[.]lovable.
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SfeerRoute = SfeerRouteImport.update({
-  id: '/sfeer',
-  path: '/sfeer',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -64,11 +57,6 @@ const LoginRoute = LoginRouteImport.update({
 const GalerijRoute = GalerijRouteImport.update({
   id: '/galerij',
   path: '/galerij',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EvenementenRoute = EvenementenRouteImport.update({
-  id: '/evenementen',
-  path: '/evenementen',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DrankenRoute = DrankenRouteImport.update({
@@ -150,13 +138,11 @@ export interface FileRoutesByFullPath {
   '/cookies': typeof CookiesRoute
   '/disclaimer': typeof DisclaimerRoute
   '/dranken': typeof DrankenRoute
-  '/evenementen': typeof EvenementenRoute
   '/galerij': typeof GalerijRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
   '/over-ons': typeof OverOnsRoute
   '/privacy': typeof PrivacyRoute
-  '/sfeer': typeof SfeerRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -173,13 +159,11 @@ export interface FileRoutesByTo {
   '/cookies': typeof CookiesRoute
   '/disclaimer': typeof DisclaimerRoute
   '/dranken': typeof DrankenRoute
-  '/evenementen': typeof EvenementenRoute
   '/galerij': typeof GalerijRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
   '/over-ons': typeof OverOnsRoute
   '/privacy': typeof PrivacyRoute
-  '/sfeer': typeof SfeerRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -197,13 +181,11 @@ export interface FileRoutesById {
   '/cookies': typeof CookiesRoute
   '/disclaimer': typeof DisclaimerRoute
   '/dranken': typeof DrankenRoute
-  '/evenementen': typeof EvenementenRoute
   '/galerij': typeof GalerijRoute
   '/login': typeof LoginRoute
   '/mcp': typeof McpRoute
   '/over-ons': typeof OverOnsRoute
   '/privacy': typeof PrivacyRoute
-  '/sfeer': typeof SfeerRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -222,13 +204,11 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/disclaimer'
     | '/dranken'
-    | '/evenementen'
     | '/galerij'
     | '/login'
     | '/mcp'
     | '/over-ons'
     | '/privacy'
-    | '/sfeer'
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -245,13 +225,11 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/disclaimer'
     | '/dranken'
-    | '/evenementen'
     | '/galerij'
     | '/login'
     | '/mcp'
     | '/over-ons'
     | '/privacy'
-    | '/sfeer'
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -268,13 +246,11 @@ export interface FileRouteTypes {
     | '/cookies'
     | '/disclaimer'
     | '/dranken'
-    | '/evenementen'
     | '/galerij'
     | '/login'
     | '/mcp'
     | '/over-ons'
     | '/privacy'
-    | '/sfeer'
     | '/sitemap.xml'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -292,13 +268,11 @@ export interface RootRouteChildren {
   CookiesRoute: typeof CookiesRoute
   DisclaimerRoute: typeof DisclaimerRoute
   DrankenRoute: typeof DrankenRoute
-  EvenementenRoute: typeof EvenementenRoute
   GalerijRoute: typeof GalerijRoute
   LoginRoute: typeof LoginRoute
   McpRoute: typeof McpRoute
   OverOnsRoute: typeof OverOnsRoute
   PrivacyRoute: typeof PrivacyRoute
-  SfeerRoute: typeof SfeerRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -313,13 +287,6 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sfeer': {
-      id: '/sfeer'
-      path: '/sfeer'
-      fullPath: '/sfeer'
-      preLoaderRoute: typeof SfeerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -355,13 +322,6 @@ declare module '@tanstack/react-router' {
       path: '/galerij'
       fullPath: '/galerij'
       preLoaderRoute: typeof GalerijRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/evenementen': {
-      id: '/evenementen'
-      path: '/evenementen'
-      fullPath: '/evenementen'
-      preLoaderRoute: typeof EvenementenRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dranken': {
@@ -468,13 +428,11 @@ const rootRouteChildren: RootRouteChildren = {
   CookiesRoute: CookiesRoute,
   DisclaimerRoute: DisclaimerRoute,
   DrankenRoute: DrankenRoute,
-  EvenementenRoute: EvenementenRoute,
   GalerijRoute: GalerijRoute,
   LoginRoute: LoginRoute,
   McpRoute: McpRoute,
   OverOnsRoute: OverOnsRoute,
   PrivacyRoute: PrivacyRoute,
-  SfeerRoute: SfeerRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:

@@ -253,61 +253,6 @@
   background-repeat: repeat-x;
 }
 
-/* ——— Bierkaart: rustige 3D-flip ——— */
-.flip-card { perspective: 1400px; }
-.flip-card .flip-inner {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 620ms var(--ease-smooth);
-}
-.flip-card .flip-inner.is-flipped { transform: rotateY(180deg); }
-.flip-card .flip-face {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  box-shadow: 0 14px 34px -28px color-mix(in oklch, black 85%, transparent);
-}
-.flip-card .flip-back { transform: rotateY(180deg); }
-@media (prefers-reduced-motion: reduce) {
-  .flip-card .flip-inner { transition-duration: 1ms; }
-}
-
-/* Kroonkurk-achtig merkteken op de voorzijde van een bierkaart. */
-/* Kroonkurk: geribbelde rand met een matte binnenkant. */
-.beer-cap {
-  display: block;
-  width: 4.75rem;
-  height: 4.75rem;
-  border-radius: 9999px;
-  background:
-    radial-gradient(circle at 50% 38%,
-      color-mix(in oklch, var(--wine) 90%, var(--brass)) 0%,
-      var(--wine) 62%,
-      transparent 82%),
-    repeating-conic-gradient(from 0deg,
-      color-mix(in oklch, var(--brass) 60%, transparent) 0deg 6deg,
-      transparent 6deg 12deg);
-  box-shadow:
-    inset 0 0 0 6px color-mix(in oklch, var(--bordeaux) 90%, transparent),
-    inset 0 0 0 7px color-mix(in oklch, var(--brass) 45%, transparent),
-    0 12px 26px -20px color-mix(in oklch, var(--brass) 70%, transparent);
-}
-
-/* ——— Kunst aan de caféwand ——— */
-.art-frame .art-frame-mat {
-  padding: 0.65rem;
-  border-radius: 2px;
-  background: color-mix(in oklch, var(--cream) 92%, var(--oak));
-  box-shadow:
-    0 0 0 8px color-mix(in oklch, var(--oak) 82%, black),
-    0 0 0 9px color-mix(in oklch, var(--brass) 35%, transparent),
-    0 24px 40px -26px color-mix(in oklch, black 90%, transparent);
-}
-
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; overflow-x: hidden; }
